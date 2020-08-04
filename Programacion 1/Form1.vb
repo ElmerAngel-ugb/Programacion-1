@@ -1,35 +1,15 @@
 ﻿Public Class Form1
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        'Dim es una palabra reservada para declara una variable
-        Dim num1, num2, respuesta As Double
-        num1 = txtnum1.Text
-        num2 = txtnum2.Text
-        If optSuma.Checked Then
-            lblrespuesta.Text = num1 + num2
-        End If
 
-        If optResta.Checked Then
-            lblrespuesta.Text = num1 - num2
-        End If
 
-        If optMultiplicacion.Checked Then
-            lblrespuesta.Text = num1 * num2
-        End If
+    Private Sub btnProcesar_Click(sender As Object, e As EventArgs) Handles btnProcesar.Click
+        Dim ntabla As SByte
+        ntabla = txtntabla.Text
 
-        If optDivision.Checked Then
-            lblrespuesta.Text = num1 / num2
-        End If
 
-        If optPortsentaje.Checked Then
-            lblrespuesta.Text = num1 * num2 / 100
-        End If
+        lstTabla.Items.Clear()
+        For i = 1 To 10
+            lstTabla.Items.Add(ntabla.ToString() + "x" + i.ToString() + "=" + (ntabla * i).ToString())
+        Next
 
-        If optExponenciacion.Checked Then
-            lblrespuesta.Text = num1 ^ num2
-        End If
-
-        If optMod.Checked Then
-            lblrespuesta.Text = num1 Mod num2
-        End If
     End Sub
 End Class
