@@ -143,7 +143,7 @@ Partial Class Form1
         'cbxentrada1
         '
         Me.cbxentrada1.FormattingEnabled = True
-        Me.cbxentrada1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilómetros", "Pulgadas ", "Pie ", "Yarda ", "Milla", "Decámetro", "Decímetro"})
+        Me.cbxentrada1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilometros", "Pulgadas", "Pie", "Yarda", "Milla", "Decámetro", "Decímetro"})
         Me.cbxentrada1.Location = New System.Drawing.Point(399, 134)
         Me.cbxentrada1.Name = "cbxentrada1"
         Me.cbxentrada1.Size = New System.Drawing.Size(147, 24)
@@ -152,7 +152,7 @@ Partial Class Form1
         'cbxsalida1
         '
         Me.cbxsalida1.FormattingEnabled = True
-        Me.cbxsalida1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilómetros", "Pulgadas ", "Pie ", "Yarda ", "Milla", "Decámetro", "Decímetro"})
+        Me.cbxsalida1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Pie", "Yarda", "Milla", "Decámetro", "Decímetro"})
         Me.cbxsalida1.Location = New System.Drawing.Point(398, 202)
         Me.cbxsalida1.Name = "cbxsalida1"
         Me.cbxsalida1.Size = New System.Drawing.Size(147, 24)
@@ -160,7 +160,7 @@ Partial Class Form1
         '
         'Btnlongitud1
         '
-        Me.Btnlongitud1.Location = New System.Drawing.Point(422, 261)
+        Me.Btnlongitud1.Location = New System.Drawing.Point(423, 261)
         Me.Btnlongitud1.Name = "Btnlongitud1"
         Me.Btnlongitud1.Size = New System.Drawing.Size(123, 34)
         Me.Btnlongitud1.TabIndex = 7
@@ -170,7 +170,7 @@ Partial Class Form1
         'lblnum
         '
         Me.lblnum.AutoSize = True
-        Me.lblnum.Location = New System.Drawing.Point(628, 239)
+        Me.lblnum.Location = New System.Drawing.Point(635, 261)
         Me.lblnum.Name = "lblnum"
         Me.lblnum.Size = New System.Drawing.Size(20, 17)
         Me.lblnum.TabIndex = 14
