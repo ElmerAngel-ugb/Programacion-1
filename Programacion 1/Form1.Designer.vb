@@ -29,13 +29,14 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtCodigo = New System.Windows.Forms.TextBox()
         Me.Lblr = New System.Windows.Forms.Label()
-        Me.LblRespuesta1 = New System.Windows.Forms.Label()
-        Me.Txtcodigo1 = New System.Windows.Forms.TextBox()
+        Me.lblrespuesta1 = New System.Windows.Forms.Label()
+        Me.Txtcódigo1 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Cbxentrada1 = New System.Windows.Forms.ComboBox()
-        Me.Cbxsalida1 = New System.Windows.Forms.ComboBox()
-        Me.Btnlongitud = New System.Windows.Forms.Button()
+        Me.cbxentrada1 = New System.Windows.Forms.ComboBox()
+        Me.cbxsalida1 = New System.Windows.Forms.ComboBox()
+        Me.Btnlongitud1 = New System.Windows.Forms.Button()
+        Me.lblnum = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnMoneda
@@ -102,22 +103,22 @@ Partial Class Form1
         Me.Lblr.TabIndex = 6
         Me.Lblr.Text = "Respuesta?"
         '
-        'LblRespuesta1
+        'lblrespuesta1
         '
-        Me.LblRespuesta1.AutoSize = True
-        Me.LblRespuesta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.LblRespuesta1.Location = New System.Drawing.Point(493, 229)
-        Me.LblRespuesta1.Name = "LblRespuesta1"
-        Me.LblRespuesta1.Size = New System.Drawing.Size(140, 29)
-        Me.LblRespuesta1.TabIndex = 13
-        Me.LblRespuesta1.Text = "Respuesta?"
+        Me.lblrespuesta1.AutoSize = True
+        Me.lblrespuesta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.lblrespuesta1.Location = New System.Drawing.Point(493, 229)
+        Me.lblrespuesta1.Name = "lblrespuesta1"
+        Me.lblrespuesta1.Size = New System.Drawing.Size(140, 29)
+        Me.lblrespuesta1.TabIndex = 13
+        Me.lblrespuesta1.Text = "Respuesta?"
         '
-        'Txtcodigo1
+        'Txtcódigo1
         '
-        Me.Txtcodigo1.Location = New System.Drawing.Point(399, 78)
-        Me.Txtcodigo1.Name = "Txtcodigo1"
-        Me.Txtcodigo1.Size = New System.Drawing.Size(147, 22)
-        Me.Txtcodigo1.TabIndex = 12
+        Me.Txtcódigo1.Location = New System.Drawing.Point(399, 78)
+        Me.Txtcódigo1.Name = "Txtcódigo1"
+        Me.Txtcódigo1.Size = New System.Drawing.Size(147, 22)
+        Me.Txtcódigo1.TabIndex = 12
         '
         'Label4
         '
@@ -139,45 +140,55 @@ Partial Class Form1
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Longitud"
         '
-        'Cbxentrada1
+        'cbxentrada1
         '
-        Me.Cbxentrada1.FormattingEnabled = True
-        Me.Cbxentrada1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilómetros", "Pulgadas ", "Pie ", "Yarda ", "Milla", "Decámetro", "Decímetro"})
-        Me.Cbxentrada1.Location = New System.Drawing.Point(399, 134)
-        Me.Cbxentrada1.Name = "Cbxentrada1"
-        Me.Cbxentrada1.Size = New System.Drawing.Size(147, 24)
-        Me.Cbxentrada1.TabIndex = 9
+        Me.cbxentrada1.FormattingEnabled = True
+        Me.cbxentrada1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilómetros", "Pulgadas ", "Pie ", "Yarda ", "Milla", "Decámetro", "Decímetro"})
+        Me.cbxentrada1.Location = New System.Drawing.Point(399, 134)
+        Me.cbxentrada1.Name = "cbxentrada1"
+        Me.cbxentrada1.Size = New System.Drawing.Size(147, 24)
+        Me.cbxentrada1.TabIndex = 9
         '
-        'Cbxsalida1
+        'cbxsalida1
         '
-        Me.Cbxsalida1.FormattingEnabled = True
-        Me.Cbxsalida1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilómetros", "Pulgadas ", "Pie ", "Yarda ", "Milla", "Decámetro", "Decímetro"})
-        Me.Cbxsalida1.Location = New System.Drawing.Point(398, 202)
-        Me.Cbxsalida1.Name = "Cbxsalida1"
-        Me.Cbxsalida1.Size = New System.Drawing.Size(147, 24)
-        Me.Cbxsalida1.TabIndex = 8
+        Me.cbxsalida1.FormattingEnabled = True
+        Me.cbxsalida1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilómetros", "Pulgadas ", "Pie ", "Yarda ", "Milla", "Decámetro", "Decímetro"})
+        Me.cbxsalida1.Location = New System.Drawing.Point(398, 202)
+        Me.cbxsalida1.Name = "cbxsalida1"
+        Me.cbxsalida1.Size = New System.Drawing.Size(147, 24)
+        Me.cbxsalida1.TabIndex = 8
         '
-        'Btnlongitud
+        'Btnlongitud1
         '
-        Me.Btnlongitud.Location = New System.Drawing.Point(422, 261)
-        Me.Btnlongitud.Name = "Btnlongitud"
-        Me.Btnlongitud.Size = New System.Drawing.Size(123, 34)
-        Me.Btnlongitud.TabIndex = 7
-        Me.Btnlongitud.Text = "Longitud"
-        Me.Btnlongitud.UseVisualStyleBackColor = True
+        Me.Btnlongitud1.Location = New System.Drawing.Point(422, 261)
+        Me.Btnlongitud1.Name = "Btnlongitud1"
+        Me.Btnlongitud1.Size = New System.Drawing.Size(123, 34)
+        Me.Btnlongitud1.TabIndex = 7
+        Me.Btnlongitud1.Text = "Longitud"
+        Me.Btnlongitud1.UseVisualStyleBackColor = True
+        '
+        'lblnum
+        '
+        Me.lblnum.AutoSize = True
+        Me.lblnum.Location = New System.Drawing.Point(628, 239)
+        Me.lblnum.Name = "lblnum"
+        Me.lblnum.Size = New System.Drawing.Size(20, 17)
+        Me.lblnum.TabIndex = 14
+        Me.lblnum.Text = "..."
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1004, 558)
-        Me.Controls.Add(Me.LblRespuesta1)
-        Me.Controls.Add(Me.Txtcodigo1)
+        Me.Controls.Add(Me.lblnum)
+        Me.Controls.Add(Me.lblrespuesta1)
+        Me.Controls.Add(Me.Txtcódigo1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Cbxentrada1)
-        Me.Controls.Add(Me.Cbxsalida1)
-        Me.Controls.Add(Me.Btnlongitud)
+        Me.Controls.Add(Me.cbxentrada1)
+        Me.Controls.Add(Me.cbxsalida1)
+        Me.Controls.Add(Me.Btnlongitud1)
         Me.Controls.Add(Me.Lblr)
         Me.Controls.Add(Me.TxtCodigo)
         Me.Controls.Add(Me.Label2)
@@ -199,11 +210,12 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtCodigo As TextBox
     Friend WithEvents Lblr As Label
-    Friend WithEvents LblRespuesta1 As Label
-    Friend WithEvents Txtcodigo1 As TextBox
+    Friend WithEvents lblrespuesta1 As Label
+    Friend WithEvents Txtcódigo1 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Cbxentrada1 As ComboBox
-    Friend WithEvents Cbxsalida1 As ComboBox
-    Friend WithEvents Btnlongitud As Button
+    Friend WithEvents cbxentrada1 As ComboBox
+    Friend WithEvents cbxsalida1 As ComboBox
+    Friend WithEvents Btnlongitud1 As Button
+    Friend WithEvents lblnum As Label
 End Class
