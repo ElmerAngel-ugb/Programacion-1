@@ -22,184 +22,200 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnCalcular = New System.Windows.Forms.Button()
+        Me.BtnMoneda = New System.Windows.Forms.Button()
+        Me.Cbxsalida = New System.Windows.Forms.ComboBox()
+        Me.Cbxentrada = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblrespuesta = New System.Windows.Forms.Label()
-        Me.txtnum1 = New System.Windows.Forms.TextBox()
-        Me.txtnum2 = New System.Windows.Forms.TextBox()
-        Me.optSuma = New System.Windows.Forms.RadioButton()
-        Me.optResta = New System.Windows.Forms.RadioButton()
-        Me.optMultiplicacion = New System.Windows.Forms.RadioButton()
-        Me.optDivision = New System.Windows.Forms.RadioButton()
-        Me.optPortsentaje = New System.Windows.Forms.RadioButton()
-        Me.optExponenciacion = New System.Windows.Forms.RadioButton()
-        Me.optMod = New System.Windows.Forms.RadioButton()
+        Me.TxtCodigo = New System.Windows.Forms.TextBox()
+        Me.Lblr = New System.Windows.Forms.Label()
+        Me.lblrespuesta1 = New System.Windows.Forms.Label()
+        Me.Txtcódigo1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cbxentrada1 = New System.Windows.Forms.ComboBox()
+        Me.cbxsalida1 = New System.Windows.Forms.ComboBox()
+        Me.Btnlongitud1 = New System.Windows.Forms.Button()
+        Me.lblnum = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'btnCalcular
+        'BtnMoneda
         '
-        Me.btnCalcular.Location = New System.Drawing.Point(291, 288)
-        Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(117, 38)
-        Me.btnCalcular.TabIndex = 0
-        Me.btnCalcular.Text = "Calcular"
-        Me.btnCalcular.UseVisualStyleBackColor = True
+        Me.BtnMoneda.Location = New System.Drawing.Point(83, 261)
+        Me.BtnMoneda.Name = "BtnMoneda"
+        Me.BtnMoneda.Size = New System.Drawing.Size(123, 34)
+        Me.BtnMoneda.TabIndex = 0
+        Me.BtnMoneda.Text = "Moneda"
+        Me.BtnMoneda.UseVisualStyleBackColor = True
+        '
+        'Cbxsalida
+        '
+        Me.Cbxsalida.FormattingEnabled = True
+        Me.Cbxsalida.Items.AddRange(New Object() {"Dólar estadounidense", "Quetzal", "Colón Salvadoreño", "Colón costarricense", "Lempira ", "Balboa", "Peso Mexicano", "Córdoba nicaraguense", "Euro", "Sol (peruano)"})
+        Me.Cbxsalida.Location = New System.Drawing.Point(82, 202)
+        Me.Cbxsalida.Name = "Cbxsalida"
+        Me.Cbxsalida.Size = New System.Drawing.Size(147, 24)
+        Me.Cbxsalida.TabIndex = 1
+        '
+        'Cbxentrada
+        '
+        Me.Cbxentrada.FormattingEnabled = True
+        Me.Cbxentrada.Items.AddRange(New Object() {"Dólar estadounidense", "Quetzal", "Colón Salvadoreño", "Colón costarricense", "Lempira ", "Balboa", "Peso Mexicano", "Córdoba nicaraguense", "Euro", "Sol (peruano)"})
+        Me.Cbxentrada.Location = New System.Drawing.Point(83, 134)
+        Me.Cbxentrada.Name = "Cbxentrada"
+        Me.Cbxentrada.Size = New System.Drawing.Size(147, 24)
+        Me.Cbxentrada.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(144, 76)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.Label1.Location = New System.Drawing.Point(27, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 17)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "num1"
+        Me.Label1.Size = New System.Drawing.Size(123, 36)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Moneda"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(460, 76)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label2.Location = New System.Drawing.Point(49, 161)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 17)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "num2"
+        Me.Label2.Size = New System.Drawing.Size(28, 29)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "A"
         '
-        'lblrespuesta
+        'TxtCodigo
         '
-        Me.lblrespuesta.AutoSize = True
-        Me.lblrespuesta.Location = New System.Drawing.Point(660, 76)
-        Me.lblrespuesta.Name = "lblrespuesta"
-        Me.lblrespuesta.Size = New System.Drawing.Size(92, 17)
-        Me.lblrespuesta.TabIndex = 3
-        Me.lblrespuesta.Text = "Respuesta¿?"
+        Me.TxtCodigo.Location = New System.Drawing.Point(83, 78)
+        Me.TxtCodigo.Name = "TxtCodigo"
+        Me.TxtCodigo.Size = New System.Drawing.Size(147, 22)
+        Me.TxtCodigo.TabIndex = 5
         '
-        'txtnum1
+        'Lblr
         '
-        Me.txtnum1.Location = New System.Drawing.Point(183, 76)
-        Me.txtnum1.Name = "txtnum1"
-        Me.txtnum1.Size = New System.Drawing.Size(100, 22)
-        Me.txtnum1.TabIndex = 4
+        Me.Lblr.AutoSize = True
+        Me.Lblr.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Lblr.Location = New System.Drawing.Point(161, 229)
+        Me.Lblr.Name = "Lblr"
+        Me.Lblr.Size = New System.Drawing.Size(140, 29)
+        Me.Lblr.TabIndex = 6
+        Me.Lblr.Text = "Respuesta?"
         '
-        'txtnum2
+        'lblrespuesta1
         '
-        Me.txtnum2.Location = New System.Drawing.Point(498, 75)
-        Me.txtnum2.Name = "txtnum2"
-        Me.txtnum2.Size = New System.Drawing.Size(100, 22)
-        Me.txtnum2.TabIndex = 5
+        Me.lblrespuesta1.AutoSize = True
+        Me.lblrespuesta1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.lblrespuesta1.Location = New System.Drawing.Point(493, 229)
+        Me.lblrespuesta1.Name = "lblrespuesta1"
+        Me.lblrespuesta1.Size = New System.Drawing.Size(140, 29)
+        Me.lblrespuesta1.TabIndex = 13
+        Me.lblrespuesta1.Text = "Respuesta?"
         '
-        'optSuma
+        'Txtcódigo1
         '
-        Me.optSuma.AutoSize = True
-        Me.optSuma.Location = New System.Drawing.Point(328, 76)
-        Me.optSuma.Name = "optSuma"
-        Me.optSuma.Size = New System.Drawing.Size(37, 21)
-        Me.optSuma.TabIndex = 6
-        Me.optSuma.TabStop = True
-        Me.optSuma.Text = "+"
-        Me.optSuma.UseVisualStyleBackColor = True
+        Me.Txtcódigo1.Location = New System.Drawing.Point(399, 78)
+        Me.Txtcódigo1.Name = "Txtcódigo1"
+        Me.Txtcódigo1.Size = New System.Drawing.Size(147, 22)
+        Me.Txtcódigo1.TabIndex = 12
         '
-        'optResta
+        'Label4
         '
-        Me.optResta.AutoSize = True
-        Me.optResta.Location = New System.Drawing.Point(328, 104)
-        Me.optResta.Name = "optResta"
-        Me.optResta.Size = New System.Drawing.Size(34, 21)
-        Me.optResta.TabIndex = 7
-        Me.optResta.TabStop = True
-        Me.optResta.Text = "-"
-        Me.optResta.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        Me.Label4.Location = New System.Drawing.Point(367, 161)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(28, 29)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "A"
         '
-        'optMultiplicacion
+        'Label5
         '
-        Me.optMultiplicacion.AutoSize = True
-        Me.optMultiplicacion.Location = New System.Drawing.Point(328, 132)
-        Me.optMultiplicacion.Name = "optMultiplicacion"
-        Me.optMultiplicacion.Size = New System.Drawing.Size(34, 21)
-        Me.optMultiplicacion.TabIndex = 8
-        Me.optMultiplicacion.TabStop = True
-        Me.optMultiplicacion.Text = "*"
-        Me.optMultiplicacion.UseVisualStyleBackColor = True
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.Label5.Location = New System.Drawing.Point(329, 39)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(132, 36)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Longitud"
         '
-        'optDivision
+        'cbxentrada1
         '
-        Me.optDivision.AutoSize = True
-        Me.optDivision.Location = New System.Drawing.Point(328, 160)
-        Me.optDivision.Name = "optDivision"
-        Me.optDivision.Size = New System.Drawing.Size(33, 21)
-        Me.optDivision.TabIndex = 9
-        Me.optDivision.TabStop = True
-        Me.optDivision.Text = "/"
-        Me.optDivision.UseVisualStyleBackColor = True
+        Me.cbxentrada1.FormattingEnabled = True
+        Me.cbxentrada1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilometros", "Pulgadas", "Pie", "Yarda", "Milla", "Decámetro", "Decímetro"})
+        Me.cbxentrada1.Location = New System.Drawing.Point(398, 134)
+        Me.cbxentrada1.Name = "cbxentrada1"
+        Me.cbxentrada1.Size = New System.Drawing.Size(147, 24)
+        Me.cbxentrada1.TabIndex = 9
         '
-        'optPortsentaje
+        'cbxsalida1
         '
-        Me.optPortsentaje.AutoSize = True
-        Me.optPortsentaje.Location = New System.Drawing.Point(328, 188)
-        Me.optPortsentaje.Name = "optPortsentaje"
-        Me.optPortsentaje.Size = New System.Drawing.Size(109, 21)
-        Me.optPortsentaje.TabIndex = 10
-        Me.optPortsentaje.TabStop = True
-        Me.optPortsentaje.Text = "Porsentaje%"
-        Me.optPortsentaje.UseVisualStyleBackColor = True
+        Me.cbxsalida1.FormattingEnabled = True
+        Me.cbxsalida1.Items.AddRange(New Object() {"Milímetro", "Centímetro", "Metro", "Kilometros", "Pulgadas", "Pie", "Yarda", "Milla", "Decámetro", "Decímetro"})
+        Me.cbxsalida1.Location = New System.Drawing.Point(398, 202)
+        Me.cbxsalida1.Name = "cbxsalida1"
+        Me.cbxsalida1.Size = New System.Drawing.Size(147, 24)
+        Me.cbxsalida1.TabIndex = 8
         '
-        'optExponenciacion
+        'Btnlongitud1
         '
-        Me.optExponenciacion.AutoSize = True
-        Me.optExponenciacion.Location = New System.Drawing.Point(328, 216)
-        Me.optExponenciacion.Name = "optExponenciacion"
-        Me.optExponenciacion.Size = New System.Drawing.Size(36, 21)
-        Me.optExponenciacion.TabIndex = 11
-        Me.optExponenciacion.TabStop = True
-        Me.optExponenciacion.Text = "^"
-        Me.optExponenciacion.UseVisualStyleBackColor = True
+        Me.Btnlongitud1.Location = New System.Drawing.Point(423, 261)
+        Me.Btnlongitud1.Name = "Btnlongitud1"
+        Me.Btnlongitud1.Size = New System.Drawing.Size(123, 34)
+        Me.Btnlongitud1.TabIndex = 7
+        Me.Btnlongitud1.Text = "Longitud"
+        Me.Btnlongitud1.UseVisualStyleBackColor = True
         '
-        'optMod
+        'lblnum
         '
-        Me.optMod.AutoSize = True
-        Me.optMod.Location = New System.Drawing.Point(328, 244)
-        Me.optMod.Name = "optMod"
-        Me.optMod.Size = New System.Drawing.Size(81, 21)
-        Me.optMod.TabIndex = 12
-        Me.optMod.TabStop = True
-        Me.optMod.Text = "Residuo"
-        Me.optMod.UseVisualStyleBackColor = True
+        Me.lblnum.AutoSize = True
+        Me.lblnum.Location = New System.Drawing.Point(635, 261)
+        Me.lblnum.Name = "lblnum"
+        Me.lblnum.Size = New System.Drawing.Size(20, 17)
+        Me.lblnum.TabIndex = 14
+        Me.lblnum.Text = "..."
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.optMod)
-        Me.Controls.Add(Me.optExponenciacion)
-        Me.Controls.Add(Me.optPortsentaje)
-        Me.Controls.Add(Me.optDivision)
-        Me.Controls.Add(Me.optMultiplicacion)
-        Me.Controls.Add(Me.optResta)
-        Me.Controls.Add(Me.optSuma)
-        Me.Controls.Add(Me.txtnum2)
-        Me.Controls.Add(Me.txtnum1)
-        Me.Controls.Add(Me.lblrespuesta)
+        Me.ClientSize = New System.Drawing.Size(1004, 558)
+        Me.Controls.Add(Me.lblnum)
+        Me.Controls.Add(Me.lblrespuesta1)
+        Me.Controls.Add(Me.Txtcódigo1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cbxentrada1)
+        Me.Controls.Add(Me.cbxsalida1)
+        Me.Controls.Add(Me.Btnlongitud1)
+        Me.Controls.Add(Me.Lblr)
+        Me.Controls.Add(Me.TxtCodigo)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnCalcular)
+        Me.Controls.Add(Me.Cbxentrada)
+        Me.Controls.Add(Me.Cbxsalida)
+        Me.Controls.Add(Me.BtnMoneda)
         Me.Name = "Form1"
-        Me.Text = "Calculadora Basica"
+        Me.Text = "Conversores"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents btnCalcular As Button
+    Friend WithEvents BtnMoneda As Button
+    Friend WithEvents Cbxsalida As ComboBox
+    Friend WithEvents Cbxentrada As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents lblrespuesta As Label
-    Friend WithEvents txtnum1 As TextBox
-    Friend WithEvents txtnum2 As TextBox
-    Friend WithEvents optSuma As RadioButton
-    Friend WithEvents optResta As RadioButton
-    Friend WithEvents optMultiplicacion As RadioButton
-    Friend WithEvents optDivision As RadioButton
-    Friend WithEvents optPortsentaje As RadioButton
-    Friend WithEvents optExponenciacion As RadioButton
-    Friend WithEvents optMod As RadioButton
+    Friend WithEvents TxtCodigo As TextBox
+    Friend WithEvents Lblr As Label
+    Friend WithEvents lblrespuesta1 As Label
+    Friend WithEvents Txtcódigo1 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents cbxentrada1 As ComboBox
+    Friend WithEvents cbxsalida1 As ComboBox
+    Friend WithEvents Btnlongitud1 As Button
+    Friend WithEvents lblnum As Label
 End Class
