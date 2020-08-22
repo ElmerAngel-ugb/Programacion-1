@@ -37,6 +37,7 @@ Partial Class Form1
         Me.cbxsalida1 = New System.Windows.Forms.ComboBox()
         Me.Btnlongitud1 = New System.Windows.Forms.Button()
         Me.lblnum = New System.Windows.Forms.Label()
+        Me.lblnum1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnMoneda
@@ -60,7 +61,7 @@ Partial Class Form1
         'Cbxentrada
         '
         Me.Cbxentrada.FormattingEnabled = True
-        Me.Cbxentrada.Items.AddRange(New Object() {"Dólar estadounidense", "Quetzal", "Colón Salvadoreño", "Colón costarricense", "Lempira ", "Balboa", "Peso Mexicano", "Córdoba nicaraguense", "Euro", "Sol (peruano)"})
+        Me.Cbxentrada.Items.AddRange(New Object() {"Dolar estadounidense", "Quetzal", "Colón Salvadoreño", "Colón costarricense", "Lempira ", "Balboa", "Peso Mexicano", "Córdoba nicaraguense", "Euro", "Sol (peruano)"})
         Me.Cbxentrada.Location = New System.Drawing.Point(83, 134)
         Me.Cbxentrada.Name = "Cbxentrada"
         Me.Cbxentrada.Size = New System.Drawing.Size(147, 24)
@@ -176,11 +177,21 @@ Partial Class Form1
         Me.lblnum.TabIndex = 14
         Me.lblnum.Text = "..."
         '
+        'lblnum1
+        '
+        Me.lblnum1.AutoSize = True
+        Me.lblnum1.Location = New System.Drawing.Point(272, 270)
+        Me.lblnum1.Name = "lblnum1"
+        Me.lblnum1.Size = New System.Drawing.Size(20, 17)
+        Me.lblnum1.TabIndex = 15
+        Me.lblnum1.Text = "..."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1004, 558)
+        Me.Controls.Add(Me.lblnum1)
         Me.Controls.Add(Me.lblnum)
         Me.Controls.Add(Me.lblrespuesta1)
         Me.Controls.Add(Me.Txtcódigo1)
@@ -218,4 +229,5 @@ Partial Class Form1
     Friend WithEvents cbxsalida1 As ComboBox
     Friend WithEvents Btnlongitud1 As Button
     Friend WithEvents lblnum As Label
+    Friend WithEvents lblnum1 As Label
 End Class
