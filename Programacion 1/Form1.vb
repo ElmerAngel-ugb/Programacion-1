@@ -335,4 +335,15 @@
             lblnum.Text = "Decámetro"
         End If
     End Sub
+
+    Private Sub BtnMoneda_Click(sender As Object, e As EventArgs) Handles BtnMoneda.Click
+
+        If Cbxentrada.Text = "Dolar estadounidense" And Cbxsalida.Text = "Dolar estadounidense" Then
+            Lblr.Text = Val(TxtCodigo.Text)
+            lblnum.Text = "Dolar estadounidense"
+        ElseIf Cbxentrada.Text = "Dolar estadounidense" And Cbxsalida.Text = "Quetzal" Then
+            Lblr.Text = Val(TxtCodigo.Text) * 7.7
+            lblnum1.Text = "Queztal"
+        End If
+    End Sub
 End Class
