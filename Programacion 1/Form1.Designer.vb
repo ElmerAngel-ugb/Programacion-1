@@ -52,7 +52,7 @@ Partial Class Form1
         'Cbxsalida
         '
         Me.Cbxsalida.FormattingEnabled = True
-        Me.Cbxsalida.Items.AddRange(New Object() {"Dólar estadounidense", "Quetzal", "Colón Salvadoreño", "Colón costarricense", "Lempira ", "Balboa", "Peso Mexicano", "Córdoba nicaraguense", "Euro", "Sol (peruano)"})
+        Me.Cbxsalida.Items.AddRange(New Object() {"Dólar estadounidense", "Quetzal", "Colon salvadoreño", "Colon costarricense", "Lempira", "Balboa", "Peso Mexicano", "Cordoba nicaraguense", "Euro", "Sol (peruano)"})
         Me.Cbxsalida.Location = New System.Drawing.Point(82, 202)
         Me.Cbxsalida.Name = "Cbxsalida"
         Me.Cbxsalida.Size = New System.Drawing.Size(147, 24)
@@ -61,7 +61,7 @@ Partial Class Form1
         'Cbxentrada
         '
         Me.Cbxentrada.FormattingEnabled = True
-        Me.Cbxentrada.Items.AddRange(New Object() {"Dolar estadounidense", "Quetzal", "Colón Salvadoreño", "Colón costarricense", "Lempira ", "Balboa", "Peso Mexicano", "Córdoba nicaraguense", "Euro", "Sol (peruano)"})
+        Me.Cbxentrada.Items.AddRange(New Object() {"Dolar estadounidense", "Quetzal", "Colon salvadoreño", "Colon costarricense", "Lempira", "Balboa", "Peso Mexicano", "Cordoba nicaraguense", "Euro", "Sol (peruano)"})
         Me.Cbxentrada.Location = New System.Drawing.Point(83, 134)
         Me.Cbxentrada.Name = "Cbxentrada"
         Me.Cbxentrada.Size = New System.Drawing.Size(147, 24)
