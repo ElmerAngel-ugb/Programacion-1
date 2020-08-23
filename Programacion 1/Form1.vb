@@ -1229,4 +1229,620 @@
             lblnum5.Text = "P C"
         End If
     End Sub
+
+    Private Sub BtnTiempo_Click(sender As Object, e As EventArgs) Handles BtnTiempo.Click
+        If cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000000000.0
+            Lblnum2.Text = "Min"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600000000000.0
+            Lblnum2.Text = "Hora"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400000000000.0
+            Lblnum2.Text = "Dia"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800000000000.0
+            Lblnum2.Text = "Smn"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2.628E+15
+            Lblnum2.Text = "Mes"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3.154E+16
+            Lblnum2.Text = "A.N"
+
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 0.001
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Segundo" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000000.0
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600000000.0
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400000000.0
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800000000.0
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2628000000000.0
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 31540000000000.0
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "M L s"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600000.0
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400000.0
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800000.0
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2628000000.0
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 31540000000.0
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Segundo" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2628000.0
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 31540000.0
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60000
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1440
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 10080
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 43800
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 525600
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 24
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 168
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 730
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 8760
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Día" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1440
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 24
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 7
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 30.417
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 365
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800000.0
+            Lblnum2.Text = "MLS"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 10080
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 168
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 7
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 4.345
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 52.143
+            Lblnum2.Text = "A N"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2.628E+15
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2628000000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2628000000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2628000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 43800
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 730
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 30.417
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 4.345
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 4.345
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 52.143
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3.154E+16
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 31540000000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 31540000000.0
+            Lblnum2.Text = "MLS"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 31540000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 525600
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 8760
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 365
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 52.143
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 12
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "A N"
+        End If
+    End Sub
+
+    Private Sub Btnalmacenamiento_Click(sender As Object, e As EventArgs) Handles Btnalmacenamiento.Click
+        If cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.001
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000001
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000000001
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000000000001
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000000000000001
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E-18
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E-21
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada1.Text = "Kilobyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7.8125
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1.0E+15
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada1.Text = "Megabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1.0E+18
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8000000.0
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7813
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada1.Text = "Gigabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000000.0
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1.0E+15
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8000000000.0
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7812000.0
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000000.0
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8000000000000.0
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7812000000.0
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum1.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8.0E+15
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7812000000000.0
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+15
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8.0E+18
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7.812E+15
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+18
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+15
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7.812E+18
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+18
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+15
+            lblnum1.Text = "G b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000000000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8.0E+15
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8.0E+18
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 9.223E+18
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 9.223E+18
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1024
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7.812
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7813
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7812000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7812000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7812000000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 976600000000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7.813E+18
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 9.223E+18
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1024
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Kb b"
+        End If
+    End Sub
 End Class
