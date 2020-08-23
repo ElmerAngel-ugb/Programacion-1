@@ -1242,7 +1242,7 @@
             Lblnum2.Text = "M l s"
         ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Segundos" Then
             Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000000.0
-            Lblnum2.Text = "Seng"
+            Lblnum2.Text = "Segundos"
         ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Minutos" Then
             Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000000000.0
             Lblnum2.Text = "Min"
