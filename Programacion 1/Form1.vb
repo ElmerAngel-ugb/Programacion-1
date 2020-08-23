@@ -614,4 +614,312 @@
         End If
 
     End Sub
+
+    Private Sub BtnMasa_Click(sender As Object, e As EventArgs) Handles BtnMasa.Click
+        If Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000
+            Lblnum7.Text = "Kg"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000000
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000000000
+            Lblnum7.Text = "Mg"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000000000000
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1.016
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1.102
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 157
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 2205
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Tonelada" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 35274
+            Lblnum7.Text = "oz"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000
+            Lblnum7.Text = "t"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000000.0
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000000000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1016
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 907
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 6.35
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 2.205
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Kilogramo" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 35.274
+            Lblnum7.Text = "oz"
+
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000000.0
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000
+            Lblnum7.Text = "ml"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1016000.0
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 907185
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 6350
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 454
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Gramo" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 28.35
+            Lblnum7.Text = "oz"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000000000.0
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000000.0
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1000
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1016000000.0
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 907200000.0
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 6350000.0
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 453592
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Miligramo" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 28350
+            Lblnum7.Text = "oz"
+
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Microgramo " Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000000000000.0
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000000000.0
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000000.0
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1000
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1016000000000.0
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 907200000000.0
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 6350000000.0
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 453600000.0
+            Lblnum7.Text = "libra"
+        ElseIf Cbxentrada7.Text = "Microgramo" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 28350000.0
+            Lblnum7.Text = "oz"
+
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1.016
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1016
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1016000.0
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1016000000.0
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1016000000000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 1.12
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 160
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 2240
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Tonelada Larga" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 35840
+            Lblnum7.Text = "oz"
+
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1.102
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 907
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 907185
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 907200000000.0
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 907120000000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 1.12
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 143
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 2000
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Tonelada corta" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 32000
+            Lblnum7.Text = "oz"
+
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 157
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 6.35
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 6350
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 6350000.0
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 6350000000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 160
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 143
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 14
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Stone" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 224
+            Lblnum7.Text = "oz"
+
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "oz"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 35274
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 35.274
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 28.35
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 28350
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 28350000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 35840
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 32000
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 224
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Onza" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 16
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Libra" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text)
+            Lblnum7.Text = "lb"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Tonelada" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 2205
+            Lblnum7.Text = "T"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Kilogramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 2.205
+            Lblnum7.Text = "kg"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Gramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 454
+            Lblnum7.Text = "g"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Miligramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 453592
+            Lblnum7.Text = "mg"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Microgramo" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 453600000.0
+            Lblnum7.Text = "ug"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Tonelada Larga" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 2240
+            Lblnum7.Text = "Lt"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Tonelada corta" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 2000
+            Lblnum7.Text = "St"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Stone" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) / 14
+            Lblnum7.Text = "st"
+        ElseIf Cbxentrada7.Text = "Libra" And Cbxsalida7.Text = "Onza" Then
+            Lblrespuesta7.Text = Val(Txtcodigo7.Text) * 16
+            Lblnum7.Text = "oz"
+        End If
+
+    End Sub
 End Class
