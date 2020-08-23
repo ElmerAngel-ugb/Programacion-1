@@ -38,6 +38,14 @@ Partial Class Form1
         Me.Btnlongitud1 = New System.Windows.Forms.Button()
         Me.lblnum = New System.Windows.Forms.Label()
         Me.lblnum1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Cbxentrada7 = New System.Windows.Forms.ComboBox()
+        Me.Cbxsalida7 = New System.Windows.Forms.ComboBox()
+        Me.Txtcodigo7 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Lblrespuesta7 = New System.Windows.Forms.Label()
+        Me.Lblnum7 = New System.Windows.Forms.Label()
+        Me.BtnMasa = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'BtnMoneda
@@ -70,10 +78,10 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(27, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 36)
+        Me.Label1.Size = New System.Drawing.Size(129, 36)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Moneda"
         '
@@ -134,10 +142,10 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(329, 39)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(132, 36)
+        Me.Label5.Size = New System.Drawing.Size(140, 36)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Longitud"
         '
@@ -186,11 +194,92 @@ Partial Class Form1
         Me.lblnum1.TabIndex = 15
         Me.lblnum1.Text = "..."
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(726, 39)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(95, 38)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Masa"
+        '
+        'Cbxentrada7
+        '
+        Me.Cbxentrada7.FormattingEnabled = True
+        Me.Cbxentrada7.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
+        Me.Cbxentrada7.Location = New System.Drawing.Point(732, 124)
+        Me.Cbxentrada7.Name = "Cbxentrada7"
+        Me.Cbxentrada7.Size = New System.Drawing.Size(163, 24)
+        Me.Cbxentrada7.TabIndex = 17
+        '
+        'Cbxsalida7
+        '
+        Me.Cbxsalida7.FormattingEnabled = True
+        Me.Cbxsalida7.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
+        Me.Cbxsalida7.Location = New System.Drawing.Point(732, 202)
+        Me.Cbxsalida7.Name = "Cbxsalida7"
+        Me.Cbxsalida7.Size = New System.Drawing.Size(163, 24)
+        Me.Cbxsalida7.TabIndex = 18
+        '
+        'Txtcodigo7
+        '
+        Me.Txtcodigo7.Location = New System.Drawing.Point(732, 78)
+        Me.Txtcodigo7.Name = "Txtcodigo7"
+        Me.Txtcodigo7.Size = New System.Drawing.Size(163, 22)
+        Me.Txtcodigo7.TabIndex = 19
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(688, 173)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(24, 24)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "A"
+        '
+        'Lblrespuesta7
+        '
+        Me.Lblrespuesta7.AutoSize = True
+        Me.Lblrespuesta7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Lblrespuesta7.Location = New System.Drawing.Point(872, 240)
+        Me.Lblrespuesta7.Name = "Lblrespuesta7"
+        Me.Lblrespuesta7.Size = New System.Drawing.Size(109, 24)
+        Me.Lblrespuesta7.TabIndex = 21
+        Me.Lblrespuesta7.Text = "Respuesta?"
+        '
+        'Lblnum7
+        '
+        Me.Lblnum7.AutoSize = True
+        Me.Lblnum7.Location = New System.Drawing.Point(955, 261)
+        Me.Lblnum7.Name = "Lblnum7"
+        Me.Lblnum7.Size = New System.Drawing.Size(28, 17)
+        Me.Lblnum7.TabIndex = 22
+        Me.Lblnum7.Text = "....."
+        '
+        'BtnMasa
+        '
+        Me.BtnMasa.Location = New System.Drawing.Point(715, 261)
+        Me.BtnMasa.Name = "BtnMasa"
+        Me.BtnMasa.Size = New System.Drawing.Size(106, 33)
+        Me.BtnMasa.TabIndex = 23
+        Me.BtnMasa.Text = "Masa"
+        Me.BtnMasa.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1004, 558)
+        Me.ClientSize = New System.Drawing.Size(1233, 558)
+        Me.Controls.Add(Me.BtnMasa)
+        Me.Controls.Add(Me.Lblnum7)
+        Me.Controls.Add(Me.Lblrespuesta7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Txtcodigo7)
+        Me.Controls.Add(Me.Cbxsalida7)
+        Me.Controls.Add(Me.Cbxentrada7)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.lblnum1)
         Me.Controls.Add(Me.lblnum)
         Me.Controls.Add(Me.lblrespuesta1)
@@ -230,4 +319,12 @@ Partial Class Form1
     Friend WithEvents Btnlongitud1 As Button
     Friend WithEvents lblnum As Label
     Friend WithEvents lblnum1 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Cbxentrada7 As ComboBox
+    Friend WithEvents Cbxsalida7 As ComboBox
+    Friend WithEvents Txtcodigo7 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Lblrespuesta7 As Label
+    Friend WithEvents Lblnum7 As Label
+    Friend WithEvents BtnMasa As Button
 End Class
