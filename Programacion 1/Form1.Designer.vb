@@ -46,6 +46,30 @@ Partial Class Form1
         Me.Lblrespuesta7 = New System.Windows.Forms.Label()
         Me.Lblnum7 = New System.Windows.Forms.Label()
         Me.BtnMasa = New System.Windows.Forms.Button()
+        Me.Btnvolumen = New System.Windows.Forms.Button()
+        Me.lblnum5 = New System.Windows.Forms.Label()
+        Me.lblrespuesta5 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Txtcódigo5 = New System.Windows.Forms.TextBox()
+        Me.cbxsalida5 = New System.Windows.Forms.ComboBox()
+        Me.cbxentrada5 = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label18 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnMoneda
@@ -198,7 +222,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft JhengHei UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(726, 39)
+        Me.Label3.Location = New System.Drawing.Point(785, 37)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 38)
         Me.Label3.TabIndex = 16
@@ -208,7 +232,7 @@ Partial Class Form1
         '
         Me.Cbxentrada7.FormattingEnabled = True
         Me.Cbxentrada7.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
-        Me.Cbxentrada7.Location = New System.Drawing.Point(732, 124)
+        Me.Cbxentrada7.Location = New System.Drawing.Point(774, 118)
         Me.Cbxentrada7.Name = "Cbxentrada7"
         Me.Cbxentrada7.Size = New System.Drawing.Size(163, 24)
         Me.Cbxentrada7.TabIndex = 17
@@ -217,14 +241,14 @@ Partial Class Form1
         '
         Me.Cbxsalida7.FormattingEnabled = True
         Me.Cbxsalida7.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
-        Me.Cbxsalida7.Location = New System.Drawing.Point(732, 202)
+        Me.Cbxsalida7.Location = New System.Drawing.Point(774, 196)
         Me.Cbxsalida7.Name = "Cbxsalida7"
         Me.Cbxsalida7.Size = New System.Drawing.Size(163, 24)
         Me.Cbxsalida7.TabIndex = 18
         '
         'Txtcodigo7
         '
-        Me.Txtcodigo7.Location = New System.Drawing.Point(732, 78)
+        Me.Txtcodigo7.Location = New System.Drawing.Point(774, 72)
         Me.Txtcodigo7.Name = "Txtcodigo7"
         Me.Txtcodigo7.Size = New System.Drawing.Size(163, 22)
         Me.Txtcodigo7.TabIndex = 19
@@ -233,7 +257,7 @@ Partial Class Form1
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(688, 173)
+        Me.Label6.Location = New System.Drawing.Point(730, 167)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(24, 24)
         Me.Label6.TabIndex = 20
@@ -243,7 +267,7 @@ Partial Class Form1
         '
         Me.Lblrespuesta7.AutoSize = True
         Me.Lblrespuesta7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.Lblrespuesta7.Location = New System.Drawing.Point(872, 240)
+        Me.Lblrespuesta7.Location = New System.Drawing.Point(914, 234)
         Me.Lblrespuesta7.Name = "Lblrespuesta7"
         Me.Lblrespuesta7.Size = New System.Drawing.Size(109, 24)
         Me.Lblrespuesta7.TabIndex = 21
@@ -252,7 +276,7 @@ Partial Class Form1
         'Lblnum7
         '
         Me.Lblnum7.AutoSize = True
-        Me.Lblnum7.Location = New System.Drawing.Point(955, 261)
+        Me.Lblnum7.Location = New System.Drawing.Point(997, 255)
         Me.Lblnum7.Name = "Lblnum7"
         Me.Lblnum7.Size = New System.Drawing.Size(28, 17)
         Me.Lblnum7.TabIndex = 22
@@ -260,18 +284,261 @@ Partial Class Form1
         '
         'BtnMasa
         '
-        Me.BtnMasa.Location = New System.Drawing.Point(715, 261)
+        Me.BtnMasa.Location = New System.Drawing.Point(757, 255)
         Me.BtnMasa.Name = "BtnMasa"
         Me.BtnMasa.Size = New System.Drawing.Size(106, 33)
         Me.BtnMasa.TabIndex = 23
         Me.BtnMasa.Text = "Masa"
         Me.BtnMasa.UseVisualStyleBackColor = True
         '
+        'Btnvolumen
+        '
+        Me.Btnvolumen.Location = New System.Drawing.Point(66, 544)
+        Me.Btnvolumen.Name = "Btnvolumen"
+        Me.Btnvolumen.Size = New System.Drawing.Size(106, 33)
+        Me.Btnvolumen.TabIndex = 31
+        Me.Btnvolumen.Text = "Volumen"
+        Me.Btnvolumen.UseVisualStyleBackColor = True
+        '
+        'lblnum5
+        '
+        Me.lblnum5.AutoSize = True
+        Me.lblnum5.Location = New System.Drawing.Point(306, 544)
+        Me.lblnum5.Name = "lblnum5"
+        Me.lblnum5.Size = New System.Drawing.Size(28, 17)
+        Me.lblnum5.TabIndex = 30
+        Me.lblnum5.Text = "....."
+        '
+        'lblrespuesta5
+        '
+        Me.lblrespuesta5.AutoSize = True
+        Me.lblrespuesta5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.lblrespuesta5.Location = New System.Drawing.Point(223, 523)
+        Me.lblrespuesta5.Name = "lblrespuesta5"
+        Me.lblrespuesta5.Size = New System.Drawing.Size(109, 24)
+        Me.lblrespuesta5.TabIndex = 29
+        Me.lblrespuesta5.Text = "Respuesta?"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(39, 456)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(24, 24)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "A"
+        '
+        'Txtcódigo5
+        '
+        Me.Txtcódigo5.Location = New System.Drawing.Point(83, 361)
+        Me.Txtcódigo5.Name = "Txtcódigo5"
+        Me.Txtcódigo5.Size = New System.Drawing.Size(163, 22)
+        Me.Txtcódigo5.TabIndex = 27
+        '
+        'cbxsalida5
+        '
+        Me.cbxsalida5.FormattingEnabled = True
+        Me.cbxsalida5.Items.AddRange(New Object() {"Litros", "Mililitros", "Cucharada estadounidense", "Onza liquida imperial", "Pinta estadounidense", "Metro cubico", "Pulgada cúbica", "Pie cúbico", "Galón estadounidense", "Galón Imperial"})
+        Me.cbxsalida5.Location = New System.Drawing.Point(83, 485)
+        Me.cbxsalida5.Name = "cbxsalida5"
+        Me.cbxsalida5.Size = New System.Drawing.Size(163, 24)
+        Me.cbxsalida5.TabIndex = 26
+        '
+        'cbxentrada5
+        '
+        Me.cbxentrada5.FormattingEnabled = True
+        Me.cbxentrada5.Items.AddRange(New Object() {"Litros", "Mililitros", "Cucharada estadounidense", "Onza liquida imperial", "Pinta estadounidense", "Metro cubico", "Pulgada cúbica", "Pie cúbico", "Galón estadounidense", "Galón Imperial"})
+        Me.cbxentrada5.Location = New System.Drawing.Point(83, 407)
+        Me.cbxentrada5.Name = "cbxentrada5"
+        Me.cbxentrada5.Size = New System.Drawing.Size(163, 24)
+        Me.cbxentrada5.TabIndex = 25
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft JhengHei UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(77, 322)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(149, 38)
+        Me.Label10.TabIndex = 24
+        Me.Label10.Text = "Volumen"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(395, 556)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(106, 33)
+        Me.Button2.TabIndex = 39
+        Me.Button2.Text = "Masa"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(655, 566)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(28, 17)
+        Me.Label11.TabIndex = 38
+        Me.Label11.Text = "....."
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Label12.Location = New System.Drawing.Point(572, 545)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(109, 24)
+        Me.Label12.TabIndex = 37
+        Me.Label12.Text = "Respuesta?"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(368, 468)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(24, 24)
+        Me.Label13.TabIndex = 36
+        Me.Label13.Text = "A"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(412, 373)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(163, 22)
+        Me.TextBox2.TabIndex = 35
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
+        Me.ComboBox3.Location = New System.Drawing.Point(412, 497)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(163, 24)
+        Me.ComboBox3.TabIndex = 34
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
+        Me.ComboBox4.Location = New System.Drawing.Point(412, 419)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(163, 24)
+        Me.ComboBox4.TabIndex = 33
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft JhengHei UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(406, 334)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(95, 38)
+        Me.Label14.TabIndex = 32
+        Me.Label14.Text = "Masa"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(774, 544)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(106, 33)
+        Me.Button3.TabIndex = 47
+        Me.Button3.Text = "Masa"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(1014, 544)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(28, 17)
+        Me.Label15.TabIndex = 46
+        Me.Label15.Text = "....."
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Label16.Location = New System.Drawing.Point(931, 523)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(109, 24)
+        Me.Label16.TabIndex = 45
+        Me.Label16.Text = "Respuesta?"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(747, 456)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(24, 24)
+        Me.Label17.TabIndex = 44
+        Me.Label17.Text = "A"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(791, 363)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(163, 22)
+        Me.TextBox3.TabIndex = 43
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
+        Me.ComboBox5.Location = New System.Drawing.Point(791, 485)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(163, 24)
+        Me.ComboBox5.TabIndex = 42
+        '
+        'ComboBox6
+        '
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
+        Me.ComboBox6.Location = New System.Drawing.Point(791, 407)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(163, 24)
+        Me.ComboBox6.TabIndex = 41
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft JhengHei UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(785, 322)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(95, 38)
+        Me.Label18.TabIndex = 40
+        Me.Label18.Text = "Masa"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1233, 558)
+        Me.ClientSize = New System.Drawing.Size(1288, 689)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.ComboBox5)
+        Me.Controls.Add(Me.ComboBox6)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Btnvolumen)
+        Me.Controls.Add(Me.lblnum5)
+        Me.Controls.Add(Me.lblrespuesta5)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Txtcódigo5)
+        Me.Controls.Add(Me.cbxsalida5)
+        Me.Controls.Add(Me.cbxentrada5)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.BtnMasa)
         Me.Controls.Add(Me.Lblnum7)
         Me.Controls.Add(Me.Lblrespuesta7)
@@ -327,4 +594,28 @@ Partial Class Form1
     Friend WithEvents Lblrespuesta7 As Label
     Friend WithEvents Lblnum7 As Label
     Friend WithEvents BtnMasa As Button
+    Friend WithEvents Btnvolumen As Button
+    Friend WithEvents lblnum5 As Label
+    Friend WithEvents lblrespuesta5 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Txtcódigo5 As TextBox
+    Friend WithEvents cbxsalida5 As ComboBox
+    Friend WithEvents cbxentrada5 As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label18 As Label
 End Class
