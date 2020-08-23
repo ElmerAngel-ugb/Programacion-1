@@ -1301,7 +1301,7 @@
             Lblnum2.Text = "M s"
         ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Milisegundos" Then
             Lblrespuesta2.Text = Val(txtcodigo2.Text)
-            Lblnum2.Text = "M l s"
+            Lblnum2.Text = "M L s"
         ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Segundos" Then
             Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000
             Lblnum2.Text = "Segundos"
