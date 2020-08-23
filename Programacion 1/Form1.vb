@@ -1229,4 +1229,316 @@
             lblnum5.Text = "P C"
         End If
     End Sub
+
+    Private Sub BtnTiempo_Click(sender As Object, e As EventArgs) Handles BtnTiempo.Click
+        If cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000000.0
+            Lblnum2.Text = "Seng"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000000000.0
+            Lblnum2.Text = "Min"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600000000000.0
+            Lblnum2.Text = "Hora"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400000000000.0
+            Lblnum2.Text = "Dia"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800000000000.0
+            Lblnum2.Text = "Smn"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2.628E+15
+            Lblnum2.Text = "Mes"
+        ElseIf cbxentrada2.Text = "Nanosegundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3.154E+16
+            Lblnum2.Text = "A.N"
+
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 0.001
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Segundo" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000000.0
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600000000.0
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400000000.0
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800000000.0
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2628000000000.0
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Microsegundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 31540000000000.0
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1000
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60000
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600000.0
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400000.0
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800000.0
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2628000000.0
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Milisegundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 31540000000.0
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1000
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Segundo" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 3600
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 86400
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 604800
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 2628000.0
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Segundos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 31540000.0
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60000
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 60
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 1440
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 10080
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 43800
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Minutos" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 525600
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3600
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 60
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 24
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 168
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 730
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Horas" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 8760
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Día" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 86400
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 1440
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 24
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 7
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 30.417
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Días" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 365
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800000000000.0
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800000.0
+            Lblnum2.Text = "MLS"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 604800
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 10080
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 168
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 7
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 4.345
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Semanas" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 52.143
+            Lblnum2.Text = "A N"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2.628E+15
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2628000000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2628000000.0
+            Lblnum2.Text = "M l s"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 2628000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 43800
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 730
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 30.417
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 4.345
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 4.345
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Mes" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 52.143
+            Lblnum2.Text = "A N"
+
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Nanosegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 3.154E+16
+            Lblnum2.Text = "N s"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Microsegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 31540000000000.0
+            Lblnum2.Text = "M s"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Milisegundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 31540000000.0
+            Lblnum2.Text = "MLS"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Segundos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 31540000.0
+            Lblnum2.Text = "Segundos"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Minutos" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 525600
+            Lblnum2.Text = "Minutos"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Horas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 8760
+            Lblnum2.Text = "Horas"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Días" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 365
+            Lblnum2.Text = "Dias"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Semanas" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) * 52.143
+            Lblnum2.Text = "Semanas"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Mes" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text) / 12
+            Lblnum2.Text = "Meses"
+        ElseIf cbxentrada2.Text = "Año natural" And cbxsalida2.Text = "Año natural" Then
+            Lblrespuesta2.Text = Val(txtcodigo2.Text)
+            Lblnum2.Text = "A N"
+        End If
+    End Sub
 End Class

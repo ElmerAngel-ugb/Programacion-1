@@ -54,13 +54,13 @@ Partial Class Form1
         Me.cbxsalida5 = New System.Windows.Forms.ComboBox()
         Me.cbxentrada5 = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.BtnTiempo = New System.Windows.Forms.Button()
+        Me.Lblnum2 = New System.Windows.Forms.Label()
+        Me.Lblrespuesta2 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.txtcodigo2 = New System.Windows.Forms.TextBox()
+        Me.cbxsalida2 = New System.Windows.Forms.ComboBox()
+        Me.cbxentrada2 = New System.Windows.Forms.ComboBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -74,6 +74,7 @@ Partial Class Form1
         '
         'BtnMoneda
         '
+        Me.BtnMoneda.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMoneda.Location = New System.Drawing.Point(83, 261)
         Me.BtnMoneda.Name = "BtnMoneda"
         Me.BtnMoneda.Size = New System.Drawing.Size(123, 34)
@@ -193,6 +194,7 @@ Partial Class Form1
         '
         'Btnlongitud1
         '
+        Me.Btnlongitud1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnlongitud1.Location = New System.Drawing.Point(423, 261)
         Me.Btnlongitud1.Name = "Btnlongitud1"
         Me.Btnlongitud1.Size = New System.Drawing.Size(123, 34)
@@ -284,6 +286,7 @@ Partial Class Form1
         '
         'BtnMasa
         '
+        Me.BtnMasa.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMasa.Location = New System.Drawing.Point(757, 255)
         Me.BtnMasa.Name = "BtnMasa"
         Me.BtnMasa.Size = New System.Drawing.Size(106, 33)
@@ -293,6 +296,7 @@ Partial Class Form1
         '
         'Btnvolumen
         '
+        Me.Btnvolumen.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnvolumen.Location = New System.Drawing.Point(66, 544)
         Me.Btnvolumen.Name = "Btnvolumen"
         Me.Btnvolumen.Size = New System.Drawing.Size(106, 33)
@@ -364,33 +368,34 @@ Partial Class Form1
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "Volumen"
         '
-        'Button2
+        'BtnTiempo
         '
-        Me.Button2.Location = New System.Drawing.Point(395, 556)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(106, 33)
-        Me.Button2.TabIndex = 39
-        Me.Button2.Text = "Masa"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnTiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnTiempo.Location = New System.Drawing.Point(395, 556)
+        Me.BtnTiempo.Name = "BtnTiempo"
+        Me.BtnTiempo.Size = New System.Drawing.Size(106, 33)
+        Me.BtnTiempo.TabIndex = 39
+        Me.BtnTiempo.Text = "Tiempo"
+        Me.BtnTiempo.UseVisualStyleBackColor = True
         '
-        'Label11
+        'Lblnum2
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(655, 566)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(28, 17)
-        Me.Label11.TabIndex = 38
-        Me.Label11.Text = "....."
+        Me.Lblnum2.AutoSize = True
+        Me.Lblnum2.Location = New System.Drawing.Point(655, 566)
+        Me.Lblnum2.Name = "Lblnum2"
+        Me.Lblnum2.Size = New System.Drawing.Size(28, 17)
+        Me.Lblnum2.TabIndex = 38
+        Me.Lblnum2.Text = "....."
         '
-        'Label12
+        'Lblrespuesta2
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
-        Me.Label12.Location = New System.Drawing.Point(572, 545)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(109, 24)
-        Me.Label12.TabIndex = 37
-        Me.Label12.Text = "Respuesta?"
+        Me.Lblrespuesta2.AutoSize = True
+        Me.Lblrespuesta2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!)
+        Me.Lblrespuesta2.Location = New System.Drawing.Point(572, 545)
+        Me.Lblrespuesta2.Name = "Lblrespuesta2"
+        Me.Lblrespuesta2.Size = New System.Drawing.Size(109, 24)
+        Me.Lblrespuesta2.TabIndex = 37
+        Me.Lblrespuesta2.Text = "Respuesta?"
         '
         'Label13
         '
@@ -402,30 +407,30 @@ Partial Class Form1
         Me.Label13.TabIndex = 36
         Me.Label13.Text = "A"
         '
-        'TextBox2
+        'txtcodigo2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(412, 373)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(163, 22)
-        Me.TextBox2.TabIndex = 35
+        Me.txtcodigo2.Location = New System.Drawing.Point(412, 373)
+        Me.txtcodigo2.Name = "txtcodigo2"
+        Me.txtcodigo2.Size = New System.Drawing.Size(163, 22)
+        Me.txtcodigo2.TabIndex = 35
         '
-        'ComboBox3
+        'cbxsalida2
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
-        Me.ComboBox3.Location = New System.Drawing.Point(412, 497)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(163, 24)
-        Me.ComboBox3.TabIndex = 34
+        Me.cbxsalida2.FormattingEnabled = True
+        Me.cbxsalida2.Items.AddRange(New Object() {"Nanosegundos", "Microsegundos", "Milisegundos", "Segundos", "Minutos", "Horas", "Días", "Semanas", "Mes ", "Año natural"})
+        Me.cbxsalida2.Location = New System.Drawing.Point(412, 497)
+        Me.cbxsalida2.Name = "cbxsalida2"
+        Me.cbxsalida2.Size = New System.Drawing.Size(163, 24)
+        Me.cbxsalida2.TabIndex = 34
         '
-        'ComboBox4
+        'cbxentrada2
         '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Items.AddRange(New Object() {"Tonelada", "Kilogramo", "Miligramo", "Microgramo", "Tonelada Larga", "Tonelada corta", "Stone", "Libra", "Onza"})
-        Me.ComboBox4.Location = New System.Drawing.Point(412, 419)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(163, 24)
-        Me.ComboBox4.TabIndex = 33
+        Me.cbxentrada2.FormattingEnabled = True
+        Me.cbxentrada2.Items.AddRange(New Object() {"Nanosegundos", "Microsegundos", "Milisegundos", "Segundos", "Minutos", "Horas", "Días", "Semanas", "Mes ", "Año natural"})
+        Me.cbxentrada2.Location = New System.Drawing.Point(412, 419)
+        Me.cbxentrada2.Name = "cbxentrada2"
+        Me.cbxentrada2.Size = New System.Drawing.Size(163, 24)
+        Me.cbxentrada2.TabIndex = 33
         '
         'Label14
         '
@@ -433,12 +438,13 @@ Partial Class Form1
         Me.Label14.Font = New System.Drawing.Font("Microsoft JhengHei UI", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(406, 334)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(95, 38)
+        Me.Label14.Size = New System.Drawing.Size(127, 38)
         Me.Label14.TabIndex = 32
-        Me.Label14.Text = "Masa"
+        Me.Label14.Text = "Tiempo"
         '
         'Button3
         '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(774, 544)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 33)
@@ -523,13 +529,13 @@ Partial Class Form1
         Me.Controls.Add(Me.ComboBox5)
         Me.Controls.Add(Me.ComboBox6)
         Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.BtnTiempo)
+        Me.Controls.Add(Me.Lblnum2)
+        Me.Controls.Add(Me.Lblrespuesta2)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.txtcodigo2)
+        Me.Controls.Add(Me.cbxsalida2)
+        Me.Controls.Add(Me.cbxentrada2)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Btnvolumen)
         Me.Controls.Add(Me.lblnum5)
@@ -602,13 +608,13 @@ Partial Class Form1
     Friend WithEvents cbxsalida5 As ComboBox
     Friend WithEvents cbxentrada5 As ComboBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents BtnTiempo As Button
+    Friend WithEvents Lblnum2 As Label
+    Friend WithEvents Lblrespuesta2 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents txtcodigo2 As TextBox
+    Friend WithEvents cbxsalida2 As ComboBox
+    Friend WithEvents cbxentrada2 As ComboBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents Label15 As Label
