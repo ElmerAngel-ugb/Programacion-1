@@ -1541,4 +1541,308 @@
             Lblnum2.Text = "A N"
         End If
     End Sub
+
+    Private Sub Btnalmacenamiento_Click(sender As Object, e As EventArgs) Handles Btnalmacenamiento.Click
+        If cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.001
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000001
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000000001
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000000000001
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 0.000000000000001
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E-18
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E-21
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada1.Text = "Kilobyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Kilobyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7.8125
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1.0E+15
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada1.Text = "Megabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1.0E+18
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8000000.0
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Megabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7813
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada1.Text = "Gigabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000000.0
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1.0E+15
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8000000000.0
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Gigabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7812000.0
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000000.0
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8000000000000.0
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Terabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7812000000.0
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000000.0
+            lblnum1.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8.0E+15
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Petabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7812000000000.0
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+15
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000000.0
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 8.0E+18
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Exabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7.812E+15
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+18
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+15
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1000
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Zettabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 7.812E+18
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+18
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1.0E+15
+            lblnum1.Text = "G b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1000
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Yottabyte" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 9.223E+18
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000000.0
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000000000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8000000000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8.0E+15
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 8.0E+18
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 9.223E+18
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 9.223E+18
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Bit" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 1024
+            lblnum8.Text = "Kb b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Kilobyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7.812
+            lblnum8.Text = "K b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Megabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7813
+            lblnum8.Text = "M b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Gigabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7812000.0
+            lblnum8.Text = "G b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Terabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7812000000.0
+            lblnum8.Text = "T b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Petabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7812000000000.0
+            lblnum8.Text = "P b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Exabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 976600000000000.0
+            lblnum8.Text = "E b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Zettabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 7.813E+18
+            lblnum8.Text = "Z b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Yottabyte" Then
+            lblr8.Text = Val(txtcodigo1.Text) / 9.223E+18
+            lblnum8.Text = "Y b"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Bit" Then
+            lblr8.Text = Val(txtcodigo1.Text) * 1024
+            lblnum8.Text = "Bit"
+        ElseIf cbxentrada8.Text = "Kibibit" And cbxsalida8.Text = "Kibibit" Then
+            lblr8.Text = Val(txtcodigo1.Text)
+            lblnum8.Text = "Kb b"
+        End If
+    End Sub
 End Class
