@@ -1,44 +1,40 @@
 ﻿Public Class Form1
-    Private Sub grdEstadistica_KeyUp(sender As Object, e As KeyEventArgs) Handles grdEstadistica.KeyUp
-        Dim nfilas = grdEstadistica.Rows.Count - 1,
-            totalf1 = 0,
-            totalx1xf1 = 0.0,
-            totalx21xf1 = 0.0
-        Dim fila As New DataGridViewRow
-        For i = 0 To nfilas - 1
-            fila = grdEstadistica.Rows(i)
-            Dim x1 = 0, f1 = 0
-            If fila.Cells("x1").Value <> "" Then
-                x1 = Integer.Parse(fila.Cells("x1").Value.ToString())
-            End If
-            If fila.Cells("f1").Value <> "" Then
-                f1 = Integer.Parse(fila.Cells("f1").Value.ToString())
-            End If
-            totalf1 += f1
-            totalx1xf1 += x1 * f1
-            totalx21xf1 += x1 ^ 2 * f1
+    Dim objConversor = New conversores()
 
-            fila.Cells("n1").Value = totalf1.ToString()
-            fila.Cells("x1xf1").Value = (x1 * f1).ToString()
-            fila.Cells("x21xf1").Value = (x1 ^ 2 * f1).ToString()
-        Next
-        lbltotalf1.Text = totalf1.ToString()
-        lbltotalx1xf1.Text = totalx1xf1.ToString()
-        lbltotalx21xf1.Text = totalx21xf1.ToString()
+    Private Sub cbotipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbotipo.SelectedIndexChanged
+        cbode.Items.Clear()
+        cbode.Text = ""
+        cbode.Items.AddRange(objConversor.etiquetas(cbotipo.SelectedIndex))
 
-        Dim media = Math.Round(totalx1xf1 / totalf1, 2),
-            varianza = Math.Round(totalx21xf1 / totalf1 - media ^ 2, 2)
-        lblRespuestaMedia.Text = media.ToString()
-        lblRespuestaVarianza.Text = varianza.ToString()
-        lblRespuestaDesvTipica.Text = Math.Round(Math.Sqrt(varianza), 2).ToString()
-
+        cboa.Items.Clear()
+        cboa.Text = ""
+        cboa.Items.AddRange(objConversor.etiquetas(cbotipo.SelectedIndex))
     End Sub
-    Dim objEstadistica As New Estadistica
-    Private Sub btnMediaAritmetica_Click(sender As Object, e As EventArgs)
-        lblRespuestaMedia.Text = objEstadistica.calcularMedia(txtserie.Text.Split(","))
-        lblRespuestaVarianza.Text = objEstadistica.calcularVarianza(txtserie.Text.Split(","))
-        lblRespuestaDesvTipica.Text = objEstadistica.calcularDesvTipica(txtserie.Text.Split(","))
+
+    Private Sub btnConvertir_Click(sender As Object, e As EventArgs) Handles btnConvertir.Click
+        lblrespuesta.Text = "Respuesta: " + objConversor.convertir(cbotipo.SelectedIndex, cbode.SelectedIndex, cboa.SelectedIndex, txtcantidad.Text).ToString() + " " + objConversor.etiquetas(cbotipo.SelectedIndex)(cboa.SelectedIndex)
     End Sub
+End Class
+
+Class conversores
+    Public etiquetas()() As String = {
+        New String() {"Dolar", "Euro", "Quetzales", "Lempira", "Colon SV", "Cordoba", "Colon CR"},
+        New String() {"Metro", "CM", "Pulgadas", "Pies", "Varas", "Yardas", "Km", "Millas"},
+        New String() {"Libra", "Gramos", "Kilogramos", "Onzas", "Quintales", "Toneladas"},
+        New String() {"MB", "Bit", "Byte", "KB", "GB", "TB"},
+        New String() {"Hora", "Segundos", "Minutos", "Dias", "Semana", "Meses", "Años"}
+    }
+    Public valores()() As Double = {
+        New Double() {1, 0.85, 7.74, 24.8, 8.75, 34.6, 597.23},
+        New Double() {1, 100, 39.3701, 3.28084, 1.1963081929167, 1.09361, 0.001, 0.000621371},
+        New Double() {1, 453.592, 0.453592, 16, 0.01, 0.000453592},
+        New Double() {1, 8000000.0, 1000000.0, 1000, 0.001, 0.000001},
+        New Double() {1, 3600, 60, 0.0416667, 0.00595238, 0.00136986, 0.000114155}
+    }
+    Public Function convertir(ByVal tipo As Int16, ByVal de As Int16, ByVal a As Int16, ByVal cantidad As Double)
+        Return valores(tipo)(a) / valores(tipo)(de) * cantidad
+    End Function
+
 End Class
 
 
