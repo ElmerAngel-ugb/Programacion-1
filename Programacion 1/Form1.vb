@@ -1,35 +1,44 @@
 ﻿Public Class Form1
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        'Dim es una palabra reservada para declara una variable
-        Dim num1, num2, respuesta As Double
-        num1 = txtnum1.Text
-        num2 = txtnum2.Text
-        If optSuma.Checked Then
-            lblrespuesta.Text = num1 + num2
-        End If
+    Private Sub grdEstadistica_KeyUp(sender As Object, e As KeyEventArgs) Handles grdEstadistica.KeyUp
+        Dim nfilas = grdEstadistica.Rows.Count - 1,
+            totalf1 = 0,
+            totalx1xf1 = 0.0,
+            totalx21xf1 = 0.0
+        Dim fila As New DataGridViewRow
+        For i = 0 To nfilas - 1
+            fila = grdEstadistica.Rows(i)
+            Dim x1 = 0, f1 = 0
+            If fila.Cells("x1").Value <> "" Then
+                x1 = Integer.Parse(fila.Cells("x1").Value.ToString())
+            End If
+            If fila.Cells("f1").Value <> "" Then
+                f1 = Integer.Parse(fila.Cells("f1").Value.ToString())
+            End If
+            totalf1 += f1
+            totalx1xf1 += x1 * f1
+            totalx21xf1 += x1 ^ 2 * f1
 
-        If optResta.Checked Then
-            lblrespuesta.Text = num1 - num2
-        End If
+            fila.Cells("n1").Value = totalf1.ToString()
+            fila.Cells("x1xf1").Value = (x1 * f1).ToString()
+            fila.Cells("x21xf1").Value = (x1 ^ 2 * f1).ToString()
+        Next
+        lbltotalf1.Text = totalf1.ToString()
+        lbltotalx1xf1.Text = totalx1xf1.ToString()
+        lbltotalx21xf1.Text = totalx21xf1.ToString()
 
-        If optMultiplicacion.Checked Then
-            lblrespuesta.Text = num1 * num2
-        End If
+        Dim media = Math.Round(totalx1xf1 / totalf1, 2),
+            varianza = Math.Round(totalx21xf1 / totalf1 - media ^ 2, 2)
+        lblRespuestaMedia.Text = media.ToString()
+        lblRespuestaVarianza.Text = varianza.ToString()
+        lblRespuestaDesvTipica.Text = Math.Round(Math.Sqrt(varianza), 2).ToString()
 
-        If optDivision.Checked Then
-            lblrespuesta.Text = num1 / num2
-        End If
-
-        If optPortsentaje.Checked Then
-            lblrespuesta.Text = num1 * num2 / 100
-        End If
-
-        If optExponenciacion.Checked Then
-            lblrespuesta.Text = num1 ^ num2
-        End If
-
-        If optMod.Checked Then
-            lblrespuesta.Text = num1 Mod num2
-        End If
+    End Sub
+    Dim objEstadistica As New Estadistica
+    Private Sub btnMediaAritmetica_Click(sender As Object, e As EventArgs)
+        lblRespuestaMedia.Text = objEstadistica.calcularMedia(txtserie.Text.Split(","))
+        lblRespuestaVarianza.Text = objEstadistica.calcularVarianza(txtserie.Text.Split(","))
+        lblRespuestaDesvTipica.Text = objEstadistica.calcularDesvTipica(txtserie.Text.Split(","))
     End Sub
 End Class
+
+
