@@ -22,76 +22,59 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboDepto = New System.Windows.Forms.ComboBox()
-        Me.cboMun = New System.Windows.Forms.ComboBox()
-        Me.cboArea = New System.Windows.Forms.ComboBox()
+        Me.lblnumero = New System.Windows.Forms.Label()
+        Me.lblRespuestaRomano = New System.Windows.Forms.Label()
+        Me.txtnumero = New System.Windows.Forms.TextBox()
+        Me.btnCalcular = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblnumero
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(326, 115)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 17)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Mun:"
+        Me.lblnumero.AutoSize = True
+        Me.lblnumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnumero.Location = New System.Drawing.Point(153, 113)
+        Me.lblnumero.Name = "lblnumero"
+        Me.lblnumero.Size = New System.Drawing.Size(74, 20)
+        Me.lblnumero.TabIndex = 0
+        Me.lblnumero.Text = "Capital:"
         '
-        'Label2
+        'lblRespuestaRomano
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(676, 111)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 17)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Area:"
+        Me.lblRespuestaRomano.AutoSize = True
+        Me.lblRespuestaRomano.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRespuestaRomano.Location = New System.Drawing.Point(524, 111)
+        Me.lblRespuestaRomano.Name = "lblRespuestaRomano"
+        Me.lblRespuestaRomano.Size = New System.Drawing.Size(170, 20)
+        Me.lblRespuestaRomano.TabIndex = 1
+        Me.lblRespuestaRomano.Text = "Numero Romano: ?"
         '
-        'Label4
+        'txtnumero
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(32, 118)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 17)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Depto:"
+        Me.txtnumero.Location = New System.Drawing.Point(233, 111)
+        Me.txtnumero.Name = "txtnumero"
+        Me.txtnumero.Size = New System.Drawing.Size(285, 22)
+        Me.txtnumero.TabIndex = 2
         '
-        'cboDepto
+        'btnCalcular
         '
-        Me.cboDepto.FormattingEnabled = True
-        Me.cboDepto.Location = New System.Drawing.Point(89, 115)
-        Me.cboDepto.Name = "cboDepto"
-        Me.cboDepto.Size = New System.Drawing.Size(222, 24)
-        Me.cboDepto.TabIndex = 5
-        '
-        'cboMun
-        '
-        Me.cboMun.FormattingEnabled = True
-        Me.cboMun.Location = New System.Drawing.Point(383, 111)
-        Me.cboMun.Name = "cboMun"
-        Me.cboMun.Size = New System.Drawing.Size(250, 24)
-        Me.cboMun.TabIndex = 6
-        '
-        'cboArea
-        '
-        Me.cboArea.FormattingEnabled = True
-        Me.cboArea.Location = New System.Drawing.Point(733, 111)
-        Me.cboArea.Name = "cboArea"
-        Me.cboArea.Size = New System.Drawing.Size(233, 24)
-        Me.cboArea.TabIndex = 7
+        Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalcular.ForeColor = System.Drawing.Color.Red
+        Me.btnCalcular.Location = New System.Drawing.Point(304, 279)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(177, 61)
+        Me.btnCalcular.TabIndex = 3
+        Me.btnCalcular.Text = "Calcular"
+        Me.btnCalcular.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1017, 498)
-        Me.Controls.Add(Me.cboArea)
-        Me.Controls.Add(Me.cboMun)
-        Me.Controls.Add(Me.cboDepto)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnCalcular)
+        Me.Controls.Add(Me.txtnumero)
+        Me.Controls.Add(Me.lblRespuestaRomano)
+        Me.Controls.Add(Me.lblnumero)
         Me.Name = "Form1"
         Me.Text = "Combos_dinamicos_Depto_Mun"
         Me.ResumeLayout(False)
@@ -99,10 +82,8 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents cboDepto As ComboBox
-    Friend WithEvents cboMun As ComboBox
-    Friend WithEvents cboArea As ComboBox
+    Friend WithEvents lblnumero As Label
+    Friend WithEvents lblRespuestaRomano As Label
+    Friend WithEvents txtnumero As TextBox
+    Friend WithEvents btnCalcular As Button
 End Class
