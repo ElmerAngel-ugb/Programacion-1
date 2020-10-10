@@ -34,7 +34,7 @@ Class conversores
     Public Function convertir(ByVal tipo As Int16, ByVal de As Int16, ByVal a As Int16, ByVal cantidad As Double)
         Return valores(tipo)(a) / valores(tipo)(de) * cantidad
     End Function
-
 End Class
+
 
 
