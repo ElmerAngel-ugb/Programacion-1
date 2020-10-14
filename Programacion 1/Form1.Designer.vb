@@ -22,136 +22,317 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnConvertir = New System.Windows.Forms.Button()
-        Me.lblrespuesta = New System.Windows.Forms.Label()
-        Me.lblcantidad = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtdescripcion = New System.Windows.Forms.TextBox()
+        Me.lbldescripcion = New System.Windows.Forms.Label()
+        Me.txtprecio = New System.Windows.Forms.TextBox()
+        Me.lblprecio = New System.Windows.Forms.Label()
         Me.txtcantidad = New System.Windows.Forms.TextBox()
-        Me.cbotipo = New System.Windows.Forms.ComboBox()
-        Me.lbltipo = New System.Windows.Forms.Label()
-        Me.cboa = New System.Windows.Forms.ComboBox()
-        Me.cbode = New System.Windows.Forms.ComboBox()
-        Me.lbla = New System.Windows.Forms.Label()
+        Me.lblcantidad = New System.Windows.Forms.Label()
+        Me.txtmedicamento = New System.Windows.Forms.TextBox()
+        Me.lblnommedicamento = New System.Windows.Forms.Label()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
+        Me.lblcodigo = New System.Windows.Forms.Label()
+        Me.txtidmedicamento = New System.Windows.Forms.TextBox()
+        Me.lblmedicamento = New System.Windows.Forms.Label()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnnavegar1 = New System.Windows.Forms.Button()
+        Me.btnnavegar2 = New System.Windows.Forms.Button()
+        Me.btn2 = New System.Windows.Forms.Button()
+        Me.btn1 = New System.Windows.Forms.Button()
+        Me.lblnum1 = New System.Windows.Forms.Label()
+        Me.btnnuevo = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btneliminar = New System.Windows.Forms.Button()
+        Me.btnbuscar = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnConvertir
+        'GroupBox1
         '
-        Me.btnConvertir.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConvertir.Location = New System.Drawing.Point(188, 249)
-        Me.btnConvertir.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnConvertir.Name = "btnConvertir"
-        Me.btnConvertir.Size = New System.Drawing.Size(229, 90)
-        Me.btnConvertir.TabIndex = 24
-        Me.btnConvertir.Text = "Convertir"
-        Me.btnConvertir.UseVisualStyleBackColor = True
+        Me.GroupBox1.Controls.Add(Me.GroupBox3)
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.txtdescripcion)
+        Me.GroupBox1.Controls.Add(Me.lbldescripcion)
+        Me.GroupBox1.Controls.Add(Me.txtprecio)
+        Me.GroupBox1.Controls.Add(Me.lblprecio)
+        Me.GroupBox1.Controls.Add(Me.txtcantidad)
+        Me.GroupBox1.Controls.Add(Me.lblcantidad)
+        Me.GroupBox1.Controls.Add(Me.txtmedicamento)
+        Me.GroupBox1.Controls.Add(Me.lblnommedicamento)
+        Me.GroupBox1.Controls.Add(Me.txtcodigo)
+        Me.GroupBox1.Controls.Add(Me.lblcodigo)
+        Me.GroupBox1.Controls.Add(Me.txtidmedicamento)
+        Me.GroupBox1.Controls.Add(Me.lblmedicamento)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(921, 488)
+        Me.GroupBox1.TabIndex = 0
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Medicamentos."
         '
-        'lblrespuesta
+        'txtdescripcion
         '
-        Me.lblrespuesta.AutoSize = True
-        Me.lblrespuesta.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblrespuesta.Location = New System.Drawing.Point(485, 283)
-        Me.lblrespuesta.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblrespuesta.Name = "lblrespuesta"
-        Me.lblrespuesta.Size = New System.Drawing.Size(135, 24)
-        Me.lblrespuesta.TabIndex = 23
-        Me.lblrespuesta.Text = "Respuesta: ?"
+        Me.txtdescripcion.Location = New System.Drawing.Point(242, 295)
+        Me.txtdescripcion.Name = "txtdescripcion"
+        Me.txtdescripcion.Size = New System.Drawing.Size(146, 27)
+        Me.txtdescripcion.TabIndex = 23
+        '
+        'lbldescripcion
+        '
+        Me.lbldescripcion.AutoSize = True
+        Me.lbldescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbldescripcion.Location = New System.Drawing.Point(120, 295)
+        Me.lbldescripcion.Name = "lbldescripcion"
+        Me.lbldescripcion.Size = New System.Drawing.Size(116, 20)
+        Me.lbldescripcion.TabIndex = 22
+        Me.lbldescripcion.Text = "Descripcion:"
+        '
+        'txtprecio
+        '
+        Me.txtprecio.Location = New System.Drawing.Point(195, 234)
+        Me.txtprecio.Name = "txtprecio"
+        Me.txtprecio.Size = New System.Drawing.Size(146, 27)
+        Me.txtprecio.TabIndex = 21
+        '
+        'lblprecio
+        '
+        Me.lblprecio.AutoSize = True
+        Me.lblprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblprecio.Location = New System.Drawing.Point(120, 234)
+        Me.lblprecio.Name = "lblprecio"
+        Me.lblprecio.Size = New System.Drawing.Size(69, 20)
+        Me.lblprecio.TabIndex = 20
+        Me.lblprecio.Text = "Precio:"
+        '
+        'txtcantidad
+        '
+        Me.txtcantidad.Location = New System.Drawing.Point(268, 181)
+        Me.txtcantidad.Name = "txtcantidad"
+        Me.txtcantidad.Size = New System.Drawing.Size(146, 27)
+        Me.txtcantidad.TabIndex = 19
         '
         'lblcantidad
         '
         Me.lblcantidad.AutoSize = True
-        Me.lblcantidad.Location = New System.Drawing.Point(480, 186)
-        Me.lblcantidad.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblcantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcantidad.Location = New System.Drawing.Point(120, 181)
         Me.lblcantidad.Name = "lblcantidad"
-        Me.lblcantidad.Size = New System.Drawing.Size(68, 17)
-        Me.lblcantidad.TabIndex = 22
-        Me.lblcantidad.Text = "Cantidad:"
+        Me.lblcantidad.Size = New System.Drawing.Size(149, 20)
+        Me.lblcantidad.TabIndex = 18
+        Me.lblcantidad.Text = "Cant_disponible:"
         '
-        'txtcantidad
+        'txtmedicamento
         '
-        Me.txtcantidad.Location = New System.Drawing.Point(557, 182)
-        Me.txtcantidad.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtcantidad.Name = "txtcantidad"
-        Me.txtcantidad.Size = New System.Drawing.Size(132, 22)
-        Me.txtcantidad.TabIndex = 21
+        Me.txtmedicamento.Location = New System.Drawing.Point(253, 124)
+        Me.txtmedicamento.Name = "txtmedicamento"
+        Me.txtmedicamento.Size = New System.Drawing.Size(146, 27)
+        Me.txtmedicamento.TabIndex = 17
         '
-        'cbotipo
+        'lblnommedicamento
         '
-        Me.cbotipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbotipo.FormattingEnabled = True
-        Me.cbotipo.Items.AddRange(New Object() {"Monedas", "Longitud", "Masa", "Almacenamiento", "Tiempo"})
-        Me.cbotipo.Location = New System.Drawing.Point(311, 112)
-        Me.cbotipo.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbotipo.Name = "cbotipo"
-        Me.cbotipo.Size = New System.Drawing.Size(160, 24)
-        Me.cbotipo.TabIndex = 20
+        Me.lblnommedicamento.AutoSize = True
+        Me.lblnommedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnommedicamento.Location = New System.Drawing.Point(120, 124)
+        Me.lblnommedicamento.Name = "lblnommedicamento"
+        Me.lblnommedicamento.Size = New System.Drawing.Size(126, 20)
+        Me.lblnommedicamento.TabIndex = 16
+        Me.lblnommedicamento.Text = "Medicamento:"
         '
-        'lbltipo
+        'txtcodigo
         '
-        Me.lbltipo.AutoSize = True
-        Me.lbltipo.Location = New System.Drawing.Point(261, 116)
-        Me.lbltipo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltipo.Name = "lbltipo"
-        Me.lbltipo.Size = New System.Drawing.Size(40, 17)
-        Me.lbltipo.TabIndex = 19
-        Me.lbltipo.Text = "Tipo:"
+        Me.txtcodigo.Location = New System.Drawing.Point(201, 83)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(146, 27)
+        Me.txtcodigo.TabIndex = 15
         '
-        'cboa
+        'lblcodigo
         '
-        Me.cboa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboa.FormattingEnabled = True
-        Me.cboa.Location = New System.Drawing.Point(311, 186)
-        Me.cboa.Margin = New System.Windows.Forms.Padding(4)
-        Me.cboa.Name = "cboa"
-        Me.cboa.Size = New System.Drawing.Size(160, 24)
-        Me.cboa.TabIndex = 18
+        Me.lblcodigo.AutoSize = True
+        Me.lblcodigo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblcodigo.Location = New System.Drawing.Point(121, 83)
+        Me.lblcodigo.Name = "lblcodigo"
+        Me.lblcodigo.Size = New System.Drawing.Size(73, 20)
+        Me.lblcodigo.TabIndex = 14
+        Me.lblcodigo.Text = "Codigo:"
         '
-        'cbode
+        'txtidmedicamento
         '
-        Me.cbode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbode.FormattingEnabled = True
-        Me.cbode.Location = New System.Drawing.Point(111, 186)
-        Me.cbode.Margin = New System.Windows.Forms.Padding(4)
-        Me.cbode.Name = "cbode"
-        Me.cbode.Size = New System.Drawing.Size(160, 24)
-        Me.cbode.TabIndex = 17
+        Me.txtidmedicamento.Location = New System.Drawing.Point(268, 40)
+        Me.txtidmedicamento.Name = "txtidmedicamento"
+        Me.txtidmedicamento.Size = New System.Drawing.Size(131, 27)
+        Me.txtidmedicamento.TabIndex = 13
         '
-        'lbla
+        'lblmedicamento
         '
-        Me.lbla.AutoSize = True
-        Me.lbla.Location = New System.Drawing.Point(280, 189)
-        Me.lbla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbla.Name = "lbla"
-        Me.lbla.Size = New System.Drawing.Size(21, 17)
-        Me.lbla.TabIndex = 16
-        Me.lbla.Text = "A:"
+        Me.lblmedicamento.AutoSize = True
+        Me.lblmedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmedicamento.Location = New System.Drawing.Point(120, 40)
+        Me.lblmedicamento.Name = "lblmedicamento"
+        Me.lblmedicamento.Size = New System.Drawing.Size(141, 20)
+        Me.lblmedicamento.TabIndex = 12
+        Me.lblmedicamento.Text = "idmedicamento:"
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.lblnum1)
+        Me.GroupBox2.Controls.Add(Me.btn2)
+        Me.GroupBox2.Controls.Add(Me.btnnavegar2)
+        Me.GroupBox2.Controls.Add(Me.btn1)
+        Me.GroupBox2.Controls.Add(Me.btnnavegar1)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 404)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(382, 69)
+        Me.GroupBox2.TabIndex = 24
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "navegar"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btnbuscar)
+        Me.GroupBox3.Controls.Add(Me.btneliminar)
+        Me.GroupBox3.Controls.Add(Me.Button1)
+        Me.GroupBox3.Controls.Add(Me.btnnuevo)
+        Me.GroupBox3.Location = New System.Drawing.Point(439, 404)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(445, 69)
+        Me.GroupBox3.TabIndex = 25
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Editar."
+        '
+        'btnnavegar1
+        '
+        Me.btnnavegar1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnnavegar1.Location = New System.Drawing.Point(0, 26)
+        Me.btnnavegar1.Name = "btnnavegar1"
+        Me.btnnavegar1.Size = New System.Drawing.Size(65, 37)
+        Me.btnnavegar1.TabIndex = 26
+        Me.btnnavegar1.Text = "l<"
+        Me.btnnavegar1.UseVisualStyleBackColor = False
+        '
+        'btnnavegar2
+        '
+        Me.btnnavegar2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnnavegar2.Location = New System.Drawing.Point(71, 26)
+        Me.btnnavegar2.Name = "btnnavegar2"
+        Me.btnnavegar2.Size = New System.Drawing.Size(65, 37)
+        Me.btnnavegar2.TabIndex = 27
+        Me.btnnavegar2.Text = "<"
+        Me.btnnavegar2.UseVisualStyleBackColor = False
+        '
+        'btn2
+        '
+        Me.btn2.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btn2.Location = New System.Drawing.Point(307, 26)
+        Me.btn2.Name = "btn2"
+        Me.btn2.Size = New System.Drawing.Size(60, 37)
+        Me.btn2.TabIndex = 29
+        Me.btn2.Text = ">l"
+        Me.btn2.UseVisualStyleBackColor = False
+        '
+        'btn1
+        '
+        Me.btn1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btn1.Location = New System.Drawing.Point(241, 26)
+        Me.btn1.Name = "btn1"
+        Me.btn1.Size = New System.Drawing.Size(60, 37)
+        Me.btn1.TabIndex = 28
+        Me.btn1.Text = ">"
+        Me.btn1.UseVisualStyleBackColor = False
+        '
+        'lblnum1
+        '
+        Me.lblnum1.AutoSize = True
+        Me.lblnum1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnum1.Location = New System.Drawing.Point(154, 43)
+        Me.lblnum1.Name = "lblnum1"
+        Me.lblnum1.Size = New System.Drawing.Size(54, 17)
+        Me.lblnum1.TabIndex = 30
+        Me.lblnum1.Text = "1 de n"
+        '
+        'btnnuevo
+        '
+        Me.btnnuevo.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnnuevo.Location = New System.Drawing.Point(15, 26)
+        Me.btnnuevo.Name = "btnnuevo"
+        Me.btnnuevo.Size = New System.Drawing.Size(84, 37)
+        Me.btnnuevo.TabIndex = 0
+        Me.btnnuevo.Text = "Nuevo"
+        Me.btnnuevo.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Button1.Location = New System.Drawing.Point(105, 26)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(105, 37)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "Modificar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btneliminar
+        '
+        Me.btneliminar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btneliminar.Location = New System.Drawing.Point(216, 26)
+        Me.btneliminar.Name = "btneliminar"
+        Me.btneliminar.Size = New System.Drawing.Size(92, 37)
+        Me.btneliminar.TabIndex = 26
+        Me.btneliminar.Text = "Eliminar"
+        Me.btneliminar.UseVisualStyleBackColor = False
+        '
+        'btnbuscar
+        '
+        Me.btnbuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnbuscar.Location = New System.Drawing.Point(314, 23)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(84, 37)
+        Me.btnbuscar.TabIndex = 26
+        Me.btnbuscar.Text = "Buscar"
+        Me.btnbuscar.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.btnConvertir)
-        Me.Controls.Add(Me.lblrespuesta)
-        Me.Controls.Add(Me.lblcantidad)
-        Me.Controls.Add(Me.txtcantidad)
-        Me.Controls.Add(Me.cbotipo)
-        Me.Controls.Add(Me.lbltipo)
-        Me.Controls.Add(Me.cboa)
-        Me.Controls.Add(Me.cbode)
-        Me.Controls.Add(Me.lbla)
+        Me.ClientSize = New System.Drawing.Size(954, 512)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
-        Me.Text = "Calculadora Basica"
+        Me.Text = "Medicamentos"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents btnConvertir As Button
-    Friend WithEvents lblrespuesta As Label
-    Friend WithEvents lblcantidad As Label
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents btnbuscar As Button
+    Friend WithEvents btneliminar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btnnuevo As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents lblnum1 As Label
+    Friend WithEvents btn2 As Button
+    Friend WithEvents btnnavegar2 As Button
+    Friend WithEvents btn1 As Button
+    Friend WithEvents btnnavegar1 As Button
+    Friend WithEvents txtdescripcion As TextBox
+    Friend WithEvents lbldescripcion As Label
+    Friend WithEvents txtprecio As TextBox
+    Friend WithEvents lblprecio As Label
     Friend WithEvents txtcantidad As TextBox
-    Friend WithEvents cbotipo As ComboBox
-    Friend WithEvents lbltipo As Label
-    Friend WithEvents cboa As ComboBox
-    Friend WithEvents cbode As ComboBox
-    Friend WithEvents lbla As Label
+    Friend WithEvents lblcantidad As Label
+    Friend WithEvents txtmedicamento As TextBox
+    Friend WithEvents lblnommedicamento As Label
+    Friend WithEvents txtcodigo As TextBox
+    Friend WithEvents lblcodigo As Label
+    Friend WithEvents txtidmedicamento As TextBox
+    Friend WithEvents lblmedicamento As Label
 End Class

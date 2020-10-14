@@ -1,7 +1,7 @@
 ﻿Public Class Form1
     Dim objConversor = New conversores()
 
-    Private Sub cbotipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbotipo.SelectedIndexChanged
+    Private Sub cbotipo_SelectedIndexChanged(sender As Object, e As EventArgs)
         cbode.Items.Clear()
         cbode.Text = ""
         cbode.Items.AddRange(objConversor.etiquetas(cbotipo.SelectedIndex))
@@ -11,7 +11,7 @@
         cboa.Items.AddRange(objConversor.etiquetas(cbotipo.SelectedIndex))
     End Sub
 
-    Private Sub btnConvertir_Click(sender As Object, e As EventArgs) Handles btnConvertir.Click
+    Private Sub btnConvertir_Click(sender As Object, e As EventArgs)
         lblrespuesta.Text = "Respuesta: " + objConversor.convertir(cbotipo.SelectedIndex, cbode.SelectedIndex, cboa.SelectedIndex, txtcantidad.Text).ToString() + " " + objConversor.etiquetas(cbotipo.SelectedIndex)(cboa.SelectedIndex)
     End Sub
 End Class
