@@ -1,39 +1,34 @@
 ﻿Public Class Form1
-    Dim objConversor = New conversores()
+    Private Sub BindingSource1_CurrentChanged(sender As Object, e As EventArgs)
 
-    Private Sub cbotipo_SelectedIndexChanged(sender As Object, e As EventArgs)
-        cbode.Items.Clear()
-        cbode.Text = ""
-        cbode.Items.AddRange(objConversor.etiquetas(cbotipo.SelectedIndex))
-
-        cboa.Items.Clear()
-        cboa.Text = ""
-        cboa.Items.AddRange(objConversor.etiquetas(cbotipo.SelectedIndex))
     End Sub
 
-    Private Sub btnConvertir_Click(sender As Object, e As EventArgs)
-        lblrespuesta.Text = "Respuesta: " + objConversor.convertir(cbotipo.SelectedIndex, cbode.SelectedIndex, cboa.SelectedIndex, txtcantidad.Text).ToString() + " " + objConversor.etiquetas(cbotipo.SelectedIndex)(cboa.SelectedIndex)
-    End Sub
-End Class
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'form_DSMedicamentos.medicamento' Puede moverla o quitarla según sea necesario.
+        Me.MedicamentoTableAdapter.Fill(Me.form_DSMedicamentos.medicamento)
 
-Class conversores
-    Public etiquetas()() As String = {
-        New String() {"Dolar", "Euro", "Quetzales", "Lempira", "Colon SV", "Cordoba", "Colon CR"},
-        New String() {"Metro", "CM", "Pulgadas", "Pies", "Varas", "Yardas", "Km", "Millas"},
-        New String() {"Libra", "Gramos", "Kilogramos", "Onzas", "Quintales", "Toneladas"},
-        New String() {"MB", "Bit", "Byte", "KB", "GB", "TB"},
-        New String() {"Hora", "Segundos", "Minutos", "Dias", "Semana", "Meses", "Años"}
-    }
-    Public valores()() As Double = {
-        New Double() {1, 0.85, 7.74, 24.8, 8.75, 34.6, 597.23},
-        New Double() {1, 100, 39.3701, 3.28084, 1.1963081929167, 1.09361, 0.001, 0.000621371},
-        New Double() {1, 453.592, 0.453592, 16, 0.01, 0.000453592},
-        New Double() {1, 8000000.0, 1000000.0, 1000, 0.001, 0.000001},
-        New Double() {1, 3600, 60, 0.0416667, 0.00595238, 0.00136986, 0.000114155}
-    }
-    Public Function convertir(ByVal tipo As Int16, ByVal de As Int16, ByVal a As Int16, ByVal cantidad As Double)
-        Return valores(tipo)(a) / valores(tipo)(de) * cantidad
-    End Function
+    End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs)
+        Try
+            Me.MedicamentoTableAdapter.FillBy(Me.form_DSMedicamentos.medicamento)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub bnMedicamentos_CurrentChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+
+    End Sub
+
+    Private Sub navMedicamentos_RefreshItems(sender As Object, e As EventArgs) Handles navMedicamentos.RefreshItems
+
+    End Sub
 End Class
 
 
