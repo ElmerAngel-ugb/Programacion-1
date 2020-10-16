@@ -62,6 +62,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinder-hospitalmedicalhealth-clinicurbanbuildingsarchitectonic-4394778_119503.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -107,10 +110,24 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscarPaciente.Designer.vb">
+      <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaciente.Designer.vb">
+      <DependentUpon>FrmPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="miconexion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -129,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarPaciente.resx">
+      <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaciente.resx">
+      <DependentUpon>FrmPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -164,6 +187,7 @@
     <EmbeddedResource Include="sistemaclinicodb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <Content Include="iconfinder-hospitalmedicalhealth-clinicurbanbuildingsarchitectonic-4394778_119503.ico" />
     <Content Include="sistemaclinicodb_log.ldf">
       <DependentUpon>sistemaclinicodb.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
