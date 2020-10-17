@@ -14,6 +14,11 @@ Public Class dbconexion
         miConexion.Open()
 
     End Sub
-    Public Function o()
+    Public Function obtenerDatos()
+        miCommand.CommandText = "select * from registrodepersonal"
+        miCommand.Connection = miConexion
+        miAdapter.Fill(ds, "registrodepersonal")
+        Return ds
+    End Function
 
 End Class

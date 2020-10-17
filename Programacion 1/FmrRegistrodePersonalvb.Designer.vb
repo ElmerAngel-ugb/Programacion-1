@@ -90,7 +90,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblNombrePersonal.AutoSize = True
         Me.lblNombrePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombrePersonal.Location = New System.Drawing.Point(49, 57)
+        Me.lblNombrePersonal.Location = New System.Drawing.Point(48, 52)
         Me.lblNombrePersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNombrePersonal.Name = "lblNombrePersonal"
         Me.lblNombrePersonal.Size = New System.Drawing.Size(62, 15)
@@ -110,7 +110,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblTelefonoPersonal.AutoSize = True
         Me.lblTelefonoPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoPersonal.Location = New System.Drawing.Point(49, 151)
+        Me.lblTelefonoPersonal.Location = New System.Drawing.Point(42, 146)
         Me.lblTelefonoPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTelefonoPersonal.Name = "lblTelefonoPersonal"
         Me.lblTelefonoPersonal.Size = New System.Drawing.Size(67, 15)
@@ -163,7 +163,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblHorarioPersonal.AutoSize = True
         Me.lblHorarioPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHorarioPersonal.Location = New System.Drawing.Point(52, 263)
+        Me.lblHorarioPersonal.Location = New System.Drawing.Point(51, 258)
         Me.lblHorarioPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHorarioPersonal.Name = "lblHorarioPersonal"
         Me.lblHorarioPersonal.Size = New System.Drawing.Size(59, 15)
@@ -174,7 +174,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblCargoPersonal.AutoSize = True
         Me.lblCargoPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCargoPersonal.Location = New System.Drawing.Point(62, 227)
+        Me.lblCargoPersonal.Location = New System.Drawing.Point(60, 222)
         Me.lblCargoPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCargoPersonal.Name = "lblCargoPersonal"
         Me.lblCargoPersonal.Size = New System.Drawing.Size(49, 15)
@@ -185,7 +185,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblemailPersonal.AutoSize = True
         Me.lblemailPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblemailPersonal.Location = New System.Drawing.Point(63, 185)
+        Me.lblemailPersonal.Location = New System.Drawing.Point(61, 180)
         Me.lblemailPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblemailPersonal.Name = "lblemailPersonal"
         Me.lblemailPersonal.Size = New System.Drawing.Size(48, 15)
@@ -196,7 +196,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblDireccioPersonal.AutoSize = True
         Me.lblDireccioPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccioPersonal.Location = New System.Drawing.Point(43, 89)
+        Me.lblDireccioPersonal.Location = New System.Drawing.Point(42, 84)
         Me.lblDireccioPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDireccioPersonal.Name = "lblDireccioPersonal"
         Me.lblDireccioPersonal.Size = New System.Drawing.Size(72, 15)
@@ -207,7 +207,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblCodigoPersonal.AutoSize = True
         Me.lblCodigoPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigoPersonal.Location = New System.Drawing.Point(49, 27)
+        Me.lblCodigoPersonal.Location = New System.Drawing.Point(48, 22)
         Me.lblCodigoPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCodigoPersonal.Name = "lblCodigoPersonal"
         Me.lblCodigoPersonal.Size = New System.Drawing.Size(56, 15)
