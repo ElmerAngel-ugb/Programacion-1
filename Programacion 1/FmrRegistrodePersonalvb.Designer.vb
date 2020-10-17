@@ -69,101 +69,104 @@ Partial Class FmrRegistrodePersonalvb
         Me.grbRegistroPersonal.Controls.Add(Me.lblemailPersonal)
         Me.grbRegistroPersonal.Controls.Add(Me.lblDireccioPersonal)
         Me.grbRegistroPersonal.Controls.Add(Me.lblCodigoPersonal)
-        Me.grbRegistroPersonal.Location = New System.Drawing.Point(15, 14)
-        Me.grbRegistroPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grbRegistroPersonal.Location = New System.Drawing.Point(11, 11)
+        Me.grbRegistroPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.grbRegistroPersonal.Name = "grbRegistroPersonal"
-        Me.grbRegistroPersonal.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.grbRegistroPersonal.Size = New System.Drawing.Size(664, 404)
+        Me.grbRegistroPersonal.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grbRegistroPersonal.Size = New System.Drawing.Size(498, 328)
         Me.grbRegistroPersonal.TabIndex = 1
         Me.grbRegistroPersonal.TabStop = False
         Me.grbRegistroPersonal.Text = "Registro de Personal "
         '
         'txtNombrePersonal
         '
-        Me.txtNombrePersonal.Location = New System.Drawing.Point(153, 64)
-        Me.txtNombrePersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtNombrePersonal.Location = New System.Drawing.Point(115, 52)
+        Me.txtNombrePersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombrePersonal.Name = "txtNombrePersonal"
-        Me.txtNombrePersonal.Size = New System.Drawing.Size(343, 22)
+        Me.txtNombrePersonal.Size = New System.Drawing.Size(258, 20)
         Me.txtNombrePersonal.TabIndex = 19
         '
         'lblNombrePersonal
         '
         Me.lblNombrePersonal.AutoSize = True
         Me.lblNombrePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombrePersonal.Location = New System.Drawing.Point(55, 64)
+        Me.lblNombrePersonal.Location = New System.Drawing.Point(41, 52)
+        Me.lblNombrePersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblNombrePersonal.Name = "lblNombrePersonal"
-        Me.lblNombrePersonal.Size = New System.Drawing.Size(73, 18)
+        Me.lblNombrePersonal.Size = New System.Drawing.Size(62, 15)
         Me.lblNombrePersonal.TabIndex = 18
         Me.lblNombrePersonal.Text = "Nombre:"
         '
         'txtTelefonoPersonal
         '
         Me.txtTelefonoPersonal.AcceptsTab = True
-        Me.txtTelefonoPersonal.Location = New System.Drawing.Point(153, 180)
-        Me.txtTelefonoPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtTelefonoPersonal.Location = New System.Drawing.Point(115, 146)
+        Me.txtTelefonoPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTelefonoPersonal.Name = "txtTelefonoPersonal"
-        Me.txtTelefonoPersonal.Size = New System.Drawing.Size(164, 22)
+        Me.txtTelefonoPersonal.Size = New System.Drawing.Size(124, 20)
         Me.txtTelefonoPersonal.TabIndex = 17
         '
         'lblTelefonoPersonal
         '
         Me.lblTelefonoPersonal.AutoSize = True
         Me.lblTelefonoPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoPersonal.Location = New System.Drawing.Point(55, 180)
+        Me.lblTelefonoPersonal.Location = New System.Drawing.Point(41, 146)
+        Me.lblTelefonoPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblTelefonoPersonal.Name = "lblTelefonoPersonal"
-        Me.lblTelefonoPersonal.Size = New System.Drawing.Size(79, 18)
+        Me.lblTelefonoPersonal.Size = New System.Drawing.Size(67, 15)
         Me.lblTelefonoPersonal.TabIndex = 16
         Me.lblTelefonoPersonal.Text = "Telefono:"
         '
         'txtHorarioPersonal
         '
-        Me.txtHorarioPersonal.Location = New System.Drawing.Point(153, 318)
-        Me.txtHorarioPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtHorarioPersonal.Location = New System.Drawing.Point(115, 258)
+        Me.txtHorarioPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtHorarioPersonal.Multiline = True
         Me.txtHorarioPersonal.Name = "txtHorarioPersonal"
-        Me.txtHorarioPersonal.Size = New System.Drawing.Size(304, 69)
+        Me.txtHorarioPersonal.Size = New System.Drawing.Size(229, 57)
         Me.txtHorarioPersonal.TabIndex = 12
         '
         'txtCargoPersonal
         '
-        Me.txtCargoPersonal.Location = New System.Drawing.Point(153, 273)
-        Me.txtCargoPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCargoPersonal.Location = New System.Drawing.Point(115, 222)
+        Me.txtCargoPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCargoPersonal.Name = "txtCargoPersonal"
-        Me.txtCargoPersonal.Size = New System.Drawing.Size(164, 22)
+        Me.txtCargoPersonal.Size = New System.Drawing.Size(124, 20)
         Me.txtCargoPersonal.TabIndex = 11
         '
         'txtEmailPersonal
         '
-        Me.txtEmailPersonal.Location = New System.Drawing.Point(153, 222)
-        Me.txtEmailPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtEmailPersonal.Location = New System.Drawing.Point(115, 180)
+        Me.txtEmailPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEmailPersonal.Name = "txtEmailPersonal"
-        Me.txtEmailPersonal.Size = New System.Drawing.Size(343, 22)
+        Me.txtEmailPersonal.Size = New System.Drawing.Size(258, 20)
         Me.txtEmailPersonal.TabIndex = 10
         '
         'txtDireccionPersonal
         '
-        Me.txtDireccionPersonal.Location = New System.Drawing.Point(153, 102)
-        Me.txtDireccionPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtDireccionPersonal.Location = New System.Drawing.Point(115, 83)
+        Me.txtDireccionPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDireccionPersonal.Multiline = True
         Me.txtDireccionPersonal.Name = "txtDireccionPersonal"
-        Me.txtDireccionPersonal.Size = New System.Drawing.Size(343, 61)
+        Me.txtDireccionPersonal.Size = New System.Drawing.Size(258, 50)
         Me.txtDireccionPersonal.TabIndex = 9
         '
         'txtCodigoPersonal
         '
-        Me.txtCodigoPersonal.Location = New System.Drawing.Point(153, 26)
-        Me.txtCodigoPersonal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCodigoPersonal.Location = New System.Drawing.Point(115, 21)
+        Me.txtCodigoPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCodigoPersonal.Name = "txtCodigoPersonal"
-        Me.txtCodigoPersonal.Size = New System.Drawing.Size(135, 22)
+        Me.txtCodigoPersonal.Size = New System.Drawing.Size(102, 20)
         Me.txtCodigoPersonal.TabIndex = 8
         '
         'lblHorarioPersonal
         '
         Me.lblHorarioPersonal.AutoSize = True
         Me.lblHorarioPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHorarioPersonal.Location = New System.Drawing.Point(59, 318)
+        Me.lblHorarioPersonal.Location = New System.Drawing.Point(44, 258)
+        Me.lblHorarioPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblHorarioPersonal.Name = "lblHorarioPersonal"
-        Me.lblHorarioPersonal.Size = New System.Drawing.Size(70, 18)
+        Me.lblHorarioPersonal.Size = New System.Drawing.Size(59, 15)
         Me.lblHorarioPersonal.TabIndex = 4
         Me.lblHorarioPersonal.Text = "Horario:"
         '
@@ -171,9 +174,10 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblCargoPersonal.AutoSize = True
         Me.lblCargoPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCargoPersonal.Location = New System.Drawing.Point(72, 273)
+        Me.lblCargoPersonal.Location = New System.Drawing.Point(54, 222)
+        Me.lblCargoPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCargoPersonal.Name = "lblCargoPersonal"
-        Me.lblCargoPersonal.Size = New System.Drawing.Size(59, 18)
+        Me.lblCargoPersonal.Size = New System.Drawing.Size(49, 15)
         Me.lblCargoPersonal.TabIndex = 3
         Me.lblCargoPersonal.Text = "Cargo:"
         '
@@ -181,9 +185,10 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblemailPersonal.AutoSize = True
         Me.lblemailPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblemailPersonal.Location = New System.Drawing.Point(73, 222)
+        Me.lblemailPersonal.Location = New System.Drawing.Point(55, 180)
+        Me.lblemailPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblemailPersonal.Name = "lblemailPersonal"
-        Me.lblemailPersonal.Size = New System.Drawing.Size(55, 18)
+        Me.lblemailPersonal.Size = New System.Drawing.Size(48, 15)
         Me.lblemailPersonal.TabIndex = 2
         Me.lblemailPersonal.Text = "Email:"
         '
@@ -191,9 +196,10 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblDireccioPersonal.AutoSize = True
         Me.lblDireccioPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDireccioPersonal.Location = New System.Drawing.Point(47, 103)
+        Me.lblDireccioPersonal.Location = New System.Drawing.Point(35, 84)
+        Me.lblDireccioPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDireccioPersonal.Name = "lblDireccioPersonal"
-        Me.lblDireccioPersonal.Size = New System.Drawing.Size(85, 18)
+        Me.lblDireccioPersonal.Size = New System.Drawing.Size(72, 15)
         Me.lblDireccioPersonal.TabIndex = 1
         Me.lblDireccioPersonal.Text = "Direccion:"
         '
@@ -201,9 +207,10 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblCodigoPersonal.AutoSize = True
         Me.lblCodigoPersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigoPersonal.Location = New System.Drawing.Point(55, 27)
+        Me.lblCodigoPersonal.Location = New System.Drawing.Point(41, 22)
+        Me.lblCodigoPersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblCodigoPersonal.Name = "lblCodigoPersonal"
-        Me.lblCodigoPersonal.Size = New System.Drawing.Size(67, 18)
+        Me.lblCodigoPersonal.Size = New System.Drawing.Size(56, 15)
         Me.lblCodigoPersonal.TabIndex = 0
         Me.lblCodigoPersonal.Text = "Código:"
         '
@@ -214,11 +221,9 @@ Partial Class FmrRegistrodePersonalvb
         Me.grbRNavegarRegistrodePersonal.Controls.Add(Me.btnSuienteRegistrodePersonal)
         Me.grbRNavegarRegistrodePersonal.Controls.Add(Me.btnAnteriorRegistrodePersonal)
         Me.grbRNavegarRegistrodePersonal.Controls.Add(Me.btnPrimerRegistrodePersonal)
-        Me.grbRNavegarRegistrodePersonal.Location = New System.Drawing.Point(15, 423)
-        Me.grbRNavegarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.grbRNavegarRegistrodePersonal.Location = New System.Drawing.Point(11, 344)
         Me.grbRNavegarRegistrodePersonal.Name = "grbRNavegarRegistrodePersonal"
-        Me.grbRNavegarRegistrodePersonal.Padding = New System.Windows.Forms.Padding(4)
-        Me.grbRNavegarRegistrodePersonal.Size = New System.Drawing.Size(289, 123)
+        Me.grbRNavegarRegistrodePersonal.Size = New System.Drawing.Size(217, 100)
         Me.grbRNavegarRegistrodePersonal.TabIndex = 2
         Me.grbRNavegarRegistrodePersonal.TabStop = False
         Me.grbRNavegarRegistrodePersonal.Text = "Navegar Registro"
@@ -227,19 +232,19 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.lblUbicacionRegistrodePersonal.AutoSize = True
         Me.lblUbicacionRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUbicacionRegistrodePersonal.Location = New System.Drawing.Point(116, 59)
+        Me.lblUbicacionRegistrodePersonal.Location = New System.Drawing.Point(87, 48)
+        Me.lblUbicacionRegistrodePersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblUbicacionRegistrodePersonal.Name = "lblUbicacionRegistrodePersonal"
-        Me.lblUbicacionRegistrodePersonal.Size = New System.Drawing.Size(54, 18)
+        Me.lblUbicacionRegistrodePersonal.Size = New System.Drawing.Size(47, 15)
         Me.lblUbicacionRegistrodePersonal.TabIndex = 4
         Me.lblUbicacionRegistrodePersonal.Text = "0 de n"
         '
         'btnUltimoRegistrodePersonal
         '
         Me.btnUltimoRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimoRegistrodePersonal.Location = New System.Drawing.Point(243, 49)
-        Me.btnUltimoRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnUltimoRegistrodePersonal.Location = New System.Drawing.Point(182, 40)
         Me.btnUltimoRegistrodePersonal.Name = "btnUltimoRegistrodePersonal"
-        Me.btnUltimoRegistrodePersonal.Size = New System.Drawing.Size(47, 39)
+        Me.btnUltimoRegistrodePersonal.Size = New System.Drawing.Size(35, 32)
         Me.btnUltimoRegistrodePersonal.TabIndex = 3
         Me.btnUltimoRegistrodePersonal.Text = ">Ⅰ"
         Me.btnUltimoRegistrodePersonal.UseVisualStyleBackColor = True
@@ -247,10 +252,9 @@ Partial Class FmrRegistrodePersonalvb
         'btnSuienteRegistrodePersonal
         '
         Me.btnSuienteRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSuienteRegistrodePersonal.Location = New System.Drawing.Point(205, 49)
-        Me.btnSuienteRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSuienteRegistrodePersonal.Location = New System.Drawing.Point(154, 40)
         Me.btnSuienteRegistrodePersonal.Name = "btnSuienteRegistrodePersonal"
-        Me.btnSuienteRegistrodePersonal.Size = New System.Drawing.Size(47, 39)
+        Me.btnSuienteRegistrodePersonal.Size = New System.Drawing.Size(35, 32)
         Me.btnSuienteRegistrodePersonal.TabIndex = 2
         Me.btnSuienteRegistrodePersonal.Text = ">"
         Me.btnSuienteRegistrodePersonal.UseVisualStyleBackColor = True
@@ -258,10 +262,9 @@ Partial Class FmrRegistrodePersonalvb
         'btnAnteriorRegistrodePersonal
         '
         Me.btnAnteriorRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnteriorRegistrodePersonal.Location = New System.Drawing.Point(52, 50)
-        Me.btnAnteriorRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAnteriorRegistrodePersonal.Location = New System.Drawing.Point(39, 41)
         Me.btnAnteriorRegistrodePersonal.Name = "btnAnteriorRegistrodePersonal"
-        Me.btnAnteriorRegistrodePersonal.Size = New System.Drawing.Size(43, 39)
+        Me.btnAnteriorRegistrodePersonal.Size = New System.Drawing.Size(32, 32)
         Me.btnAnteriorRegistrodePersonal.TabIndex = 1
         Me.btnAnteriorRegistrodePersonal.Text = "<"
         Me.btnAnteriorRegistrodePersonal.UseVisualStyleBackColor = True
@@ -269,10 +272,9 @@ Partial Class FmrRegistrodePersonalvb
         'btnPrimerRegistrodePersonal
         '
         Me.btnPrimerRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimerRegistrodePersonal.Location = New System.Drawing.Point(9, 50)
-        Me.btnPrimerRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrimerRegistrodePersonal.Location = New System.Drawing.Point(7, 41)
         Me.btnPrimerRegistrodePersonal.Name = "btnPrimerRegistrodePersonal"
-        Me.btnPrimerRegistrodePersonal.Size = New System.Drawing.Size(47, 39)
+        Me.btnPrimerRegistrodePersonal.Size = New System.Drawing.Size(35, 32)
         Me.btnPrimerRegistrodePersonal.TabIndex = 0
         Me.btnPrimerRegistrodePersonal.Text = "ⅼ<"
         Me.btnPrimerRegistrodePersonal.UseVisualStyleBackColor = True
@@ -283,11 +285,9 @@ Partial Class FmrRegistrodePersonalvb
         Me.grbEditarRegistrodePersonal.Controls.Add(Me.btnEliminarRegistrodePersonal)
         Me.grbEditarRegistrodePersonal.Controls.Add(Me.btnModificarRegistrodePersonal)
         Me.grbEditarRegistrodePersonal.Controls.Add(Me.btnNuevoRegistrodePersonal)
-        Me.grbEditarRegistrodePersonal.Location = New System.Drawing.Point(303, 423)
-        Me.grbEditarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.grbEditarRegistrodePersonal.Location = New System.Drawing.Point(227, 344)
         Me.grbEditarRegistrodePersonal.Name = "grbEditarRegistrodePersonal"
-        Me.grbEditarRegistrodePersonal.Padding = New System.Windows.Forms.Padding(4)
-        Me.grbEditarRegistrodePersonal.Size = New System.Drawing.Size(375, 123)
+        Me.grbEditarRegistrodePersonal.Size = New System.Drawing.Size(281, 100)
         Me.grbEditarRegistrodePersonal.TabIndex = 3
         Me.grbEditarRegistrodePersonal.TabStop = False
         Me.grbEditarRegistrodePersonal.Text = "EditarRegistro"
@@ -295,10 +295,9 @@ Partial Class FmrRegistrodePersonalvb
         'btnBuscarRegistrodePersonal
         '
         Me.btnBuscarRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarRegistrodePersonal.Location = New System.Drawing.Point(279, 49)
-        Me.btnBuscarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnBuscarRegistrodePersonal.Location = New System.Drawing.Point(209, 40)
         Me.btnBuscarRegistrodePersonal.Name = "btnBuscarRegistrodePersonal"
-        Me.btnBuscarRegistrodePersonal.Size = New System.Drawing.Size(88, 39)
+        Me.btnBuscarRegistrodePersonal.Size = New System.Drawing.Size(66, 32)
         Me.btnBuscarRegistrodePersonal.TabIndex = 7
         Me.btnBuscarRegistrodePersonal.Text = "Buscar"
         Me.btnBuscarRegistrodePersonal.UseVisualStyleBackColor = True
@@ -306,10 +305,9 @@ Partial Class FmrRegistrodePersonalvb
         'btnEliminarRegistrodePersonal
         '
         Me.btnEliminarRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarRegistrodePersonal.Location = New System.Drawing.Point(177, 49)
-        Me.btnEliminarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnEliminarRegistrodePersonal.Location = New System.Drawing.Point(133, 40)
         Me.btnEliminarRegistrodePersonal.Name = "btnEliminarRegistrodePersonal"
-        Me.btnEliminarRegistrodePersonal.Size = New System.Drawing.Size(105, 39)
+        Me.btnEliminarRegistrodePersonal.Size = New System.Drawing.Size(79, 32)
         Me.btnEliminarRegistrodePersonal.TabIndex = 6
         Me.btnEliminarRegistrodePersonal.Text = "Eliminar"
         Me.btnEliminarRegistrodePersonal.UseVisualStyleBackColor = True
@@ -317,10 +315,9 @@ Partial Class FmrRegistrodePersonalvb
         'btnModificarRegistrodePersonal
         '
         Me.btnModificarRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarRegistrodePersonal.Location = New System.Drawing.Point(85, 49)
-        Me.btnModificarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnModificarRegistrodePersonal.Location = New System.Drawing.Point(64, 40)
         Me.btnModificarRegistrodePersonal.Name = "btnModificarRegistrodePersonal"
-        Me.btnModificarRegistrodePersonal.Size = New System.Drawing.Size(95, 39)
+        Me.btnModificarRegistrodePersonal.Size = New System.Drawing.Size(71, 32)
         Me.btnModificarRegistrodePersonal.TabIndex = 5
         Me.btnModificarRegistrodePersonal.Text = "Modificar"
         Me.btnModificarRegistrodePersonal.UseVisualStyleBackColor = True
@@ -328,23 +325,22 @@ Partial Class FmrRegistrodePersonalvb
         'btnNuevoRegistrodePersonal
         '
         Me.btnNuevoRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoRegistrodePersonal.Location = New System.Drawing.Point(12, 49)
-        Me.btnNuevoRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnNuevoRegistrodePersonal.Location = New System.Drawing.Point(9, 40)
         Me.btnNuevoRegistrodePersonal.Name = "btnNuevoRegistrodePersonal"
-        Me.btnNuevoRegistrodePersonal.Size = New System.Drawing.Size(76, 39)
+        Me.btnNuevoRegistrodePersonal.Size = New System.Drawing.Size(57, 32)
         Me.btnNuevoRegistrodePersonal.TabIndex = 4
         Me.btnNuevoRegistrodePersonal.Text = "Nuevo"
         Me.btnNuevoRegistrodePersonal.UseVisualStyleBackColor = True
         '
         'FmrRegistrodePersonalvb
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(693, 550)
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ClientSize = New System.Drawing.Size(533, 460)
         Me.Controls.Add(Me.grbEditarRegistrodePersonal)
         Me.Controls.Add(Me.grbRNavegarRegistrodePersonal)
         Me.Controls.Add(Me.grbRegistroPersonal)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FmrRegistrodePersonalvb"
         Me.ShowInTaskbar = False
         Me.Text = "Registro de Personal"
