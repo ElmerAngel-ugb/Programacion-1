@@ -336,8 +336,8 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.ClientSize = New System.Drawing.Size(517, 446)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(518, 456)
         Me.Controls.Add(Me.grbEditarRegistrodePersonal)
         Me.Controls.Add(Me.grbRNavegarRegistrodePersonal)
         Me.Controls.Add(Me.grbRegistroPersonal)
