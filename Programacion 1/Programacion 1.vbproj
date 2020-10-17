@@ -232,7 +232,7 @@
       <DependentUpon>SistemaClinico.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sistemaclinicodb.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="iconos\Save.ico" />
     <None Include="Resources\Save.ico" />
@@ -243,7 +243,7 @@
     <None Include="Resources\Cancel.ico" />
     <Content Include="sistemaclinicodb_log.ldf">
       <DependentUpon>sistemaclinicodb.mdf</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
