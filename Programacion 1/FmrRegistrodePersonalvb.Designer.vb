@@ -70,9 +70,9 @@ Partial Class FmrRegistrodePersonalvb
         Me.grbRegistroPersonal.Controls.Add(Me.lblDireccioPersonal)
         Me.grbRegistroPersonal.Controls.Add(Me.lblCodigoPersonal)
         Me.grbRegistroPersonal.Location = New System.Drawing.Point(11, 11)
-        Me.grbRegistroPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grbRegistroPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.grbRegistroPersonal.Name = "grbRegistroPersonal"
-        Me.grbRegistroPersonal.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.grbRegistroPersonal.Padding = New System.Windows.Forms.Padding(2)
         Me.grbRegistroPersonal.Size = New System.Drawing.Size(498, 328)
         Me.grbRegistroPersonal.TabIndex = 1
         Me.grbRegistroPersonal.TabStop = False
@@ -81,7 +81,7 @@ Partial Class FmrRegistrodePersonalvb
         'txtNombrePersonal
         '
         Me.txtNombrePersonal.Location = New System.Drawing.Point(115, 52)
-        Me.txtNombrePersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtNombrePersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtNombrePersonal.Name = "txtNombrePersonal"
         Me.txtNombrePersonal.Size = New System.Drawing.Size(258, 20)
         Me.txtNombrePersonal.TabIndex = 19
@@ -101,7 +101,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.txtTelefonoPersonal.AcceptsTab = True
         Me.txtTelefonoPersonal.Location = New System.Drawing.Point(115, 146)
-        Me.txtTelefonoPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTelefonoPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTelefonoPersonal.Name = "txtTelefonoPersonal"
         Me.txtTelefonoPersonal.Size = New System.Drawing.Size(124, 20)
         Me.txtTelefonoPersonal.TabIndex = 17
@@ -120,7 +120,7 @@ Partial Class FmrRegistrodePersonalvb
         'txtHorarioPersonal
         '
         Me.txtHorarioPersonal.Location = New System.Drawing.Point(115, 258)
-        Me.txtHorarioPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtHorarioPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtHorarioPersonal.Multiline = True
         Me.txtHorarioPersonal.Name = "txtHorarioPersonal"
         Me.txtHorarioPersonal.Size = New System.Drawing.Size(229, 57)
@@ -129,7 +129,7 @@ Partial Class FmrRegistrodePersonalvb
         'txtCargoPersonal
         '
         Me.txtCargoPersonal.Location = New System.Drawing.Point(115, 222)
-        Me.txtCargoPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCargoPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCargoPersonal.Name = "txtCargoPersonal"
         Me.txtCargoPersonal.Size = New System.Drawing.Size(124, 20)
         Me.txtCargoPersonal.TabIndex = 11
@@ -137,7 +137,7 @@ Partial Class FmrRegistrodePersonalvb
         'txtEmailPersonal
         '
         Me.txtEmailPersonal.Location = New System.Drawing.Point(115, 180)
-        Me.txtEmailPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtEmailPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmailPersonal.Name = "txtEmailPersonal"
         Me.txtEmailPersonal.Size = New System.Drawing.Size(258, 20)
         Me.txtEmailPersonal.TabIndex = 10
@@ -145,7 +145,7 @@ Partial Class FmrRegistrodePersonalvb
         'txtDireccionPersonal
         '
         Me.txtDireccionPersonal.Location = New System.Drawing.Point(115, 83)
-        Me.txtDireccionPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDireccionPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDireccionPersonal.Multiline = True
         Me.txtDireccionPersonal.Name = "txtDireccionPersonal"
         Me.txtDireccionPersonal.Size = New System.Drawing.Size(258, 50)
@@ -154,7 +154,7 @@ Partial Class FmrRegistrodePersonalvb
         'txtCodigoPersonal
         '
         Me.txtCodigoPersonal.Location = New System.Drawing.Point(115, 21)
-        Me.txtCodigoPersonal.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCodigoPersonal.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCodigoPersonal.Name = "txtCodigoPersonal"
         Me.txtCodigoPersonal.Size = New System.Drawing.Size(102, 20)
         Me.txtCodigoPersonal.TabIndex = 8
@@ -336,7 +336,7 @@ Partial Class FmrRegistrodePersonalvb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 447)
+        Me.ClientSize = New System.Drawing.Size(517, 447)
         Me.Controls.Add(Me.grbEditarRegistrodePersonal)
         Me.Controls.Add(Me.grbRNavegarRegistrodePersonal)
         Me.Controls.Add(Me.grbRegistroPersonal)
