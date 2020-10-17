@@ -25,6 +25,13 @@ Partial Class Form2
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.bsEntregarmedicamento = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Form_DSEntregarmedicamentos = New Programacion_1.dsEntregarmedicamentos()
+        Me.bsMedicamentos = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -33,6 +40,7 @@ Partial Class Form2
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.txtPaciente = New System.Windows.Forms.TextBox()
+        Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -41,8 +49,6 @@ Partial Class Form2
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Form_DSEntregarmedicamentos = New Programacion_1.dsEntregarmedicamentos()
-        Me.bsEntregarmedicamento = New System.Windows.Forms.BindingSource(Me.components)
         Me.Encargar_medicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.encargar_medicamentoTableAdapter()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
@@ -50,36 +56,33 @@ Partial Class Form2
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.navEntregarmedicamentos = New System.Windows.Forms.BindingNavigator(Me.components)
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.txtBuscar = New System.Windows.Forms.ToolStripTextBox()
-        Me.bsMedicamentos = New System.Windows.Forms.BindingSource(Me.components)
-        Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MedicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter()
-        Me.PacienteTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.pacienteTableAdapter()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.txtBuscar = New System.Windows.Forms.ToolStripTextBox()
         Me.btnBuscar = New System.Windows.Forms.ToolStripButton()
         Me.btnRemoveFilter = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.txtBuscarmedicamento = New System.Windows.Forms.ToolStripTextBox()
+        Me.btnBuscarMedicamento = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.txtBuscarPaciente = New System.Windows.Forms.ToolStripTextBox()
+        Me.btnBuscarPaciente = New System.Windows.Forms.ToolStripButton()
+        Me.MedicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter()
+        Me.PacienteTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.pacienteTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsEntregarmedicamento, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.navEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.navEntregarmedicamentos.SuspendLayout()
+        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.navEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.navEntregarmedicamentos.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -109,6 +112,59 @@ Partial Class Form2
         Me.GroupBox1.Size = New System.Drawing.Size(713, 471)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(214, 59)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(357, 22)
+        Me.TextBox9.TabIndex = 19
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(29, 59)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(168, 18)
+        Me.Label10.TabIndex = 18
+        Me.Label10.Text = "Nombre del paciente:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.AcceptsTab = True
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEntregarmedicamento, "idmedicamento", True))
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.bsMedicamentos, "idmedicamento", True))
+        Me.TextBox1.Location = New System.Drawing.Point(213, 131)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.TabIndex = 17
+        '
+        'bsEntregarmedicamento
+        '
+        Me.bsEntregarmedicamento.DataMember = "encargar_medicamento"
+        Me.bsEntregarmedicamento.DataSource = Me.Form_DSEntregarmedicamentos
+        '
+        'Form_DSEntregarmedicamentos
+        '
+        Me.Form_DSEntregarmedicamentos.DataSetName = "dsEntregarmedicamentos"
+        Me.Form_DSEntregarmedicamentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'bsMedicamentos
+        '
+        Me.bsMedicamentos.AllowNew = False
+        Me.bsMedicamentos.DataMember = "medicamento"
+        Me.bsMedicamentos.DataSource = Me.Form_DSEntregarmedicamentos
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(26, 131)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(130, 18)
+        Me.Label9.TabIndex = 16
+        Me.Label9.Text = "IDmedicamento:"
         '
         'TextBox8
         '
@@ -175,6 +231,12 @@ Partial Class Form2
         Me.txtPaciente.Name = "txtPaciente"
         Me.txtPaciente.Size = New System.Drawing.Size(134, 22)
         Me.txtPaciente.TabIndex = 8
+        '
+        'bsPaciente
+        '
+        Me.bsPaciente.AllowNew = False
+        Me.bsPaciente.DataMember = "paciente"
+        Me.bsPaciente.DataSource = Me.Form_DSEntregarmedicamentos
         '
         'Label8
         '
@@ -256,16 +318,6 @@ Partial Class Form2
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Código del paciente:"
         '
-        'Form_DSEntregarmedicamentos
-        '
-        Me.Form_DSEntregarmedicamentos.DataSetName = "dsEntregarmedicamentos"
-        Me.Form_DSEntregarmedicamentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'bsEntregarmedicamento
-        '
-        Me.bsEntregarmedicamento.DataMember = "encargar_medicamento"
-        Me.bsEntregarmedicamento.DataSource = Me.Form_DSEntregarmedicamentos
-        '
         'Encargar_medicamentoTableAdapter
         '
         Me.Encargar_medicamentoTableAdapter.ClearBeforeFill = True
@@ -273,7 +325,7 @@ Partial Class Form2
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorPositionItem
         '
@@ -288,19 +340,19 @@ Partial Class Form2
         'BindingNavigatorCountItem
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 28)
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(48, 24)
         Me.BindingNavigatorCountItem.Text = "de {0}"
         Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
         '
         'BindingNavigatorSeparator1
         '
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 31)
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'navEntregarmedicamentos
         '
@@ -309,7 +361,7 @@ Partial Class Form2
         Me.navEntregarmedicamentos.CountItem = Me.BindingNavigatorCountItem
         Me.navEntregarmedicamentos.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.navEntregarmedicamentos.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.navEntregarmedicamentos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ToolStripSeparator1, Me.btnGuardar, Me.ToolStripSeparator2, Me.txtBuscar, Me.btnBuscar, Me.btnRemoveFilter, Me.ToolStripSeparator3, Me.ToolStripTextBox1, Me.ToolStripButton1})
+        Me.navEntregarmedicamentos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ToolStripSeparator1, Me.btnGuardar, Me.ToolStripSeparator2, Me.txtBuscar, Me.btnBuscar, Me.btnRemoveFilter, Me.ToolStripSeparator3, Me.txtBuscarmedicamento, Me.btnBuscarMedicamento, Me.ToolStripSeparator4, Me.txtBuscarPaciente, Me.btnBuscarPaciente})
         Me.navEntregarmedicamentos.Location = New System.Drawing.Point(0, 0)
         Me.navEntregarmedicamentos.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.navEntregarmedicamentos.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -317,37 +369,149 @@ Partial Class Form2
         Me.navEntregarmedicamentos.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.navEntregarmedicamentos.Name = "navEntregarmedicamentos"
         Me.navEntregarmedicamentos.PositionItem = Me.BindingNavigatorPositionItem
-        Me.navEntregarmedicamentos.Size = New System.Drawing.Size(737, 31)
+        Me.navEntregarmedicamentos.Size = New System.Drawing.Size(898, 27)
         Me.navEntregarmedicamentos.TabIndex = 17
         Me.navEntregarmedicamentos.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnGuardar.Image = Global.Programacion_1.My.Resources.Recursos.Save
+        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(29, 24)
+        Me.btnGuardar.Text = "Guardar"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'txtBuscar
         '
         Me.txtBuscar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(100, 31)
+        Me.txtBuscar.Size = New System.Drawing.Size(100, 27)
+        Me.txtBuscar.Text = "Buscar."
         '
-        'bsMedicamentos
+        'btnBuscar
         '
-        Me.bsMedicamentos.AllowNew = False
-        Me.bsMedicamentos.DataMember = "medicamento"
-        Me.bsMedicamentos.DataSource = Me.Form_DSEntregarmedicamentos
+        Me.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnBuscar.Image = Global.Programacion_1.My.Resources.Recursos.Search
+        Me.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(29, 24)
+        Me.btnBuscar.Text = "Buscar"
         '
-        'bsPaciente
+        'btnRemoveFilter
         '
-        Me.bsPaciente.AllowNew = False
-        Me.bsPaciente.DataMember = "paciente"
-        Me.bsPaciente.DataSource = Me.Form_DSEntregarmedicamentos
+        Me.btnRemoveFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnRemoveFilter.Image = Global.Programacion_1.My.Resources.Recursos.remove_filter
+        Me.btnRemoveFilter.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnRemoveFilter.Name = "btnRemoveFilter"
+        Me.btnRemoveFilter.Size = New System.Drawing.Size(29, 24)
+        Me.btnRemoveFilter.Text = "Mostrar todos"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        '
+        'txtBuscarmedicamento
+        '
+        Me.txtBuscarmedicamento.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtBuscarmedicamento.Name = "txtBuscarmedicamento"
+        Me.txtBuscarmedicamento.Size = New System.Drawing.Size(100, 27)
+        Me.txtBuscarmedicamento.Text = "Inserte código de medicina"
+        '
+        'btnBuscarMedicamento
+        '
+        Me.btnBuscarMedicamento.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnBuscarMedicamento.Image = Global.Programacion_1.My.Resources.Recursos.Medicine
+        Me.btnBuscarMedicamento.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnBuscarMedicamento.Name = "btnBuscarMedicamento"
+        Me.btnBuscarMedicamento.Size = New System.Drawing.Size(29, 24)
+        Me.btnBuscarMedicamento.Text = "Buscar medicamento"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 27)
+        '
+        'txtBuscarPaciente
+        '
+        Me.txtBuscarPaciente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtBuscarPaciente.Name = "txtBuscarPaciente"
+        Me.txtBuscarPaciente.Size = New System.Drawing.Size(100, 27)
+        Me.txtBuscarPaciente.Text = "Inserte Id de paciente"
+        '
+        'btnBuscarPaciente
+        '
+        Me.btnBuscarPaciente.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnBuscarPaciente.Image = Global.Programacion_1.My.Resources.Recursos.Patients
+        Me.btnBuscarPaciente.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnBuscarPaciente.Name = "btnBuscarPaciente"
+        Me.btnBuscarPaciente.Size = New System.Drawing.Size(29, 24)
+        Me.btnBuscarPaciente.Text = "ID de paciente"
         '
         'MedicamentoTableAdapter
         '
@@ -357,162 +521,24 @@ Partial Class Form2
         '
         Me.PacienteTableAdapter.ClearBeforeFill = True
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(26, 131)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(130, 18)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "IDmedicamento:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.AcceptsTab = True
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEntregarmedicamento, "idmedicamento", True))
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.bsMedicamentos, "idmedicamento", True))
-        Me.TextBox1.Location = New System.Drawing.Point(213, 131)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 17
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(29, 59)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(168, 18)
-        Me.Label10.TabIndex = 18
-        Me.Label10.Text = "Nombre del paciente:"
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(214, 59)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(357, 22)
-        Me.TextBox9.TabIndex = 19
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 31)
-        '
-        'ToolStripTextBox1
-        '
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(100, 31)
-        '
-        'BindingNavigatorAddNewItem
-        '
-        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
-        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 28)
-        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
-        '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(29, 28)
-        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(29, 28)
-        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
-        '
-        'BindingNavigatorMovePreviousItem
-        '
-        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
-        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(29, 28)
-        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
-        '
-        'BindingNavigatorMoveNextItem
-        '
-        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
-        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(29, 28)
-        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(29, 28)
-        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnGuardar.Image = Global.Programacion_1.My.Resources.Recursos.Save
-        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(29, 28)
-        Me.btnGuardar.Text = "Guardar"
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnBuscar.Image = Global.Programacion_1.My.Resources.Recursos.Search
-        Me.btnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(29, 28)
-        Me.btnBuscar.Text = "Buscar codigo del paciente"
-        '
-        'btnRemoveFilter
-        '
-        Me.btnRemoveFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnRemoveFilter.Image = Global.Programacion_1.My.Resources.Recursos.remove_filter
-        Me.btnRemoveFilter.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnRemoveFilter.Name = "btnRemoveFilter"
-        Me.btnRemoveFilter.Size = New System.Drawing.Size(29, 28)
-        Me.btnRemoveFilter.Text = "Mostrar todos"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.Programacion_1.My.Resources.Recursos.Medicine
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(29, 28)
-        Me.ToolStripButton1.Text = "Buscar medicamento"
-        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(737, 523)
+        Me.ClientSize = New System.Drawing.Size(898, 523)
         Me.Controls.Add(Me.navEntregarmedicamentos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
         Me.Text = "Encargar_medicamento"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsEntregarmedicamento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.navEntregarmedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.navEntregarmedicamentos.ResumeLayout(False)
         Me.navEntregarmedicamentos.PerformLayout()
-        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -565,6 +591,9 @@ Partial Class Form2
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents txtBuscarmedicamento As ToolStripTextBox
+    Friend WithEvents btnBuscarMedicamento As ToolStripButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents txtBuscarPaciente As ToolStripTextBox
+    Friend WithEvents btnBuscarPaciente As ToolStripButton
 End Class

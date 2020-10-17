@@ -77,6 +77,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend Shared ReadOnly Property Patients() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Patients", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend Shared ReadOnly Property remove_filter() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("remove filter", resourceCulture)

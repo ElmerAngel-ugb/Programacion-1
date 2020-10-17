@@ -22,13 +22,6 @@
 
     End Sub
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.bsMedicamentos.EndEdit()
-        Me.MedicamentoTableAdapter.Update(form_DSMedicamentos)
-        Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
-    End Sub
-
     Private Sub navMedicamentos_RefreshItems(sender As Object, e As EventArgs)
 
     End Sub
@@ -56,6 +49,13 @@
                 MsgBox("Acción Cancelada", 64, "")
             End If
         End If
+    End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Me.Validate()
+        Me.bsMedicamentos.EndEdit()
+        Me.MedicamentoTableAdapter.Update(form_DSMedicamentos)
+        Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
     End Sub
 End Class
 

@@ -12,4 +12,10 @@
     Private Sub bsEntregarmedicamento_CurrentChanged(sender As Object, e As EventArgs) Handles bsEntregarmedicamento.CurrentChanged
 
     End Sub
+
+    Private Sub btnBuscarPaciente_Click(sender As Object, e As EventArgs) Handles btnBuscarPaciente.Click
+        bsMedicamentos.Filter = "codigo='" & Me.txtBuscarmedicamento.Text.Trim & "'"
+        bsMedicamentos.Sort = "idmedicamento ASC"
+        Me.MedicamentoTableAdapter.Fill(Form_DSEntregarmedicamentos.medicamento)
+    End Sub
 End Class

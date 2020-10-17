@@ -202,6 +202,7 @@
     <None Include="Resources\Search.ico" />
     <None Include="Resources\remove filter.ico" />
     <None Include="Resources\Medicine.ico" />
+    <None Include="Resources\Patients.ico" />
     <Content Include="sistemaclinicodb_log.ldf">
       <DependentUpon>sistemaclinicodb.mdf</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
