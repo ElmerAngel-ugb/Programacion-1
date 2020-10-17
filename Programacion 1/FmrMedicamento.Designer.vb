@@ -26,8 +26,6 @@ Partial Class FmrMedicamento
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FmrMedicamento))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtdescripcion = New System.Windows.Forms.TextBox()
-        Me.bsMedicamentos = New System.Windows.Forms.BindingSource(Me.components)
-        Me.form_DSMedicamentos = New Programacion_1.dsMedicamentos()
         Me.lbldescripcion = New System.Windows.Forms.Label()
         Me.txtprecio = New System.Windows.Forms.TextBox()
         Me.lblprecio = New System.Windows.Forms.Label()
@@ -39,7 +37,6 @@ Partial Class FmrMedicamento
         Me.lblcodigo = New System.Windows.Forms.Label()
         Me.txtidmedicamento = New System.Windows.Forms.TextBox()
         Me.lblmedicamento = New System.Windows.Forms.Label()
-        Me.MedicamentoTableAdapter = New Programacion_1.dsMedicamentosTableAdapters.medicamentoTableAdapter()
         Me.navMedicamentos = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -57,11 +54,14 @@ Partial Class FmrMedicamento
         Me.txtBuscar = New System.Windows.Forms.ToolStripTextBox()
         Me.btnBuscar = New System.Windows.Forms.ToolStripButton()
         Me.btnRemoveFilter = New System.Windows.Forms.ToolStripButton()
+        Me.bsMedicamentos = New System.Windows.Forms.BindingSource(Me.components)
+        Me.form_DSMedicamentos = New Programacion_1.dsMedicamentos()
+        Me.MedicamentoTableAdapter = New Programacion_1.dsMedicamentosTableAdapters.medicamentoTableAdapter()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.form_DSMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.navMedicamentos.SuspendLayout()
+        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.form_DSMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -93,19 +93,6 @@ Partial Class FmrMedicamento
         Me.txtdescripcion.Name = "txtdescripcion"
         Me.txtdescripcion.Size = New System.Drawing.Size(388, 108)
         Me.txtdescripcion.TabIndex = 23
-        '
-        'bsMedicamentos
-        '
-        Me.bsMedicamentos.AllowNew = True
-        Me.bsMedicamentos.DataMember = "medicamento"
-        Me.bsMedicamentos.DataSource = Me.form_DSMedicamentos
-        Me.bsMedicamentos.Filter = ""
-        Me.bsMedicamentos.Sort = ""
-        '
-        'form_DSMedicamentos
-        '
-        Me.form_DSMedicamentos.DataSetName = "form_dsMedicamentos"
-        Me.form_DSMedicamentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'lbldescripcion
         '
@@ -206,10 +193,6 @@ Partial Class FmrMedicamento
         Me.lblmedicamento.Size = New System.Drawing.Size(182, 20)
         Me.lblmedicamento.TabIndex = 12
         Me.lblmedicamento.Text = "ID del medicamento:"
-        '
-        'MedicamentoTableAdapter
-        '
-        Me.MedicamentoTableAdapter.ClearBeforeFill = True
         '
         'navMedicamentos
         '
@@ -356,6 +339,23 @@ Partial Class FmrMedicamento
         Me.btnRemoveFilter.Size = New System.Drawing.Size(29, 24)
         Me.btnRemoveFilter.Text = "Mostrar todos"
         '
+        'bsMedicamentos
+        '
+        Me.bsMedicamentos.AllowNew = True
+        Me.bsMedicamentos.DataMember = "medicamento"
+        Me.bsMedicamentos.DataSource = Me.form_DSMedicamentos
+        Me.bsMedicamentos.Filter = ""
+        Me.bsMedicamentos.Sort = ""
+        '
+        'form_DSMedicamentos
+        '
+        Me.form_DSMedicamentos.DataSetName = "form_dsMedicamentos"
+        Me.form_DSMedicamentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MedicamentoTableAdapter
+        '
+        Me.MedicamentoTableAdapter.ClearBeforeFill = True
+        '
         'FmrMedicamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -367,11 +367,11 @@ Partial Class FmrMedicamento
         Me.Text = "Medicamentos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.form_DSMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.navMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.navMedicamentos.ResumeLayout(False)
         Me.navMedicamentos.PerformLayout()
+        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.form_DSMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

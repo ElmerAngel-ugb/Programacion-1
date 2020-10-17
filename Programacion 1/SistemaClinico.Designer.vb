@@ -22,28 +22,21 @@ Partial Class SistemaClinico
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrodelPersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AgregarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncargarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistroDePersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrincipal.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 28)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
-        Me.MenuStrip1.TabIndex = 0
-        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'mnuPrincipal
         '
         Me.mnuPrincipal.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperacionesToolStripMenuItem})
+        Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperacionesToolStripMenuItem, Me.MantenimientoToolStripMenuItem})
         Me.mnuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.mnuPrincipal.Name = "mnuPrincipal"
         Me.mnuPrincipal.Size = New System.Drawing.Size(800, 28)
@@ -51,22 +44,10 @@ Partial Class SistemaClinico
         '
         'OperacionesToolStripMenuItem
         '
-        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrodelPersonalToolStripMenuItem, Me.AgregarMedicamentoToolStripMenuItem, Me.EncargarMedicamentoToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
         Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
-        '
-        'RegistrodelPersonalToolStripMenuItem
-        '
-        Me.RegistrodelPersonalToolStripMenuItem.Name = "RegistrodelPersonalToolStripMenuItem"
-        Me.RegistrodelPersonalToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
-        Me.RegistrodelPersonalToolStripMenuItem.Text = "Registro del Personal"
-        '
-        'AgregarMedicamentoToolStripMenuItem
-        '
-        Me.AgregarMedicamentoToolStripMenuItem.Name = "AgregarMedicamentoToolStripMenuItem"
-        Me.AgregarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
-        Me.AgregarMedicamentoToolStripMenuItem.Text = "Agregar Medicamento"
         '
         'EncargarMedicamentoToolStripMenuItem
         '
@@ -74,28 +55,59 @@ Partial Class SistemaClinico
         Me.EncargarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
         Me.EncargarMedicamentoToolStripMenuItem.Text = "Encargar Medicamento"
         '
+        'MantenimientoToolStripMenuItem
+        '
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
+        Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
+        '
+        'PacienteToolStripMenuItem
+        '
+        Me.PacienteToolStripMenuItem.Name = "PacienteToolStripMenuItem"
+        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.PacienteToolStripMenuItem.Text = "Paciente"
+        '
+        'RegistrarPacienteToolStripMenuItem
+        '
+        Me.RegistrarPacienteToolStripMenuItem.Name = "RegistrarPacienteToolStripMenuItem"
+        Me.RegistrarPacienteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.RegistrarPacienteToolStripMenuItem.Text = "Buscar Paciente"
+        '
+        'RegistroDePersonalToolStripMenuItem
+        '
+        Me.RegistroDePersonalToolStripMenuItem.Name = "RegistroDePersonalToolStripMenuItem"
+        Me.RegistroDePersonalToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.RegistroDePersonalToolStripMenuItem.Text = "Registro de personal"
+        '
+        'MedicamentoToolStripMenuItem
+        '
+        Me.MedicamentoToolStripMenuItem.Name = "MedicamentoToolStripMenuItem"
+        Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.MedicamentoToolStripMenuItem.Text = "Medicamento"
+        '
         'SistemaClinico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.mnuPrincipal)
         Me.IsMdiContainer = True
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "SistemaClinico"
         Me.Text = "SistemaClinico"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.mnuPrincipal.ResumeLayout(False)
         Me.mnuPrincipal.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents mnuPrincipal As MenuStrip
     Friend WithEvents OperacionesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegistrodelPersonalToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AgregarMedicamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncargarMedicamentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MantenimientoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PacienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarPacienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDePersonalToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MedicamentoToolStripMenuItem As ToolStripMenuItem
 End Class

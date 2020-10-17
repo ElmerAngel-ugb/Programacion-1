@@ -142,4 +142,8 @@
         Dim objBuscarPaciente As New FrmBuscarPaciente
         objBuscarPaciente.ShowDialog()
     End Sub
+
+    Private Sub FrmPaciente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SistemaClinico.frmPaciente = Nothing
+    End Sub
 End Class

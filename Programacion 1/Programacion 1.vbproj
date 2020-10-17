@@ -118,12 +118,25 @@
       <DependentUpon>FmrMedicamento.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FmrEnacargarMedicamento.Designer.vb">
-      <DependentUpon>FmrEnacargarMedicamento.vb</DependentUpon>
+    <Compile Include="FmrEncargarMedicamento.Designer.vb">
+      <DependentUpon>FmrEncargarMedicamento.vb</DependentUpon>
     </Compile>
-    <Compile Include="FmrEnacargarMedicamento.vb">
+    <Compile Include="FmrEncargarMedicamento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscarPaciente.Designer.vb">
+      <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaciente.Designer.vb">
+      <DependentUpon>FrmPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="miconexion.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -159,8 +172,14 @@
     <EmbeddedResource Include="FmrMedicamento.resx">
       <DependentUpon>FmrMedicamento.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FmrEnacargarMedicamento.resx">
-      <DependentUpon>FmrEnacargarMedicamento.vb</DependentUpon>
+    <EmbeddedResource Include="FmrEncargarMedicamento.resx">
+      <DependentUpon>FmrEncargarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarPaciente.resx">
+      <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaciente.resx">
+      <DependentUpon>FrmPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -221,6 +240,7 @@
     <None Include="Resources\remove filter.ico" />
     <None Include="Resources\Medicine.ico" />
     <None Include="Resources\Patients.ico" />
+    <None Include="Resources\Cancel.ico" />
     <Content Include="sistemaclinicodb_log.ldf">
       <DependentUpon>sistemaclinicodb.mdf</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

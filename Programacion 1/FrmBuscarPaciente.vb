@@ -30,4 +30,8 @@
         _idC = 0
         Close()
     End Sub
+
+    Private Sub FrmBuscarPaciente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SistemaClinico.frmBuscarPaciente = Nothing
+    End Sub
 End Class

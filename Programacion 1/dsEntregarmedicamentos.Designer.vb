@@ -264,17 +264,6 @@ Partial Public Class dsEntregarmedicamentos
         MyBase.Tables.Add(Me.tablepaciente)
         Me.tableencargar_medicamento = New encargar_medicamentoDataTable()
         MyBase.Tables.Add(Me.tableencargar_medicamento)
-        Dim fkc As Global.System.Data.ForeignKeyConstraint
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_medicamento_encargar_medicamento", New Global.System.Data.DataColumn() {Me.tablemedicamento.idmedicamentoColumn}, New Global.System.Data.DataColumn() {Me.tableencargar_medicamento.idmedicamentoColumn})
-        Me.tableencargar_medicamento.Constraints.Add(fkc)
-        fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.Cascade
-        fkc.DeleteRule = Global.System.Data.Rule.Cascade
-        fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_paciente_encargar_medicamento", New Global.System.Data.DataColumn() {Me.tablepaciente.idpacienteColumn}, New Global.System.Data.DataColumn() {Me.tableencargar_medicamento.idpacienteColumn})
-        Me.tableencargar_medicamento.Constraints.Add(fkc)
-        fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.Cascade
-        fkc.DeleteRule = Global.System.Data.Rule.Cascade
-        fkc.UpdateRule = Global.System.Data.Rule.Cascade
         Me.relationFK_medicamento_encargar_medicamento = New Global.System.Data.DataRelation("FK_medicamento_encargar_medicamento", New Global.System.Data.DataColumn() {Me.tablemedicamento.idmedicamentoColumn}, New Global.System.Data.DataColumn() {Me.tableencargar_medicamento.idmedicamentoColumn}, false)
         Me.Relations.Add(Me.relationFK_medicamento_encargar_medicamento)
         Me.relationFK_paciente_encargar_medicamento = New Global.System.Data.DataRelation("FK_paciente_encargar_medicamento", New Global.System.Data.DataColumn() {Me.tablepaciente.idpacienteColumn}, New Global.System.Data.DataColumn() {Me.tableencargar_medicamento.idpacienteColumn}, false)
