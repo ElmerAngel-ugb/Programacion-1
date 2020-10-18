@@ -41,6 +41,7 @@ Partial Class FrmBuscarPaciente
         Me.Examenes_Realizados = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lblBuscarCliente = New System.Windows.Forms.Label()
         Me.txtBuscarPaciente = New System.Windows.Forms.TextBox()
+        Me.btnCancelarPacientes = New System.Windows.Forms.Button()
         CType(Me.grdBuscarPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -48,10 +49,10 @@ Partial Class FrmBuscarPaciente
         '
         Me.btnCancelarPaciente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancelarPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelarPaciente.Location = New System.Drawing.Point(1588, 535)
+        Me.btnCancelarPaciente.Location = New System.Drawing.Point(1325, 379)
         Me.btnCancelarPaciente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnCancelarPaciente.Name = "btnCancelarPaciente"
-        Me.btnCancelarPaciente.Size = New System.Drawing.Size(160, 41)
+        Me.btnCancelarPaciente.Size = New System.Drawing.Size(120, 33)
         Me.btnCancelarPaciente.TabIndex = 9
         Me.btnCancelarPaciente.Text = "Cancelar"
         Me.btnCancelarPaciente.UseVisualStyleBackColor = True
@@ -60,10 +61,10 @@ Partial Class FrmBuscarPaciente
         '
         Me.btnSeleccionarPaciente.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSeleccionarPaciente.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarPaciente.Location = New System.Drawing.Point(1257, 535)
+        Me.btnSeleccionarPaciente.Location = New System.Drawing.Point(731, 379)
         Me.btnSeleccionarPaciente.Margin = New System.Windows.Forms.Padding(1)
         Me.btnSeleccionarPaciente.Name = "btnSeleccionarPaciente"
-        Me.btnSeleccionarPaciente.Size = New System.Drawing.Size(315, 41)
+        Me.btnSeleccionarPaciente.Size = New System.Drawing.Size(236, 33)
         Me.btnSeleccionarPaciente.TabIndex = 8
         Me.btnSeleccionarPaciente.Text = "Seleccionar Cliente"
         Me.btnSeleccionarPaciente.UseVisualStyleBackColor = True
@@ -78,13 +79,13 @@ Partial Class FrmBuscarPaciente
         Me.grdBuscarPaciente.BackgroundColor = System.Drawing.SystemColors.InactiveCaption
         Me.grdBuscarPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdBuscarPaciente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdPaciente, Me.Codigo, Me.Nombre, Me.Apellido, Me.Fecha_Nacimiento, Me.Edad, Me.Sexo, Me.DUI_NIT, Me.Tipo_Sangre, Me.Email, Me.Direccion, Me.Alergico, Me.Examenes_Realizados})
-        Me.grdBuscarPaciente.Location = New System.Drawing.Point(17, 52)
+        Me.grdBuscarPaciente.Location = New System.Drawing.Point(10, 48)
         Me.grdBuscarPaciente.Margin = New System.Windows.Forms.Padding(1)
         Me.grdBuscarPaciente.Name = "grdBuscarPaciente"
         Me.grdBuscarPaciente.ReadOnly = True
         Me.grdBuscarPaciente.RowHeadersWidth = 102
         Me.grdBuscarPaciente.RowTemplate.Height = 40
-        Me.grdBuscarPaciente.Size = New System.Drawing.Size(1805, 460)
+        Me.grdBuscarPaciente.Size = New System.Drawing.Size(1142, 318)
         Me.grdBuscarPaciente.TabIndex = 7
         '
         'IdPaciente
@@ -195,10 +196,10 @@ Partial Class FrmBuscarPaciente
         'lblBuscarCliente
         '
         Me.lblBuscarCliente.AutoSize = True
-        Me.lblBuscarCliente.Location = New System.Drawing.Point(13, 11)
+        Me.lblBuscarCliente.Location = New System.Drawing.Point(10, 9)
         Me.lblBuscarCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.lblBuscarCliente.Name = "lblBuscarCliente"
-        Me.lblBuscarCliente.Size = New System.Drawing.Size(68, 17)
+        Me.lblBuscarCliente.Size = New System.Drawing.Size(54, 13)
         Me.lblBuscarCliente.TabIndex = 6
         Me.lblBuscarCliente.Text = "BUSCAR:"
         '
@@ -206,25 +207,37 @@ Partial Class FrmBuscarPaciente
         '
         Me.txtBuscarPaciente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscarPaciente.Location = New System.Drawing.Point(87, 11)
+        Me.txtBuscarPaciente.Location = New System.Drawing.Point(65, 9)
         Me.txtBuscarPaciente.Margin = New System.Windows.Forms.Padding(1)
         Me.txtBuscarPaciente.Name = "txtBuscarPaciente"
-        Me.txtBuscarPaciente.Size = New System.Drawing.Size(1696, 22)
+        Me.txtBuscarPaciente.Size = New System.Drawing.Size(1087, 20)
         Me.txtBuscarPaciente.TabIndex = 5
+        '
+        'btnCancelarPacientes
+        '
+        Me.btnCancelarPacientes.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelarPacientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelarPacientes.Location = New System.Drawing.Point(983, 379)
+        Me.btnCancelarPacientes.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnCancelarPacientes.Name = "btnCancelarPacientes"
+        Me.btnCancelarPacientes.Size = New System.Drawing.Size(169, 33)
+        Me.btnCancelarPacientes.TabIndex = 10
+        Me.btnCancelarPacientes.Text = "Cancelar"
+        Me.btnCancelarPacientes.UseVisualStyleBackColor = True
         '
         'FrmBuscarPaciente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuHighlight
-        Me.ClientSize = New System.Drawing.Size(1827, 588)
+        Me.ClientSize = New System.Drawing.Size(1162, 422)
+        Me.Controls.Add(Me.btnCancelarPacientes)
         Me.Controls.Add(Me.btnCancelarPaciente)
         Me.Controls.Add(Me.btnSeleccionarPaciente)
         Me.Controls.Add(Me.grdBuscarPaciente)
         Me.Controls.Add(Me.lblBuscarCliente)
         Me.Controls.Add(Me.txtBuscarPaciente)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmBuscarPaciente"
         Me.Text = "FrmBuscarPaciente"
         CType(Me.grdBuscarPaciente, System.ComponentModel.ISupportInitialize).EndInit()
@@ -251,4 +264,5 @@ Partial Class FrmBuscarPaciente
     Friend WithEvents Direccion As DataGridViewTextBoxColumn
     Friend WithEvents Alergico As DataGridViewTextBoxColumn
     Friend WithEvents Examenes_Realizados As DataGridViewTextBoxColumn
+    Friend WithEvents btnCancelarPacientes As Button
 End Class
