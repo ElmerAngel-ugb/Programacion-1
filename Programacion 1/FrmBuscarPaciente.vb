@@ -26,12 +26,12 @@
         grdBuscarPaciente.DataSource = bs
     End Sub
 
-    Private Sub btnCancelarPaciente_Click(sender As Object, e As EventArgs) Handles btnCancelarPaciente.Click
-        _idC = 0
-        Close()
-    End Sub
-
     Private Sub FrmBuscarPaciente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         SistemaClinico.frmBuscarPaciente = Nothing
+    End Sub
+
+    Private Sub btnCancelarPacientes_Click(sender As Object, e As EventArgs) Handles btnCancelarPacientes.Click
+        _idC = 0
+        Close()
     End Sub
 End Class
