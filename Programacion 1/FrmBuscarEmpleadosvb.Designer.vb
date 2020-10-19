@@ -25,7 +25,6 @@ Partial Class FrmBuscarEmpleadosvb
         Me.txtBuscarEmpleado = New System.Windows.Forms.TextBox()
         Me.lblBucarEmpleado = New System.Windows.Forms.Label()
         Me.grbBuscarEmpleado = New System.Windows.Forms.DataGridView()
-        Me.btnSeleccionarEmpleado = New System.Windows.Forms.Button()
         Me.idregistrodepersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -34,6 +33,7 @@ Partial Class FrmBuscarEmpleadosvb
         Me.email = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.horario = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnSeleccionarEmpleado = New System.Windows.Forms.Button()
         Me.btnCancelarSeleccion = New System.Windows.Forms.Button()
         CType(Me.grbBuscarEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,21 +61,11 @@ Partial Class FrmBuscarEmpleadosvb
         Me.grbBuscarEmpleado.AllowUserToDeleteRows = False
         Me.grbBuscarEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grbBuscarEmpleado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idregistrodepersonal, Me.codigo, Me.nombre, Me.direccion, Me.telefono, Me.email, Me.cargo, Me.horario})
-        Me.grbBuscarEmpleado.Location = New System.Drawing.Point(37, 39)
+        Me.grbBuscarEmpleado.Location = New System.Drawing.Point(32, 39)
         Me.grbBuscarEmpleado.Name = "grbBuscarEmpleado"
         Me.grbBuscarEmpleado.ReadOnly = True
         Me.grbBuscarEmpleado.Size = New System.Drawing.Size(991, 375)
         Me.grbBuscarEmpleado.TabIndex = 2
-        '
-        'btnSeleccionarEmpleado
-        '
-        Me.btnSeleccionarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSeleccionarEmpleado.Location = New System.Drawing.Point(743, 429)
-        Me.btnSeleccionarEmpleado.Name = "btnSeleccionarEmpleado"
-        Me.btnSeleccionarEmpleado.Size = New System.Drawing.Size(165, 33)
-        Me.btnSeleccionarEmpleado.TabIndex = 3
-        Me.btnSeleccionarEmpleado.Text = "Seleccionar"
-        Me.btnSeleccionarEmpleado.UseVisualStyleBackColor = True
         '
         'idregistrodepersonal
         '
@@ -139,6 +129,16 @@ Partial Class FrmBuscarEmpleadosvb
         Me.horario.Name = "horario"
         Me.horario.ReadOnly = True
         Me.horario.Width = 200
+        '
+        'btnSeleccionarEmpleado
+        '
+        Me.btnSeleccionarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionarEmpleado.Location = New System.Drawing.Point(743, 429)
+        Me.btnSeleccionarEmpleado.Name = "btnSeleccionarEmpleado"
+        Me.btnSeleccionarEmpleado.Size = New System.Drawing.Size(165, 33)
+        Me.btnSeleccionarEmpleado.TabIndex = 3
+        Me.btnSeleccionarEmpleado.Text = "Seleccionar"
+        Me.btnSeleccionarEmpleado.UseVisualStyleBackColor = True
         '
         'btnCancelarSeleccion
         '

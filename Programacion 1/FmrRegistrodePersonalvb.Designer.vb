@@ -349,7 +349,7 @@ Partial Class FmrRegistrodePersonalvb
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(531, 471)
+        Me.ClientSize = New System.Drawing.Size(531, 483)
         Me.Controls.Add(Me.grbEditarRegistrodePersonal)
         Me.Controls.Add(Me.grbRNavegarRegistrodePersonal)
         Me.Controls.Add(Me.grbRegistroPersonal)
