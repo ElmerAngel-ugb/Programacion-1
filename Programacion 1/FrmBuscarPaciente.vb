@@ -34,4 +34,8 @@
     Private Sub FrmBuscarPaciente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         SistemaClinico.frmBuscarPaciente = Nothing
     End Sub
+
+    Private Sub FrmBuscarPaciente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

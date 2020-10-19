@@ -24,7 +24,15 @@ Public Class db_conexion
         miCommand.CommandText = "select * from Paciente"
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "Paciente")
+        Return ds
+    End Function
+    Public Function Btenerdatos()
+        ds.Clear()
+        miCommand.Connection = miConexion 
 
+        miCommand.CommandText = "select * from registrodepersonal"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "RegistrodePersonal")
         Return ds
     End Function
 
@@ -47,10 +55,29 @@ Public Class db_conexion
         Return msg
     End Function
 
+
+    Public Function mantenimientoDatosRegistrodePersonal(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO registrodepersonal (codigo,nombre,direccion,telefono,email,cargo,horario) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "','" + datos(7) + "') "
+            Case "modificar"
+                sql = "UPDATE registrodepersonal SET Codigo ='" + datos(1) + "',nombre='" + datos(2) + "',direccion='" + datos(3) + "',telefono='" + datos(4) + "',email='" + datos(5) + "',cargo='" + datos(6) + "',horario='" + datos(7) + "' WHERE idregistrodepersonal='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM registrodepersonal WHERE idregistrodepersonal='" + datos(0) + "'"
+        End Select
+        If (executeSql(Sql) > 0) Then
+            msg = "Accion realizada con exito"
+        Else
+            msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
+        End If
+
+        Return msg
+    End Function
+
     Private Function executeSql(ByVal sql As String)
         miCommand.Connection = miConexion
         miCommand.CommandText = sql
         Return miCommand.ExecuteNonQuery()
     End Function
-
 End Class

@@ -36,8 +36,6 @@
             limpiarDatosPaciente()
             MessageBox.Show("No hay Registro que mostrar", "Registro de Paciente", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-
-
     End Sub
 
     Private Sub btnPrimeroCliente_Click(sender As Object, e As EventArgs) Handles btnPrimeroCliente.Click

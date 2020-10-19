@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{24368DED-819F-40C5-933E-56071411F97A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Programacion_1.My.MyApplication</StartupObject>
+    <StartupObject>Programacion_1.SistemaClinico</StartupObject>
     <RootNamespace>Programacion_1</RootNamespace>
     <AssemblyName>Programacion 1</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -124,6 +124,12 @@
     <Compile Include="FmrEncargarMedicamento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmBuscarEmpleadosvb.Designer.vb">
+      <DependentUpon>FrmBuscarEmpleadosvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarEmpleadosvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBuscarPaciente.Designer.vb">
       <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmrEncargarMedicamento.resx">
       <DependentUpon>FmrEncargarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarEmpleadosvb.resx">
+      <DependentUpon>FrmBuscarEmpleadosvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarPaciente.resx">
       <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
