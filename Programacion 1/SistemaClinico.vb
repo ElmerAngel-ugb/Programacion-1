@@ -4,6 +4,7 @@
     Public fmrEncargarMedicamento As FmrEncargarMedicamento
     Public frmPaciente As FrmPaciente
     Public frmBuscarPaciente As FrmBuscarPaciente
+    Public fmrPagar As FmrPagar
 
     Private Sub EncargarMedicamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncargarMedicamentoToolStripMenuItem.Click
         If fmrEncargarMedicamento Is Nothing Then
@@ -52,6 +53,16 @@
             fmrMedicamento.Show()
         Else
             fmrMedicamento.Activate()
+        End If
+    End Sub
+
+    Private Sub PagarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagarToolStripMenuItem.Click
+        If fmrPagar Is Nothing Then
+            fmrPagar = New FmrPagar
+            fmrPagar.MdiParent = Me
+            fmrPagar.Show()
+        Else
+            fmrPagar.Activate()
         End If
     End Sub
 End Class

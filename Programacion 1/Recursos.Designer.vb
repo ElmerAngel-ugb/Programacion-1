@@ -67,6 +67,46 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend Shared ReadOnly Property BuscarEncargo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BuscarEncargo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property Cancel() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Cancel", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property Hospital() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Hospital", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property Hospital1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Hospital1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend Shared ReadOnly Property Medicine() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Medicine", resourceCulture)
@@ -80,6 +120,16 @@ Namespace My.Resources
         Friend Shared ReadOnly Property Patients() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Patients", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend Shared ReadOnly Property Pay() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Pay", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

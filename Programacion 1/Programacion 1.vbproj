@@ -105,6 +105,17 @@
     <Compile Include="dsMedicamentos.vb">
       <DependentUpon>dsMedicamentos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsPagar.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPagar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FmrPagar.Designer.vb">
+      <DependentUpon>FmrPagar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrPagar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FmrRegistrodePersonalvb.Designer.vb">
       <DependentUpon>FmrRegistrodePersonalvb.vb</DependentUpon>
     </Compile>
@@ -172,6 +183,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FmrPagar.resx">
+      <DependentUpon>FmrPagar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmrRegistrodePersonalvb.resx">
       <DependentUpon>FmrRegistrodePersonalvb.vb</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +234,17 @@
     <None Include="dsMedicamentos.xss">
       <DependentUpon>dsMedicamentos.xsd</DependentUpon>
     </None>
+    <None Include="dsPagar.xsc">
+      <DependentUpon>dsPagar.xsd</DependentUpon>
+    </None>
+    <None Include="dsPagar.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPagar.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsPagar.xss">
+      <DependentUpon>dsPagar.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -250,6 +275,11 @@
     <None Include="Resources\Medicine.ico" />
     <None Include="Resources\Patients.ico" />
     <None Include="Resources\Cancel.ico" />
+    <None Include="Resources\Pay.ico" />
+    <None Include="Resources\Cancel1.ico" />
+    <None Include="Resources\Hospital.ico" />
+    <None Include="Resources\Hospital.png" />
+    <None Include="Resources\BuscarEncargo.ico" />
     <Content Include="sistemaclinicodb_log.ldf">
       <DependentUpon>sistemaclinicodb.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

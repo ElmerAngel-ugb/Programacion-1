@@ -196,4 +196,9 @@
         Return cantidadDisponible >= cantidadDeseada
     End Function
 
+    Private Sub bsMedicamentos_CurrentChanged(sender As Object, e As EventArgs) Handles bsMedicamentos.CurrentChanged
+
+    End Sub
+
+
 End Class

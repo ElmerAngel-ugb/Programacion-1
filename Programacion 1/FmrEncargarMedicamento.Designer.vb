@@ -480,7 +480,7 @@ Partial Class FmrEncargarMedicamento
         Me.btnCancelar.Image = Global.Programacion_1.My.Resources.Resources.Cancel
         Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(29, 28)
+        Me.btnCancelar.Size = New System.Drawing.Size(29, 24)
         Me.btnCancelar.Text = "Cancelar"
         '
         'ToolStripSeparator6

@@ -22,9 +22,11 @@ Partial Class SistemaClinico
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SistemaClinico))
         Me.mnuPrincipal = New System.Windows.Forms.MenuStrip()
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncargarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,7 +46,7 @@ Partial Class SistemaClinico
         '
         'OperacionesToolStripMenuItem
         '
-        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem, Me.PagarToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
         Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
@@ -54,6 +56,12 @@ Partial Class SistemaClinico
         Me.EncargarMedicamentoToolStripMenuItem.Name = "EncargarMedicamentoToolStripMenuItem"
         Me.EncargarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
         Me.EncargarMedicamentoToolStripMenuItem.Text = "Encargar Medicamento"
+        '
+        'PagarToolStripMenuItem
+        '
+        Me.PagarToolStripMenuItem.Name = "PagarToolStripMenuItem"
+        Me.PagarToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
+        Me.PagarToolStripMenuItem.Text = "Pagar"
         '
         'MantenimientoToolStripMenuItem
         '
@@ -90,8 +98,12 @@ Partial Class SistemaClinico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Programacion_1.My.Resources.Recursos.Hospital1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.mnuPrincipal)
+        Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
         Me.Name = "SistemaClinico"
         Me.Text = "SistemaClinico"
@@ -110,4 +122,5 @@ Partial Class SistemaClinico
     Friend WithEvents RegistrarPacienteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistroDePersonalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MedicamentoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PagarToolStripMenuItem As ToolStripMenuItem
 End Class
