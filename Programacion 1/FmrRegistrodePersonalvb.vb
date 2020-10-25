@@ -13,7 +13,7 @@
     End Sub
     Sub BtenerDatos()
         dataTable = objConexion.Btenerdatos().Tables("registrodepersonal")
-
+        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("Idregistrodepersonal")}
         mostrarDatos()
     End Sub
 
@@ -129,9 +129,13 @@
     End Sub
 
     Private Sub btnBuscarRegistrodePersonal_Click(sender As Object, e As EventArgs) Handles btnBuscarRegistrodePersonal.Click
+
         Dim objBuscarEmpleados As New FrmBuscarEmpleadosvb
         objBuscarEmpleados.ShowDialog()
-
+        If objBuscarEmpleados._idC > 0 Then
+            posicion = dataTable.Rows.IndexOf(dataTable.Rows.Find(objBuscarEmpleados._idC))
+            mostrarDatos()
+        End If
     End Sub
 
 End Class
