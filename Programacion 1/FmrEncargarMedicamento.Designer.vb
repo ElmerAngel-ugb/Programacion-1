@@ -35,7 +35,6 @@ Partial Class FmrEncargarMedicamento
         Me.txtNombrePaciente = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtIdMedicamento = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.txtDescripcion = New System.Windows.Forms.TextBox()
@@ -50,7 +49,6 @@ Partial Class FmrEncargarMedicamento
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
@@ -81,6 +79,10 @@ Partial Class FmrEncargarMedicamento
         Me.Encargar_medicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.encargar_medicamentoTableAdapter()
         Me.MedicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter()
         Me.PacienteTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.pacienteTableAdapter()
+        Me.txtCodigoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtApellidosPaciente = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,13 +94,16 @@ Partial Class FmrEncargarMedicamento
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtApellidosPaciente)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label11)
+        Me.GroupBox1.Controls.Add(Me.txtCodigoPaciente)
         Me.GroupBox1.Controls.Add(Me.tmpIdMedicamento)
         Me.GroupBox1.Controls.Add(Me.tmpIdPaciente)
         Me.GroupBox1.Controls.Add(Me.txtCantidadDeseada)
         Me.GroupBox1.Controls.Add(Me.txtNombrePaciente)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtIdMedicamento)
-        Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.txtTotal)
         Me.GroupBox1.Controls.Add(Me.txtPrecio)
         Me.GroupBox1.Controls.Add(Me.txtDescripcion)
@@ -113,7 +118,6 @@ Partial Class FmrEncargarMedicamento
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(713, 471)
@@ -123,7 +127,7 @@ Partial Class FmrEncargarMedicamento
         'tmpIdMedicamento
         '
         Me.tmpIdMedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "idmedicamento", True))
-        Me.tmpIdMedicamento.Location = New System.Drawing.Point(353, 97)
+        Me.tmpIdMedicamento.Location = New System.Drawing.Point(376, 129)
         Me.tmpIdMedicamento.Name = "tmpIdMedicamento"
         Me.tmpIdMedicamento.Size = New System.Drawing.Size(0, 22)
         Me.tmpIdMedicamento.TabIndex = 22
@@ -142,7 +146,7 @@ Partial Class FmrEncargarMedicamento
         'tmpIdPaciente
         '
         Me.tmpIdPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "IdPaciente", True))
-        Me.tmpIdPaciente.Location = New System.Drawing.Point(353, 21)
+        Me.tmpIdPaciente.Location = New System.Drawing.Point(379, 17)
         Me.tmpIdPaciente.Name = "tmpIdPaciente"
         Me.tmpIdPaciente.Size = New System.Drawing.Size(0, 22)
         Me.tmpIdPaciente.TabIndex = 21
@@ -155,10 +159,11 @@ Partial Class FmrEncargarMedicamento
         'txtCantidadDeseada
         '
         Me.txtCantidadDeseada.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEntregarmedicamento, "cantidad_deseada", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"))
-        Me.txtCantidadDeseada.Location = New System.Drawing.Point(213, 358)
+        Me.txtCantidadDeseada.Location = New System.Drawing.Point(239, 357)
         Me.txtCantidadDeseada.Name = "txtCantidadDeseada"
-        Me.txtCantidadDeseada.Size = New System.Drawing.Size(100, 22)
+        Me.txtCantidadDeseada.Size = New System.Drawing.Size(191, 22)
         Me.txtCantidadDeseada.TabIndex = 20
+        Me.txtCantidadDeseada.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         Me.txtCantidadDeseada.ValidatingType = GetType(Date)
         '
         'bsEntregarmedicamento
@@ -169,17 +174,17 @@ Partial Class FmrEncargarMedicamento
         'txtNombrePaciente
         '
         Me.txtNombrePaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Nombre", True))
-        Me.txtNombrePaciente.Location = New System.Drawing.Point(214, 59)
+        Me.txtNombrePaciente.Location = New System.Drawing.Point(239, 57)
         Me.txtNombrePaciente.Name = "txtNombrePaciente"
         Me.txtNombrePaciente.ReadOnly = True
-        Me.txtNombrePaciente.Size = New System.Drawing.Size(391, 22)
+        Me.txtNombrePaciente.Size = New System.Drawing.Size(191, 22)
         Me.txtNombrePaciente.TabIndex = 19
         '
         'Label10
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(29, 59)
+        Me.Label10.Location = New System.Drawing.Point(20, 59)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(168, 18)
         Me.Label10.TabIndex = 18
@@ -189,44 +194,36 @@ Partial Class FmrEncargarMedicamento
         '
         Me.txtIdMedicamento.AcceptsTab = True
         Me.txtIdMedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEntregarmedicamento, "idmedicamento", True))
-        Me.txtIdMedicamento.Location = New System.Drawing.Point(213, 131)
+        Me.txtIdMedicamento.Location = New System.Drawing.Point(436, 128)
         Me.txtIdMedicamento.Name = "txtIdMedicamento"
         Me.txtIdMedicamento.ReadOnly = True
-        Me.txtIdMedicamento.Size = New System.Drawing.Size(100, 22)
+        Me.txtIdMedicamento.Size = New System.Drawing.Size(0, 22)
         Me.txtIdMedicamento.TabIndex = 17
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(26, 131)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(130, 18)
-        Me.Label9.TabIndex = 16
-        Me.Label9.Text = "IDmedicamento:"
         '
         'txtTotal
         '
         Me.txtTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEntregarmedicamento, "total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"))
-        Me.txtTotal.Location = New System.Drawing.Point(213, 402)
+        Me.txtTotal.Location = New System.Drawing.Point(239, 393)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(87, 22)
+        Me.txtTotal.Size = New System.Drawing.Size(191, 22)
         Me.txtTotal.TabIndex = 15
+        Me.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtPrecio
         '
         Me.txtPrecio.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "0", "N2"))
-        Me.txtPrecio.Location = New System.Drawing.Point(213, 316)
+        Me.txtPrecio.Location = New System.Drawing.Point(239, 321)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.ReadOnly = True
-        Me.txtPrecio.Size = New System.Drawing.Size(101, 22)
+        Me.txtPrecio.Size = New System.Drawing.Size(191, 22)
         Me.txtPrecio.TabIndex = 13
+        Me.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtDescripcion
         '
         Me.txtDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "descripcion", True))
-        Me.txtDescripcion.Location = New System.Drawing.Point(213, 241)
+        Me.txtDescripcion.Location = New System.Drawing.Point(239, 238)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ReadOnly = True
@@ -236,44 +233,45 @@ Partial Class FmrEncargarMedicamento
         'txtCantidadDisponible
         '
         Me.txtCantidadDisponible.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "cantidad_disponible", True))
-        Me.txtCantidadDisponible.Location = New System.Drawing.Point(213, 206)
+        Me.txtCantidadDisponible.Location = New System.Drawing.Point(239, 202)
         Me.txtCantidadDisponible.Name = "txtCantidadDisponible"
         Me.txtCantidadDisponible.ReadOnly = True
-        Me.txtCantidadDisponible.Size = New System.Drawing.Size(88, 22)
+        Me.txtCantidadDisponible.Size = New System.Drawing.Size(191, 22)
         Me.txtCantidadDisponible.TabIndex = 11
+        Me.txtCantidadDisponible.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtNombreMedicamento
         '
         Me.txtNombreMedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "nombre_medicamento", True))
-        Me.txtNombreMedicamento.Location = New System.Drawing.Point(213, 168)
+        Me.txtNombreMedicamento.Location = New System.Drawing.Point(239, 166)
         Me.txtNombreMedicamento.Name = "txtNombreMedicamento"
         Me.txtNombreMedicamento.ReadOnly = True
-        Me.txtNombreMedicamento.Size = New System.Drawing.Size(134, 22)
+        Me.txtNombreMedicamento.Size = New System.Drawing.Size(191, 22)
         Me.txtNombreMedicamento.TabIndex = 10
         '
         'TextBox2
         '
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "codigo", True))
-        Me.TextBox2.Location = New System.Drawing.Point(213, 97)
+        Me.TextBox2.Location = New System.Drawing.Point(239, 129)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(134, 22)
+        Me.TextBox2.Size = New System.Drawing.Size(191, 22)
         Me.TextBox2.TabIndex = 9
         '
         'txtPaciente
         '
         Me.txtPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEntregarmedicamento, "idpaciente", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.txtPaciente.Location = New System.Drawing.Point(213, 21)
+        Me.txtPaciente.Location = New System.Drawing.Point(407, 17)
         Me.txtPaciente.Name = "txtPaciente"
         Me.txtPaciente.ReadOnly = True
-        Me.txtPaciente.Size = New System.Drawing.Size(134, 22)
+        Me.txtPaciente.Size = New System.Drawing.Size(0, 22)
         Me.txtPaciente.TabIndex = 8
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(23, 401)
+        Me.Label8.Location = New System.Drawing.Point(20, 402)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(51, 18)
         Me.Label8.TabIndex = 7
@@ -283,7 +281,7 @@ Partial Class FmrEncargarMedicamento
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(23, 358)
+        Me.Label7.Location = New System.Drawing.Point(20, 369)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(147, 18)
         Me.Label7.TabIndex = 6
@@ -293,7 +291,7 @@ Partial Class FmrEncargarMedicamento
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(23, 315)
+        Me.Label6.Location = New System.Drawing.Point(20, 328)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(62, 18)
         Me.Label6.TabIndex = 5
@@ -303,7 +301,7 @@ Partial Class FmrEncargarMedicamento
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(23, 240)
+        Me.Label5.Location = New System.Drawing.Point(20, 241)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(103, 18)
         Me.Label5.TabIndex = 4
@@ -313,7 +311,7 @@ Partial Class FmrEncargarMedicamento
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(23, 205)
+        Me.Label4.Location = New System.Drawing.Point(20, 206)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(160, 18)
         Me.Label4.TabIndex = 3
@@ -323,7 +321,7 @@ Partial Class FmrEncargarMedicamento
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(23, 167)
+        Me.Label3.Location = New System.Drawing.Point(20, 168)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(73, 18)
         Me.Label3.TabIndex = 2
@@ -333,21 +331,11 @@ Partial Class FmrEncargarMedicamento
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(23, 96)
+        Me.Label2.Location = New System.Drawing.Point(20, 132)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 18)
+        Me.Label2.Size = New System.Drawing.Size(196, 18)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Codigo:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(23, 21)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(162, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código del paciente:"
+        Me.Label2.Text = "Codigo de medicamento:"
         '
         'BindingNavigatorSeparator
         '
@@ -396,7 +384,7 @@ Partial Class FmrEncargarMedicamento
         Me.navEntregarmedicamentos.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.navEntregarmedicamentos.Name = "navEntregarmedicamentos"
         Me.navEntregarmedicamentos.PositionItem = Me.BindingNavigatorPositionItem
-        Me.navEntregarmedicamentos.Size = New System.Drawing.Size(944, 27)
+        Me.navEntregarmedicamentos.Size = New System.Drawing.Size(1218, 27)
         Me.navEntregarmedicamentos.TabIndex = 17
         Me.navEntregarmedicamentos.Text = "BindingNavigator1"
         '
@@ -521,8 +509,8 @@ Partial Class FmrEncargarMedicamento
         '
         Me.txtBuscarmedicamento.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtBuscarmedicamento.Name = "txtBuscarmedicamento"
-        Me.txtBuscarmedicamento.Size = New System.Drawing.Size(100, 27)
-        Me.txtBuscarmedicamento.Text = "Inserte código de medicina"
+        Me.txtBuscarmedicamento.Size = New System.Drawing.Size(250, 27)
+        Me.txtBuscarmedicamento.Text = "Escriba el código del medicamento"
         '
         'btnBuscarMedicamento
         '
@@ -542,8 +530,8 @@ Partial Class FmrEncargarMedicamento
         '
         Me.txtBuscarPaciente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtBuscarPaciente.Name = "txtBuscarPaciente"
-        Me.txtBuscarPaciente.Size = New System.Drawing.Size(100, 27)
-        Me.txtBuscarPaciente.Text = "Inserte Id de paciente"
+        Me.txtBuscarPaciente.Size = New System.Drawing.Size(210, 27)
+        Me.txtBuscarPaciente.Text = "Escriba el código de paciente"
         '
         'btnBuscarPaciente
         '
@@ -571,11 +559,49 @@ Partial Class FmrEncargarMedicamento
         '
         Me.PacienteTableAdapter.ClearBeforeFill = True
         '
+        'txtCodigoPaciente
+        '
+        Me.txtCodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Codigo", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtCodigoPaciente.Location = New System.Drawing.Point(239, 21)
+        Me.txtCodigoPaciente.Name = "txtCodigoPaciente"
+        Me.txtCodigoPaciente.ReadOnly = True
+        Me.txtCodigoPaciente.Size = New System.Drawing.Size(191, 22)
+        Me.txtCodigoPaciente.TabIndex = 18
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(20, 21)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(162, 18)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "Código del paciente:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(20, 97)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(176, 18)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Apellidos del paciente:"
+        '
+        'txtApellidosPaciente
+        '
+        Me.txtApellidosPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Apellido", True))
+        Me.txtApellidosPaciente.Location = New System.Drawing.Point(239, 93)
+        Me.txtApellidosPaciente.Name = "txtApellidosPaciente"
+        Me.txtApellidosPaciente.ReadOnly = True
+        Me.txtApellidosPaciente.Size = New System.Drawing.Size(191, 22)
+        Me.txtApellidosPaciente.TabIndex = 25
+        '
         'FmrEncargarMedicamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(944, 523)
+        Me.ClientSize = New System.Drawing.Size(1218, 523)
         Me.Controls.Add(Me.navEntregarmedicamentos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FmrEncargarMedicamento"
@@ -608,7 +634,6 @@ Partial Class FmrEncargarMedicamento
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents Form_DSEntregarmedicamentos As dsEntregarmedicamentos
     Friend WithEvents bsEntregarmedicamento As BindingSource
@@ -634,7 +659,6 @@ Partial Class FmrEncargarMedicamento
     Friend WithEvents bsMedicamentos As BindingSource
     Friend WithEvents MedicamentoTableAdapter As dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter
     Friend WithEvents txtIdMedicamento As TextBox
-    Friend WithEvents Label9 As Label
     Friend WithEvents txtNombrePaciente As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
@@ -651,4 +675,8 @@ Partial Class FmrEncargarMedicamento
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents bsPaciente As BindingSource
     Friend WithEvents PacienteTableAdapter As dsEntregarmedicamentosTableAdapters.pacienteTableAdapter
+    Friend WithEvents txtApellidosPaciente As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtCodigoPaciente As TextBox
 End Class

@@ -16,13 +16,13 @@
         actualizarTotal()
     End Sub
 
-    Private Sub bsEntregarmedicamento_CurrentChanged(sender As Object, e As EventArgs) Handles bsEntregarmedicamento.CurrentChanged
-
-    End Sub
-
     Private Sub btnBuscarPaciente_Click(sender As Object, e As EventArgs) Handles btnBuscarPaciente.Click
         btnGuardarFuepresionado = False
-        actualizarinfomaciondelPaciente(Me.txtBuscarPaciente.Text.Trim)
+        bsPaciente.Filter = "codigo='" & txtBuscarPaciente.Text.Trim & "'"
+        bsPaciente.Sort = "codigo ASC"
+        Me.PacienteTableAdapter.Fill(Form_DSEntregarmedicamentos.paciente)
+        Me.txtPaciente.Text = Me.tmpIdPaciente.Text
+        actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim)
     End Sub
 
     Private Sub txtBuscarmedicamento_Click(sender As Object, e As EventArgs) Handles txtBuscarmedicamento.Click
@@ -192,7 +192,6 @@
             bsMedicamentos.Sort = "idmedicamento ASC"
             Me.MedicamentoTableAdapter.Fill(Form_DSEntregarmedicamentos.medicamento)
             actualizarTotal()
-            'Me.txtIdMedicamento.Text = Me.tmpIdMedicamento.Text
         Catch ex As Exception
             bsMedicamentos.Filter = "idmedicamento=''"
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
@@ -229,9 +228,4 @@
         End Try
         Return cantidadDisponible >= cantidadDeseada
     End Function
-
-    Private Sub txtPaciente_TextChanged(sender As Object, e As EventArgs) Handles txtPaciente.TextChanged
-        'actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim())
-        'actualizarinformaciondelMedicamentoPorId(Me.txtIdMedicamento.Text.Trim())
-    End Sub
 End Class

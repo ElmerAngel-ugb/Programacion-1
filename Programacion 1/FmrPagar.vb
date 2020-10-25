@@ -1,7 +1,9 @@
 ﻿Public Class FmrPagar
 
     Dim btnPagarFuepresionado As Boolean = False
+    Dim formLoad As Boolean = False
     Private Sub FmrPagar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        formLoad = True
         'TODO: esta línea de código carga datos en la tabla 'Form_DsPagar.Pagar' Puede moverla o quitarla según sea necesario.
         Me.PagarTableAdapter.Fill(Me.Form_DsPagar.Pagar)
         'TODO: esta línea de código carga datos en la tabla 'DsPagar1.encargar_medicamento' Puede moverla o quitarla según sea necesario.
@@ -9,11 +11,11 @@
         'TODO: esta línea de código carga datos en la tabla 'DsPagar1.paciente' Puede moverla o quitarla según sea necesario.
         Me.PacienteTableAdapter.Fill(Me.Form_DsPagar.paciente)
         'TODO: esta línea de código carga datos en la tabla 'Form_DSPagar.encargar_medicamento' Puede moverla o quitarla según sea necesario.
-        Me.Encargar_medicamentoTableAdapter.Fill(Me.Form_DSPagar.encargar_medicamento)
+        Me.Encargar_medicamentoTableAdapter.Fill(Me.Form_DsPagar.encargar_medicamento)
         'TODO: esta línea de código carga datos en la tabla 'Form_DSPagar.paciente' Puede moverla o quitarla según sea necesario.
-        Me.PacienteTableAdapter.Fill(Me.Form_DSPagar.paciente)
+        Me.PacienteTableAdapter.Fill(Me.Form_DsPagar.paciente)
         'TODO: esta línea de código carga datos en la tabla 'Form_DSPagar.Pagar' Puede moverla o quitarla según sea necesario.
-        Me.PagarTableAdapter.Fill(Me.Form_DSPagar.Pagar)
+        Me.PagarTableAdapter.Fill(Me.Form_DsPagar.Pagar)
         actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
         actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
         Me.actualizarSubTotal()
@@ -22,39 +24,20 @@
 
     Private Sub btnBuscarEncargo_Click(sender As Object, e As EventArgs) Handles btnBuscarEncargo.Click
         btnPagarFuepresionado = False
+        formLoad = False
         txtCostoCita.Text = 10
-        'Try
-        'bsEncargar_medicamento.Filter = "id_encargarmedicamento='" & Me.txtBuscarEncargo.Text.Trim & "'"
-        'bsEncargar_medicamento.Sort = "id_encargarmedicamento ASC"
-        ' Me.Encargar_medicamentoTableAdapter.Fill(Form_DsPagar.encargar_medicamento)
-
-        ' Dim id As Integer = -1
-        'Try
-        'id = Integer.Parse(txtidPaciente.Text.Trim)
-        'Catch ex As Exception
-        'txtidPaciente.Text = "0"
-        'End Try
-        'bsPaciente.Filter = "idPaciente='" & Me.txtidPaciente.Text.Trim & "'"
-        'bsPaciente.Sort = "idPaciente ASC"
-        'Me.PacienteTableAdapter.Fill(Form_DsPagar.paciente)
-        'txtidEncargarmedicamento.Text = tmpidEncargarmedicamento.Value
-        'Catch ex As Exception
-        'MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
-        'End Try
+        txtidEncargarmedicamento.Text = ""
+        tmpidEncargarmedicamento.Text = ""
         actualizarinformaciondeencargarMedicamento(Me.txtBuscarEncargo.Text.Trim)
         actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
         txtidEncargarmedicamento.Text = tmpidEncargarmedicamento.Value
-    End Sub
-
-    Private Sub bsEncargar_medicamento_PositionChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub txtSubTotal_ValueChanged(sender As Object, e As EventArgs)
-
+        txtCostoIngreso.Text = ""
     End Sub
 
     Private Sub bsPagar_PositionChanged(sender As Object, e As EventArgs) Handles bsPagar.PositionChanged
+        If formLoad Or btnPagarFuepresionado Then
+            Return
+        End If
         actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
         actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
         actualizarSubTotal()
@@ -82,7 +65,18 @@
 
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
         btnPagarFuepresionado = True
+        formLoad = False
         txtCostoCita.Text = 10
+        If String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim) Or String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Or String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim) Or Me.txtidEncargarmedicamento.Text.Trim = 0 Then
+            If String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Or Me.txtidEncargarmedicamento.Text.Trim = 0 Then
+                MsgBox("Seleccione un encargo")
+            ElseIf String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim) Then
+                MsgBox("Coloque el coso del ingreso")
+            ElseIf String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim) Then
+                MsgBox("Coloque el costo de la cita")
+            End If
+            Return
+        End If
         If MsgBox("Seleccione (Si) para pagar", vbQuestion + vbYesNo) = vbNo Then
             MsgBox("Pago Cancelado", 64, "")
             bsPagar.CancelEdit()
@@ -99,10 +93,6 @@
         End Try
 
 
-
-    End Sub
-
-    Private Sub bsEncargar_medicamento_CurrentChanged(sender As Object, e As EventArgs) Handles bsEncargar_medicamento.CurrentChanged
 
     End Sub
 
@@ -139,6 +129,7 @@
 
     Private Sub navPagar_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles navPagar.ItemClicked
         btnPagarFuepresionado = False
+        formLoad = False
         navPagar.DeleteItem = BindingNavigatorDeleteItem
         navPagar.MoveFirstItem = BindingNavigatorMoveFirstItem
         navPagar.MoveLastItem = BindingNavigatorMoveLastItem
@@ -164,7 +155,7 @@
                 MsgBox("El Costode ingreso no puede quedar vacio", MsgBoxStyle.Critical, "Error")
             ElseIf String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim()) Then
                 MsgBox("El costo de cita no puede quedar vacio", MsgBoxStyle.Critical, "Error")
-            ElseIf String.IsNullorEmpty(Me.txtCostoMedicina.Text.Trim) Then
+            ElseIf String.IsNullOrEmpty(Me.txtCostoMedicina.Text.Trim) Then
                 MsgBox("El costo de medicina no puedo quedar vacio ", MsgBoxStyle.Critical, "Error")
                 MsgBox("El costo de cita no puede quedar vacio", MsgBoxStyle.Critical, "Error")
             ElseIf String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Then
@@ -179,12 +170,9 @@
 
     End Sub
 
-    Private Sub BindingNavigatorDeleteItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorDeleteItem.Click
-
-    End Sub
-
     Private Sub btnRemoveFilter_Click(sender As Object, e As EventArgs) Handles btnRemoveFilter.Click
         btnPagarFuepresionado = False
+        formLoad = False
         Try
             Me.bsPagar.Filter = ""
             Me.PagarTableAdapter.Fill(Form_DsPagar.Pagar)
@@ -196,6 +184,7 @@
 
     Private Sub btnCancelarPago_Click(sender As Object, e As EventArgs) Handles btnCancelarPago.Click
         btnPagarFuepresionado = False
+        formLoad = False
         Me.bsPagar.CancelEdit()
         actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
         actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
@@ -205,6 +194,7 @@
 
     Private Sub btnBuscarPago_Click(sender As Object, e As EventArgs) Handles btnBuscarPago.Click
         btnPagarFuepresionado = False
+        formLoad = False
         Try
             bsPagar.Filter = "Idpagar='" & Me.txtBuscarpago.Text.Trim & "'"
             bsPagar.Sort = "Idpagar ASC"
@@ -245,7 +235,7 @@
             Me.Encargar_medicamentoTableAdapter.Fill(Form_DsPagar.encargar_medicamento)
             actualizarSubTotal()
             actualizarTotal()
-            'Me.txtidEncargarmedicamento.Text = Me.tmpidEncargarmedicamento.Text
+            Me.txtidEncargarmedicamento.Text = Me.tmpidEncargarmedicamento.Text
         Catch ex As Exception
             bsEncargar_medicamento.Filter = "id_encargarmedicamento='0'"
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error Encargarmedicamento")

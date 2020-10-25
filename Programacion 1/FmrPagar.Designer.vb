@@ -50,37 +50,41 @@ Partial Class FmrPagar
         Me.txtBuscarEncargo = New System.Windows.Forms.ToolStripTextBox()
         Me.btnBuscarEncargo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.txtidPaciente = New System.Windows.Forms.TextBox()
-        Me.bsEncargar_medicamento = New System.Windows.Forms.BindingSource(Me.components)
-        Me.txtTotalPagar = New System.Windows.Forms.TextBox()
-        Me.txtSubTotal = New System.Windows.Forms.TextBox()
-        Me.txtCostoIngreso = New System.Windows.Forms.TextBox()
-        Me.txtCostoMedicina = New System.Windows.Forms.TextBox()
-        Me.txtidEncargarmedicamento = New System.Windows.Forms.TextBox()
-        Me.txtCostoCita = New System.Windows.Forms.TextBox()
-        Me.tmpidEncargarmedicamento = New System.Windows.Forms.NumericUpDown()
-        Me.txtNombrePaciente = New System.Windows.Forms.TextBox()
         Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.bsEncargar_medicamento = New System.Windows.Forms.BindingSource(Me.components)
         Me.PacienteTableAdapter = New Programacion_1.dsPagarTableAdapters.pacienteTableAdapter()
         Me.Encargar_medicamentoTableAdapter = New Programacion_1.dsPagarTableAdapters.encargar_medicamentoTableAdapter()
         Me.PagarTableAdapter = New Programacion_1.dsPagarTableAdapters.PagarTableAdapter()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtNombrePaciente = New System.Windows.Forms.TextBox()
+        Me.tmpidEncargarmedicamento = New System.Windows.Forms.NumericUpDown()
+        Me.txtCostoCita = New System.Windows.Forms.TextBox()
+        Me.txtidEncargarmedicamento = New System.Windows.Forms.TextBox()
+        Me.txtCostoMedicina = New System.Windows.Forms.TextBox()
+        Me.txtCostoIngreso = New System.Windows.Forms.TextBox()
+        Me.txtSubTotal = New System.Windows.Forms.TextBox()
+        Me.txtTotalPagar = New System.Windows.Forms.TextBox()
+        Me.txtidPaciente = New System.Windows.Forms.TextBox()
+        Me.txtPagar = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtCodigoPaciente = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtApellidoPaciente = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         CType(Me.navPagar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.navPagar.SuspendLayout()
         CType(Me.bsPagar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Form_DsPagar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
+        CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsEncargar_medicamento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tmpidEncargarmedicamento, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'navPagar
@@ -98,7 +102,7 @@ Partial Class FmrPagar
         Me.navPagar.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.navPagar.Name = "navPagar"
         Me.navPagar.PositionItem = Me.BindingNavigatorPositionItem
-        Me.navPagar.Size = New System.Drawing.Size(891, 27)
+        Me.navPagar.Size = New System.Drawing.Size(915, 31)
         Me.navPagar.TabIndex = 0
         Me.navPagar.Text = "BindingNavigator1"
         '
@@ -108,7 +112,7 @@ Partial Class FmrPagar
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 28)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo pago"
         '
         'bsPagar
@@ -266,7 +270,7 @@ Partial Class FmrPagar
         Me.txtBuscarEncargo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtBuscarEncargo.Name = "txtBuscarEncargo"
         Me.txtBuscarEncargo.ShortcutsEnabled = False
-        Me.txtBuscarEncargo.Size = New System.Drawing.Size(100, 27)
+        Me.txtBuscarEncargo.Size = New System.Drawing.Size(200, 27)
         Me.txtBuscarEncargo.Text = "Buscar orden de encargo"
         '
         'btnBuscarEncargo
@@ -283,9 +287,238 @@ Partial Class FmrPagar
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 27)
         '
+        'bsPaciente
+        '
+        Me.bsPaciente.AllowNew = False
+        Me.bsPaciente.DataMember = "paciente"
+        Me.bsPaciente.DataSource = Me.Form_DsPagar
+        '
+        'bsEncargar_medicamento
+        '
+        Me.bsEncargar_medicamento.AllowNew = False
+        Me.bsEncargar_medicamento.DataMember = "encargar_medicamento"
+        Me.bsEncargar_medicamento.DataSource = Me.Form_DsPagar
+        '
+        'PacienteTableAdapter
+        '
+        Me.PacienteTableAdapter.ClearBeforeFill = True
+        '
+        'Encargar_medicamentoTableAdapter
+        '
+        Me.Encargar_medicamentoTableAdapter.ClearBeforeFill = True
+        '
+        'PagarTableAdapter
+        '
+        Me.PagarTableAdapter.ClearBeforeFill = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(5, 54)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(162, 18)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Código del paciente:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 166)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(114, 18)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Costo de cita:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(6, 200)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(154, 18)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Costo de medicina:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 238)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(143, 18)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Costo de ingreso:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 276)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(80, 18)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Sub total:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(6, 318)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(112, 18)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Total a pagar:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(5, 92)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(168, 18)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "Nombre del paciente:"
+        '
+        'txtNombrePaciente
+        '
+        Me.txtNombrePaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Nombre", True))
+        Me.txtNombrePaciente.Location = New System.Drawing.Point(210, 92)
+        Me.txtNombrePaciente.Name = "txtNombrePaciente"
+        Me.txtNombrePaciente.ReadOnly = True
+        Me.txtNombrePaciente.Size = New System.Drawing.Size(193, 22)
+        Me.txtNombrePaciente.TabIndex = 13
+        '
+        'tmpidEncargarmedicamento
+        '
+        Me.tmpidEncargarmedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.bsEncargar_medicamento, "id_encargarmedicamento", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.tmpidEncargarmedicamento.Location = New System.Drawing.Point(446, 125)
+        Me.tmpidEncargarmedicamento.Name = "tmpidEncargarmedicamento"
+        Me.tmpidEncargarmedicamento.Size = New System.Drawing.Size(0, 22)
+        Me.tmpidEncargarmedicamento.TabIndex = 21
+        '
+        'txtCostoCita
+        '
+        Me.txtCostoCita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "costo_de_cita", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.txtCostoCita.Location = New System.Drawing.Point(210, 162)
+        Me.txtCostoCita.Name = "txtCostoCita"
+        Me.txtCostoCita.ReadOnly = True
+        Me.txtCostoCita.Size = New System.Drawing.Size(193, 22)
+        Me.txtCostoCita.TabIndex = 23
+        Me.txtCostoCita.Text = "10"
+        Me.txtCostoCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtidEncargarmedicamento
+        '
+        Me.txtidEncargarmedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "id_encargarmedicamento", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtidEncargarmedicamento.Location = New System.Drawing.Point(316, 178)
+        Me.txtidEncargarmedicamento.Name = "txtidEncargarmedicamento"
+        Me.txtidEncargarmedicamento.Size = New System.Drawing.Size(0, 22)
+        Me.txtidEncargarmedicamento.TabIndex = 24
+        '
+        'txtCostoMedicina
+        '
+        Me.txtCostoMedicina.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEncargar_medicamento, "total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.txtCostoMedicina.Location = New System.Drawing.Point(210, 199)
+        Me.txtCostoMedicina.Name = "txtCostoMedicina"
+        Me.txtCostoMedicina.ReadOnly = True
+        Me.txtCostoMedicina.Size = New System.Drawing.Size(193, 22)
+        Me.txtCostoMedicina.TabIndex = 25
+        Me.txtCostoMedicina.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtCostoIngreso
+        '
+        Me.txtCostoIngreso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "costo_de_ingreso", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.txtCostoIngreso.Location = New System.Drawing.Point(210, 237)
+        Me.txtCostoIngreso.Name = "txtCostoIngreso"
+        Me.txtCostoIngreso.Size = New System.Drawing.Size(193, 22)
+        Me.txtCostoIngreso.TabIndex = 26
+        Me.txtCostoIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtSubTotal
+        '
+        Me.txtSubTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Sub_total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.txtSubTotal.Location = New System.Drawing.Point(210, 276)
+        Me.txtSubTotal.Name = "txtSubTotal"
+        Me.txtSubTotal.ReadOnly = True
+        Me.txtSubTotal.Size = New System.Drawing.Size(193, 22)
+        Me.txtSubTotal.TabIndex = 27
+        Me.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtTotalPagar
+        '
+        Me.txtTotalPagar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Total_a_pagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
+        Me.txtTotalPagar.Location = New System.Drawing.Point(210, 314)
+        Me.txtTotalPagar.Name = "txtTotalPagar"
+        Me.txtTotalPagar.ReadOnly = True
+        Me.txtTotalPagar.Size = New System.Drawing.Size(193, 22)
+        Me.txtTotalPagar.TabIndex = 28
+        Me.txtTotalPagar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'txtidPaciente
+        '
+        Me.txtidPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEncargar_medicamento, "idpaciente", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtidPaciente.Location = New System.Drawing.Point(324, 50)
+        Me.txtidPaciente.Name = "txtidPaciente"
+        Me.txtidPaciente.ReadOnly = True
+        Me.txtidPaciente.Size = New System.Drawing.Size(0, 22)
+        Me.txtidPaciente.TabIndex = 29
+        '
+        'txtPagar
+        '
+        Me.txtPagar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Idpagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtPagar.Location = New System.Drawing.Point(210, 16)
+        Me.txtPagar.Name = "txtPagar"
+        Me.txtPagar.ReadOnly = True
+        Me.txtPagar.Size = New System.Drawing.Size(193, 22)
+        Me.txtPagar.TabIndex = 30
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(5, 16)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(70, 18)
+        Me.Label8.TabIndex = 31
+        Me.Label8.Text = "Id Pago:"
+        '
+        'txtCodigoPaciente
+        '
+        Me.txtCodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Codigo", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtCodigoPaciente.Location = New System.Drawing.Point(210, 54)
+        Me.txtCodigoPaciente.Name = "txtCodigoPaciente"
+        Me.txtCodigoPaciente.ReadOnly = True
+        Me.txtCodigoPaciente.Size = New System.Drawing.Size(193, 22)
+        Me.txtCodigoPaciente.TabIndex = 32
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(6, 129)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(176, 18)
+        Me.Label9.TabIndex = 33
+        Me.Label9.Text = "Apellidos del paciente:"
+        '
+        'txtApellidoPaciente
+        '
+        Me.txtApellidoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Apellido", True))
+        Me.txtApellidoPaciente.Location = New System.Drawing.Point(210, 129)
+        Me.txtApellidoPaciente.Name = "txtApellidoPaciente"
+        Me.txtApellidoPaciente.ReadOnly = True
+        Me.txtApellidoPaciente.Size = New System.Drawing.Size(193, 22)
+        Me.txtApellidoPaciente.TabIndex = 34
+        '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtApellidoPaciente)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.txtCodigoPaciente)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.txtPagar)
         Me.GroupBox1.Controls.Add(Me.txtidPaciente)
         Me.GroupBox1.Controls.Add(Me.txtTotalPagar)
         Me.GroupBox1.Controls.Add(Me.txtSubTotal)
@@ -302,199 +535,17 @@ Partial Class FmrPagar
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 39)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 328)
+        Me.GroupBox1.Size = New System.Drawing.Size(776, 389)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Idpagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.TextBox1.Location = New System.Drawing.Point(183, 16)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox1.TabIndex = 30
-        '
-        'txtidPaciente
-        '
-        Me.txtidPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEncargar_medicamento, "idpaciente", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.txtidPaciente.Location = New System.Drawing.Point(183, 44)
-        Me.txtidPaciente.Name = "txtidPaciente"
-        Me.txtidPaciente.ReadOnly = True
-        Me.txtidPaciente.Size = New System.Drawing.Size(100, 22)
-        Me.txtidPaciente.TabIndex = 29
-        '
-        'bsEncargar_medicamento
-        '
-        Me.bsEncargar_medicamento.AllowNew = False
-        Me.bsEncargar_medicamento.DataMember = "encargar_medicamento"
-        Me.bsEncargar_medicamento.DataSource = Me.Form_DsPagar
-        '
-        'txtTotalPagar
-        '
-        Me.txtTotalPagar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Total_a_pagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtTotalPagar.Location = New System.Drawing.Point(170, 288)
-        Me.txtTotalPagar.Name = "txtTotalPagar"
-        Me.txtTotalPagar.ReadOnly = True
-        Me.txtTotalPagar.Size = New System.Drawing.Size(100, 22)
-        Me.txtTotalPagar.TabIndex = 28
-        '
-        'txtSubTotal
-        '
-        Me.txtSubTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Sub_total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtSubTotal.Location = New System.Drawing.Point(170, 239)
-        Me.txtSubTotal.Name = "txtSubTotal"
-        Me.txtSubTotal.ReadOnly = True
-        Me.txtSubTotal.Size = New System.Drawing.Size(100, 22)
-        Me.txtSubTotal.TabIndex = 27
-        '
-        'txtCostoIngreso
-        '
-        Me.txtCostoIngreso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "costo_de_ingreso", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtCostoIngreso.Location = New System.Drawing.Point(170, 186)
-        Me.txtCostoIngreso.Name = "txtCostoIngreso"
-        Me.txtCostoIngreso.Size = New System.Drawing.Size(100, 22)
-        Me.txtCostoIngreso.TabIndex = 26
-        '
-        'txtCostoMedicina
-        '
-        Me.txtCostoMedicina.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEncargar_medicamento, "total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtCostoMedicina.Location = New System.Drawing.Point(170, 147)
-        Me.txtCostoMedicina.Name = "txtCostoMedicina"
-        Me.txtCostoMedicina.ReadOnly = True
-        Me.txtCostoMedicina.Size = New System.Drawing.Size(100, 22)
-        Me.txtCostoMedicina.TabIndex = 25
-        '
-        'txtidEncargarmedicamento
-        '
-        Me.txtidEncargarmedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "id_encargarmedicamento", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.txtidEncargarmedicamento.Location = New System.Drawing.Point(315, 146)
-        Me.txtidEncargarmedicamento.Name = "txtidEncargarmedicamento"
-        Me.txtidEncargarmedicamento.Size = New System.Drawing.Size(102, 22)
-        Me.txtidEncargarmedicamento.TabIndex = 24
-        '
-        'txtCostoCita
-        '
-        Me.txtCostoCita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "costo_de_cita", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtCostoCita.Location = New System.Drawing.Point(170, 108)
-        Me.txtCostoCita.Name = "txtCostoCita"
-        Me.txtCostoCita.ReadOnly = True
-        Me.txtCostoCita.Size = New System.Drawing.Size(113, 22)
-        Me.txtCostoCita.TabIndex = 23
-        Me.txtCostoCita.Text = "10"
-        '
-        'tmpidEncargarmedicamento
-        '
-        Me.tmpidEncargarmedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.bsEncargar_medicamento, "id_encargarmedicamento", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.tmpidEncargarmedicamento.Location = New System.Drawing.Point(446, 125)
-        Me.tmpidEncargarmedicamento.Name = "tmpidEncargarmedicamento"
-        Me.tmpidEncargarmedicamento.Size = New System.Drawing.Size(0, 22)
-        Me.tmpidEncargarmedicamento.TabIndex = 21
-        '
-        'txtNombrePaciente
-        '
-        Me.txtNombrePaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Nombre", True))
-        Me.txtNombrePaciente.Location = New System.Drawing.Point(193, 74)
-        Me.txtNombrePaciente.Name = "txtNombrePaciente"
-        Me.txtNombrePaciente.ReadOnly = True
-        Me.txtNombrePaciente.Size = New System.Drawing.Size(395, 22)
-        Me.txtNombrePaciente.TabIndex = 13
-        '
-        'bsPaciente
-        '
-        Me.bsPaciente.AllowNew = False
-        Me.bsPaciente.DataMember = "paciente"
-        Me.bsPaciente.DataSource = Me.Form_DsPagar
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(5, 74)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(168, 18)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Nombre del paciente:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(5, 288)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(112, 18)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Total a pagar:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(5, 239)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 18)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Sub total:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(5, 191)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(143, 18)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Costo de ingreso:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(5, 147)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(154, 18)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Costo de medicina:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(5, 108)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(111, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "costo de cita:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(5, 40)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(159, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "codigo del paciente:"
-        '
-        'PacienteTableAdapter
-        '
-        Me.PacienteTableAdapter.ClearBeforeFill = True
-        '
-        'Encargar_medicamentoTableAdapter
-        '
-        Me.Encargar_medicamentoTableAdapter.ClearBeforeFill = True
-        '
-        'PagarTableAdapter
-        '
-        Me.PagarTableAdapter.ClearBeforeFill = True
         '
         'FmrPagar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(891, 369)
+        Me.ClientSize = New System.Drawing.Size(915, 431)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.navPagar)
         Me.Name = "FmrPagar"
@@ -504,11 +555,11 @@ Partial Class FmrPagar
         Me.navPagar.PerformLayout()
         CType(Me.bsPagar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Form_DsPagar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsEncargar_medicamento, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tmpidEncargarmedicamento, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -526,13 +577,6 @@ Partial Class FmrPagar
     Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
     Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents btnPagar As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
@@ -545,10 +589,6 @@ Partial Class FmrPagar
     Friend WithEvents txtBuscarEncargo As ToolStripTextBox
     Friend WithEvents btnBuscarEncargo As ToolStripButton
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
-    Friend WithEvents txtNombrePaciente As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents tmpidEncargarmedicamento As NumericUpDown
-    Friend WithEvents txtCostoCita As TextBox
     Friend WithEvents Form_DsPagar As dsPagar
     Friend WithEvents bsPagar As BindingSource
     Friend WithEvents bsPaciente As BindingSource
@@ -556,11 +596,26 @@ Partial Class FmrPagar
     Friend WithEvents bsEncargar_medicamento As BindingSource
     Friend WithEvents Encargar_medicamentoTableAdapter As dsPagarTableAdapters.encargar_medicamentoTableAdapter
     Friend WithEvents PagarTableAdapter As dsPagarTableAdapters.PagarTableAdapter
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtNombrePaciente As TextBox
+    Friend WithEvents tmpidEncargarmedicamento As NumericUpDown
+    Friend WithEvents txtCostoCita As TextBox
     Friend WithEvents txtidEncargarmedicamento As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents txtidPaciente As TextBox
-    Friend WithEvents txtTotalPagar As TextBox
-    Friend WithEvents txtSubTotal As TextBox
-    Friend WithEvents txtCostoIngreso As TextBox
     Friend WithEvents txtCostoMedicina As TextBox
+    Friend WithEvents txtCostoIngreso As TextBox
+    Friend WithEvents txtSubTotal As TextBox
+    Friend WithEvents txtTotalPagar As TextBox
+    Friend WithEvents txtidPaciente As TextBox
+    Friend WithEvents txtPagar As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtCodigoPaciente As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtApellidoPaciente As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

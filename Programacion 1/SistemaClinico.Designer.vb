@@ -41,14 +41,14 @@ Partial Class SistemaClinico
         Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperacionesToolStripMenuItem, Me.MantenimientoToolStripMenuItem})
         Me.mnuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.mnuPrincipal.Name = "mnuPrincipal"
-        Me.mnuPrincipal.Size = New System.Drawing.Size(800, 28)
+        Me.mnuPrincipal.Size = New System.Drawing.Size(800, 30)
         Me.mnuPrincipal.TabIndex = 1
         '
         'OperacionesToolStripMenuItem
         '
         Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem, Me.PagarToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 26)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
         '
         'EncargarMedicamentoToolStripMenuItem
@@ -67,7 +67,7 @@ Partial Class SistemaClinico
         '
         Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
-        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
         '
         'PacienteToolStripMenuItem
