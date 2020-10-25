@@ -25,14 +25,14 @@ Partial Class BuscarCategoriamedicamentos
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnSeleccionar = New System.Windows.Forms.Button()
         Me.grbBuscarCategoriaMedicamentos = New System.Windows.Forms.DataGridView()
+        Me.lblBucarEmpleado = New System.Windows.Forms.Label()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.idregistrodepersonal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.descripcion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.laboratorio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblBucarEmpleado = New System.Windows.Forms.Label()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
         CType(Me.grbBuscarCategoriaMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -68,6 +68,23 @@ Partial Class BuscarCategoriamedicamentos
         Me.grbBuscarCategoriaMedicamentos.Size = New System.Drawing.Size(733, 375)
         Me.grbBuscarCategoriaMedicamentos.TabIndex = 12
         '
+        'lblBucarEmpleado
+        '
+        Me.lblBucarEmpleado.AutoSize = True
+        Me.lblBucarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBucarEmpleado.Location = New System.Drawing.Point(10, 13)
+        Me.lblBucarEmpleado.Name = "lblBucarEmpleado"
+        Me.lblBucarEmpleado.Size = New System.Drawing.Size(60, 16)
+        Me.lblBucarEmpleado.TabIndex = 11
+        Me.lblBucarEmpleado.Text = "Buscar:"
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Location = New System.Drawing.Point(76, 12)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(628, 20)
+        Me.txtBuscar.TabIndex = 10
+        '
         'idregistrodepersonal
         '
         Me.idregistrodepersonal.DataPropertyName = "Idproducto"
@@ -102,7 +119,7 @@ Partial Class BuscarCategoriamedicamentos
         '
         'laboratorio
         '
-        Me.laboratorio.DataPropertyName = "laboratorio)"
+        Me.laboratorio.DataPropertyName = "laboratorio"
         Me.laboratorio.HeaderText = "LABORATORIO"
         Me.laboratorio.Name = "laboratorio"
         Me.laboratorio.ReadOnly = True
@@ -114,23 +131,6 @@ Partial Class BuscarCategoriamedicamentos
         Me.cantidad.HeaderText = "CANTIDAD"
         Me.cantidad.Name = "cantidad"
         Me.cantidad.ReadOnly = True
-        '
-        'lblBucarEmpleado
-        '
-        Me.lblBucarEmpleado.AutoSize = True
-        Me.lblBucarEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBucarEmpleado.Location = New System.Drawing.Point(10, 13)
-        Me.lblBucarEmpleado.Name = "lblBucarEmpleado"
-        Me.lblBucarEmpleado.Size = New System.Drawing.Size(60, 16)
-        Me.lblBucarEmpleado.TabIndex = 11
-        Me.lblBucarEmpleado.Text = "Buscar:"
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Location = New System.Drawing.Point(76, 12)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(628, 20)
-        Me.txtBuscar.TabIndex = 10
         '
         'BuscarCategoriamedicamentos
         '
@@ -153,12 +153,12 @@ Partial Class BuscarCategoriamedicamentos
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnSeleccionar As Button
     Friend WithEvents grbBuscarCategoriaMedicamentos As DataGridView
+    Friend WithEvents lblBucarEmpleado As Label
+    Friend WithEvents txtBuscar As TextBox
     Friend WithEvents idregistrodepersonal As DataGridViewTextBoxColumn
     Friend WithEvents codigo As DataGridViewTextBoxColumn
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents descripcion As DataGridViewTextBoxColumn
     Friend WithEvents laboratorio As DataGridViewTextBoxColumn
     Friend WithEvents cantidad As DataGridViewTextBoxColumn
-    Friend WithEvents lblBucarEmpleado As Label
-    Friend WithEvents txtBuscar As TextBox
 End Class

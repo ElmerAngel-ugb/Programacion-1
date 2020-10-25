@@ -5,7 +5,7 @@
         seleccionarCategoriaMedicamentos()
     End Sub
     Private Sub BuscarCategoriamedicamentos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        grbBuscarCategoriaMedicamentos.DataSource = objConexion.Obtenerdato ).Tables("productos").DefaultView
+        grbBuscarCategoriaMedicamentos.DataSource = (objConexion.Obtenerdato).Tables("productos").DefaultView
     End Sub
 
     Private Sub txtBuscar_KeyUp(sender As Object, e As KeyEventArgs) Handles txtBuscar.KeyUp
