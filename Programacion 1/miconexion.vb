@@ -37,6 +37,18 @@ Public Class db_conexion
         Return ds
     End Function
 
+    Public Function Btenerdatospaciente(ByVal tuidepaciente As String)
+        ds.Clear()
+        miCommand.Connection = miConexion
+
+        miCommand.CommandText = "select * from paciente where IdPaciente = " + tuidepaciente
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "idpaciente")
+
+
+        Return ds
+    End Function
+
     Public Function mantenimientoDatosPaciente(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
@@ -47,7 +59,10 @@ Public Class db_conexion
             Case "eliminar"
                 sql = "DELETE FROM Paciente WHERE idPaciente='" + datos(0) + "'"
         End Select
-        If (executeSql(sql) > 0) Then
+
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+        If executeSql(sql) > 0 Then
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             msg = "Accion realizada con exito"
         Else
             msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
@@ -71,7 +86,9 @@ Public Class db_conexion
             Case "eliminar"
                 sql = "DELETE FROM registrodepersonal WHERE idregistrodepersonal='" + datos(0) + "'"
         End Select
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
         If (executeSql(sql) > 0) Then
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
             msg = "Accion realizada con exito"
         Else
             msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
