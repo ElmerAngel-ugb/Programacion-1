@@ -89,6 +89,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarCategoriamedicamentos.Designer.vb">
+      <DependentUpon>BuscarCategoriamedicamentos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarCategoriamedicamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="dsEntregarmedicamentos.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,6 +195,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BuscarCategoriamedicamentos.resx">
+      <DependentUpon>BuscarCategoriamedicamentos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmrPagar.resx">
       <DependentUpon>FmrPagar.vb</DependentUpon>
     </EmbeddedResource>

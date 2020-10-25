@@ -132,6 +132,12 @@
     End Sub
 
     Private Sub btnBuscarRegistrodePersonal_Click(sender As Object, e As EventArgs) Handles btnBuscarRegistrodePersonal.Click
+        Dim objBuscarRegistrodePersonal As New BuscarCategoriamedicamentos
+        objBuscarRegistrodePersonal.ShowDialog()
 
+        If objBuscarRegistrodePersonal._idPC > 1 Then
+            posicion = dataTable.Rows.IndexOf(dataTable.Rows.Find(objBuscarRegistrodePersonal._idPC))
+            mostrarDatos()
+        End If
     End Sub
 End Class
