@@ -141,6 +141,12 @@
     <Compile Include="FmrEncargarMedicamento.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FmrEliminardatosdelpaciente.Designer.vb">
+      <DependentUpon>FmrEliminardatosdelpaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FmrEliminardatosdelpaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmBuscarEmpleadosvb.Designer.vb">
       <DependentUpon>FrmBuscarEmpleadosvb.vb</DependentUpon>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmrEncargarMedicamento.resx">
       <DependentUpon>FmrEncargarMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmrEliminardatosdelpaciente.resx">
+      <DependentUpon>FmrEliminardatosdelpaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarEmpleadosvb.resx">
       <DependentUpon>FrmBuscarEmpleadosvb.vb</DependentUpon>
