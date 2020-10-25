@@ -9,9 +9,8 @@
 
     End Sub
     Sub Obtenerdato()
-         dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("Idproductos")}
         dataTable = objConexion.Obtenerdato().Tables("productos")
-
+        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("Idproductos")}
 
         cboCategoriaMedicamento.DataSource = objConexion.Obtenerdato().Tables("categorias").DefaultView()
         cboCategoriaMedicamento.DisplayMember = "categoria"
@@ -132,11 +131,11 @@
     End Sub
 
     Private Sub btnBuscarRegistrodePersonal_Click(sender As Object, e As EventArgs) Handles btnBuscarRegistrodePersonal.Click
-        Dim objBuscarRegistrodePersonal As New BuscarCategoriamedicamentos
-        objBuscarRegistrodePersonal.ShowDialog()
+        Dim objCategoriaMedicamentosvb As New BuscarCategoriamedicamentos
+        objCategoriaMedicamentosvb.ShowDialog()
 
-        If objBuscarRegistrodePersonal._idPC > 1 Then
-            posicion = dataTable.Rows.IndexOf(dataTable.Rows.Find(objBuscarRegistrodePersonal._idPC))
+        If objCategoriaMedicamentosvb._idC > 1 Then
+            posicion = dataTable.Rows.IndexOf(dataTable.Rows.Find(objCategoriaMedicamentosvb._idC))
             mostrarDatos()
         End If
     End Sub
