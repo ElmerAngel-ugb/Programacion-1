@@ -141,7 +141,7 @@ Partial Class FmrEncargarMedicamento
         '
         'tmpIdPaciente
         '
-        Me.tmpIdPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "idpaciente", True))
+        Me.tmpIdPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "IdPaciente", True))
         Me.tmpIdPaciente.Location = New System.Drawing.Point(353, 21)
         Me.tmpIdPaciente.Name = "tmpIdPaciente"
         Me.tmpIdPaciente.Size = New System.Drawing.Size(0, 22)
@@ -149,7 +149,6 @@ Partial Class FmrEncargarMedicamento
         '
         'bsPaciente
         '
-        Me.bsPaciente.AllowNew = False
         Me.bsPaciente.DataMember = "paciente"
         Me.bsPaciente.DataSource = Me.Form_DSEntregarmedicamentos
         '
@@ -169,7 +168,7 @@ Partial Class FmrEncargarMedicamento
         '
         'txtNombrePaciente
         '
-        Me.txtNombrePaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "nombre", True))
+        Me.txtNombrePaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Nombre", True))
         Me.txtNombrePaciente.Location = New System.Drawing.Point(214, 59)
         Me.txtNombrePaciente.Name = "txtNombrePaciente"
         Me.txtNombrePaciente.ReadOnly = True
@@ -254,7 +253,7 @@ Partial Class FmrEncargarMedicamento
         '
         'TextBox2
         '
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "idmedicamento", True))
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "codigo", True))
         Me.TextBox2.Location = New System.Drawing.Point(213, 97)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
@@ -397,7 +396,7 @@ Partial Class FmrEncargarMedicamento
         Me.navEntregarmedicamentos.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.navEntregarmedicamentos.Name = "navEntregarmedicamentos"
         Me.navEntregarmedicamentos.PositionItem = Me.BindingNavigatorPositionItem
-        Me.navEntregarmedicamentos.Size = New System.Drawing.Size(898, 27)
+        Me.navEntregarmedicamentos.Size = New System.Drawing.Size(944, 27)
         Me.navEntregarmedicamentos.TabIndex = 17
         Me.navEntregarmedicamentos.Text = "BindingNavigator1"
         '
@@ -576,7 +575,7 @@ Partial Class FmrEncargarMedicamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(898, 523)
+        Me.ClientSize = New System.Drawing.Size(944, 523)
         Me.Controls.Add(Me.navEntregarmedicamentos)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FmrEncargarMedicamento"
@@ -633,9 +632,7 @@ Partial Class FmrEncargarMedicamento
     Friend WithEvents btnBuscar As ToolStripButton
     Friend WithEvents btnRemoveFilter As ToolStripButton
     Friend WithEvents bsMedicamentos As BindingSource
-    Friend WithEvents bsPaciente As BindingSource
     Friend WithEvents MedicamentoTableAdapter As dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter
-    Friend WithEvents PacienteTableAdapter As dsEntregarmedicamentosTableAdapters.pacienteTableAdapter
     Friend WithEvents txtIdMedicamento As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txtNombrePaciente As TextBox
@@ -652,4 +649,6 @@ Partial Class FmrEncargarMedicamento
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents btnCancelar As ToolStripButton
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
+    Friend WithEvents bsPaciente As BindingSource
+    Friend WithEvents PacienteTableAdapter As dsEntregarmedicamentosTableAdapters.pacienteTableAdapter
 End Class

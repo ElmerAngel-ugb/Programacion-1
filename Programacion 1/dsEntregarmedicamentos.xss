@@ -7,11 +7,11 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="-10" ViewPortY="0" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:medicamento" ZOrder="5" X="440" Y="70" Height="227" Width="265" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
-    <Shape ID="DesignTable:paciente" ZOrder="4" X="440" Y="367" Height="365" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
-    <Shape ID="DesignTable:encargar_medicamento" ZOrder="3" X="70" Y="70" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:encargar_medicamento" ZOrder="4" X="70" Y="70" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:paciente" ZOrder="2" X="364" Y="448" Height="365" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="306" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_medicamento_encargar_medicamento" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_medicamento_encargar_medicamento" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>440</X>
@@ -23,19 +23,19 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_paciente_encargar_medicamento" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:encargar_medicamento_paciente" ZOrder="1" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>440</X>
-          <Y>384</Y>
+          <X>370</X>
+          <Y>114</Y>
         </Point>
         <Point>
-          <X>353</X>
-          <Y>384</Y>
+          <X>379</X>
+          <Y>114</Y>
         </Point>
         <Point>
-          <X>353</X>
-          <Y>274</Y>
+          <X>379</X>
+          <Y>448</Y>
         </Point>
       </RoutePoints>
     </Connector>

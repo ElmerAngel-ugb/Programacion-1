@@ -310,8 +310,8 @@ Partial Class FmrPagar
         '
         'TextBox1
         '
-        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Idpagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.TextBox1.Location = New System.Drawing.Point(170, 16)
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Idpagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.TextBox1.Location = New System.Drawing.Point(183, 16)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(100, 22)
@@ -319,8 +319,8 @@ Partial Class FmrPagar
         '
         'txtidPaciente
         '
-        Me.txtidPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEncargar_medicamento, "idpaciente", True))
-        Me.txtidPaciente.Location = New System.Drawing.Point(170, 44)
+        Me.txtidPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsEncargar_medicamento, "idpaciente", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtidPaciente.Location = New System.Drawing.Point(183, 44)
         Me.txtidPaciente.Name = "txtidPaciente"
         Me.txtidPaciente.ReadOnly = True
         Me.txtidPaciente.Size = New System.Drawing.Size(100, 22)
@@ -369,10 +369,10 @@ Partial Class FmrPagar
         '
         'txtidEncargarmedicamento
         '
-        Me.txtidEncargarmedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "id_encargarmedicamento", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtidEncargarmedicamento.Location = New System.Drawing.Point(325, 146)
+        Me.txtidEncargarmedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "id_encargarmedicamento", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtidEncargarmedicamento.Location = New System.Drawing.Point(315, 146)
         Me.txtidEncargarmedicamento.Name = "txtidEncargarmedicamento"
-        Me.txtidEncargarmedicamento.Size = New System.Drawing.Size(0, 22)
+        Me.txtidEncargarmedicamento.Size = New System.Drawing.Size(102, 22)
         Me.txtidEncargarmedicamento.TabIndex = 24
         '
         'txtCostoCita
@@ -396,7 +396,7 @@ Partial Class FmrPagar
         'txtNombrePaciente
         '
         Me.txtNombrePaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Nombre", True))
-        Me.txtNombrePaciente.Location = New System.Drawing.Point(179, 74)
+        Me.txtNombrePaciente.Location = New System.Drawing.Point(193, 74)
         Me.txtNombrePaciente.Name = "txtNombrePaciente"
         Me.txtNombrePaciente.ReadOnly = True
         Me.txtNombrePaciente.Size = New System.Drawing.Size(395, 22)
