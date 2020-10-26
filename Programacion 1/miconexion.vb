@@ -71,6 +71,38 @@ Public Class db_conexion
         Return ds
     End Function
 
+    Public Function Datos()
+        ds.Clear()
+
+        miCommand.Connection = miConexion
+
+        miCommand.CommandText = "select * from receta"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "receta")
+
+        Return ds
+    End Function
+    Public Function mantenimientoDatosreceta(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO receta (medico,paciente,descripcion,dosis,fecha_emision) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "') "
+            Case "modificar"
+                sql = "UPDATE receta SET medico='" + datos(1) + "',paciente='" + datos(2) + "',descripion='" + datos(3) + "',dosis='" + datos(4) + "',fecha_emision='" + datos(5) + "' WHERE Idreceta='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM receta WHERE Idreceta='" + datos(0) + "'"
+        End Select
+
+        If (executeSql(sql) > 0) Then
+
+            msg = "Accion realizada con exito"
+        Else
+            msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
+        End If
+
+        Return msg
+    End Function
+
     Public Function mantenimientoDatosPaciente(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion

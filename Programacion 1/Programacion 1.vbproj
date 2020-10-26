@@ -159,6 +159,12 @@
     <Compile Include="FrmBuscarPaciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmBuscarReceta.Designer.vb">
+      <DependentUpon>frmBuscarReceta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarReceta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCategorias Medicamentosvb.Designer.vb">
       <DependentUpon>frmCategorias Medicamentosvb.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,12 @@
       <DependentUpon>FrmPaciente.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecetaMedica.Designer.vb">
+      <DependentUpon>FrmRecetaMedica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecetaMedica.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="miconexion.vb" />
@@ -225,11 +237,17 @@
     <EmbeddedResource Include="FrmBuscarPaciente.resx">
       <DependentUpon>FrmBuscarPaciente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarReceta.resx">
+      <DependentUpon>frmBuscarReceta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias Medicamentosvb.resx">
       <DependentUpon>frmCategorias Medicamentosvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPaciente.resx">
       <DependentUpon>FrmPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecetaMedica.resx">
+      <DependentUpon>FrmRecetaMedica.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
