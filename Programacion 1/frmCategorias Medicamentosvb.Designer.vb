@@ -57,9 +57,11 @@ Partial Class frmCegorias_Medicamentosvb
         Me.grbEditarRegistrodePersonal.Controls.Add(Me.btnEliminarRegistrodePersonal)
         Me.grbEditarRegistrodePersonal.Controls.Add(Me.btnModificarMedicaamento)
         Me.grbEditarRegistrodePersonal.Controls.Add(Me.btnNuevoMedicamento)
-        Me.grbEditarRegistrodePersonal.Location = New System.Drawing.Point(235, 303)
+        Me.grbEditarRegistrodePersonal.Location = New System.Drawing.Point(313, 373)
+        Me.grbEditarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.grbEditarRegistrodePersonal.Name = "grbEditarRegistrodePersonal"
-        Me.grbEditarRegistrodePersonal.Size = New System.Drawing.Size(310, 100)
+        Me.grbEditarRegistrodePersonal.Padding = New System.Windows.Forms.Padding(4)
+        Me.grbEditarRegistrodePersonal.Size = New System.Drawing.Size(413, 123)
         Me.grbEditarRegistrodePersonal.TabIndex = 10
         Me.grbEditarRegistrodePersonal.TabStop = False
         Me.grbEditarRegistrodePersonal.Text = "Editar"
@@ -67,9 +69,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnBuscarRegistrodePersonal
         '
         Me.btnBuscarRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarRegistrodePersonal.Location = New System.Drawing.Point(218, 40)
+        Me.btnBuscarRegistrodePersonal.Location = New System.Drawing.Point(291, 49)
+        Me.btnBuscarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscarRegistrodePersonal.Name = "btnBuscarRegistrodePersonal"
-        Me.btnBuscarRegistrodePersonal.Size = New System.Drawing.Size(66, 32)
+        Me.btnBuscarRegistrodePersonal.Size = New System.Drawing.Size(88, 39)
         Me.btnBuscarRegistrodePersonal.TabIndex = 7
         Me.btnBuscarRegistrodePersonal.Text = "Buscar"
         Me.btnBuscarRegistrodePersonal.UseVisualStyleBackColor = True
@@ -77,9 +80,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnEliminarRegistrodePersonal
         '
         Me.btnEliminarRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarRegistrodePersonal.Location = New System.Drawing.Point(142, 40)
+        Me.btnEliminarRegistrodePersonal.Location = New System.Drawing.Point(189, 49)
+        Me.btnEliminarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.btnEliminarRegistrodePersonal.Name = "btnEliminarRegistrodePersonal"
-        Me.btnEliminarRegistrodePersonal.Size = New System.Drawing.Size(79, 32)
+        Me.btnEliminarRegistrodePersonal.Size = New System.Drawing.Size(105, 39)
         Me.btnEliminarRegistrodePersonal.TabIndex = 6
         Me.btnEliminarRegistrodePersonal.Text = "Eliminar"
         Me.btnEliminarRegistrodePersonal.UseVisualStyleBackColor = True
@@ -87,9 +91,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnModificarMedicaamento
         '
         Me.btnModificarMedicaamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarMedicaamento.Location = New System.Drawing.Point(73, 40)
+        Me.btnModificarMedicaamento.Location = New System.Drawing.Point(97, 49)
+        Me.btnModificarMedicaamento.Margin = New System.Windows.Forms.Padding(4)
         Me.btnModificarMedicaamento.Name = "btnModificarMedicaamento"
-        Me.btnModificarMedicaamento.Size = New System.Drawing.Size(71, 32)
+        Me.btnModificarMedicaamento.Size = New System.Drawing.Size(95, 39)
         Me.btnModificarMedicaamento.TabIndex = 5
         Me.btnModificarMedicaamento.Text = "Modificar"
         Me.btnModificarMedicaamento.UseVisualStyleBackColor = True
@@ -97,9 +102,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnNuevoMedicamento
         '
         Me.btnNuevoMedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevoMedicamento.Location = New System.Drawing.Point(9, 40)
+        Me.btnNuevoMedicamento.Location = New System.Drawing.Point(12, 49)
+        Me.btnNuevoMedicamento.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNuevoMedicamento.Name = "btnNuevoMedicamento"
-        Me.btnNuevoMedicamento.Size = New System.Drawing.Size(69, 32)
+        Me.btnNuevoMedicamento.Size = New System.Drawing.Size(92, 39)
         Me.btnNuevoMedicamento.TabIndex = 4
         Me.btnNuevoMedicamento.Text = "Nuevo"
         Me.btnNuevoMedicamento.UseVisualStyleBackColor = True
@@ -111,9 +117,11 @@ Partial Class frmCegorias_Medicamentosvb
         Me.grbRNavegarRegistrodePersonal.Controls.Add(Me.btnSuienteRegistrodePersonal)
         Me.grbRNavegarRegistrodePersonal.Controls.Add(Me.btnAnteriorRegistrodePersonal)
         Me.grbRNavegarRegistrodePersonal.Controls.Add(Me.btnPrimerRegistrodePersonal)
-        Me.grbRNavegarRegistrodePersonal.Location = New System.Drawing.Point(12, 303)
+        Me.grbRNavegarRegistrodePersonal.Location = New System.Drawing.Point(16, 373)
+        Me.grbRNavegarRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.grbRNavegarRegistrodePersonal.Name = "grbRNavegarRegistrodePersonal"
-        Me.grbRNavegarRegistrodePersonal.Size = New System.Drawing.Size(217, 100)
+        Me.grbRNavegarRegistrodePersonal.Padding = New System.Windows.Forms.Padding(4)
+        Me.grbRNavegarRegistrodePersonal.Size = New System.Drawing.Size(289, 123)
         Me.grbRNavegarRegistrodePersonal.TabIndex = 9
         Me.grbRNavegarRegistrodePersonal.TabStop = False
         Me.grbRNavegarRegistrodePersonal.Text = "Navegar "
@@ -122,19 +130,19 @@ Partial Class frmCegorias_Medicamentosvb
         '
         Me.lblUbicacionRegistrodePersonal.AutoSize = True
         Me.lblUbicacionRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUbicacionRegistrodePersonal.Location = New System.Drawing.Point(87, 48)
-        Me.lblUbicacionRegistrodePersonal.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblUbicacionRegistrodePersonal.Location = New System.Drawing.Point(116, 59)
         Me.lblUbicacionRegistrodePersonal.Name = "lblUbicacionRegistrodePersonal"
-        Me.lblUbicacionRegistrodePersonal.Size = New System.Drawing.Size(47, 15)
+        Me.lblUbicacionRegistrodePersonal.Size = New System.Drawing.Size(54, 18)
         Me.lblUbicacionRegistrodePersonal.TabIndex = 4
         Me.lblUbicacionRegistrodePersonal.Text = "0 de n"
         '
         'btnUltimoRegistrodePersonal
         '
         Me.btnUltimoRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimoRegistrodePersonal.Location = New System.Drawing.Point(182, 40)
+        Me.btnUltimoRegistrodePersonal.Location = New System.Drawing.Point(243, 49)
+        Me.btnUltimoRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.btnUltimoRegistrodePersonal.Name = "btnUltimoRegistrodePersonal"
-        Me.btnUltimoRegistrodePersonal.Size = New System.Drawing.Size(35, 32)
+        Me.btnUltimoRegistrodePersonal.Size = New System.Drawing.Size(47, 39)
         Me.btnUltimoRegistrodePersonal.TabIndex = 3
         Me.btnUltimoRegistrodePersonal.Text = ">Ⅰ"
         Me.btnUltimoRegistrodePersonal.UseVisualStyleBackColor = True
@@ -142,9 +150,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnSuienteRegistrodePersonal
         '
         Me.btnSuienteRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSuienteRegistrodePersonal.Location = New System.Drawing.Point(154, 40)
+        Me.btnSuienteRegistrodePersonal.Location = New System.Drawing.Point(205, 49)
+        Me.btnSuienteRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSuienteRegistrodePersonal.Name = "btnSuienteRegistrodePersonal"
-        Me.btnSuienteRegistrodePersonal.Size = New System.Drawing.Size(35, 32)
+        Me.btnSuienteRegistrodePersonal.Size = New System.Drawing.Size(47, 39)
         Me.btnSuienteRegistrodePersonal.TabIndex = 2
         Me.btnSuienteRegistrodePersonal.Text = ">"
         Me.btnSuienteRegistrodePersonal.UseVisualStyleBackColor = True
@@ -152,9 +161,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnAnteriorRegistrodePersonal
         '
         Me.btnAnteriorRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnteriorRegistrodePersonal.Location = New System.Drawing.Point(39, 41)
+        Me.btnAnteriorRegistrodePersonal.Location = New System.Drawing.Point(52, 50)
+        Me.btnAnteriorRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAnteriorRegistrodePersonal.Name = "btnAnteriorRegistrodePersonal"
-        Me.btnAnteriorRegistrodePersonal.Size = New System.Drawing.Size(32, 32)
+        Me.btnAnteriorRegistrodePersonal.Size = New System.Drawing.Size(43, 39)
         Me.btnAnteriorRegistrodePersonal.TabIndex = 1
         Me.btnAnteriorRegistrodePersonal.Text = "<"
         Me.btnAnteriorRegistrodePersonal.UseVisualStyleBackColor = True
@@ -162,9 +172,10 @@ Partial Class frmCegorias_Medicamentosvb
         'btnPrimerRegistrodePersonal
         '
         Me.btnPrimerRegistrodePersonal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimerRegistrodePersonal.Location = New System.Drawing.Point(7, 41)
+        Me.btnPrimerRegistrodePersonal.Location = New System.Drawing.Point(9, 50)
+        Me.btnPrimerRegistrodePersonal.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPrimerRegistrodePersonal.Name = "btnPrimerRegistrodePersonal"
-        Me.btnPrimerRegistrodePersonal.Size = New System.Drawing.Size(35, 32)
+        Me.btnPrimerRegistrodePersonal.Size = New System.Drawing.Size(47, 39)
         Me.btnPrimerRegistrodePersonal.TabIndex = 0
         Me.btnPrimerRegistrodePersonal.Text = "ⅼ<"
         Me.btnPrimerRegistrodePersonal.UseVisualStyleBackColor = True
@@ -183,107 +194,104 @@ Partial Class frmCegorias_Medicamentosvb
         Me.grbMedicamentosCategoria.Controls.Add(Me.lblCantidadMedicamento)
         Me.grbMedicamentosCategoria.Controls.Add(Me.lblDescripcionMedicamento)
         Me.grbMedicamentosCategoria.Controls.Add(Me.lblCategoriaMedicamento)
-        Me.grbMedicamentosCategoria.Location = New System.Drawing.Point(11, 11)
-        Me.grbMedicamentosCategoria.Margin = New System.Windows.Forms.Padding(2)
+        Me.grbMedicamentosCategoria.Location = New System.Drawing.Point(15, 14)
+        Me.grbMedicamentosCategoria.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.grbMedicamentosCategoria.Name = "grbMedicamentosCategoria"
-        Me.grbMedicamentosCategoria.Padding = New System.Windows.Forms.Padding(2)
-        Me.grbMedicamentosCategoria.Size = New System.Drawing.Size(535, 287)
+        Me.grbMedicamentosCategoria.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.grbMedicamentosCategoria.Size = New System.Drawing.Size(713, 353)
         Me.grbMedicamentosCategoria.TabIndex = 8
         Me.grbMedicamentosCategoria.TabStop = False
         Me.grbMedicamentosCategoria.Text = "Categorias "
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(119, 108)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtNombre.Location = New System.Drawing.Point(159, 133)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNombre.Multiline = True
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(235, 35)
+        Me.txtNombre.Size = New System.Drawing.Size(312, 42)
         Me.txtNombre.TabIndex = 21
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(50, 109)
-        Me.lblNombre.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblNombre.Location = New System.Drawing.Point(67, 134)
         Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(62, 15)
+        Me.lblNombre.Size = New System.Drawing.Size(73, 18)
         Me.lblNombre.TabIndex = 20
         Me.lblNombre.Text = "Nombre:"
         '
         'cboCategoriaMedicamento
         '
         Me.cboCategoriaMedicamento.FormattingEnabled = True
-        Me.cboCategoriaMedicamento.Location = New System.Drawing.Point(119, 36)
+        Me.cboCategoriaMedicamento.Location = New System.Drawing.Point(159, 44)
+        Me.cboCategoriaMedicamento.Margin = New System.Windows.Forms.Padding(4)
         Me.cboCategoriaMedicamento.Name = "cboCategoriaMedicamento"
-        Me.cboCategoriaMedicamento.Size = New System.Drawing.Size(182, 21)
+        Me.cboCategoriaMedicamento.Size = New System.Drawing.Size(241, 24)
         Me.cboCategoriaMedicamento.TabIndex = 5
         '
         'txtCodigoMedicamento
         '
-        Me.txtCodigoMedicamento.Location = New System.Drawing.Point(119, 66)
-        Me.txtCodigoMedicamento.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCodigoMedicamento.Location = New System.Drawing.Point(159, 81)
+        Me.txtCodigoMedicamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCodigoMedicamento.Name = "txtCodigoMedicamento"
-        Me.txtCodigoMedicamento.Size = New System.Drawing.Size(110, 20)
+        Me.txtCodigoMedicamento.Size = New System.Drawing.Size(145, 22)
         Me.txtCodigoMedicamento.TabIndex = 19
         '
         'lblCodigoMedicamento
         '
         Me.lblCodigoMedicamento.AutoSize = True
         Me.lblCodigoMedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigoMedicamento.Location = New System.Drawing.Point(50, 67)
-        Me.lblCodigoMedicamento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCodigoMedicamento.Location = New System.Drawing.Point(67, 82)
         Me.lblCodigoMedicamento.Name = "lblCodigoMedicamento"
-        Me.lblCodigoMedicamento.Size = New System.Drawing.Size(56, 15)
+        Me.lblCodigoMedicamento.Size = New System.Drawing.Size(67, 18)
         Me.lblCodigoMedicamento.TabIndex = 18
         Me.lblCodigoMedicamento.Text = "Codigo:"
         '
         'txtLaboratorioMedicamento
         '
         Me.txtLaboratorioMedicamento.AcceptsTab = True
-        Me.txtLaboratorioMedicamento.Location = New System.Drawing.Point(119, 216)
-        Me.txtLaboratorioMedicamento.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtLaboratorioMedicamento.Location = New System.Drawing.Point(159, 266)
+        Me.txtLaboratorioMedicamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtLaboratorioMedicamento.Name = "txtLaboratorioMedicamento"
-        Me.txtLaboratorioMedicamento.Size = New System.Drawing.Size(182, 20)
+        Me.txtLaboratorioMedicamento.Size = New System.Drawing.Size(241, 22)
         Me.txtLaboratorioMedicamento.TabIndex = 17
         '
         'lblLaboratorioMedicamento
         '
         Me.lblLaboratorioMedicamento.AutoSize = True
         Me.lblLaboratorioMedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLaboratorioMedicamento.Location = New System.Drawing.Point(21, 216)
-        Me.lblLaboratorioMedicamento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblLaboratorioMedicamento.Location = New System.Drawing.Point(28, 266)
         Me.lblLaboratorioMedicamento.Name = "lblLaboratorioMedicamento"
-        Me.lblLaboratorioMedicamento.Size = New System.Drawing.Size(85, 15)
+        Me.lblLaboratorioMedicamento.Size = New System.Drawing.Size(100, 18)
         Me.lblLaboratorioMedicamento.TabIndex = 16
         Me.lblLaboratorioMedicamento.Text = "Laboratorio:"
         '
         'txtCantidadMedicamento
         '
-        Me.txtCantidadMedicamento.Location = New System.Drawing.Point(119, 250)
-        Me.txtCantidadMedicamento.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCantidadMedicamento.Location = New System.Drawing.Point(159, 308)
+        Me.txtCantidadMedicamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCantidadMedicamento.Name = "txtCantidadMedicamento"
-        Me.txtCantidadMedicamento.Size = New System.Drawing.Size(154, 20)
+        Me.txtCantidadMedicamento.Size = New System.Drawing.Size(204, 22)
         Me.txtCantidadMedicamento.TabIndex = 10
         '
         'txtDescrpcionMedicamento
         '
-        Me.txtDescrpcionMedicamento.Location = New System.Drawing.Point(119, 157)
-        Me.txtDescrpcionMedicamento.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDescrpcionMedicamento.Location = New System.Drawing.Point(159, 193)
+        Me.txtDescrpcionMedicamento.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDescrpcionMedicamento.Multiline = True
         Me.txtDescrpcionMedicamento.Name = "txtDescrpcionMedicamento"
-        Me.txtDescrpcionMedicamento.Size = New System.Drawing.Size(258, 50)
+        Me.txtDescrpcionMedicamento.Size = New System.Drawing.Size(343, 61)
         Me.txtDescrpcionMedicamento.TabIndex = 9
         '
         'lblCantidadMedicamento
         '
         Me.lblCantidadMedicamento.AutoSize = True
         Me.lblCantidadMedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCantidadMedicamento.Location = New System.Drawing.Point(38, 250)
-        Me.lblCantidadMedicamento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCantidadMedicamento.Location = New System.Drawing.Point(51, 308)
         Me.lblCantidadMedicamento.Name = "lblCantidadMedicamento"
-        Me.lblCantidadMedicamento.Size = New System.Drawing.Size(68, 15)
+        Me.lblCantidadMedicamento.Size = New System.Drawing.Size(79, 18)
         Me.lblCantidadMedicamento.TabIndex = 2
         Me.lblCantidadMedicamento.Text = "Cantidad:"
         '
@@ -291,10 +299,9 @@ Partial Class frmCegorias_Medicamentosvb
         '
         Me.lblDescripcionMedicamento.AutoSize = True
         Me.lblDescripcionMedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescripcionMedicamento.Location = New System.Drawing.Point(23, 158)
-        Me.lblDescripcionMedicamento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblDescripcionMedicamento.Location = New System.Drawing.Point(31, 194)
         Me.lblDescripcionMedicamento.Name = "lblDescripcionMedicamento"
-        Me.lblDescripcionMedicamento.Size = New System.Drawing.Size(83, 15)
+        Me.lblDescripcionMedicamento.Size = New System.Drawing.Size(99, 18)
         Me.lblDescripcionMedicamento.TabIndex = 1
         Me.lblDescripcionMedicamento.Text = "Descrpcion:"
         '
@@ -302,21 +309,21 @@ Partial Class frmCegorias_Medicamentosvb
         '
         Me.lblCategoriaMedicamento.AutoSize = True
         Me.lblCategoriaMedicamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCategoriaMedicamento.Location = New System.Drawing.Point(42, 36)
-        Me.lblCategoriaMedicamento.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.lblCategoriaMedicamento.Location = New System.Drawing.Point(56, 44)
         Me.lblCategoriaMedicamento.Name = "lblCategoriaMedicamento"
-        Me.lblCategoriaMedicamento.Size = New System.Drawing.Size(73, 15)
+        Me.lblCategoriaMedicamento.Size = New System.Drawing.Size(86, 18)
         Me.lblCategoriaMedicamento.TabIndex = 0
         Me.lblCategoriaMedicamento.Text = "Categoria:"
         '
         'frmCegorias_Medicamentosvb
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(555, 415)
+        Me.ClientSize = New System.Drawing.Size(740, 511)
         Me.Controls.Add(Me.grbEditarRegistrodePersonal)
         Me.Controls.Add(Me.grbRNavegarRegistrodePersonal)
         Me.Controls.Add(Me.grbMedicamentosCategoria)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmCegorias_Medicamentosvb"
         Me.Text = "frmCegorias_Medicamentosvb"
         Me.grbEditarRegistrodePersonal.ResumeLayout(False)

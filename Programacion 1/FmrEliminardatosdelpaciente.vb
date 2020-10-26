@@ -45,4 +45,7 @@
         BtenerDatos()
     End Sub
 
+    Private Sub FmrEliminardatosdelpaciente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SistemaClinico.frmElmiminardatosdelpaciente = Nothing
+    End Sub
 End Class

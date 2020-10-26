@@ -71,7 +71,7 @@
             If String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Or Me.txtidEncargarmedicamento.Text.Trim = 0 Then
                 MsgBox("Seleccione un encargo")
             ElseIf String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim) Then
-                MsgBox("Coloque el coso del ingreso")
+                MsgBox("Coloque el costo del ingreso")
             ElseIf String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim) Then
                 MsgBox("Coloque el costo de la cita")
             End If

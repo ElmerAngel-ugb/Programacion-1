@@ -27,47 +27,56 @@ Partial Class SistemaClinico
         Me.OperacionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncargarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoriasDeMedicinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDePersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BarraDeEliminacionDeDatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarDatosDelPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
         'mnuPrincipal
         '
         Me.mnuPrincipal.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperacionesToolStripMenuItem, Me.MantenimientoToolStripMenuItem})
+        Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperacionesToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.BarraDeEliminacionDeDatosToolStripMenuItem})
         Me.mnuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.mnuPrincipal.Name = "mnuPrincipal"
-        Me.mnuPrincipal.Size = New System.Drawing.Size(800, 30)
+        Me.mnuPrincipal.Size = New System.Drawing.Size(800, 28)
         Me.mnuPrincipal.TabIndex = 1
         '
         'OperacionesToolStripMenuItem
         '
-        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem, Me.PagarToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem, Me.PagarToolStripMenuItem, Me.CategoriasDeMedicinaToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 26)
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
         '
         'EncargarMedicamentoToolStripMenuItem
         '
         Me.EncargarMedicamentoToolStripMenuItem.Name = "EncargarMedicamentoToolStripMenuItem"
-        Me.EncargarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
+        Me.EncargarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
         Me.EncargarMedicamentoToolStripMenuItem.Text = "Encargar Medicamento"
         '
         'PagarToolStripMenuItem
         '
         Me.PagarToolStripMenuItem.Name = "PagarToolStripMenuItem"
-        Me.PagarToolStripMenuItem.Size = New System.Drawing.Size(246, 26)
+        Me.PagarToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
         Me.PagarToolStripMenuItem.Text = "Pagar"
+        '
+        'CategoriasDeMedicinaToolStripMenuItem
+        '
+        Me.CategoriasDeMedicinaToolStripMenuItem.Name = "CategoriasDeMedicinaToolStripMenuItem"
+        Me.CategoriasDeMedicinaToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
+        Me.CategoriasDeMedicinaToolStripMenuItem.Text = "Categorias de medicina"
         '
         'MantenimientoToolStripMenuItem
         '
         Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
-        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 26)
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
         '
         'PacienteToolStripMenuItem
@@ -93,6 +102,19 @@ Partial Class SistemaClinico
         Me.MedicamentoToolStripMenuItem.Name = "MedicamentoToolStripMenuItem"
         Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.MedicamentoToolStripMenuItem.Text = "Medicamento"
+        '
+        'BarraDeEliminacionDeDatosToolStripMenuItem
+        '
+        Me.BarraDeEliminacionDeDatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarDatosDelPacienteToolStripMenuItem})
+        Me.BarraDeEliminacionDeDatosToolStripMenuItem.Name = "BarraDeEliminacionDeDatosToolStripMenuItem"
+        Me.BarraDeEliminacionDeDatosToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
+        Me.BarraDeEliminacionDeDatosToolStripMenuItem.Text = "Barra de eliminacion de Datos"
+        '
+        'EliminarDatosDelPacienteToolStripMenuItem
+        '
+        Me.EliminarDatosDelPacienteToolStripMenuItem.Name = "EliminarDatosDelPacienteToolStripMenuItem"
+        Me.EliminarDatosDelPacienteToolStripMenuItem.Size = New System.Drawing.Size(273, 26)
+        Me.EliminarDatosDelPacienteToolStripMenuItem.Text = "Eliminar Datos del Paciente"
         '
         'SistemaClinico
         '
@@ -123,4 +145,7 @@ Partial Class SistemaClinico
     Friend WithEvents RegistroDePersonalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MedicamentoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PagarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CategoriasDeMedicinaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BarraDeEliminacionDeDatosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarDatosDelPacienteToolStripMenuItem As ToolStripMenuItem
 End Class

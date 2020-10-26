@@ -139,4 +139,9 @@
             mostrarDatos()
         End If
     End Sub
+
+    Private Sub frmCegorias_Medicamentosvb_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SistemaClinico.frmCategoriasMedicamentos = Nothing
+
+    End Sub
 End Class

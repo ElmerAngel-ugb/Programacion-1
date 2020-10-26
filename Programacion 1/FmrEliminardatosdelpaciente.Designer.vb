@@ -42,77 +42,85 @@ Partial Class FmrEliminardatosdelpaciente
         Me.GroupBox1.Controls.Add(Me.TextNombredelPaciente)
         Me.GroupBox1.Controls.Add(Me.lblNombredelPaciente)
         Me.GroupBox1.Controls.Add(Me.btnBuscaridPaciente)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(11, 10)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 426)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(690, 341)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Eliminar "
         '
         'txtidPaciente
         '
-        Me.txtidPaciente.Location = New System.Drawing.Point(222, 185)
+        Me.txtidPaciente.Location = New System.Drawing.Point(197, 148)
+        Me.txtidPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtidPaciente.Name = "txtidPaciente"
-        Me.txtidPaciente.Size = New System.Drawing.Size(111, 26)
+        Me.txtidPaciente.Size = New System.Drawing.Size(99, 22)
         Me.txtidPaciente.TabIndex = 12
         '
         'lblidPaciente
         '
         Me.lblidPaciente.AutoSize = True
-        Me.lblidPaciente.Location = New System.Drawing.Point(56, 185)
+        Me.lblidPaciente.Location = New System.Drawing.Point(50, 148)
         Me.lblidPaciente.Name = "lblidPaciente"
-        Me.lblidPaciente.Size = New System.Drawing.Size(153, 20)
+        Me.lblidPaciente.Size = New System.Drawing.Size(137, 17)
         Me.lblidPaciente.TabIndex = 11
         Me.lblidPaciente.Text = "Codigo del paciente:"
         '
         'txtBuscaridPaciente
         '
-        Me.txtBuscaridPaciente.Location = New System.Drawing.Point(385, 72)
+        Me.txtBuscaridPaciente.Location = New System.Drawing.Point(342, 58)
+        Me.txtBuscaridPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtBuscaridPaciente.Name = "txtBuscaridPaciente"
-        Me.txtBuscaridPaciente.Size = New System.Drawing.Size(141, 26)
+        Me.txtBuscaridPaciente.Size = New System.Drawing.Size(126, 22)
         Me.txtBuscaridPaciente.TabIndex = 10
         Me.txtBuscaridPaciente.Text = "Buscar IdPaciente"
         '
         'btnEliminarPaciente
         '
-        Me.btnEliminarPaciente.Location = New System.Drawing.Point(287, 312)
+        Me.btnEliminarPaciente.Location = New System.Drawing.Point(255, 250)
+        Me.btnEliminarPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEliminarPaciente.Name = "btnEliminarPaciente"
-        Me.btnEliminarPaciente.Size = New System.Drawing.Size(155, 43)
+        Me.btnEliminarPaciente.Size = New System.Drawing.Size(138, 34)
         Me.btnEliminarPaciente.TabIndex = 9
         Me.btnEliminarPaciente.Text = "Eliminar Paciente"
         Me.btnEliminarPaciente.UseVisualStyleBackColor = True
         '
         'TextNombredelPaciente
         '
-        Me.TextNombredelPaciente.Location = New System.Drawing.Point(222, 129)
+        Me.TextNombredelPaciente.Location = New System.Drawing.Point(197, 103)
+        Me.TextNombredelPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextNombredelPaciente.Name = "TextNombredelPaciente"
-        Me.TextNombredelPaciente.Size = New System.Drawing.Size(347, 26)
+        Me.TextNombredelPaciente.Size = New System.Drawing.Size(309, 22)
         Me.TextNombredelPaciente.TabIndex = 8
         '
         'lblNombredelPaciente
         '
         Me.lblNombredelPaciente.AutoSize = True
-        Me.lblNombredelPaciente.Location = New System.Drawing.Point(56, 129)
+        Me.lblNombredelPaciente.Location = New System.Drawing.Point(50, 103)
         Me.lblNombredelPaciente.Name = "lblNombredelPaciente"
-        Me.lblNombredelPaciente.Size = New System.Drawing.Size(160, 20)
+        Me.lblNombredelPaciente.Size = New System.Drawing.Size(144, 17)
         Me.lblNombredelPaciente.TabIndex = 7
         Me.lblNombredelPaciente.Text = "Nombre del Paciente:"
         '
         'btnBuscaridPaciente
         '
-        Me.btnBuscaridPaciente.Location = New System.Drawing.Point(542, 72)
+        Me.btnBuscaridPaciente.Location = New System.Drawing.Point(482, 58)
+        Me.btnBuscaridPaciente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBuscaridPaciente.Name = "btnBuscaridPaciente"
-        Me.btnBuscaridPaciente.Size = New System.Drawing.Size(171, 32)
+        Me.btnBuscaridPaciente.Size = New System.Drawing.Size(152, 26)
         Me.btnBuscaridPaciente.TabIndex = 5
         Me.btnBuscaridPaciente.Text = "Buscar "
         Me.btnBuscaridPaciente.UseVisualStyleBackColor = True
         '
         'FmrEliminardatosdelpaciente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(711, 360)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FmrEliminardatosdelpaciente"
         Me.Text = " Eliminar datos del paciente"
         Me.GroupBox1.ResumeLayout(False)
