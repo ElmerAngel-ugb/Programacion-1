@@ -11,7 +11,7 @@
 
     Sub obtenerDatos()
         dataTable = objConexion.obtenerDatos().Tables("Paciente")
-
+        dataTable.PrimaryKey = New DataColumn() {dataTable.Columns("IdPaciente")}
         mostrarDatos()
     End Sub
 
@@ -141,6 +141,10 @@
     Private Sub btnBuscarPaciente_Click(sender As Object, e As EventArgs) Handles btnBuscarPaciente.Click
         Dim objBuscarPaciente As New FrmBuscarPaciente
         objBuscarPaciente.ShowDialog()
+        If objBuscarPaciente._idC > 0 Then
+            Posicion = dataTable.Rows.IndexOf(dataTable.Rows.Find(objBuscarPaciente._idC))
+            mostrarDatos()
+        End If
     End Sub
 
     Private Sub FrmPaciente_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
