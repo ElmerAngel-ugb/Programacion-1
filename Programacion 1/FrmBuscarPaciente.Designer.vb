@@ -26,6 +26,9 @@ Partial Class FrmBuscarPaciente
         Me.btnCancelarPaciente = New System.Windows.Forms.Button()
         Me.btnSeleccionarPaciente = New System.Windows.Forms.Button()
         Me.grdBuscarPaciente = New System.Windows.Forms.DataGridView()
+        Me.lblBuscarCliente = New System.Windows.Forms.Label()
+        Me.txtBuscarPaciente = New System.Windows.Forms.TextBox()
+        Me.btnCancelarPacientes = New System.Windows.Forms.Button()
         Me.IdPaciente = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,9 +42,6 @@ Partial Class FrmBuscarPaciente
         Me.Direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Alergico = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Examenes_Realizados = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblBuscarCliente = New System.Windows.Forms.Label()
-        Me.txtBuscarPaciente = New System.Windows.Forms.TextBox()
-        Me.btnCancelarPacientes = New System.Windows.Forms.Button()
         CType(Me.grdBuscarPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -88,111 +88,6 @@ Partial Class FrmBuscarPaciente
         Me.grdBuscarPaciente.Size = New System.Drawing.Size(1142, 318)
         Me.grdBuscarPaciente.TabIndex = 7
         '
-        'IdPaciente
-        '
-        Me.IdPaciente.HeaderText = "ID"
-        Me.IdPaciente.MinimumWidth = 6
-        Me.IdPaciente.Name = "IdPaciente"
-        Me.IdPaciente.ReadOnly = True
-        Me.IdPaciente.Visible = False
-        Me.IdPaciente.Width = 125
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "CODIGO"
-        Me.Codigo.MinimumWidth = 6
-        Me.Codigo.Name = "Codigo"
-        Me.Codigo.ReadOnly = True
-        Me.Codigo.Width = 125
-        '
-        'Nombre
-        '
-        Me.Nombre.HeaderText = "NOMBRE"
-        Me.Nombre.MinimumWidth = 6
-        Me.Nombre.Name = "Nombre"
-        Me.Nombre.ReadOnly = True
-        Me.Nombre.Width = 125
-        '
-        'Apellido
-        '
-        Me.Apellido.HeaderText = "APELLIDO"
-        Me.Apellido.MinimumWidth = 6
-        Me.Apellido.Name = "Apellido"
-        Me.Apellido.ReadOnly = True
-        Me.Apellido.Width = 125
-        '
-        'Fecha_Nacimiento
-        '
-        Me.Fecha_Nacimiento.HeaderText = "FECHA_NACIMIENTO"
-        Me.Fecha_Nacimiento.MinimumWidth = 6
-        Me.Fecha_Nacimiento.Name = "Fecha_Nacimiento"
-        Me.Fecha_Nacimiento.ReadOnly = True
-        Me.Fecha_Nacimiento.Width = 135
-        '
-        'Edad
-        '
-        Me.Edad.HeaderText = "EDAD"
-        Me.Edad.MinimumWidth = 6
-        Me.Edad.Name = "Edad"
-        Me.Edad.ReadOnly = True
-        Me.Edad.Width = 125
-        '
-        'Sexo
-        '
-        Me.Sexo.HeaderText = "SEXO"
-        Me.Sexo.MinimumWidth = 6
-        Me.Sexo.Name = "Sexo"
-        Me.Sexo.ReadOnly = True
-        Me.Sexo.Width = 125
-        '
-        'DUI_NIT
-        '
-        Me.DUI_NIT.HeaderText = "DUI_NIT"
-        Me.DUI_NIT.MinimumWidth = 6
-        Me.DUI_NIT.Name = "DUI_NIT"
-        Me.DUI_NIT.ReadOnly = True
-        Me.DUI_NIT.Width = 125
-        '
-        'Tipo_Sangre
-        '
-        Me.Tipo_Sangre.HeaderText = "TIPO_SANGRE"
-        Me.Tipo_Sangre.MinimumWidth = 6
-        Me.Tipo_Sangre.Name = "Tipo_Sangre"
-        Me.Tipo_Sangre.ReadOnly = True
-        Me.Tipo_Sangre.Width = 125
-        '
-        'Email
-        '
-        Me.Email.HeaderText = "EMAIL"
-        Me.Email.MinimumWidth = 6
-        Me.Email.Name = "Email"
-        Me.Email.ReadOnly = True
-        Me.Email.Width = 125
-        '
-        'Direccion
-        '
-        Me.Direccion.HeaderText = "DIRECCION"
-        Me.Direccion.MinimumWidth = 6
-        Me.Direccion.Name = "Direccion"
-        Me.Direccion.ReadOnly = True
-        Me.Direccion.Width = 125
-        '
-        'Alergico
-        '
-        Me.Alergico.HeaderText = "ALERGICO"
-        Me.Alergico.MinimumWidth = 6
-        Me.Alergico.Name = "Alergico"
-        Me.Alergico.ReadOnly = True
-        Me.Alergico.Width = 125
-        '
-        'Examenes_Realizados
-        '
-        Me.Examenes_Realizados.HeaderText = "EXAMENES_REALIZADOS"
-        Me.Examenes_Realizados.MinimumWidth = 6
-        Me.Examenes_Realizados.Name = "Examenes_Realizados"
-        Me.Examenes_Realizados.ReadOnly = True
-        Me.Examenes_Realizados.Width = 150
-        '
         'lblBuscarCliente
         '
         Me.lblBuscarCliente.AutoSize = True
@@ -225,6 +120,124 @@ Partial Class FrmBuscarPaciente
         Me.btnCancelarPacientes.Text = "Cancelar"
         Me.btnCancelarPacientes.UseVisualStyleBackColor = True
         '
+        'IdPaciente
+        '
+        Me.IdPaciente.DataPropertyName = "IdPaciente"
+        Me.IdPaciente.HeaderText = "ID"
+        Me.IdPaciente.MinimumWidth = 6
+        Me.IdPaciente.Name = "IdPaciente"
+        Me.IdPaciente.ReadOnly = True
+        Me.IdPaciente.Visible = False
+        Me.IdPaciente.Width = 125
+        '
+        'Codigo
+        '
+        Me.Codigo.DataPropertyName = "Codigo"
+        Me.Codigo.HeaderText = "CODIGO"
+        Me.Codigo.MinimumWidth = 6
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.ReadOnly = True
+        Me.Codigo.Width = 125
+        '
+        'Nombre
+        '
+        Me.Nombre.DataPropertyName = "Nombre"
+        Me.Nombre.HeaderText = "NOMBRE"
+        Me.Nombre.MinimumWidth = 6
+        Me.Nombre.Name = "Nombre"
+        Me.Nombre.ReadOnly = True
+        Me.Nombre.Width = 125
+        '
+        'Apellido
+        '
+        Me.Apellido.DataPropertyName = "Apellido"
+        Me.Apellido.HeaderText = "APELLIDO"
+        Me.Apellido.MinimumWidth = 6
+        Me.Apellido.Name = "Apellido"
+        Me.Apellido.ReadOnly = True
+        Me.Apellido.Width = 125
+        '
+        'Fecha_Nacimiento
+        '
+        Me.Fecha_Nacimiento.DataPropertyName = "Fecha_Nacimiento"
+        Me.Fecha_Nacimiento.HeaderText = "FECHA_NACIMIENTO"
+        Me.Fecha_Nacimiento.MinimumWidth = 6
+        Me.Fecha_Nacimiento.Name = "Fecha_Nacimiento"
+        Me.Fecha_Nacimiento.ReadOnly = True
+        Me.Fecha_Nacimiento.Width = 135
+        '
+        'Edad
+        '
+        Me.Edad.DataPropertyName = "Edad"
+        Me.Edad.HeaderText = "EDAD"
+        Me.Edad.MinimumWidth = 6
+        Me.Edad.Name = "Edad"
+        Me.Edad.ReadOnly = True
+        Me.Edad.Width = 125
+        '
+        'Sexo
+        '
+        Me.Sexo.DataPropertyName = "Sexo"
+        Me.Sexo.HeaderText = "SEXO"
+        Me.Sexo.MinimumWidth = 6
+        Me.Sexo.Name = "Sexo"
+        Me.Sexo.ReadOnly = True
+        Me.Sexo.Width = 125
+        '
+        'DUI_NIT
+        '
+        Me.DUI_NIT.DataPropertyName = "DUI_NIT"
+        Me.DUI_NIT.HeaderText = "DUI_NIT"
+        Me.DUI_NIT.MinimumWidth = 6
+        Me.DUI_NIT.Name = "DUI_NIT"
+        Me.DUI_NIT.ReadOnly = True
+        Me.DUI_NIT.Width = 125
+        '
+        'Tipo_Sangre
+        '
+        Me.Tipo_Sangre.DataPropertyName = "Tipo_Sangre"
+        Me.Tipo_Sangre.HeaderText = "TIPO_SANGRE"
+        Me.Tipo_Sangre.MinimumWidth = 6
+        Me.Tipo_Sangre.Name = "Tipo_Sangre"
+        Me.Tipo_Sangre.ReadOnly = True
+        Me.Tipo_Sangre.Width = 125
+        '
+        'Email
+        '
+        Me.Email.DataPropertyName = "Email"
+        Me.Email.HeaderText = "EMAIL"
+        Me.Email.MinimumWidth = 6
+        Me.Email.Name = "Email"
+        Me.Email.ReadOnly = True
+        Me.Email.Width = 125
+        '
+        'Direccion
+        '
+        Me.Direccion.DataPropertyName = "Direccion"
+        Me.Direccion.HeaderText = "DIRECCION"
+        Me.Direccion.MinimumWidth = 6
+        Me.Direccion.Name = "Direccion"
+        Me.Direccion.ReadOnly = True
+        Me.Direccion.Width = 125
+        '
+        'Alergico
+        '
+        Me.Alergico.DataPropertyName = "Alergico"
+        Me.Alergico.HeaderText = "ALERGICO"
+        Me.Alergico.MinimumWidth = 6
+        Me.Alergico.Name = "Alergico"
+        Me.Alergico.ReadOnly = True
+        Me.Alergico.Width = 125
+        '
+        'Examenes_Realizados
+        '
+        Me.Examenes_Realizados.DataPropertyName = "Examenes_Realizados"
+        Me.Examenes_Realizados.HeaderText = "EXAMENES_REALIZADOS"
+        Me.Examenes_Realizados.MinimumWidth = 6
+        Me.Examenes_Realizados.Name = "Examenes_Realizados"
+        Me.Examenes_Realizados.ReadOnly = True
+        Me.Examenes_Realizados.Width = 150
+        '
         'FrmBuscarPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -251,6 +264,7 @@ Partial Class FrmBuscarPaciente
     Friend WithEvents grdBuscarPaciente As DataGridView
     Friend WithEvents lblBuscarCliente As Label
     Friend WithEvents txtBuscarPaciente As TextBox
+    Friend WithEvents btnCancelarPacientes As Button
     Friend WithEvents IdPaciente As DataGridViewTextBoxColumn
     Friend WithEvents Codigo As DataGridViewTextBoxColumn
     Friend WithEvents Nombre As DataGridViewTextBoxColumn
@@ -264,5 +278,4 @@ Partial Class FrmBuscarPaciente
     Friend WithEvents Direccion As DataGridViewTextBoxColumn
     Friend WithEvents Alergico As DataGridViewTextBoxColumn
     Friend WithEvents Examenes_Realizados As DataGridViewTextBoxColumn
-    Friend WithEvents btnCancelarPacientes As Button
 End Class
