@@ -103,6 +103,14 @@
     <Compile Include="dsEntregarmedicamentos.vb">
       <DependentUpon>dsEntregarmedicamentos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsExpediente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsExpediente.vb">
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsMedicamentos.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -249,6 +257,17 @@
     </None>
     <None Include="dsEntregarmedicamentos.xss">
       <DependentUpon>dsEntregarmedicamentos.xsd</DependentUpon>
+    </None>
+    <None Include="dsExpediente.xsc">
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
+    </None>
+    <None Include="dsExpediente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsExpediente.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsExpediente.xss">
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
     </None>
     <None Include="dsMedicamentos.xsc">
       <DependentUpon>dsMedicamentos.xsd</DependentUpon>
