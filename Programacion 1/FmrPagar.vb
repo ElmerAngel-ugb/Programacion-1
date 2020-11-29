@@ -2,6 +2,8 @@
 
     Dim btnPagarFuepresionado As Boolean = False
     Dim formLoad As Boolean = False
+    Dim btnRemoveFilterFuePresionado As Boolean = False
+
     Private Sub FmrPagar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formLoad = True
         Me.PagarTableAdapter.Fill(Me.Form_DsPagar.Pagar)
@@ -13,6 +15,7 @@
         Me.actualizarSubTotal()
         actualizarTotal()
         actualizarFormadePago()
+
     End Sub
 
     Private Sub actualizarFormadePago()
@@ -21,6 +24,7 @@
 
     Private Sub btnBuscarEncargo_Click(sender As Object, e As EventArgs) Handles btnBuscarEncargo.Click
         btnPagarFuepresionado = False
+        btnRemoveFilterFuePresionado = False
         formLoad = False
         txtCostoCita.Text = 10
         txtidEncargarmedicamento.Text = ""
@@ -32,7 +36,7 @@
     End Sub
 
     Private Sub bsPagar_PositionChanged(sender As Object, e As EventArgs) Handles bsPagar.PositionChanged
-        If formLoad Or btnPagarFuepresionado Then
+        If formLoad Or btnPagarFuepresionado Or btnRemoveFilterFuePresionado Then
             Return
         End If
         actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
@@ -62,15 +66,18 @@
 
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
         btnPagarFuepresionado = True
+        btnRemoveFilterFuePresionado = False
         formLoad = False
         txtCostoCita.Text = 10
-        If String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim) Or String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Or String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim) Or Me.txtidEncargarmedicamento.Text.Trim = 0 Then
+        If String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim) Or String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Or String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim) Or Me.txtidEncargarmedicamento.Text.Trim = 0 Or String.IsNullOrEmpty(Me.cbxFormadePago.Text.Trim) Then
             If String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Or Me.txtidEncargarmedicamento.Text.Trim = 0 Then
                 MsgBox("Seleccione un encargo")
             ElseIf String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim) Then
                 MsgBox("Coloque el costo del ingreso")
             ElseIf String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim) Then
                 MsgBox("Coloque el costo de la cita")
+            ElseIf String.IsNullOrEmpty(Me.cbxFormadePago.Text.Trim) Then
+                MsgBox("Seleccione una forma de pago")
             End If
             Return
         End If
@@ -126,6 +133,7 @@
 
     Private Sub navPagar_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles navPagar.ItemClicked
         btnPagarFuepresionado = False
+        btnRemoveFilterFuePresionado = False
         formLoad = False
         navPagar.DeleteItem = BindingNavigatorDeleteItem
         navPagar.MoveFirstItem = BindingNavigatorMoveFirstItem
@@ -142,7 +150,7 @@
             actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
             actualizarSubTotal()
             actualizarTotal()
-            If String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim()) Or String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim()) Or String.IsNullOrEmpty(Me.txtCostoMedicina.Text.Trim()) Or String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim()) Then
+            If String.IsNullOrEmpty(Me.txtCostoIngreso.Text.Trim()) Or String.IsNullOrEmpty(Me.txtCostoCita.Text.Trim()) Or String.IsNullOrEmpty(Me.txtCostoMedicina.Text.Trim()) Or String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim()) Or String.IsNullOrEmpty(Me.cbxFormadePago.Text.Trim()) Then
                 navPagar.MoveFirstItem = Nothing
                 navPagar.MoveLastItem = Nothing
                 navPagar.MoveNextItem = Nothing
@@ -157,6 +165,8 @@
                 MsgBox("El costo de cita no puede quedar vacio", MsgBoxStyle.Critical, "Error")
             ElseIf String.IsNullOrEmpty(Me.txtidEncargarmedicamento.Text.Trim) Then
                 MsgBox("El id encargar medicamento no puedo quedar vacio ", MsgBoxStyle.Critical, "Error")
+            ElseIf String.IsNullOrEmpty(Me.cbxFormadePago.Text.Trim()) Then
+                MsgBox("Seleccione una forma de pago", MsgBoxStyle.Critical, "Error")
             End If
         End If
 
@@ -169,6 +179,7 @@
 
     Private Sub btnRemoveFilter_Click(sender As Object, e As EventArgs) Handles btnRemoveFilter.Click
         btnPagarFuepresionado = False
+        btnRemoveFilterFuePresionado = True
         formLoad = False
         Try
             Me.bsPagar.Filter = ""
@@ -185,6 +196,7 @@
 
     Private Sub btnCancelarPago_Click(sender As Object, e As EventArgs) Handles btnCancelarPago.Click
         btnPagarFuepresionado = False
+        btnRemoveFilterFuePresionado = False
         formLoad = False
         Me.bsPagar.CancelEdit()
         actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
@@ -195,6 +207,7 @@
 
     Private Sub btnBuscarPago_Click(sender As Object, e As EventArgs) Handles btnBuscarPago.Click
         btnPagarFuepresionado = False
+        btnRemoveFilterFuePresionado = False
         formLoad = False
         Try
             bsPagar.Filter = "Idpagar='" & Me.txtBuscarpago.Text.Trim & "'"

@@ -98,6 +98,7 @@
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         btnGuardarFuepresionado = False
+        btnRemoveFilterFuepresionado = False
         Try
             bsEntregarmedicamento.Filter = "id_encargarmedicamento='" & Me.txtBuscar.Text.Trim & "'"
             bsEntregarmedicamento.Sort = "id_encargarmedicamento ASC"
@@ -205,7 +206,7 @@
     End Sub
 
     Private Sub bsEntregarmedicamento_PositionChanged(sender As Object, e As EventArgs) Handles bsEntregarmedicamento.PositionChanged
-        If btnGuardarFuepresionado Then
+        If btnGuardarFuepresionado Or btnRemoveFilterFuepresionado Then
             Return
         End If
         actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim())
