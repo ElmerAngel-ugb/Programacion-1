@@ -103,10 +103,13 @@
     <Compile Include="dsEntregarmedicamentos.vb">
       <DependentUpon>dsEntregarmedicamentos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsFormaPago.Designer.vb">
+    <Compile Include="dsExpediente.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsFormaPago.xsd</DependentUpon>
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsExpediente.vb">
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsMedicamentos.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -119,9 +122,6 @@
     <Compile Include="dsPagar.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsPagar.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dsPagar.vb">
       <DependentUpon>dsPagar.xsd</DependentUpon>
     </Compile>
     <Compile Include="FmrPagar.Designer.vb">
@@ -171,12 +171,6 @@
       <DependentUpon>frmCategorias Medicamentosvb.vb</DependentUpon>
     </Compile>
     <Compile Include="frmCategorias Medicamentosvb.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFormasdePago.Designer.vb">
-      <DependentUpon>FrmFormasdePago.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmFormasdePago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPaciente.Designer.vb">
@@ -242,9 +236,6 @@
     <EmbeddedResource Include="frmCategorias Medicamentosvb.resx">
       <DependentUpon>frmCategorias Medicamentosvb.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFormasdePago.resx">
-      <DependentUpon>FrmFormasdePago.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPaciente.resx">
       <DependentUpon>FrmPaciente.vb</DependentUpon>
     </EmbeddedResource>
@@ -267,16 +258,16 @@
     <None Include="dsEntregarmedicamentos.xss">
       <DependentUpon>dsEntregarmedicamentos.xsd</DependentUpon>
     </None>
-    <None Include="dsFormaPago.xsc">
-      <DependentUpon>dsFormaPago.xsd</DependentUpon>
+    <None Include="dsExpediente.xsc">
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
     </None>
-    <None Include="dsFormaPago.xsd">
+    <None Include="dsExpediente.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsFormaPago.Designer.vb</LastGenOutput>
+      <LastGenOutput>dsExpediente.Designer.vb</LastGenOutput>
     </None>
-    <None Include="dsFormaPago.xss">
-      <DependentUpon>dsFormaPago.xsd</DependentUpon>
+    <None Include="dsExpediente.xss">
+      <DependentUpon>dsExpediente.xsd</DependentUpon>
     </None>
     <None Include="dsMedicamentos.xsc">
       <DependentUpon>dsMedicamentos.xsd</DependentUpon>
