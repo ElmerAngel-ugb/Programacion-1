@@ -7,6 +7,7 @@
     Public fmrPagar As FmrPagar
     Public frmCategoriasMedicamentos As frmCegorias_Medicamentosvb
     Public frmElmiminardatosdelpaciente As FmrEliminardatosdelpaciente
+    Public frmFormasdePago As FrmFormasdePago
 
     Private Sub EncargarMedicamentoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EncargarMedicamentoToolStripMenuItem.Click
         If fmrEncargarMedicamento Is Nothing Then
@@ -85,6 +86,18 @@
             frmElmiminardatosdelpaciente.Show()
         Else
             fmrPagar.Activate()
+        End If
+    End Sub
+
+
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        If frmFormasdePago Is Nothing Then
+            frmFormasdePago = New FrmFormasdePago
+            frmFormasdePago.MdiParent = Me
+            frmFormasdePago.Show()
+        Else
+            frmFormasdePago.Activate()
         End If
     End Sub
 End Class

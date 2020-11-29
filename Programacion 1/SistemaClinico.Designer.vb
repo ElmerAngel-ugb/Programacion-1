@@ -33,6 +33,7 @@ Partial Class SistemaClinico
         Me.RegistrarPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDePersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarraDeEliminacionDeDatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarDatosDelPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrincipal.SuspendLayout()
@@ -74,7 +75,7 @@ Partial Class SistemaClinico
         '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
@@ -102,6 +103,12 @@ Partial Class SistemaClinico
         Me.MedicamentoToolStripMenuItem.Name = "MedicamentoToolStripMenuItem"
         Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.MedicamentoToolStripMenuItem.Text = "Medicamento"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(229, 26)
+        Me.ToolStripMenuItem1.Text = "Formas de Pago"
         '
         'BarraDeEliminacionDeDatosToolStripMenuItem
         '
@@ -148,4 +155,5 @@ Partial Class SistemaClinico
     Friend WithEvents CategoriasDeMedicinaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BarraDeEliminacionDeDatosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarDatosDelPacienteToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

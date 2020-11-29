@@ -25,11 +25,15 @@ Partial Class FmrEncargarMedicamento
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FmrEncargarMedicamento))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtApellidosPaciente = New System.Windows.Forms.TextBox()
+        Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Form_DSEntregarmedicamentos = New Programacion_1.dsEntregarmedicamentos()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtCodigoPaciente = New System.Windows.Forms.TextBox()
         Me.tmpIdMedicamento = New System.Windows.Forms.TextBox()
         Me.bsMedicamentos = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Form_DSEntregarmedicamentos = New Programacion_1.dsEntregarmedicamentos()
         Me.tmpIdPaciente = New System.Windows.Forms.TextBox()
-        Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtCantidadDeseada = New System.Windows.Forms.MaskedTextBox()
         Me.bsEntregarmedicamento = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtNombrePaciente = New System.Windows.Forms.TextBox()
@@ -79,14 +83,10 @@ Partial Class FmrEncargarMedicamento
         Me.Encargar_medicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.encargar_medicamentoTableAdapter()
         Me.MedicamentoTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter()
         Me.PacienteTableAdapter = New Programacion_1.dsEntregarmedicamentosTableAdapters.pacienteTableAdapter()
-        Me.txtCodigoPaciente = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtApellidosPaciente = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsEntregarmedicamento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.navEntregarmedicamentos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.navEntregarmedicamentos.SuspendLayout()
@@ -124,6 +124,54 @@ Partial Class FmrEncargarMedicamento
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
+        'txtApellidosPaciente
+        '
+        Me.txtApellidosPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Apellido", True))
+        Me.txtApellidosPaciente.Location = New System.Drawing.Point(239, 93)
+        Me.txtApellidosPaciente.Name = "txtApellidosPaciente"
+        Me.txtApellidosPaciente.ReadOnly = True
+        Me.txtApellidosPaciente.Size = New System.Drawing.Size(191, 22)
+        Me.txtApellidosPaciente.TabIndex = 25
+        '
+        'bsPaciente
+        '
+        Me.bsPaciente.DataMember = "paciente"
+        Me.bsPaciente.DataSource = Me.Form_DSEntregarmedicamentos
+        '
+        'Form_DSEntregarmedicamentos
+        '
+        Me.Form_DSEntregarmedicamentos.DataSetName = "dsEntregarmedicamentos"
+        Me.Form_DSEntregarmedicamentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(20, 97)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(176, 18)
+        Me.Label1.TabIndex = 24
+        Me.Label1.Text = "Apellidos del paciente:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(20, 21)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(162, 18)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "Código del paciente:"
+        '
+        'txtCodigoPaciente
+        '
+        Me.txtCodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Codigo", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.txtCodigoPaciente.Location = New System.Drawing.Point(239, 21)
+        Me.txtCodigoPaciente.Name = "txtCodigoPaciente"
+        Me.txtCodigoPaciente.ReadOnly = True
+        Me.txtCodigoPaciente.Size = New System.Drawing.Size(191, 22)
+        Me.txtCodigoPaciente.TabIndex = 18
+        '
         'tmpIdMedicamento
         '
         Me.tmpIdMedicamento.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsMedicamentos, "idmedicamento", True))
@@ -138,11 +186,6 @@ Partial Class FmrEncargarMedicamento
         Me.bsMedicamentos.DataMember = "medicamento"
         Me.bsMedicamentos.DataSource = Me.Form_DSEntregarmedicamentos
         '
-        'Form_DSEntregarmedicamentos
-        '
-        Me.Form_DSEntregarmedicamentos.DataSetName = "dsEntregarmedicamentos"
-        Me.Form_DSEntregarmedicamentos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'tmpIdPaciente
         '
         Me.tmpIdPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "IdPaciente", True))
@@ -150,11 +193,6 @@ Partial Class FmrEncargarMedicamento
         Me.tmpIdPaciente.Name = "tmpIdPaciente"
         Me.tmpIdPaciente.Size = New System.Drawing.Size(0, 22)
         Me.tmpIdPaciente.TabIndex = 21
-        '
-        'bsPaciente
-        '
-        Me.bsPaciente.DataMember = "paciente"
-        Me.bsPaciente.DataSource = Me.Form_DSEntregarmedicamentos
         '
         'txtCantidadDeseada
         '
@@ -559,44 +597,6 @@ Partial Class FmrEncargarMedicamento
         '
         Me.PacienteTableAdapter.ClearBeforeFill = True
         '
-        'txtCodigoPaciente
-        '
-        Me.txtCodigoPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Codigo", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.txtCodigoPaciente.Location = New System.Drawing.Point(239, 21)
-        Me.txtCodigoPaciente.Name = "txtCodigoPaciente"
-        Me.txtCodigoPaciente.ReadOnly = True
-        Me.txtCodigoPaciente.Size = New System.Drawing.Size(191, 22)
-        Me.txtCodigoPaciente.TabIndex = 18
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(20, 21)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(162, 18)
-        Me.Label11.TabIndex = 23
-        Me.Label11.Text = "Código del paciente:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(20, 97)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(176, 18)
-        Me.Label1.TabIndex = 24
-        Me.Label1.Text = "Apellidos del paciente:"
-        '
-        'txtApellidosPaciente
-        '
-        Me.txtApellidosPaciente.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPaciente, "Apellido", True))
-        Me.txtApellidosPaciente.Location = New System.Drawing.Point(239, 93)
-        Me.txtApellidosPaciente.Name = "txtApellidosPaciente"
-        Me.txtApellidosPaciente.ReadOnly = True
-        Me.txtApellidosPaciente.Size = New System.Drawing.Size(191, 22)
-        Me.txtApellidosPaciente.TabIndex = 25
-        '
         'FmrEncargarMedicamento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -608,9 +608,9 @@ Partial Class FmrEncargarMedicamento
         Me.Text = "Encargar_medicamento"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Form_DSEntregarmedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsMedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsEntregarmedicamento, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.navEntregarmedicamentos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.navEntregarmedicamentos.ResumeLayout(False)

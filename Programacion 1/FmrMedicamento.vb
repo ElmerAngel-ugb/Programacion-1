@@ -31,15 +31,25 @@
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        bsMedicamentos.Filter = "codigo='" & Me.txtBuscar.Text.Trim & "'"
-        bsMedicamentos.Sort = "idmedicamento ASC"
-        Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
+
+        Try
+            bsMedicamentos.Filter = "codigo='" & Me.txtBuscar.Text.Trim & "'"
+            bsMedicamentos.Sort = "idmedicamento ASC"
+            Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 
     Private Sub btnRemoveFilter_Click_1(sender As Object, e As EventArgs) Handles btnRemoveFilter.Click
-        bsMedicamentos.Filter = ""
-        Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
-        Me.txtBuscar.Text = "Escriba un codigo"
+
+        Try
+            bsMedicamentos.Filter = ""
+            Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
+            Me.txtBuscar.Text = "Escriba un codigo"
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
     Private Sub navMedicamentos_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles navMedicamentos.ItemClicked
         navMedicamentos.DeleteItem = BindingNavigatorDeleteItem
@@ -52,10 +62,15 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Me.Validate()
-        Me.bsMedicamentos.EndEdit()
-        Me.MedicamentoTableAdapter.Update(form_DSMedicamentos)
-        Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
+
+        Try
+            Me.Validate()
+            Me.bsMedicamentos.EndEdit()
+            Me.MedicamentoTableAdapter.Update(form_DSMedicamentos)
+            Me.MedicamentoTableAdapter.Fill(form_DSMedicamentos.medicamento)
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 
     Private Sub FmrMedicamento_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing

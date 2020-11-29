@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FmrPagar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FmrPagar
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FmrPagar))
@@ -50,11 +50,6 @@ Partial Class FmrPagar
         Me.txtBuscarEncargo = New System.Windows.Forms.ToolStripTextBox()
         Me.btnBuscarEncargo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
-        Me.bsEncargar_medicamento = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PacienteTableAdapter = New Programacion_1.dsPagarTableAdapters.pacienteTableAdapter()
-        Me.Encargar_medicamentoTableAdapter = New Programacion_1.dsPagarTableAdapters.encargar_medicamentoTableAdapter()
-        Me.PagarTableAdapter = New Programacion_1.dsPagarTableAdapters.PagarTableAdapter()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -63,7 +58,9 @@ Partial Class FmrPagar
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtNombrePaciente = New System.Windows.Forms.TextBox()
+        Me.bsPaciente = New System.Windows.Forms.BindingSource(Me.components)
         Me.tmpidEncargarmedicamento = New System.Windows.Forms.NumericUpDown()
+        Me.bsEncargar_medicamento = New System.Windows.Forms.BindingSource(Me.components)
         Me.txtCostoCita = New System.Windows.Forms.TextBox()
         Me.txtidEncargarmedicamento = New System.Windows.Forms.TextBox()
         Me.txtCostoMedicina = New System.Windows.Forms.TextBox()
@@ -77,14 +74,26 @@ Partial Class FmrPagar
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtApellidoPaciente = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cbxFormadePago = New System.Windows.Forms.ComboBox()
+        Me.FormadePagoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.bsFormaPago = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DsFormaPago = New Programacion_1.dsFormaPago()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.PacienteTableAdapter = New Programacion_1.dsPagarTableAdapters.pacienteTableAdapter()
+        Me.Encargar_medicamentoTableAdapter = New Programacion_1.dsPagarTableAdapters.encargar_medicamentoTableAdapter()
+        Me.PagarTableAdapter = New Programacion_1.dsPagarTableAdapters.PagarTableAdapter()
+        Me.FormadePagoTableAdapter = New Programacion_1.dsFormaPagoTableAdapters.FormadePagoTableAdapter()
         CType(Me.navPagar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.navPagar.SuspendLayout()
         CType(Me.bsPagar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Form_DsPagar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bsEncargar_medicamento, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tmpidEncargarmedicamento, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsEncargar_medicamento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.FormadePagoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bsFormaPago, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsFormaPago, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'navPagar
@@ -102,7 +111,7 @@ Partial Class FmrPagar
         Me.navPagar.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.navPagar.Name = "navPagar"
         Me.navPagar.PositionItem = Me.BindingNavigatorPositionItem
-        Me.navPagar.Size = New System.Drawing.Size(915, 31)
+        Me.navPagar.Size = New System.Drawing.Size(933, 27)
         Me.navPagar.TabIndex = 0
         Me.navPagar.Text = "BindingNavigator1"
         '
@@ -112,7 +121,7 @@ Partial Class FmrPagar
         Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
         Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
-        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 28)
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(29, 24)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo pago"
         '
         'bsPagar
@@ -287,30 +296,6 @@ Partial Class FmrPagar
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 27)
         '
-        'bsPaciente
-        '
-        Me.bsPaciente.AllowNew = False
-        Me.bsPaciente.DataMember = "paciente"
-        Me.bsPaciente.DataSource = Me.Form_DsPagar
-        '
-        'bsEncargar_medicamento
-        '
-        Me.bsEncargar_medicamento.AllowNew = False
-        Me.bsEncargar_medicamento.DataMember = "encargar_medicamento"
-        Me.bsEncargar_medicamento.DataSource = Me.Form_DsPagar
-        '
-        'PacienteTableAdapter
-        '
-        Me.PacienteTableAdapter.ClearBeforeFill = True
-        '
-        'Encargar_medicamentoTableAdapter
-        '
-        Me.Encargar_medicamentoTableAdapter.ClearBeforeFill = True
-        '
-        'PagarTableAdapter
-        '
-        Me.PagarTableAdapter.ClearBeforeFill = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -355,7 +340,7 @@ Partial Class FmrPagar
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(6, 276)
+        Me.Label5.Location = New System.Drawing.Point(6, 356)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 18)
         Me.Label5.TabIndex = 4
@@ -365,7 +350,7 @@ Partial Class FmrPagar
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(6, 318)
+        Me.Label6.Location = New System.Drawing.Point(6, 398)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(112, 18)
         Me.Label6.TabIndex = 5
@@ -387,8 +372,14 @@ Partial Class FmrPagar
         Me.txtNombrePaciente.Location = New System.Drawing.Point(210, 92)
         Me.txtNombrePaciente.Name = "txtNombrePaciente"
         Me.txtNombrePaciente.ReadOnly = True
-        Me.txtNombrePaciente.Size = New System.Drawing.Size(193, 22)
+        Me.txtNombrePaciente.Size = New System.Drawing.Size(211, 22)
         Me.txtNombrePaciente.TabIndex = 13
+        '
+        'bsPaciente
+        '
+        Me.bsPaciente.AllowNew = False
+        Me.bsPaciente.DataMember = "paciente"
+        Me.bsPaciente.DataSource = Me.Form_DsPagar
         '
         'tmpidEncargarmedicamento
         '
@@ -398,13 +389,19 @@ Partial Class FmrPagar
         Me.tmpidEncargarmedicamento.Size = New System.Drawing.Size(0, 22)
         Me.tmpidEncargarmedicamento.TabIndex = 21
         '
+        'bsEncargar_medicamento
+        '
+        Me.bsEncargar_medicamento.AllowNew = False
+        Me.bsEncargar_medicamento.DataMember = "encargar_medicamento"
+        Me.bsEncargar_medicamento.DataSource = Me.Form_DsPagar
+        '
         'txtCostoCita
         '
         Me.txtCostoCita.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "costo_de_cita", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
         Me.txtCostoCita.Location = New System.Drawing.Point(210, 162)
         Me.txtCostoCita.Name = "txtCostoCita"
         Me.txtCostoCita.ReadOnly = True
-        Me.txtCostoCita.Size = New System.Drawing.Size(193, 22)
+        Me.txtCostoCita.Size = New System.Drawing.Size(211, 22)
         Me.txtCostoCita.TabIndex = 23
         Me.txtCostoCita.Text = "10"
         Me.txtCostoCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -423,7 +420,7 @@ Partial Class FmrPagar
         Me.txtCostoMedicina.Location = New System.Drawing.Point(210, 199)
         Me.txtCostoMedicina.Name = "txtCostoMedicina"
         Me.txtCostoMedicina.ReadOnly = True
-        Me.txtCostoMedicina.Size = New System.Drawing.Size(193, 22)
+        Me.txtCostoMedicina.Size = New System.Drawing.Size(211, 22)
         Me.txtCostoMedicina.TabIndex = 25
         Me.txtCostoMedicina.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -432,27 +429,27 @@ Partial Class FmrPagar
         Me.txtCostoIngreso.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "costo_de_ingreso", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
         Me.txtCostoIngreso.Location = New System.Drawing.Point(210, 237)
         Me.txtCostoIngreso.Name = "txtCostoIngreso"
-        Me.txtCostoIngreso.Size = New System.Drawing.Size(193, 22)
+        Me.txtCostoIngreso.Size = New System.Drawing.Size(211, 22)
         Me.txtCostoIngreso.TabIndex = 26
         Me.txtCostoIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtSubTotal
         '
         Me.txtSubTotal.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Sub_total", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtSubTotal.Location = New System.Drawing.Point(210, 276)
+        Me.txtSubTotal.Location = New System.Drawing.Point(210, 356)
         Me.txtSubTotal.Name = "txtSubTotal"
         Me.txtSubTotal.ReadOnly = True
-        Me.txtSubTotal.Size = New System.Drawing.Size(193, 22)
+        Me.txtSubTotal.Size = New System.Drawing.Size(211, 22)
         Me.txtSubTotal.TabIndex = 27
         Me.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'txtTotalPagar
         '
         Me.txtTotalPagar.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.bsPagar, "Total_a_pagar", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N2"))
-        Me.txtTotalPagar.Location = New System.Drawing.Point(210, 314)
+        Me.txtTotalPagar.Location = New System.Drawing.Point(210, 394)
         Me.txtTotalPagar.Name = "txtTotalPagar"
         Me.txtTotalPagar.ReadOnly = True
-        Me.txtTotalPagar.Size = New System.Drawing.Size(193, 22)
+        Me.txtTotalPagar.Size = New System.Drawing.Size(211, 22)
         Me.txtTotalPagar.TabIndex = 28
         Me.txtTotalPagar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
@@ -471,7 +468,7 @@ Partial Class FmrPagar
         Me.txtPagar.Location = New System.Drawing.Point(210, 16)
         Me.txtPagar.Name = "txtPagar"
         Me.txtPagar.ReadOnly = True
-        Me.txtPagar.Size = New System.Drawing.Size(193, 22)
+        Me.txtPagar.Size = New System.Drawing.Size(211, 22)
         Me.txtPagar.TabIndex = 30
         '
         'Label8
@@ -490,7 +487,7 @@ Partial Class FmrPagar
         Me.txtCodigoPaciente.Location = New System.Drawing.Point(210, 54)
         Me.txtCodigoPaciente.Name = "txtCodigoPaciente"
         Me.txtCodigoPaciente.ReadOnly = True
-        Me.txtCodigoPaciente.Size = New System.Drawing.Size(193, 22)
+        Me.txtCodigoPaciente.Size = New System.Drawing.Size(211, 22)
         Me.txtCodigoPaciente.TabIndex = 32
         '
         'Label9
@@ -509,11 +506,13 @@ Partial Class FmrPagar
         Me.txtApellidoPaciente.Location = New System.Drawing.Point(210, 129)
         Me.txtApellidoPaciente.Name = "txtApellidoPaciente"
         Me.txtApellidoPaciente.ReadOnly = True
-        Me.txtApellidoPaciente.Size = New System.Drawing.Size(193, 22)
+        Me.txtApellidoPaciente.Size = New System.Drawing.Size(211, 22)
         Me.txtApellidoPaciente.TabIndex = 34
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cbxFormadePago)
+        Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtApellidoPaciente)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.txtCodigoPaciente)
@@ -537,15 +536,70 @@ Partial Class FmrPagar
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 39)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 389)
+        Me.GroupBox1.Size = New System.Drawing.Size(844, 445)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'cbxFormadePago
+        '
+        Me.cbxFormadePago.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.bsPagar, "idFormaPago", True))
+        Me.cbxFormadePago.DataSource = Me.FormadePagoBindingSource
+        Me.cbxFormadePago.DisplayMember = "nombreFormaPago"
+        Me.cbxFormadePago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxFormadePago.FormattingEnabled = True
+        Me.cbxFormadePago.Location = New System.Drawing.Point(210, 268)
+        Me.cbxFormadePago.Name = "cbxFormadePago"
+        Me.cbxFormadePago.Size = New System.Drawing.Size(211, 24)
+        Me.cbxFormadePago.TabIndex = 36
+        Me.cbxFormadePago.ValueMember = "IdFormaPago"
+        '
+        'FormadePagoBindingSource
+        '
+        Me.FormadePagoBindingSource.AllowNew = False
+        Me.FormadePagoBindingSource.DataMember = "FormadePago"
+        Me.FormadePagoBindingSource.DataSource = Me.bsFormaPago
+        '
+        'bsFormaPago
+        '
+        Me.bsFormaPago.DataSource = Me.DsFormaPago
+        Me.bsFormaPago.Position = 0
+        '
+        'DsFormaPago
+        '
+        Me.DsFormaPago.DataSetName = "dsFormaPago"
+        Me.DsFormaPago.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(6, 268)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(138, 18)
+        Me.Label10.TabIndex = 35
+        Me.Label10.Text = "Formas de Pago:"
+        '
+        'PacienteTableAdapter
+        '
+        Me.PacienteTableAdapter.ClearBeforeFill = True
+        '
+        'Encargar_medicamentoTableAdapter
+        '
+        Me.Encargar_medicamentoTableAdapter.ClearBeforeFill = True
+        '
+        'PagarTableAdapter
+        '
+        Me.PagarTableAdapter.ClearBeforeFill = True
+        '
+        'FormadePagoTableAdapter
+        '
+        Me.FormadePagoTableAdapter.ClearBeforeFill = True
         '
         'FmrPagar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(915, 431)
+        Me.ClientSize = New System.Drawing.Size(933, 504)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.navPagar)
         Me.Name = "FmrPagar"
@@ -556,10 +610,13 @@ Partial Class FmrPagar
         CType(Me.bsPagar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Form_DsPagar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bsPaciente, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bsEncargar_medicamento, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tmpidEncargarmedicamento, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsEncargar_medicamento, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.FormadePagoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bsFormaPago, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsFormaPago, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -618,4 +675,10 @@ Partial Class FmrPagar
     Friend WithEvents Label9 As Label
     Friend WithEvents txtApellidoPaciente As TextBox
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents cbxFormadePago As ComboBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents bsFormaPago As BindingSource
+    Friend WithEvents DsFormaPago As dsFormaPago
+    Friend WithEvents FormadePagoBindingSource As BindingSource
+    Friend WithEvents FormadePagoTableAdapter As dsFormaPagoTableAdapters.FormadePagoTableAdapter
 End Class

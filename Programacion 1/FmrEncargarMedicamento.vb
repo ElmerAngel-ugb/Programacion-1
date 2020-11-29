@@ -1,5 +1,6 @@
 ﻿Public Class FmrEncargarMedicamento
     Dim btnGuardarFuepresionado As Boolean = False
+    Dim btnRemoveFilterFuepresionado As Boolean = False
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'Form_DSEntregarmedicamentos.paciente' Puede moverla o quitarla según sea necesario.
         Me.PacienteTableAdapter.Fill(Me.Form_DSEntregarmedicamentos.paciente)
@@ -18,6 +19,7 @@
 
     Private Sub btnBuscarPaciente_Click(sender As Object, e As EventArgs) Handles btnBuscarPaciente.Click
         btnGuardarFuepresionado = False
+        btnRemoveFilterFuepresionado = False
         bsPaciente.Filter = "codigo='" & txtBuscarPaciente.Text.Trim & "'"
         bsPaciente.Sort = "codigo ASC"
         Me.PacienteTableAdapter.Fill(Form_DSEntregarmedicamentos.paciente)
@@ -35,6 +37,7 @@
 
     Private Sub btnBuscarMedicamento_Click(sender As Object, e As EventArgs) Handles btnBuscarMedicamento.Click
         btnGuardarFuepresionado = False
+        btnRemoveFilterFuepresionado = False
         actualizarinformaciondelMedicamento(Me.txtBuscarmedicamento.Text.Trim)
         actualizarTotal()
     End Sub
@@ -45,7 +48,6 @@
         End If
         If String.IsNullOrEmpty(Me.txtCantidadDeseada.Text.Trim) Then
             Me.txtCantidadDeseada.Text = 0
-
         End If
         Dim total As Double = 0
         Dim precio As Double = 0
@@ -75,6 +77,7 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         btnGuardarFuepresionado = True
+        btnRemoveFilterFuepresionado = False
         If Not existenciasDisponibles() Then
             MsgBox("la cantidad de medicamentos solicitada no está disponible intente con una menor ", MsgBoxStyle.Critical, "Error")
             Return
@@ -110,10 +113,13 @@
 
     Private Sub btnRemoveFilter_Click(sender As Object, e As EventArgs) Handles btnRemoveFilter.Click
         btnGuardarFuepresionado = False
+        btnRemoveFilterFuepresionado = True
         Try
             Me.bsEntregarmedicamento.Filter = ""
             Me.Encargar_medicamentoTableAdapter.Fill(Form_DSEntregarmedicamentos.encargar_medicamento)
             Me.txtBuscar.Text = "Escriba un codigo"
+            actualizarinfomaciondelPaciente(txtPaciente.Text.Trim)
+            actualizarinformaciondelMedicamentoPorId(Me.txtIdMedicamento.Text.Trim)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
@@ -199,17 +205,23 @@
     End Sub
 
     Private Sub bsEntregarmedicamento_PositionChanged(sender As Object, e As EventArgs) Handles bsEntregarmedicamento.PositionChanged
-        If Not btnGuardarFuePresionado Then
-            actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim())
-            actualizarinformaciondelMedicamentoPorId(Me.txtIdMedicamento.Text.Trim())
+        If btnGuardarFuepresionado Then
+            Return
         End If
-        actualizarTotal()
+        actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim())
+        actualizarinformaciondelMedicamentoPorId(Me.txtIdMedicamento.Text.Trim())
+
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Me.bsEntregarmedicamento.CancelEdit()
-        actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim)
-        actualizarinformaciondelMedicamentoPorId(Me.txtIdMedicamento.Text.Trim)
+
+        Try
+            Me.bsEntregarmedicamento.CancelEdit()
+            actualizarinfomaciondelPaciente(Me.txtPaciente.Text.Trim)
+            actualizarinformaciondelMedicamentoPorId(Me.txtIdMedicamento.Text.Trim)
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 
     Private Sub txtCantidadDeseada_Leave(sender As Object, e As EventArgs) Handles txtCantidadDeseada.Leave
@@ -228,4 +240,8 @@
         End Try
         Return cantidadDisponible >= cantidadDeseada
     End Function
+
+    Private Sub txtCantidadDeseada_Click(sender As Object, e As EventArgs) Handles txtCantidadDeseada.Click
+        Me.txtCantidadDeseada.SelectAll()
+    End Sub
 End Class

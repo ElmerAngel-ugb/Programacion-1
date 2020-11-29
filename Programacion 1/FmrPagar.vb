@@ -4,22 +4,19 @@
     Dim formLoad As Boolean = False
     Private Sub FmrPagar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formLoad = True
-        'TODO: esta línea de código carga datos en la tabla 'Form_DsPagar.Pagar' Puede moverla o quitarla según sea necesario.
         Me.PagarTableAdapter.Fill(Me.Form_DsPagar.Pagar)
-        'TODO: esta línea de código carga datos en la tabla 'DsPagar1.encargar_medicamento' Puede moverla o quitarla según sea necesario.
-        Me.Encargar_medicamentoTableAdapter.Fill(Me.Form_DsPagar.encargar_medicamento)
-        'TODO: esta línea de código carga datos en la tabla 'DsPagar1.paciente' Puede moverla o quitarla según sea necesario.
         Me.PacienteTableAdapter.Fill(Me.Form_DsPagar.paciente)
-        'TODO: esta línea de código carga datos en la tabla 'Form_DSPagar.encargar_medicamento' Puede moverla o quitarla según sea necesario.
+        Me.FormadePagoTableAdapter.Fill(Me.DsFormaPago.FormadePago)
         Me.Encargar_medicamentoTableAdapter.Fill(Me.Form_DsPagar.encargar_medicamento)
-        'TODO: esta línea de código carga datos en la tabla 'Form_DSPagar.paciente' Puede moverla o quitarla según sea necesario.
-        Me.PacienteTableAdapter.Fill(Me.Form_DsPagar.paciente)
-        'TODO: esta línea de código carga datos en la tabla 'Form_DSPagar.Pagar' Puede moverla o quitarla según sea necesario.
-        Me.PagarTableAdapter.Fill(Me.Form_DsPagar.Pagar)
         actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
         actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
         Me.actualizarSubTotal()
         actualizarTotal()
+        actualizarFormadePago()
+    End Sub
+
+    Private Sub actualizarFormadePago()
+        'Throw New NotImplementedException()
     End Sub
 
     Private Sub btnBuscarEncargo_Click(sender As Object, e As EventArgs) Handles btnBuscarEncargo.Click
@@ -177,6 +174,10 @@
             Me.bsPagar.Filter = ""
             Me.PagarTableAdapter.Fill(Form_DsPagar.Pagar)
             Me.txtBuscarpago.Text = "Escriba un codigo"
+            actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
+            actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
+            Me.actualizarSubTotal()
+            actualizarTotal()
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
@@ -241,4 +242,23 @@
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error Encargarmedicamento")
         End Try
     End Sub
+
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs)
+        Try
+            Me.PagarTableAdapter.FillBy(Me.Form_DsPagar.Pagar)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub FillBy1ToolStripButton_Click(sender As Object, e As EventArgs)
+        Try
+            Me.PagarTableAdapter.FillBy1(Me.Form_DsPagar.Pagar)
+        Catch ex As System.Exception
+            System.Windows.Forms.MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
 End Class
