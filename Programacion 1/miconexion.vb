@@ -28,6 +28,17 @@ Public Class db_conexion
 
         Return ds
     End Function
+    Public Function Xtenerdatos()
+        ds.Clear()
+
+        miCommand.Connection = miConexion
+
+        miCommand.CommandText = "select * from Registro"
+        miAdapter.SelectCommand = miCommand
+        miAdapter.Fill(ds, "Registro")
+
+        Return ds
+    End Function
     Public Function Btenerdatos()
         ds.Clear()
         miCommand.Connection = miConexion
@@ -69,6 +80,27 @@ Public Class db_conexion
 
 
         Return ds
+    End Function
+    Public Function mantenimientoDatosRegistro(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO Registro (Codigo,Nombre,Apellido,Sexo,Tipo_Sangre,Fecha_Nacimiento) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "') "
+            Case "modificar"
+                sql = "UPDATE Registro SET Codigo ='" + datos(1) + "',Nombre='" + datos(2) + "',Apellido='" + datos(3) + "',Sexo='" + datos(4) + "',Tipo_Sangre='" + datos(5) + "',Fecha_Nacimiento='" + datos(6) + "'  WHERE Id_Registro='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM Registro WHERE Id_Registro='" + datos(0) + "'"
+        End Select
+
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+        If executeSql(sql) > 0 Then
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            msg = "Accion realizada con exito"
+        Else
+            msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
+        End If
+
+        Return msg
     End Function
 
     Public Function mantenimientoDatosPaciente(ByVal datos As String(), ByVal accion As String)
