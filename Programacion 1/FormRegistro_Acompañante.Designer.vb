@@ -24,19 +24,21 @@ Partial Class FormRegistro_Acompañante
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegistro_Acompañante))
         Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.btnBuscarPaciente = New System.Windows.Forms.Button()
-        Me.btnEliminarPaciente = New System.Windows.Forms.Button()
-        Me.btnModificarPaciente = New System.Windows.Forms.Button()
-        Me.btnAgregarPaciente = New System.Windows.Forms.Button()
+        Me.btnBuscarRegistro = New System.Windows.Forms.Button()
+        Me.btnEliminarRegistro = New System.Windows.Forms.Button()
+        Me.btnModificarRegistro = New System.Windows.Forms.Button()
+        Me.btnAgregarRegistro = New System.Windows.Forms.Button()
         Me.grbNavegacion = New System.Windows.Forms.GroupBox()
-        Me.lblRegistrosPaciente = New System.Windows.Forms.Label()
-        Me.btnUltimoCliente = New System.Windows.Forms.Button()
-        Me.btnSiguienteCliente = New System.Windows.Forms.Button()
-        Me.btnAnteriorCliente = New System.Windows.Forms.Button()
-        Me.btnPrimeroCliente = New System.Windows.Forms.Button()
-        Me.grbDatos = New System.Windows.Forms.GroupBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.lblRegistrosRegistro = New System.Windows.Forms.Label()
+        Me.btnUltimoRegistro = New System.Windows.Forms.Button()
+        Me.btnSiguienteRegistro = New System.Windows.Forms.Button()
+        Me.btnAnteriorRegistro = New System.Windows.Forms.Button()
+        Me.btnPrimeroRegistro = New System.Windows.Forms.Button()
+        Me.grbDatosRegistro = New System.Windows.Forms.GroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.lblTipo_SangreRegsitro = New System.Windows.Forms.Label()
+        Me.txtTipo_SangreRegistro = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -45,39 +47,37 @@ Partial Class FormRegistro_Acompañante
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtDireccionPaciente = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtApellidoPaciente = New System.Windows.Forms.TextBox()
+        Me.lblApellidoRegsitro = New System.Windows.Forms.Label()
+        Me.txtApellidoRegistro = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtSangrePaciente = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtDuiPaciente = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtSexoPaciente = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtNacimientoPaciente = New System.Windows.Forms.TextBox()
+        Me.lblSexoRegsitro = New System.Windows.Forms.Label()
+        Me.txtSexoRegistro = New System.Windows.Forms.TextBox()
+        Me.lblFecha_NacimientoRegsitro = New System.Windows.Forms.Label()
+        Me.txtNacimientoRegistro = New System.Windows.Forms.TextBox()
         Me.lblEmailCliente = New System.Windows.Forms.Label()
         Me.txtEmailPaciente = New System.Windows.Forms.TextBox()
         Me.lblTelefonoCliente = New System.Windows.Forms.Label()
         Me.txtEdadPaciente = New System.Windows.Forms.TextBox()
-        Me.lblNombreCliente = New System.Windows.Forms.Label()
-        Me.txtNombrePaciente = New System.Windows.Forms.TextBox()
-        Me.txtCodigoPaciente = New System.Windows.Forms.TextBox()
-        Me.lblCodigoCliente = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblNombreRegsitro = New System.Windows.Forms.Label()
+        Me.txtNombreRegistro = New System.Windows.Forms.TextBox()
+        Me.txtCodigoRegistro = New System.Windows.Forms.TextBox()
+        Me.lblCodigoRegistro = New System.Windows.Forms.Label()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
-        Me.grbDatos.SuspendLayout()
+        Me.grbDatosRegistro.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grbEdicion
         '
         Me.grbEdicion.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.grbEdicion.Controls.Add(Me.btnBuscarPaciente)
-        Me.grbEdicion.Controls.Add(Me.btnEliminarPaciente)
-        Me.grbEdicion.Controls.Add(Me.btnModificarPaciente)
-        Me.grbEdicion.Controls.Add(Me.btnAgregarPaciente)
+        Me.grbEdicion.Controls.Add(Me.btnBuscarRegistro)
+        Me.grbEdicion.Controls.Add(Me.btnEliminarRegistro)
+        Me.grbEdicion.Controls.Add(Me.btnModificarRegistro)
+        Me.grbEdicion.Controls.Add(Me.btnAgregarRegistro)
         Me.grbEdicion.Location = New System.Drawing.Point(711, 477)
         Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbEdicion.Name = "grbEdicion"
@@ -87,58 +87,58 @@ Partial Class FormRegistro_Acompañante
         Me.grbEdicion.TabStop = False
         Me.grbEdicion.Text = "Edicion"
         '
-        'btnBuscarPaciente
+        'btnBuscarRegistro
         '
-        Me.btnBuscarPaciente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarPaciente.Location = New System.Drawing.Point(237, 19)
-        Me.btnBuscarPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnBuscarPaciente.Name = "btnBuscarPaciente"
-        Me.btnBuscarPaciente.Size = New System.Drawing.Size(71, 39)
-        Me.btnBuscarPaciente.TabIndex = 8
-        Me.btnBuscarPaciente.Text = "Buscar"
-        Me.btnBuscarPaciente.UseVisualStyleBackColor = True
+        Me.btnBuscarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscarRegistro.Location = New System.Drawing.Point(237, 19)
+        Me.btnBuscarRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnBuscarRegistro.Name = "btnBuscarRegistro"
+        Me.btnBuscarRegistro.Size = New System.Drawing.Size(71, 39)
+        Me.btnBuscarRegistro.TabIndex = 8
+        Me.btnBuscarRegistro.Text = "Buscar"
+        Me.btnBuscarRegistro.UseVisualStyleBackColor = True
         '
-        'btnEliminarPaciente
+        'btnEliminarRegistro
         '
-        Me.btnEliminarPaciente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarPaciente.Location = New System.Drawing.Point(158, 19)
-        Me.btnEliminarPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnEliminarPaciente.Name = "btnEliminarPaciente"
-        Me.btnEliminarPaciente.Size = New System.Drawing.Size(80, 39)
-        Me.btnEliminarPaciente.TabIndex = 7
-        Me.btnEliminarPaciente.Text = "Eliminar"
-        Me.btnEliminarPaciente.UseVisualStyleBackColor = True
+        Me.btnEliminarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarRegistro.Location = New System.Drawing.Point(158, 19)
+        Me.btnEliminarRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnEliminarRegistro.Name = "btnEliminarRegistro"
+        Me.btnEliminarRegistro.Size = New System.Drawing.Size(80, 39)
+        Me.btnEliminarRegistro.TabIndex = 7
+        Me.btnEliminarRegistro.Text = "Eliminar"
+        Me.btnEliminarRegistro.UseVisualStyleBackColor = True
         '
-        'btnModificarPaciente
+        'btnModificarRegistro
         '
-        Me.btnModificarPaciente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarPaciente.Location = New System.Drawing.Point(69, 19)
-        Me.btnModificarPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnModificarPaciente.Name = "btnModificarPaciente"
-        Me.btnModificarPaciente.Size = New System.Drawing.Size(90, 39)
-        Me.btnModificarPaciente.TabIndex = 6
-        Me.btnModificarPaciente.Text = "Modificar"
-        Me.btnModificarPaciente.UseVisualStyleBackColor = True
+        Me.btnModificarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarRegistro.Location = New System.Drawing.Point(69, 19)
+        Me.btnModificarRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnModificarRegistro.Name = "btnModificarRegistro"
+        Me.btnModificarRegistro.Size = New System.Drawing.Size(90, 39)
+        Me.btnModificarRegistro.TabIndex = 6
+        Me.btnModificarRegistro.Text = "Modificar"
+        Me.btnModificarRegistro.UseVisualStyleBackColor = True
         '
-        'btnAgregarPaciente
+        'btnAgregarRegistro
         '
-        Me.btnAgregarPaciente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarPaciente.Location = New System.Drawing.Point(2, 19)
-        Me.btnAgregarPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarPaciente.Name = "btnAgregarPaciente"
-        Me.btnAgregarPaciente.Size = New System.Drawing.Size(68, 39)
-        Me.btnAgregarPaciente.TabIndex = 5
-        Me.btnAgregarPaciente.Text = "Nuevo"
-        Me.btnAgregarPaciente.UseVisualStyleBackColor = True
+        Me.btnAgregarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarRegistro.Location = New System.Drawing.Point(2, 19)
+        Me.btnAgregarRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAgregarRegistro.Name = "btnAgregarRegistro"
+        Me.btnAgregarRegistro.Size = New System.Drawing.Size(68, 39)
+        Me.btnAgregarRegistro.TabIndex = 5
+        Me.btnAgregarRegistro.Text = "Nuevo"
+        Me.btnAgregarRegistro.UseVisualStyleBackColor = True
         '
         'grbNavegacion
         '
         Me.grbNavegacion.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.grbNavegacion.Controls.Add(Me.lblRegistrosPaciente)
-        Me.grbNavegacion.Controls.Add(Me.btnUltimoCliente)
-        Me.grbNavegacion.Controls.Add(Me.btnSiguienteCliente)
-        Me.grbNavegacion.Controls.Add(Me.btnAnteriorCliente)
-        Me.grbNavegacion.Controls.Add(Me.btnPrimeroCliente)
+        Me.grbNavegacion.Controls.Add(Me.lblRegistrosRegistro)
+        Me.grbNavegacion.Controls.Add(Me.btnUltimoRegistro)
+        Me.grbNavegacion.Controls.Add(Me.btnSiguienteRegistro)
+        Me.grbNavegacion.Controls.Add(Me.btnAnteriorRegistro)
+        Me.grbNavegacion.Controls.Add(Me.btnPrimeroRegistro)
         Me.grbNavegacion.Location = New System.Drawing.Point(10, 477)
         Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
         Me.grbNavegacion.Name = "grbNavegacion"
@@ -148,122 +148,142 @@ Partial Class FormRegistro_Acompañante
         Me.grbNavegacion.TabStop = False
         Me.grbNavegacion.Text = "Navegacion"
         '
-        'lblRegistrosPaciente
+        'lblRegistrosRegistro
         '
-        Me.lblRegistrosPaciente.AutoSize = True
-        Me.lblRegistrosPaciente.Location = New System.Drawing.Point(86, 34)
-        Me.lblRegistrosPaciente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblRegistrosPaciente.Name = "lblRegistrosPaciente"
-        Me.lblRegistrosPaciente.Size = New System.Drawing.Size(36, 13)
-        Me.lblRegistrosPaciente.TabIndex = 4
-        Me.lblRegistrosPaciente.Text = "x de n"
+        Me.lblRegistrosRegistro.AutoSize = True
+        Me.lblRegistrosRegistro.Location = New System.Drawing.Point(86, 34)
+        Me.lblRegistrosRegistro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblRegistrosRegistro.Name = "lblRegistrosRegistro"
+        Me.lblRegistrosRegistro.Size = New System.Drawing.Size(36, 13)
+        Me.lblRegistrosRegistro.TabIndex = 4
+        Me.lblRegistrosRegistro.Text = "x de n"
         '
-        'btnUltimoCliente
+        'btnUltimoRegistro
         '
-        Me.btnUltimoCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimoCliente.Location = New System.Drawing.Point(226, 19)
-        Me.btnUltimoCliente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnUltimoCliente.Name = "btnUltimoCliente"
-        Me.btnUltimoCliente.Size = New System.Drawing.Size(44, 39)
-        Me.btnUltimoCliente.TabIndex = 3
-        Me.btnUltimoCliente.Text = ">|"
-        Me.btnUltimoCliente.UseVisualStyleBackColor = True
+        Me.btnUltimoRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUltimoRegistro.Location = New System.Drawing.Point(226, 19)
+        Me.btnUltimoRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnUltimoRegistro.Name = "btnUltimoRegistro"
+        Me.btnUltimoRegistro.Size = New System.Drawing.Size(44, 39)
+        Me.btnUltimoRegistro.TabIndex = 3
+        Me.btnUltimoRegistro.Text = ">|"
+        Me.btnUltimoRegistro.UseVisualStyleBackColor = True
         '
-        'btnSiguienteCliente
+        'btnSiguienteRegistro
         '
-        Me.btnSiguienteCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguienteCliente.Location = New System.Drawing.Point(187, 19)
-        Me.btnSiguienteCliente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnSiguienteCliente.Name = "btnSiguienteCliente"
-        Me.btnSiguienteCliente.Size = New System.Drawing.Size(41, 39)
-        Me.btnSiguienteCliente.TabIndex = 2
-        Me.btnSiguienteCliente.Text = ">"
-        Me.btnSiguienteCliente.UseVisualStyleBackColor = True
+        Me.btnSiguienteRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSiguienteRegistro.Location = New System.Drawing.Point(187, 19)
+        Me.btnSiguienteRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnSiguienteRegistro.Name = "btnSiguienteRegistro"
+        Me.btnSiguienteRegistro.Size = New System.Drawing.Size(41, 39)
+        Me.btnSiguienteRegistro.TabIndex = 2
+        Me.btnSiguienteRegistro.Text = ">"
+        Me.btnSiguienteRegistro.UseVisualStyleBackColor = True
         '
-        'btnAnteriorCliente
+        'btnAnteriorRegistro
         '
-        Me.btnAnteriorCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnteriorCliente.Location = New System.Drawing.Point(42, 19)
-        Me.btnAnteriorCliente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAnteriorCliente.Name = "btnAnteriorCliente"
-        Me.btnAnteriorCliente.Size = New System.Drawing.Size(41, 39)
-        Me.btnAnteriorCliente.TabIndex = 1
-        Me.btnAnteriorCliente.Text = "<"
-        Me.btnAnteriorCliente.UseVisualStyleBackColor = True
+        Me.btnAnteriorRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAnteriorRegistro.Location = New System.Drawing.Point(42, 19)
+        Me.btnAnteriorRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnAnteriorRegistro.Name = "btnAnteriorRegistro"
+        Me.btnAnteriorRegistro.Size = New System.Drawing.Size(41, 39)
+        Me.btnAnteriorRegistro.TabIndex = 1
+        Me.btnAnteriorRegistro.Text = "<"
+        Me.btnAnteriorRegistro.UseVisualStyleBackColor = True
         '
-        'btnPrimeroCliente
+        'btnPrimeroRegistro
         '
-        Me.btnPrimeroCliente.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimeroCliente.Location = New System.Drawing.Point(2, 19)
-        Me.btnPrimeroCliente.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnPrimeroCliente.Name = "btnPrimeroCliente"
-        Me.btnPrimeroCliente.Size = New System.Drawing.Size(41, 39)
-        Me.btnPrimeroCliente.TabIndex = 0
-        Me.btnPrimeroCliente.Text = "|<"
-        Me.btnPrimeroCliente.UseVisualStyleBackColor = True
+        Me.btnPrimeroRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimeroRegistro.Location = New System.Drawing.Point(2, 19)
+        Me.btnPrimeroRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.btnPrimeroRegistro.Name = "btnPrimeroRegistro"
+        Me.btnPrimeroRegistro.Size = New System.Drawing.Size(41, 39)
+        Me.btnPrimeroRegistro.TabIndex = 0
+        Me.btnPrimeroRegistro.Text = "|<"
+        Me.btnPrimeroRegistro.UseVisualStyleBackColor = True
         '
-        'grbDatos
+        'grbDatosRegistro
         '
-        Me.grbDatos.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.grbDatos.Controls.Add(Me.Label11)
-        Me.grbDatos.Controls.Add(Me.Label10)
-        Me.grbDatos.Controls.Add(Me.Label5)
-        Me.grbDatos.Controls.Add(Me.TextBox3)
-        Me.grbDatos.Controls.Add(Me.Label8)
-        Me.grbDatos.Controls.Add(Me.TextBox1)
-        Me.grbDatos.Controls.Add(Me.Label9)
-        Me.grbDatos.Controls.Add(Me.TextBox2)
-        Me.grbDatos.Controls.Add(Me.Button1)
-        Me.grbDatos.Controls.Add(Me.PictureBox1)
-        Me.grbDatos.Controls.Add(Me.Label7)
-        Me.grbDatos.Controls.Add(Me.txtDireccionPaciente)
-        Me.grbDatos.Controls.Add(Me.Label6)
-        Me.grbDatos.Controls.Add(Me.txtApellidoPaciente)
-        Me.grbDatos.Controls.Add(Me.Label4)
-        Me.grbDatos.Controls.Add(Me.txtSangrePaciente)
-        Me.grbDatos.Controls.Add(Me.Label3)
-        Me.grbDatos.Controls.Add(Me.txtDuiPaciente)
-        Me.grbDatos.Controls.Add(Me.Label2)
-        Me.grbDatos.Controls.Add(Me.txtSexoPaciente)
-        Me.grbDatos.Controls.Add(Me.Label1)
-        Me.grbDatos.Controls.Add(Me.txtNacimientoPaciente)
-        Me.grbDatos.Controls.Add(Me.lblEmailCliente)
-        Me.grbDatos.Controls.Add(Me.txtEmailPaciente)
-        Me.grbDatos.Controls.Add(Me.lblTelefonoCliente)
-        Me.grbDatos.Controls.Add(Me.txtEdadPaciente)
-        Me.grbDatos.Controls.Add(Me.lblNombreCliente)
-        Me.grbDatos.Controls.Add(Me.txtNombrePaciente)
-        Me.grbDatos.Controls.Add(Me.txtCodigoPaciente)
-        Me.grbDatos.Controls.Add(Me.lblCodigoCliente)
-        Me.grbDatos.Enabled = False
-        Me.grbDatos.Location = New System.Drawing.Point(10, 10)
-        Me.grbDatos.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbDatos.Name = "grbDatos"
-        Me.grbDatos.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbDatos.Size = New System.Drawing.Size(1011, 465)
-        Me.grbDatos.TabIndex = 10
-        Me.grbDatos.TabStop = False
-        Me.grbDatos.Text = "Datos del Paciente y Acompañante"
+        Me.grbDatosRegistro.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.grbDatosRegistro.Controls.Add(Me.Label11)
+        Me.grbDatosRegistro.Controls.Add(Me.Label10)
+        Me.grbDatosRegistro.Controls.Add(Me.lblTipo_SangreRegsitro)
+        Me.grbDatosRegistro.Controls.Add(Me.txtTipo_SangreRegistro)
+        Me.grbDatosRegistro.Controls.Add(Me.Label8)
+        Me.grbDatosRegistro.Controls.Add(Me.TextBox1)
+        Me.grbDatosRegistro.Controls.Add(Me.Label9)
+        Me.grbDatosRegistro.Controls.Add(Me.TextBox2)
+        Me.grbDatosRegistro.Controls.Add(Me.Button1)
+        Me.grbDatosRegistro.Controls.Add(Me.PictureBox1)
+        Me.grbDatosRegistro.Controls.Add(Me.Label7)
+        Me.grbDatosRegistro.Controls.Add(Me.txtDireccionPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblApellidoRegsitro)
+        Me.grbDatosRegistro.Controls.Add(Me.txtApellidoRegistro)
+        Me.grbDatosRegistro.Controls.Add(Me.Label4)
+        Me.grbDatosRegistro.Controls.Add(Me.txtSangrePaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.Label3)
+        Me.grbDatosRegistro.Controls.Add(Me.txtDuiPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblSexoRegsitro)
+        Me.grbDatosRegistro.Controls.Add(Me.txtSexoRegistro)
+        Me.grbDatosRegistro.Controls.Add(Me.lblFecha_NacimientoRegsitro)
+        Me.grbDatosRegistro.Controls.Add(Me.txtNacimientoRegistro)
+        Me.grbDatosRegistro.Controls.Add(Me.lblEmailCliente)
+        Me.grbDatosRegistro.Controls.Add(Me.txtEmailPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblTelefonoCliente)
+        Me.grbDatosRegistro.Controls.Add(Me.txtEdadPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblNombreRegsitro)
+        Me.grbDatosRegistro.Controls.Add(Me.txtNombreRegistro)
+        Me.grbDatosRegistro.Controls.Add(Me.txtCodigoRegistro)
+        Me.grbDatosRegistro.Controls.Add(Me.lblCodigoRegistro)
+        Me.grbDatosRegistro.Enabled = False
+        Me.grbDatosRegistro.Location = New System.Drawing.Point(10, 10)
+        Me.grbDatosRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.grbDatosRegistro.Name = "grbDatosRegistro"
+        Me.grbDatosRegistro.Padding = New System.Windows.Forms.Padding(1)
+        Me.grbDatosRegistro.Size = New System.Drawing.Size(1011, 465)
+        Me.grbDatosRegistro.TabIndex = 10
+        Me.grbDatosRegistro.TabStop = False
+        Me.grbDatosRegistro.Text = "Datos del Paciente y Acompañante"
         '
-        'Label5
+        'Label11
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(95, 298)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 16)
-        Me.Label5.TabIndex = 34
-        Me.Label5.Text = "Tipo de sangre:"
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(653, 33)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(207, 30)
+        Me.Label11.TabIndex = 36
+        Me.Label11.Text = "Acompañante"
         '
-        'TextBox3
+        'Label10
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(204, 298)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(1)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(203, 22)
-        Me.TextBox3.TabIndex = 33
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(73, 33)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(139, 30)
+        Me.Label10.TabIndex = 35
+        Me.Label10.Text = "Paciente"
+        '
+        'lblTipo_SangreRegsitro
+        '
+        Me.lblTipo_SangreRegsitro.AutoSize = True
+        Me.lblTipo_SangreRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTipo_SangreRegsitro.Location = New System.Drawing.Point(95, 298)
+        Me.lblTipo_SangreRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblTipo_SangreRegsitro.Name = "lblTipo_SangreRegsitro"
+        Me.lblTipo_SangreRegsitro.Size = New System.Drawing.Size(107, 16)
+        Me.lblTipo_SangreRegsitro.TabIndex = 34
+        Me.lblTipo_SangreRegsitro.Text = "Tipo de sangre:"
+        '
+        'txtTipo_SangreRegistro
+        '
+        Me.txtTipo_SangreRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipo_SangreRegistro.Location = New System.Drawing.Point(204, 298)
+        Me.txtTipo_SangreRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtTipo_SangreRegistro.Name = "txtTipo_SangreRegistro"
+        Me.txtTipo_SangreRegistro.Size = New System.Drawing.Size(203, 22)
+        Me.txtTipo_SangreRegistro.TabIndex = 33
         '
         'Label8
         '
@@ -307,9 +327,9 @@ Partial Class FormRegistro_Acompañante
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(42, 253)
+        Me.Button1.Location = New System.Drawing.Point(42, 256)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(63, 23)
+        Me.Button1.Size = New System.Drawing.Size(80, 23)
         Me.Button1.TabIndex = 26
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
@@ -343,25 +363,25 @@ Partial Class FormRegistro_Acompañante
         Me.txtDireccionPaciente.Size = New System.Drawing.Size(380, 55)
         Me.txtDireccionPaciente.TabIndex = 23
         '
-        'Label6
+        'lblApellidoRegsitro
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(147, 204)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 16)
-        Me.Label6.TabIndex = 22
-        Me.Label6.Text = "Apellido:"
+        Me.lblApellidoRegsitro.AutoSize = True
+        Me.lblApellidoRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellidoRegsitro.Location = New System.Drawing.Point(147, 204)
+        Me.lblApellidoRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblApellidoRegsitro.Name = "lblApellidoRegsitro"
+        Me.lblApellidoRegsitro.Size = New System.Drawing.Size(65, 16)
+        Me.lblApellidoRegsitro.TabIndex = 22
+        Me.lblApellidoRegsitro.Text = "Apellido:"
         '
-        'txtApellidoPaciente
+        'txtApellidoRegistro
         '
-        Me.txtApellidoPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidoPaciente.Location = New System.Drawing.Point(217, 204)
-        Me.txtApellidoPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtApellidoPaciente.Name = "txtApellidoPaciente"
-        Me.txtApellidoPaciente.Size = New System.Drawing.Size(245, 22)
-        Me.txtApellidoPaciente.TabIndex = 21
+        Me.txtApellidoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApellidoRegistro.Location = New System.Drawing.Point(217, 204)
+        Me.txtApellidoRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtApellidoRegistro.Name = "txtApellidoRegistro"
+        Me.txtApellidoRegistro.Size = New System.Drawing.Size(273, 22)
+        Me.txtApellidoRegistro.TabIndex = 21
         '
         'Label4
         '
@@ -403,45 +423,45 @@ Partial Class FormRegistro_Acompañante
         Me.txtDuiPaciente.Size = New System.Drawing.Size(156, 22)
         Me.txtDuiPaciente.TabIndex = 15
         '
-        'Label2
+        'lblSexoRegsitro
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(148, 256)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 16)
-        Me.Label2.TabIndex = 14
-        Me.Label2.Text = "Sexo:"
+        Me.lblSexoRegsitro.AutoSize = True
+        Me.lblSexoRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexoRegsitro.Location = New System.Drawing.Point(148, 256)
+        Me.lblSexoRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblSexoRegsitro.Name = "lblSexoRegsitro"
+        Me.lblSexoRegsitro.Size = New System.Drawing.Size(45, 16)
+        Me.lblSexoRegsitro.TabIndex = 14
+        Me.lblSexoRegsitro.Text = "Sexo:"
         '
-        'txtSexoPaciente
+        'txtSexoRegistro
         '
-        Me.txtSexoPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSexoPaciente.Location = New System.Drawing.Point(204, 256)
-        Me.txtSexoPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtSexoPaciente.Name = "txtSexoPaciente"
-        Me.txtSexoPaciente.Size = New System.Drawing.Size(203, 22)
-        Me.txtSexoPaciente.TabIndex = 13
+        Me.txtSexoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSexoRegistro.Location = New System.Drawing.Point(204, 256)
+        Me.txtSexoRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtSexoRegistro.Name = "txtSexoRegistro"
+        Me.txtSexoRegistro.Size = New System.Drawing.Size(203, 22)
+        Me.txtSexoRegistro.TabIndex = 13
         '
-        'Label1
+        'lblFecha_NacimientoRegsitro
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 340)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 16)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Fecha de Nacimiento:"
+        Me.lblFecha_NacimientoRegsitro.AutoSize = True
+        Me.lblFecha_NacimientoRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFecha_NacimientoRegsitro.Location = New System.Drawing.Point(15, 340)
+        Me.lblFecha_NacimientoRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblFecha_NacimientoRegsitro.Name = "lblFecha_NacimientoRegsitro"
+        Me.lblFecha_NacimientoRegsitro.Size = New System.Drawing.Size(147, 16)
+        Me.lblFecha_NacimientoRegsitro.TabIndex = 12
+        Me.lblFecha_NacimientoRegsitro.Text = "Fecha de Nacimiento:"
         '
-        'txtNacimientoPaciente
+        'txtNacimientoRegistro
         '
-        Me.txtNacimientoPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNacimientoPaciente.Location = New System.Drawing.Point(164, 340)
-        Me.txtNacimientoPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtNacimientoPaciente.Name = "txtNacimientoPaciente"
-        Me.txtNacimientoPaciente.Size = New System.Drawing.Size(243, 22)
-        Me.txtNacimientoPaciente.TabIndex = 11
+        Me.txtNacimientoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNacimientoRegistro.Location = New System.Drawing.Point(164, 340)
+        Me.txtNacimientoRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtNacimientoRegistro.Name = "txtNacimientoRegistro"
+        Me.txtNacimientoRegistro.Size = New System.Drawing.Size(243, 22)
+        Me.txtNacimientoRegistro.TabIndex = 11
         '
         'lblEmailCliente
         '
@@ -483,65 +503,45 @@ Partial Class FormRegistro_Acompañante
         Me.txtEdadPaciente.Size = New System.Drawing.Size(159, 22)
         Me.txtEdadPaciente.TabIndex = 7
         '
-        'lblNombreCliente
+        'lblNombreRegsitro
         '
-        Me.lblNombreCliente.AutoSize = True
-        Me.lblNombreCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreCliente.Location = New System.Drawing.Point(147, 153)
-        Me.lblNombreCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblNombreCliente.Name = "lblNombreCliente"
-        Me.lblNombreCliente.Size = New System.Drawing.Size(68, 16)
-        Me.lblNombreCliente.TabIndex = 4
-        Me.lblNombreCliente.Text = "NOMBRE:"
+        Me.lblNombreRegsitro.AutoSize = True
+        Me.lblNombreRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreRegsitro.Location = New System.Drawing.Point(147, 153)
+        Me.lblNombreRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblNombreRegsitro.Name = "lblNombreRegsitro"
+        Me.lblNombreRegsitro.Size = New System.Drawing.Size(68, 16)
+        Me.lblNombreRegsitro.TabIndex = 4
+        Me.lblNombreRegsitro.Text = "NOMBRE:"
         '
-        'txtNombrePaciente
+        'txtNombreRegistro
         '
-        Me.txtNombrePaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombrePaciente.Location = New System.Drawing.Point(217, 153)
-        Me.txtNombrePaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtNombrePaciente.Name = "txtNombrePaciente"
-        Me.txtNombrePaciente.Size = New System.Drawing.Size(245, 22)
-        Me.txtNombrePaciente.TabIndex = 3
+        Me.txtNombreRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreRegistro.Location = New System.Drawing.Point(217, 153)
+        Me.txtNombreRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtNombreRegistro.Name = "txtNombreRegistro"
+        Me.txtNombreRegistro.Size = New System.Drawing.Size(273, 22)
+        Me.txtNombreRegistro.TabIndex = 3
         '
-        'txtCodigoPaciente
+        'txtCodigoRegistro
         '
-        Me.txtCodigoPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigoPaciente.Location = New System.Drawing.Point(217, 98)
-        Me.txtCodigoPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtCodigoPaciente.Name = "txtCodigoPaciente"
-        Me.txtCodigoPaciente.Size = New System.Drawing.Size(95, 22)
-        Me.txtCodigoPaciente.TabIndex = 1
+        Me.txtCodigoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigoRegistro.Location = New System.Drawing.Point(217, 98)
+        Me.txtCodigoRegistro.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtCodigoRegistro.Name = "txtCodigoRegistro"
+        Me.txtCodigoRegistro.Size = New System.Drawing.Size(105, 22)
+        Me.txtCodigoRegistro.TabIndex = 1
         '
-        'lblCodigoCliente
+        'lblCodigoRegistro
         '
-        Me.lblCodigoCliente.AutoSize = True
-        Me.lblCodigoCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigoCliente.Location = New System.Drawing.Point(148, 104)
-        Me.lblCodigoCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblCodigoCliente.Name = "lblCodigoCliente"
-        Me.lblCodigoCliente.Size = New System.Drawing.Size(64, 16)
-        Me.lblCodigoCliente.TabIndex = 0
-        Me.lblCodigoCliente.Text = "CODIGO:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(73, 33)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(139, 30)
-        Me.Label10.TabIndex = 35
-        Me.Label10.Text = "Paciente"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(653, 33)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(207, 30)
-        Me.Label11.TabIndex = 36
-        Me.Label11.Text = "Acompañante"
+        Me.lblCodigoRegistro.AutoSize = True
+        Me.lblCodigoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigoRegistro.Location = New System.Drawing.Point(148, 104)
+        Me.lblCodigoRegistro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblCodigoRegistro.Name = "lblCodigoRegistro"
+        Me.lblCodigoRegistro.Size = New System.Drawing.Size(64, 16)
+        Me.lblCodigoRegistro.TabIndex = 0
+        Me.lblCodigoRegistro.Text = "CODIGO:"
         '
         'FormRegistro_Acompañante
         '
@@ -549,7 +549,7 @@ Partial Class FormRegistro_Acompañante
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Desktop
         Me.ClientSize = New System.Drawing.Size(1031, 576)
-        Me.Controls.Add(Me.grbDatos)
+        Me.Controls.Add(Me.grbDatosRegistro)
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -558,49 +558,49 @@ Partial Class FormRegistro_Acompañante
         Me.grbEdicion.ResumeLayout(False)
         Me.grbNavegacion.ResumeLayout(False)
         Me.grbNavegacion.PerformLayout()
-        Me.grbDatos.ResumeLayout(False)
-        Me.grbDatos.PerformLayout()
+        Me.grbDatosRegistro.ResumeLayout(False)
+        Me.grbDatosRegistro.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents grbEdicion As GroupBox
-    Friend WithEvents btnBuscarPaciente As Button
-    Friend WithEvents btnEliminarPaciente As Button
-    Friend WithEvents btnModificarPaciente As Button
-    Friend WithEvents btnAgregarPaciente As Button
+    Friend WithEvents btnBuscarRegistro As Button
+    Friend WithEvents btnEliminarRegistro As Button
+    Friend WithEvents btnModificarRegistro As Button
+    Friend WithEvents btnAgregarRegistro As Button
     Friend WithEvents grbNavegacion As GroupBox
-    Friend WithEvents lblRegistrosPaciente As Label
-    Friend WithEvents btnUltimoCliente As Button
-    Friend WithEvents btnSiguienteCliente As Button
-    Friend WithEvents btnAnteriorCliente As Button
-    Friend WithEvents btnPrimeroCliente As Button
-    Friend WithEvents grbDatos As GroupBox
+    Friend WithEvents lblRegistrosRegistro As Label
+    Friend WithEvents btnUltimoRegistro As Button
+    Friend WithEvents btnSiguienteRegistro As Button
+    Friend WithEvents btnAnteriorRegistro As Button
+    Friend WithEvents btnPrimeroRegistro As Button
+    Friend WithEvents grbDatosRegistro As GroupBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtDireccionPaciente As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents txtApellidoPaciente As TextBox
+    Friend WithEvents lblApellidoRegsitro As Label
+    Friend WithEvents txtApellidoRegistro As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtSangrePaciente As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtDuiPaciente As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtSexoPaciente As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtNacimientoPaciente As TextBox
+    Friend WithEvents lblSexoRegsitro As Label
+    Friend WithEvents txtSexoRegistro As TextBox
+    Friend WithEvents lblFecha_NacimientoRegsitro As Label
+    Friend WithEvents txtNacimientoRegistro As TextBox
     Friend WithEvents lblEmailCliente As Label
     Friend WithEvents txtEmailPaciente As TextBox
     Friend WithEvents lblTelefonoCliente As Label
     Friend WithEvents txtEdadPaciente As TextBox
-    Friend WithEvents lblNombreCliente As Label
-    Friend WithEvents txtNombrePaciente As TextBox
-    Friend WithEvents txtCodigoPaciente As TextBox
-    Friend WithEvents lblCodigoCliente As Label
+    Friend WithEvents lblNombreRegsitro As Label
+    Friend WithEvents txtNombreRegistro As TextBox
+    Friend WithEvents txtCodigoRegistro As TextBox
+    Friend WithEvents lblCodigoRegistro As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents lblTipo_SangreRegsitro As Label
+    Friend WithEvents txtTipo_SangreRegistro As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label9 As Label

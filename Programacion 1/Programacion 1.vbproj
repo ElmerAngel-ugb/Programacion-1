@@ -103,14 +103,6 @@
     <Compile Include="dsEntregarmedicamentos.vb">
       <DependentUpon>dsEntregarmedicamentos.xsd</DependentUpon>
     </Compile>
-    <Compile Include="dsExpediente.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsExpediente.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="dsExpediente.vb">
-      <DependentUpon>dsExpediente.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dsFormaPago.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +210,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Recursos.resx</DependentUpon>
     </Compile>
+    <Compile Include="sdExpediente.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sdExpediente.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SistemaClinico.Designer.vb">
       <DependentUpon>SistemaClinico.vb</DependentUpon>
     </Compile>
@@ -281,17 +278,6 @@
     <None Include="dsEntregarmedicamentos.xss">
       <DependentUpon>dsEntregarmedicamentos.xsd</DependentUpon>
     </None>
-    <None Include="dsExpediente.xsc">
-      <DependentUpon>dsExpediente.xsd</DependentUpon>
-    </None>
-    <None Include="dsExpediente.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsExpediente.Designer.vb</LastGenOutput>
-    </None>
-    <None Include="dsExpediente.xss">
-      <DependentUpon>dsExpediente.xsd</DependentUpon>
-    </None>
     <None Include="dsFormaPago.xsc">
       <DependentUpon>dsFormaPago.xsd</DependentUpon>
     </None>
@@ -335,6 +321,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="sdExpediente.xsc">
+      <DependentUpon>sdExpediente.xsd</DependentUpon>
+    </None>
+    <None Include="sdExpediente.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sdExpediente.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="sdExpediente.xss">
+      <DependentUpon>sdExpediente.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Recursos.resx">
