@@ -35,32 +35,34 @@ Partial Class FormRegistro_Acompañante
         Me.btnAnteriorRegistro = New System.Windows.Forms.Button()
         Me.btnPrimeroRegistro = New System.Windows.Forms.Button()
         Me.grbDatosRegistro = New System.Windows.Forms.GroupBox()
+        Me.txtCodigoAcompanante = New System.Windows.Forms.TextBox()
+        Me.lblCodigoAcompanante = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.lblTipo_SangreRegsitro = New System.Windows.Forms.Label()
         Me.txtTipo_SangreRegistro = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.lblApellidoAcompanante = New System.Windows.Forms.Label()
+        Me.txtApellidoAcompanante = New System.Windows.Forms.TextBox()
+        Me.lblNombreAcompanante = New System.Windows.Forms.Label()
+        Me.txtNombreAcompanante = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtDireccionPaciente = New System.Windows.Forms.TextBox()
+        Me.lblDireccionAcompanante = New System.Windows.Forms.Label()
+        Me.txtDireccionAcompanante = New System.Windows.Forms.TextBox()
         Me.lblApellidoRegsitro = New System.Windows.Forms.Label()
         Me.txtApellidoRegistro = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtSangrePaciente = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtDuiPaciente = New System.Windows.Forms.TextBox()
+        Me.lblTelefonoAcompanante = New System.Windows.Forms.Label()
+        Me.txtTelefonoAcompanante = New System.Windows.Forms.TextBox()
+        Me.lblSexoAcompanante = New System.Windows.Forms.Label()
+        Me.txtSexoAcompanante = New System.Windows.Forms.TextBox()
         Me.lblSexoRegsitro = New System.Windows.Forms.Label()
         Me.txtSexoRegistro = New System.Windows.Forms.TextBox()
         Me.lblFecha_NacimientoRegsitro = New System.Windows.Forms.Label()
         Me.txtNacimientoRegistro = New System.Windows.Forms.TextBox()
-        Me.lblEmailCliente = New System.Windows.Forms.Label()
-        Me.txtEmailPaciente = New System.Windows.Forms.TextBox()
-        Me.lblTelefonoCliente = New System.Windows.Forms.Label()
-        Me.txtEdadPaciente = New System.Windows.Forms.TextBox()
+        Me.lblEmailAcompanante = New System.Windows.Forms.Label()
+        Me.txtEmailAcompanante = New System.Windows.Forms.TextBox()
+        Me.lblParentescoAcompanante = New System.Windows.Forms.Label()
+        Me.txtParentescoAcompanante = New System.Windows.Forms.TextBox()
         Me.lblNombreRegsitro = New System.Windows.Forms.Label()
         Me.txtNombreRegistro = New System.Windows.Forms.TextBox()
         Me.txtCodigoRegistro = New System.Windows.Forms.TextBox()
@@ -205,32 +207,34 @@ Partial Class FormRegistro_Acompañante
         'grbDatosRegistro
         '
         Me.grbDatosRegistro.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.grbDatosRegistro.Controls.Add(Me.txtCodigoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.lblCodigoAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.Label11)
         Me.grbDatosRegistro.Controls.Add(Me.Label10)
         Me.grbDatosRegistro.Controls.Add(Me.lblTipo_SangreRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtTipo_SangreRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.Label8)
-        Me.grbDatosRegistro.Controls.Add(Me.TextBox1)
-        Me.grbDatosRegistro.Controls.Add(Me.Label9)
-        Me.grbDatosRegistro.Controls.Add(Me.TextBox2)
+        Me.grbDatosRegistro.Controls.Add(Me.lblApellidoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtApellidoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.lblNombreAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtNombreAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.Button1)
         Me.grbDatosRegistro.Controls.Add(Me.PictureBox1)
-        Me.grbDatosRegistro.Controls.Add(Me.Label7)
-        Me.grbDatosRegistro.Controls.Add(Me.txtDireccionPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblDireccionAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtDireccionAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.lblApellidoRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtApellidoRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.Label4)
-        Me.grbDatosRegistro.Controls.Add(Me.txtSangrePaciente)
-        Me.grbDatosRegistro.Controls.Add(Me.Label3)
-        Me.grbDatosRegistro.Controls.Add(Me.txtDuiPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblTelefonoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtTelefonoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.lblSexoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtSexoAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.lblSexoRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtSexoRegistro)
         Me.grbDatosRegistro.Controls.Add(Me.lblFecha_NacimientoRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtNacimientoRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.lblEmailCliente)
-        Me.grbDatosRegistro.Controls.Add(Me.txtEmailPaciente)
-        Me.grbDatosRegistro.Controls.Add(Me.lblTelefonoCliente)
-        Me.grbDatosRegistro.Controls.Add(Me.txtEdadPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.lblEmailAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtEmailAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.lblParentescoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtParentescoAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.lblNombreRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtNombreRegistro)
         Me.grbDatosRegistro.Controls.Add(Me.txtCodigoRegistro)
@@ -245,11 +249,31 @@ Partial Class FormRegistro_Acompañante
         Me.grbDatosRegistro.TabStop = False
         Me.grbDatosRegistro.Text = "Datos del Paciente y Acompañante"
         '
+        'txtCodigoAcompanante
+        '
+        Me.txtCodigoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigoAcompanante.Location = New System.Drawing.Point(624, 57)
+        Me.txtCodigoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtCodigoAcompanante.Name = "txtCodigoAcompanante"
+        Me.txtCodigoAcompanante.Size = New System.Drawing.Size(105, 22)
+        Me.txtCodigoAcompanante.TabIndex = 38
+        '
+        'lblCodigoAcompanante
+        '
+        Me.lblCodigoAcompanante.AutoSize = True
+        Me.lblCodigoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigoAcompanante.Location = New System.Drawing.Point(555, 63)
+        Me.lblCodigoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblCodigoAcompanante.Name = "lblCodigoAcompanante"
+        Me.lblCodigoAcompanante.Size = New System.Drawing.Size(64, 16)
+        Me.lblCodigoAcompanante.TabIndex = 37
+        Me.lblCodigoAcompanante.Text = "CODIGO:"
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(653, 33)
+        Me.Label11.Location = New System.Drawing.Point(610, 14)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(207, 30)
         Me.Label11.TabIndex = 36
@@ -285,45 +309,45 @@ Partial Class FormRegistro_Acompañante
         Me.txtTipo_SangreRegistro.Size = New System.Drawing.Size(203, 22)
         Me.txtTipo_SangreRegistro.TabIndex = 33
         '
-        'Label8
+        'lblApellidoAcompanante
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(555, 148)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 16)
-        Me.Label8.TabIndex = 32
-        Me.Label8.Text = "Apellido:"
+        Me.lblApellidoAcompanante.AutoSize = True
+        Me.lblApellidoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblApellidoAcompanante.Location = New System.Drawing.Point(555, 148)
+        Me.lblApellidoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblApellidoAcompanante.Name = "lblApellidoAcompanante"
+        Me.lblApellidoAcompanante.Size = New System.Drawing.Size(65, 16)
+        Me.lblApellidoAcompanante.TabIndex = 32
+        Me.lblApellidoAcompanante.Text = "Apellido:"
         '
-        'TextBox1
+        'txtApellidoAcompanante
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(622, 148)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(1)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(267, 22)
-        Me.TextBox1.TabIndex = 31
+        Me.txtApellidoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApellidoAcompanante.Location = New System.Drawing.Point(622, 148)
+        Me.txtApellidoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtApellidoAcompanante.Name = "txtApellidoAcompanante"
+        Me.txtApellidoAcompanante.Size = New System.Drawing.Size(267, 22)
+        Me.txtApellidoAcompanante.TabIndex = 31
         '
-        'Label9
+        'lblNombreAcompanante
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(555, 98)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 16)
-        Me.Label9.TabIndex = 30
-        Me.Label9.Text = "NOMBRE:"
+        Me.lblNombreAcompanante.AutoSize = True
+        Me.lblNombreAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreAcompanante.Location = New System.Drawing.Point(555, 104)
+        Me.lblNombreAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblNombreAcompanante.Name = "lblNombreAcompanante"
+        Me.lblNombreAcompanante.Size = New System.Drawing.Size(68, 16)
+        Me.lblNombreAcompanante.TabIndex = 30
+        Me.lblNombreAcompanante.Text = "NOMBRE:"
         '
-        'TextBox2
+        'txtNombreAcompanante
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(625, 98)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(1)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(264, 22)
-        Me.TextBox2.TabIndex = 29
+        Me.txtNombreAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombreAcompanante.Location = New System.Drawing.Point(625, 104)
+        Me.txtNombreAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtNombreAcompanante.Name = "txtNombreAcompanante"
+        Me.txtNombreAcompanante.Size = New System.Drawing.Size(264, 22)
+        Me.txtNombreAcompanante.TabIndex = 29
         '
         'Button1
         '
@@ -342,26 +366,26 @@ Partial Class FormRegistro_Acompañante
         Me.PictureBox1.TabIndex = 25
         Me.PictureBox1.TabStop = False
         '
-        'Label7
+        'lblDireccionAcompanante
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(541, 397)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 16)
-        Me.Label7.TabIndex = 24
-        Me.Label7.Text = "Direccion:"
+        Me.lblDireccionAcompanante.AutoSize = True
+        Me.lblDireccionAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDireccionAcompanante.Location = New System.Drawing.Point(541, 397)
+        Me.lblDireccionAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblDireccionAcompanante.Name = "lblDireccionAcompanante"
+        Me.lblDireccionAcompanante.Size = New System.Drawing.Size(72, 16)
+        Me.lblDireccionAcompanante.TabIndex = 24
+        Me.lblDireccionAcompanante.Text = "Direccion:"
         '
-        'txtDireccionPaciente
+        'txtDireccionAcompanante
         '
-        Me.txtDireccionPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccionPaciente.Location = New System.Drawing.Point(615, 394)
-        Me.txtDireccionPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtDireccionPaciente.Multiline = True
-        Me.txtDireccionPaciente.Name = "txtDireccionPaciente"
-        Me.txtDireccionPaciente.Size = New System.Drawing.Size(380, 55)
-        Me.txtDireccionPaciente.TabIndex = 23
+        Me.txtDireccionAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccionAcompanante.Location = New System.Drawing.Point(615, 394)
+        Me.txtDireccionAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtDireccionAcompanante.Multiline = True
+        Me.txtDireccionAcompanante.Name = "txtDireccionAcompanante"
+        Me.txtDireccionAcompanante.Size = New System.Drawing.Size(380, 55)
+        Me.txtDireccionAcompanante.TabIndex = 23
         '
         'lblApellidoRegsitro
         '
@@ -383,45 +407,45 @@ Partial Class FormRegistro_Acompañante
         Me.txtApellidoRegistro.Size = New System.Drawing.Size(273, 22)
         Me.txtApellidoRegistro.TabIndex = 21
         '
-        'Label4
+        'lblTelefonoAcompanante
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(546, 295)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 16)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Telefono:"
+        Me.lblTelefonoAcompanante.AutoSize = True
+        Me.lblTelefonoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelefonoAcompanante.Location = New System.Drawing.Point(546, 295)
+        Me.lblTelefonoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblTelefonoAcompanante.Name = "lblTelefonoAcompanante"
+        Me.lblTelefonoAcompanante.Size = New System.Drawing.Size(67, 16)
+        Me.lblTelefonoAcompanante.TabIndex = 18
+        Me.lblTelefonoAcompanante.Text = "Telefono:"
         '
-        'txtSangrePaciente
+        'txtTelefonoAcompanante
         '
-        Me.txtSangrePaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSangrePaciente.Location = New System.Drawing.Point(615, 295)
-        Me.txtSangrePaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtSangrePaciente.Name = "txtSangrePaciente"
-        Me.txtSangrePaciente.Size = New System.Drawing.Size(149, 22)
-        Me.txtSangrePaciente.TabIndex = 17
+        Me.txtTelefonoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefonoAcompanante.Location = New System.Drawing.Point(615, 295)
+        Me.txtTelefonoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtTelefonoAcompanante.Name = "txtTelefonoAcompanante"
+        Me.txtTelefonoAcompanante.Size = New System.Drawing.Size(149, 22)
+        Me.txtTelefonoAcompanante.TabIndex = 17
         '
-        'Label3
+        'lblSexoAcompanante
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(555, 245)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 16)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "DUI/NIT:"
+        Me.lblSexoAcompanante.AutoSize = True
+        Me.lblSexoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexoAcompanante.Location = New System.Drawing.Point(555, 245)
+        Me.lblSexoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblSexoAcompanante.Name = "lblSexoAcompanante"
+        Me.lblSexoAcompanante.Size = New System.Drawing.Size(45, 16)
+        Me.lblSexoAcompanante.TabIndex = 16
+        Me.lblSexoAcompanante.Text = "Sexo:"
         '
-        'txtDuiPaciente
+        'txtSexoAcompanante
         '
-        Me.txtDuiPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDuiPaciente.Location = New System.Drawing.Point(615, 245)
-        Me.txtDuiPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtDuiPaciente.Name = "txtDuiPaciente"
-        Me.txtDuiPaciente.Size = New System.Drawing.Size(156, 22)
-        Me.txtDuiPaciente.TabIndex = 15
+        Me.txtSexoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSexoAcompanante.Location = New System.Drawing.Point(615, 245)
+        Me.txtSexoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtSexoAcompanante.Name = "txtSexoAcompanante"
+        Me.txtSexoAcompanante.Size = New System.Drawing.Size(156, 22)
+        Me.txtSexoAcompanante.TabIndex = 15
         '
         'lblSexoRegsitro
         '
@@ -463,45 +487,45 @@ Partial Class FormRegistro_Acompañante
         Me.txtNacimientoRegistro.Size = New System.Drawing.Size(243, 22)
         Me.txtNacimientoRegistro.TabIndex = 11
         '
-        'lblEmailCliente
+        'lblEmailAcompanante
         '
-        Me.lblEmailCliente.AutoSize = True
-        Me.lblEmailCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmailCliente.Location = New System.Drawing.Point(561, 346)
-        Me.lblEmailCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblEmailCliente.Name = "lblEmailCliente"
-        Me.lblEmailCliente.Size = New System.Drawing.Size(52, 16)
-        Me.lblEmailCliente.TabIndex = 10
-        Me.lblEmailCliente.Text = "EMAIL:"
+        Me.lblEmailAcompanante.AutoSize = True
+        Me.lblEmailAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmailAcompanante.Location = New System.Drawing.Point(561, 346)
+        Me.lblEmailAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblEmailAcompanante.Name = "lblEmailAcompanante"
+        Me.lblEmailAcompanante.Size = New System.Drawing.Size(52, 16)
+        Me.lblEmailAcompanante.TabIndex = 10
+        Me.lblEmailAcompanante.Text = "EMAIL:"
         '
-        'txtEmailPaciente
+        'txtEmailAcompanante
         '
-        Me.txtEmailPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmailPaciente.Location = New System.Drawing.Point(615, 346)
-        Me.txtEmailPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtEmailPaciente.Name = "txtEmailPaciente"
-        Me.txtEmailPaciente.Size = New System.Drawing.Size(280, 22)
-        Me.txtEmailPaciente.TabIndex = 9
+        Me.txtEmailAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmailAcompanante.Location = New System.Drawing.Point(615, 346)
+        Me.txtEmailAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtEmailAcompanante.Name = "txtEmailAcompanante"
+        Me.txtEmailAcompanante.Size = New System.Drawing.Size(280, 22)
+        Me.txtEmailAcompanante.TabIndex = 9
         '
-        'lblTelefonoCliente
+        'lblParentescoAcompanante
         '
-        Me.lblTelefonoCliente.AutoSize = True
-        Me.lblTelefonoCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoCliente.Location = New System.Drawing.Point(569, 195)
-        Me.lblTelefonoCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblTelefonoCliente.Name = "lblTelefonoCliente"
-        Me.lblTelefonoCliente.Size = New System.Drawing.Size(44, 16)
-        Me.lblTelefonoCliente.TabIndex = 8
-        Me.lblTelefonoCliente.Text = "Edad:"
+        Me.lblParentescoAcompanante.AutoSize = True
+        Me.lblParentescoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblParentescoAcompanante.Location = New System.Drawing.Point(541, 192)
+        Me.lblParentescoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblParentescoAcompanante.Name = "lblParentescoAcompanante"
+        Me.lblParentescoAcompanante.Size = New System.Drawing.Size(83, 16)
+        Me.lblParentescoAcompanante.TabIndex = 8
+        Me.lblParentescoAcompanante.Text = "Parentesco:"
         '
-        'txtEdadPaciente
+        'txtParentescoAcompanante
         '
-        Me.txtEdadPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEdadPaciente.Location = New System.Drawing.Point(625, 192)
-        Me.txtEdadPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtEdadPaciente.Name = "txtEdadPaciente"
-        Me.txtEdadPaciente.Size = New System.Drawing.Size(159, 22)
-        Me.txtEdadPaciente.TabIndex = 7
+        Me.txtParentescoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtParentescoAcompanante.Location = New System.Drawing.Point(625, 192)
+        Me.txtParentescoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtParentescoAcompanante.Name = "txtParentescoAcompanante"
+        Me.txtParentescoAcompanante.Size = New System.Drawing.Size(159, 22)
+        Me.txtParentescoAcompanante.TabIndex = 7
         '
         'lblNombreRegsitro
         '
@@ -577,22 +601,22 @@ Partial Class FormRegistro_Acompañante
     Friend WithEvents btnAnteriorRegistro As Button
     Friend WithEvents btnPrimeroRegistro As Button
     Friend WithEvents grbDatosRegistro As GroupBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents txtDireccionPaciente As TextBox
+    Friend WithEvents lblDireccionAcompanante As Label
+    Friend WithEvents txtDireccionAcompanante As TextBox
     Friend WithEvents lblApellidoRegsitro As Label
     Friend WithEvents txtApellidoRegistro As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtSangrePaciente As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtDuiPaciente As TextBox
+    Friend WithEvents lblTelefonoAcompanante As Label
+    Friend WithEvents txtTelefonoAcompanante As TextBox
+    Friend WithEvents lblSexoAcompanante As Label
+    Friend WithEvents txtSexoAcompanante As TextBox
     Friend WithEvents lblSexoRegsitro As Label
     Friend WithEvents txtSexoRegistro As TextBox
     Friend WithEvents lblFecha_NacimientoRegsitro As Label
     Friend WithEvents txtNacimientoRegistro As TextBox
-    Friend WithEvents lblEmailCliente As Label
-    Friend WithEvents txtEmailPaciente As TextBox
-    Friend WithEvents lblTelefonoCliente As Label
-    Friend WithEvents txtEdadPaciente As TextBox
+    Friend WithEvents lblEmailAcompanante As Label
+    Friend WithEvents txtEmailAcompanante As TextBox
+    Friend WithEvents lblParentescoAcompanante As Label
+    Friend WithEvents txtParentescoAcompanante As TextBox
     Friend WithEvents lblNombreRegsitro As Label
     Friend WithEvents txtNombreRegistro As TextBox
     Friend WithEvents txtCodigoRegistro As TextBox
@@ -601,10 +625,12 @@ Partial Class FormRegistro_Acompañante
     Friend WithEvents Button1 As Button
     Friend WithEvents lblTipo_SangreRegsitro As Label
     Friend WithEvents txtTipo_SangreRegistro As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents lblApellidoAcompanante As Label
+    Friend WithEvents txtApellidoAcompanante As TextBox
+    Friend WithEvents lblNombreAcompanante As Label
+    Friend WithEvents txtNombreAcompanante As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents txtCodigoAcompanante As TextBox
+    Friend WithEvents lblCodigoAcompanante As Label
 End Class

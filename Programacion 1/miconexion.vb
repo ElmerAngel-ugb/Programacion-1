@@ -33,7 +33,14 @@ Public Class db_conexion
 
         miCommand.Connection = miConexion
 
-        miCommand.CommandText = "select * from Registro"
+        miCommand.CommandText = "
+        select Registro.Id_Registro, Registro.Codigo, Registro.Nombre,
+              Registro.Apellido, Registro.Sexo, Registro.Tipo_Sangre, Registro.Fecha_Nacimiento,
+              Acompanante.Id_Acompanante, Acompanante.Codigo As codigo2, Acompanante.Nombre As nombre2, Acompanante. Apellido As apellido2
+              Acompanante.Parentesco, Acompanante.Sexo As sexo2, Acompanante.Telefono, Acompanante.Email, Acompanante.Direccion
+            from Registro
+              inner join Acompanante on(Acompanante.Id_Registro=Registro.Id_Registro)
+"
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "Registro")
 

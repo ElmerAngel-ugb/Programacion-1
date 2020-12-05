@@ -2,7 +2,7 @@
     Dim objConexion As New db_conexion()
     Dim dataTables As New DataTable
     Dim Posicion As Integer
-    Dim accion As String = " new"
+    Dim accion As String = " nuevo"
     Private Sub FormRegistro_Acompañante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Posicion = 0
 
@@ -25,6 +25,16 @@
             txtSexoRegistro.Text = dataTables.Rows(Posicion).ItemArray(4).ToString()
             txtTipo_SangreRegistro.Text = dataTables.Rows(Posicion).ItemArray(5).ToString()
             txtNacimientoRegistro.Text = dataTables.Rows(Posicion).ItemArray(6).ToString()
+
+            txtCodigoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(8).ToString()
+            txtNombreAcompanante.Text = dataTables.Rows(Posicion).ItemArray(9).ToString()
+            txtApellidoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(10).ToString()
+            txtParentescoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(11).ToString()
+            txtSexoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(12).ToString()
+            txtTelefonoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(13).ToString()
+            txtEmailAcompanante.Text = dataTables.Rows(Posicion).ItemArray(14).ToString()
+            txtDireccionAcompanante.Text = dataTables.Rows(Posicion).ItemArray(15).ToString()
+
 
             lblRegistrosRegistro.Text = Posicion + 1 & "  de  " & dataTables.Rows.Count
         Else
