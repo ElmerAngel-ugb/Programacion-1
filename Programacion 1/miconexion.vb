@@ -33,7 +33,13 @@ Public Class db_conexion
 
         miCommand.Connection = miConexion
 
-        miCommand.CommandText = "select * from Registro"
+        miCommand.CommandText = "
+                                 select Registro.Id_Registro, Registro.Codigo, Registro.Nombre, Registro.Apellido, Registro.Sexo, Registro.Tipo_Sangre, Registro.Fecha_Nacimiento,
+                                 Acompanante.Id_Acompanante, Acompanante.Codigo As codigo2, Acompanante.Nombre As nombre2, Acompanante.Apellido As apellido2,
+                                 Acompanante.Edad, Acompanante.Sexo As sexo2, Acompanante.Telefono, Acompanante.Email, Acompanante.Direccion
+                            from Registro
+                                  inner join Acompanante on(Acompanante.Id_Registro=Registro.Id_Registro)
+"
         miAdapter.SelectCommand = miCommand
         miAdapter.Fill(ds, "Registro")
 
@@ -85,7 +91,7 @@ Public Class db_conexion
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO Registro (Codigo,Nombre,Apellido,Sexo,Tipo_Sangre,Fecha_Nacimiento) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "') "
+                sql = "INSERT INTO Registro (Codigo,Nombre,Apellido,Sexo,Tipo_Sangre,Fecha_Nacimiento) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "')"
             Case "modificar"
                 sql = "UPDATE Registro SET Codigo ='" + datos(1) + "',Nombre='" + datos(2) + "',Apellido='" + datos(3) + "',Sexo='" + datos(4) + "',Tipo_Sangre='" + datos(5) + "',Fecha_Nacimiento='" + datos(6) + "'  WHERE Id_Registro='" + datos(0) + "'"
             Case "eliminar"

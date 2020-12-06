@@ -50,9 +50,9 @@ Partial Class FormRegistro_Acompañante
         Me.lblApellidoRegsitro = New System.Windows.Forms.Label()
         Me.txtApellidoRegistro = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtSangrePaciente = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtDuiPaciente = New System.Windows.Forms.TextBox()
+        Me.txtTelefonoAcompnante = New System.Windows.Forms.TextBox()
+        Me.lblSexoAcompanante = New System.Windows.Forms.Label()
+        Me.txtSexoAcompanante = New System.Windows.Forms.TextBox()
         Me.lblSexoRegsitro = New System.Windows.Forms.Label()
         Me.txtSexoRegistro = New System.Windows.Forms.TextBox()
         Me.lblFecha_NacimientoRegsitro = New System.Windows.Forms.Label()
@@ -65,6 +65,8 @@ Partial Class FormRegistro_Acompañante
         Me.txtNombreRegistro = New System.Windows.Forms.TextBox()
         Me.txtCodigoRegistro = New System.Windows.Forms.TextBox()
         Me.lblCodigoRegistro = New System.Windows.Forms.Label()
+        Me.txtCodigoAcompanante = New System.Windows.Forms.TextBox()
+        Me.lblCodigoAcompanante = New System.Windows.Forms.Label()
         Me.grbEdicion.SuspendLayout()
         Me.grbNavegacion.SuspendLayout()
         Me.grbDatosRegistro.SuspendLayout()
@@ -205,6 +207,8 @@ Partial Class FormRegistro_Acompañante
         'grbDatosRegistro
         '
         Me.grbDatosRegistro.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.grbDatosRegistro.Controls.Add(Me.txtCodigoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.lblCodigoAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.Label11)
         Me.grbDatosRegistro.Controls.Add(Me.Label10)
         Me.grbDatosRegistro.Controls.Add(Me.lblTipo_SangreRegsitro)
@@ -220,9 +224,9 @@ Partial Class FormRegistro_Acompañante
         Me.grbDatosRegistro.Controls.Add(Me.lblApellidoRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtApellidoRegistro)
         Me.grbDatosRegistro.Controls.Add(Me.Label4)
-        Me.grbDatosRegistro.Controls.Add(Me.txtSangrePaciente)
-        Me.grbDatosRegistro.Controls.Add(Me.Label3)
-        Me.grbDatosRegistro.Controls.Add(Me.txtDuiPaciente)
+        Me.grbDatosRegistro.Controls.Add(Me.txtTelefonoAcompnante)
+        Me.grbDatosRegistro.Controls.Add(Me.lblSexoAcompanante)
+        Me.grbDatosRegistro.Controls.Add(Me.txtSexoAcompanante)
         Me.grbDatosRegistro.Controls.Add(Me.lblSexoRegsitro)
         Me.grbDatosRegistro.Controls.Add(Me.txtSexoRegistro)
         Me.grbDatosRegistro.Controls.Add(Me.lblFecha_NacimientoRegsitro)
@@ -249,7 +253,7 @@ Partial Class FormRegistro_Acompañante
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(653, 33)
+        Me.Label11.Location = New System.Drawing.Point(653, 14)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(207, 30)
         Me.Label11.TabIndex = 36
@@ -309,7 +313,7 @@ Partial Class FormRegistro_Acompañante
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(555, 98)
+        Me.Label9.Location = New System.Drawing.Point(551, 104)
         Me.Label9.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(68, 16)
@@ -319,7 +323,7 @@ Partial Class FormRegistro_Acompañante
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(625, 98)
+        Me.TextBox2.Location = New System.Drawing.Point(621, 101)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(1)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(264, 22)
@@ -394,34 +398,34 @@ Partial Class FormRegistro_Acompañante
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "Telefono:"
         '
-        'txtSangrePaciente
+        'txtTelefonoAcompnante
         '
-        Me.txtSangrePaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSangrePaciente.Location = New System.Drawing.Point(615, 295)
-        Me.txtSangrePaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtSangrePaciente.Name = "txtSangrePaciente"
-        Me.txtSangrePaciente.Size = New System.Drawing.Size(149, 22)
-        Me.txtSangrePaciente.TabIndex = 17
+        Me.txtTelefonoAcompnante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelefonoAcompnante.Location = New System.Drawing.Point(615, 295)
+        Me.txtTelefonoAcompnante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtTelefonoAcompnante.Name = "txtTelefonoAcompnante"
+        Me.txtTelefonoAcompnante.Size = New System.Drawing.Size(149, 22)
+        Me.txtTelefonoAcompnante.TabIndex = 17
         '
-        'Label3
+        'lblSexoAcompanante
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(555, 245)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 16)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "DUI/NIT:"
+        Me.lblSexoAcompanante.AutoSize = True
+        Me.lblSexoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSexoAcompanante.Location = New System.Drawing.Point(555, 245)
+        Me.lblSexoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblSexoAcompanante.Name = "lblSexoAcompanante"
+        Me.lblSexoAcompanante.Size = New System.Drawing.Size(45, 16)
+        Me.lblSexoAcompanante.TabIndex = 16
+        Me.lblSexoAcompanante.Text = "Sexo:"
         '
-        'txtDuiPaciente
+        'txtSexoAcompanante
         '
-        Me.txtDuiPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDuiPaciente.Location = New System.Drawing.Point(615, 245)
-        Me.txtDuiPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtDuiPaciente.Name = "txtDuiPaciente"
-        Me.txtDuiPaciente.Size = New System.Drawing.Size(156, 22)
-        Me.txtDuiPaciente.TabIndex = 15
+        Me.txtSexoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSexoAcompanante.Location = New System.Drawing.Point(615, 245)
+        Me.txtSexoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtSexoAcompanante.Name = "txtSexoAcompanante"
+        Me.txtSexoAcompanante.Size = New System.Drawing.Size(156, 22)
+        Me.txtSexoAcompanante.TabIndex = 15
         '
         'lblSexoRegsitro
         '
@@ -543,6 +547,26 @@ Partial Class FormRegistro_Acompañante
         Me.lblCodigoRegistro.TabIndex = 0
         Me.lblCodigoRegistro.Text = "CODIGO:"
         '
+        'txtCodigoAcompanante
+        '
+        Me.txtCodigoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodigoAcompanante.Location = New System.Drawing.Point(624, 58)
+        Me.txtCodigoAcompanante.Margin = New System.Windows.Forms.Padding(1)
+        Me.txtCodigoAcompanante.Name = "txtCodigoAcompanante"
+        Me.txtCodigoAcompanante.Size = New System.Drawing.Size(105, 22)
+        Me.txtCodigoAcompanante.TabIndex = 38
+        '
+        'lblCodigoAcompanante
+        '
+        Me.lblCodigoAcompanante.AutoSize = True
+        Me.lblCodigoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCodigoAcompanante.Location = New System.Drawing.Point(555, 64)
+        Me.lblCodigoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
+        Me.lblCodigoAcompanante.Name = "lblCodigoAcompanante"
+        Me.lblCodigoAcompanante.Size = New System.Drawing.Size(64, 16)
+        Me.lblCodigoAcompanante.TabIndex = 37
+        Me.lblCodigoAcompanante.Text = "CODIGO:"
+        '
         'FormRegistro_Acompañante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -582,9 +606,9 @@ Partial Class FormRegistro_Acompañante
     Friend WithEvents lblApellidoRegsitro As Label
     Friend WithEvents txtApellidoRegistro As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtSangrePaciente As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtDuiPaciente As TextBox
+    Friend WithEvents txtTelefonoAcompnante As TextBox
+    Friend WithEvents lblSexoAcompanante As Label
+    Friend WithEvents txtSexoAcompanante As TextBox
     Friend WithEvents lblSexoRegsitro As Label
     Friend WithEvents txtSexoRegistro As TextBox
     Friend WithEvents lblFecha_NacimientoRegsitro As Label
@@ -607,4 +631,6 @@ Partial Class FormRegistro_Acompañante
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents txtCodigoAcompanante As TextBox
+    Friend WithEvents lblCodigoAcompanante As Label
 End Class
