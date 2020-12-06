@@ -26,6 +26,16 @@
             txtTipo_SangreRegistro.Text = dataTables.Rows(Posicion).ItemArray(5).ToString()
             txtNacimientoRegistro.Text = dataTables.Rows(Posicion).ItemArray(6).ToString()
 
+            txtCodigoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(8).ToString()
+            TextBox2.Text = dataTables.Rows(Posicion).ItemArray(9).ToString()
+            TextBox1.Text = dataTables.Rows(Posicion).ItemArray(10).ToString()
+            txtEdadPaciente.Text = dataTables.Rows(Posicion).ItemArray(11).ToString()
+            txtSexoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(12).ToString()
+            txtTelefonoAcompnante.Text = dataTables.Rows(Posicion).ItemArray(13).ToString()
+            txtEmailPaciente.Text = dataTables.Rows(Posicion).ItemArray(14).ToString()
+            txtDireccionPaciente.Text = dataTables.Rows(Posicion).ItemArray(15).ToString()
+
+
             lblRegistrosRegistro.Text = Posicion + 1 & "  de  " & dataTables.Rows.Count
         Else
             limpiarDatosRegistro()
@@ -72,7 +82,8 @@
             limpiarDatosRegistro()
         Else 'Guardar
             Dim msg = objConexion.mantenimientoDatosRegistro(New String() {
-                Me.Tag, txtCodigoRegistro.Text, txtNombreRegistro.Text, txtApellidoRegistro.Text, txtSexoRegistro.Text, txtTipo_SangreRegistro.Text, txtNacimientoRegistro.Text
+                Me.Tag, txtCodigoRegistro.Text, txtNombreRegistro.Text, txtApellidoRegistro.Text, txtSexoRegistro.Text, txtTipo_SangreRegistro.Text, txtNacimientoRegistro.Text, txtCodigoAcompanante.Text,
+            TextBox2.Text, TextBox1.Text, txtEdadPaciente.Text, txtSexoAcompanante.Text, txtTelefonoAcompnante.Text, txtEmailPaciente.Text, txtDireccionPaciente.Text
             }, accion)
 
             Xtenerdatos()
@@ -97,6 +108,15 @@
         txtSexoRegistro.Text = ""
         txtTipo_SangreRegistro.Text = ""
         txtNacimientoRegistro.Text = ""
+
+        txtCodigoAcompanante.Text = ""
+        TextBox2.Text = ""
+        TextBox1.Text = ""
+        txtEdadPaciente.Text = ""
+        txtSexoAcompanante.Text = ""
+        txtTelefonoAcompnante.Text = ""
+        txtEmailPaciente.Text = ""
+        txtDireccionPaciente.Text = ""
 
     End Sub
 
