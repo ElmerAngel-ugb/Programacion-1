@@ -79,7 +79,7 @@
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1427.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -139,6 +139,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPagar.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsPersonal.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fmrListadePacientes.Designer.vb">
+      <DependentUpon>fmrListadePacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrListadePacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FmrPagar.Designer.vb">
       <DependentUpon>FmrPagar.vb</DependentUpon>
     </Compile>
@@ -168,6 +179,12 @@
       <DependentUpon>FmrEliminardatosdelpaciente.vb</DependentUpon>
     </Compile>
     <Compile Include="FmrEliminardatosdelpaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrListaPersonal.Designer.vb">
+      <DependentUpon>fmrListaPersonal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrListaPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormRegistro_Acompañante.Designer.vb">
@@ -250,6 +267,12 @@
     <EmbeddedResource Include="BuscarCategoriamedicamentos.resx">
       <DependentUpon>BuscarCategoriamedicamentos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmrListadePacientes.resx">
+      <DependentUpon>fmrListadePacientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrListaPersonal.resx">
+      <DependentUpon>fmrListaPersonal.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmrPagar.resx">
       <DependentUpon>FmrPagar.vb</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +310,8 @@
       <DependentUpon>FrmPaciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ifmListaMedicamentos.rdlc" />
+    <EmbeddedResource Include="ifmPaciente.rdlc" />
+    <EmbeddedResource Include="ifmPersonal.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -338,6 +363,17 @@
     </None>
     <None Include="dsPagar.xss">
       <DependentUpon>dsPagar.xsd</DependentUpon>
+    </None>
+    <None Include="dsPersonal.xsc">
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
+    </None>
+    <None Include="dsPersonal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPersonal.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsPersonal.xss">
+      <DependentUpon>dsPersonal.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
