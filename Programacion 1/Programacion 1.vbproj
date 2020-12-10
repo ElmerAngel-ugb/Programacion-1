@@ -187,6 +187,12 @@
     <Compile Include="fmrListaPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormRegistro_Acompañante.Designer.vb">
       <DependentUpon>FormRegistro_Acompañante.vb</DependentUpon>
     </Compile>
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmrEliminardatosdelpaciente.resx">
       <DependentUpon>FmrEliminardatosdelpaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegistro_Acompañante.resx">
       <DependentUpon>FormRegistro_Acompañante.vb</DependentUpon>
@@ -418,6 +427,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Recursos.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="SistemaClinico.resx">
       <DependentUpon>SistemaClinico.vb</DependentUpon>
     </EmbeddedResource>

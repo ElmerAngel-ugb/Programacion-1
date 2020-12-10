@@ -1,0 +1,23 @@
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion 1.vbprojAssemblyReference.cache
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.BuscarCategoriamedicamentos.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.fmrListadePacientes.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.fmrListaPersonal.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FmrPagar.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FmrRegistrodePersonalvb.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FmrMedicamento.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FmrEncargarMedicamento.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FmrEliminardatosdelpaciente.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.Form1.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FormRegistro_Acompañante.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FrmBuscarEmpleadosvb.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FrmBuscarPaciente.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.frmCegorias_Medicamentosvb.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FrmFormasdePago.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FrmListaMedicamentos.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.FrmPaciente.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.Resources.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.Recursos.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion_1.SistemaClinico.resources
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\Programacion 1.vbproj.GenerateResource.cache
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\RdlCompile.cache
+C:\Users\isabe\Desktop\333\Programacion 1\obj\Debug\RdlCompile.compiled
