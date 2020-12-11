@@ -51,7 +51,7 @@ Partial Class frmLisMedicamentoCategoria
         Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(886, 607)
+        Me.ReportViewer1.Size = New System.Drawing.Size(899, 607)
         Me.ReportViewer1.TabIndex = 0
         '
         'sistemaclinicodbDataSet
@@ -81,7 +81,7 @@ Partial Class frmLisMedicamentoCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(910, 645)
+        Me.ClientSize = New System.Drawing.Size(923, 645)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "frmLisMedicamentoCategoria"
         Me.Text = "Lista de Medicamento por Categoria"
