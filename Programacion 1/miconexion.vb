@@ -109,6 +109,7 @@ Public Class db_conexion
         Return msg
     End Function
 
+
     Public Function mantenimientoDatosPaciente(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion

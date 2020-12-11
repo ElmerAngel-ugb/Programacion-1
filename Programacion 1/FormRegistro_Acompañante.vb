@@ -3,6 +3,7 @@
     Dim dataTables As New DataTable
     Dim Posicion As Integer
     Dim accion As String = " new"
+
     Private Sub FormRegistro_Acompañante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Posicion = 0
 
@@ -25,6 +26,7 @@
             txtSexoRegistro.Text = dataTables.Rows(Posicion).ItemArray(4).ToString()
             txtTipo_SangreRegistro.Text = dataTables.Rows(Posicion).ItemArray(5).ToString()
             txtNacimientoRegistro.Text = dataTables.Rows(Posicion).ItemArray(6).ToString()
+
 
             txtCodigoAcompanante.Text = dataTables.Rows(Posicion).ItemArray(8).ToString()
             TextBox2.Text = dataTables.Rows(Posicion).ItemArray(9).ToString()
@@ -139,10 +141,18 @@
         If (MessageBox.Show("Estas Seguro de borrar a " + txtNombreRegistro.Text, "Registro de Paciente",
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes) Then
             objConexion.mantenimientoDatosRegistro(New String() {Me.Tag}, "eliminar")
+
             If Posicion > 0 Then
                 Posicion -= 1
             End If
             Xtenerdatos()
+        End If
+    End Sub
+
+    Private Sub btnSeleccionarImagen_Click(sender As Object, e As EventArgs) Handles btnSeleccionarImagen.Click
+        If OfdSeleccionarImagen.ShowDialog = Windows.Forms.DialogResult.OK Then
+            PicmostrarImagen.Image = Image.FromFile(OfdSeleccionarImagen.FileName)
+
         End If
     End Sub
 End Class
