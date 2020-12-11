@@ -1,0 +1,1112 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Programacion 1
+</name>
+</assembly>
+<members>
+<member name="T:Programacion_1.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Resources.Cancel">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Programacion_1.My.Resources.Recursos">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.BuscarEncargo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Cancel">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Hospital">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Hospital1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Medicine">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Patients">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Pay">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.remove_filter">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Save">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Programacion_1.My.Resources.Recursos.Search">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.encargar_medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.pacienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.encargar_medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.pacienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.encargar_medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentos.pacienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentosTableAdapters.medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentosTableAdapters.encargar_medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentosTableAdapters.pacienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.dsEntregarmedicamentos,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.dsEntregarmedicamentos,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.dsEntregarmedicamentos,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.dsEntregarmedicamentos)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.dsEntregarmedicamentosTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPago">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPago.FormadePagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPago.FormadePagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPago.FormadePagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPagoTableAdapters.FormadePagoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.dsFormaPago,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.dsFormaPago,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.dsFormaPago,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.dsFormaPago)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.dsFormaPagoTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentos">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentos.medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentos.medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentos.medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentosTableAdapters.medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.dsMedicamentos,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.dsMedicamentos,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.dsMedicamentos,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.dsMedicamentos)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.dsMedicamentosTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.pacienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.encargar_medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.PagarDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.FormadePagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.pacienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.encargar_medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.PagarRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.FormadePagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.pacienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.encargar_medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.PagarRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagar.FormadePagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.pacienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.encargar_medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.PagarTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.FormadePagoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.dsPagarTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.dsPagar,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsPagarTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.dsPagar,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsPagarTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.dsPagar,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsPagarTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.dsPagarTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.dsPagar)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.dsPagarTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.registrodepersonalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.pacienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.proveedormedicamentosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.registrodepersonalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.pacienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.proveedormedicamentosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.registrodepersonalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.pacienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonal.proveedormedicamentosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonalTableAdapters.registrodepersonalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonalTableAdapters.pacienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonalTableAdapters.proveedormedicamentosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonalTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.dsPersonal,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.dsPersonal,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.dsPersonal,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.dsPersonal)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.dsPersonalTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.ExpedienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.RegistroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.AcompananteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.DiagnosticoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.RecetaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.ExpedienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.RegistroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.AcompananteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.DiagnosticoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.RecetaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.ExpedienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.RegistroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.AcompananteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.DiagnosticoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.RecetaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.ExpedienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.RegistroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.AcompananteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.DiagnosticoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.RecetaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.sdExpediente,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.sdExpediente,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.sdExpediente,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.sdExpediente)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.AcompananteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.categoriasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.DiagnosticoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.encargar_medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.ExpedienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.FormadePagoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.medicamentoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.pacienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.PagarDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.PediatraDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.productosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.proveedormedicamentosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.RecetaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.RegistroDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.registrodepersonalDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.TableDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.usuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.AcompananteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.categoriasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.DiagnosticoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.encargar_medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.ExpedienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.FormadePagoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.medicamentoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.pacienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.PagarRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.PediatraRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.productosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.proveedormedicamentosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.RecetaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.RegistroRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.registrodepersonalRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.TableRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.usuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.AcompananteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.categoriasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.DiagnosticoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.encargar_medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.ExpedienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.FormadePagoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.medicamentoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.pacienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.PagarRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.PediatraRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.productosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.proveedormedicamentosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.RecetaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.RegistroRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.registrodepersonalRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.TableRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSet.usuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.AcompananteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.categoriasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.DiagnosticoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.encargar_medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.ExpedienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.FormadePagoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.medicamentoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.pacienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.PagarTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.PediatraTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.productosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.proveedormedicamentosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.RecetaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.RegistroTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.registrodepersonalTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.usuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Programacion_1.sistemaclinicodbDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Programacion_1.sistemaclinicodbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Programacion_1.sistemaclinicodbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.UpdateAll(Programacion_1.sistemaclinicodbDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Programacion_1.sistemaclinicodbDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+</members>
+</doc>

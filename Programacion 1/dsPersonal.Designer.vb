@@ -1079,11 +1079,11 @@ Partial Public Class dsPersonal
         
         Private columnpropietario As Global.System.Data.DataColumn
         
-        Private columndireccion_ As Global.System.Data.DataColumn
-        
         Private columntelefono As Global.System.Data.DataColumn
         
         Private columnemail As Global.System.Data.DataColumn
+        
+        Private columndireccion As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
@@ -1154,14 +1154,6 @@ Partial Public Class dsPersonal
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property direccion_Column() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndireccion_
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property telefonoColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columntelefono
@@ -1173,6 +1165,14 @@ Partial Public Class dsPersonal
         Public ReadOnly Property emailColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnemail
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property direccionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndireccion
             End Get
         End Property
         
@@ -1213,9 +1213,9 @@ Partial Public Class dsPersonal
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddproveedormedicamentosRow(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion_ As String, ByVal telefono As String, ByVal email As String) As proveedormedicamentosRow
+        Public Overloads Function AddproveedormedicamentosRow(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal telefono As String, ByVal email As String, ByVal direccion As String) As proveedormedicamentosRow
             Dim rowproveedormedicamentosRow As proveedormedicamentosRow = CType(Me.NewRow,proveedormedicamentosRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nrc, laboratorio, propietario, direccion_, telefono, email}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nrc, laboratorio, propietario, telefono, email, direccion}
             rowproveedormedicamentosRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowproveedormedicamentosRow)
             Return rowproveedormedicamentosRow
@@ -1248,9 +1248,9 @@ Partial Public Class dsPersonal
             Me.columnnrc = MyBase.Columns("nrc")
             Me.columnlaboratorio = MyBase.Columns("laboratorio")
             Me.columnpropietario = MyBase.Columns("propietario")
-            Me.columndireccion_ = MyBase.Columns("direccion ")
             Me.columntelefono = MyBase.Columns("telefono")
             Me.columnemail = MyBase.Columns("email")
+            Me.columndireccion = MyBase.Columns("direccion")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1264,12 +1264,12 @@ Partial Public Class dsPersonal
             MyBase.Columns.Add(Me.columnlaboratorio)
             Me.columnpropietario = New Global.System.Data.DataColumn("propietario", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpropietario)
-            Me.columndireccion_ = New Global.System.Data.DataColumn("direccion ", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndireccion_)
             Me.columntelefono = New Global.System.Data.DataColumn("telefono", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columntelefono)
             Me.columnemail = New Global.System.Data.DataColumn("email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnemail)
+            Me.columndireccion = New Global.System.Data.DataColumn("direccion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndireccion)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdproveedormedicamentos}, true))
             Me.columnIdproveedormedicamentos.AutoIncrement = true
             Me.columnIdproveedormedicamentos.AutoIncrementSeed = -1
@@ -1280,9 +1280,9 @@ Partial Public Class dsPersonal
             Me.columnnrc.MaxLength = 15
             Me.columnlaboratorio.MaxLength = 60
             Me.columnpropietario.MaxLength = 55
-            Me.columndireccion_.MaxLength = 60
             Me.columntelefono.MaxLength = 15
             Me.columnemail.MaxLength = 60
+            Me.columndireccion.MaxLength = 60
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1796,22 +1796,6 @@ Partial Public Class dsPersonal
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property direccion_() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableproveedormedicamentos.direccion_Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'direccion ' de la tabla 'proveedormedicamentos' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableproveedormedicamentos.direccion_Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property telefono() As String
             Get
                 Try 
@@ -1837,6 +1821,22 @@ Partial Public Class dsPersonal
             End Get
             Set
                 Me(Me.tableproveedormedicamentos.emailColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property direccion() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableproveedormedicamentos.direccionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'direccion' de la tabla 'proveedormedicamentos' es DBNull."& _ 
+                            "", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableproveedormedicamentos.direccionColumn) = value
             End Set
         End Property
         
@@ -1878,18 +1878,6 @@ Partial Public Class dsPersonal
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function Isdireccion_Null() As Boolean
-            Return Me.IsNull(Me.tableproveedormedicamentos.direccion_Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub Setdireccion_Null()
-            Me(Me.tableproveedormedicamentos.direccion_Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IstelefonoNull() As Boolean
             Return Me.IsNull(Me.tableproveedormedicamentos.telefonoColumn)
         End Function
@@ -1910,6 +1898,18 @@ Partial Public Class dsPersonal
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetemailNull()
             Me(Me.tableproveedormedicamentos.emailColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsdireccionNull() As Boolean
+            Return Me.IsNull(Me.tableproveedormedicamentos.direccionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetdireccionNull()
+            Me(Me.tableproveedormedicamentos.direccionColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3151,9 +3151,9 @@ Namespace dsPersonalTableAdapters
             tableMapping.ColumnMappings.Add("nrc", "nrc")
             tableMapping.ColumnMappings.Add("laboratorio", "laboratorio")
             tableMapping.ColumnMappings.Add("propietario", "propietario")
-            tableMapping.ColumnMappings.Add("direccion ", "direccion ")
             tableMapping.ColumnMappings.Add("telefono", "telefono")
             tableMapping.ColumnMappings.Add("email", "email")
+            tableMapping.ColumnMappings.Add("direccion", "direccion")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -3162,10 +3162,9 @@ Namespace dsPersonalTableAdapters
                 "Original_nrc)) AND ((@IsNull_laboratorio = 1 AND [laboratorio] IS NULL) OR ([lab"& _ 
                 "oratorio] = @Original_laboratorio)) AND ((@IsNull_propietario = 1 AND [propietar"& _ 
                 "io] IS NULL) OR ([propietario] = @Original_propietario)) AND ((@IsNull_direccion"& _ 
-                "_ = 1 AND [direccion ] IS NULL) OR ([direccion ] = @Original_direccion_)) AND (("& _ 
-                "@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono"& _ 
-                ")) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)))"& _ 
-                ""
+                " = 1 AND [direccion] IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsN"& _ 
+                "ull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) A"& _ 
+                "ND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idproveedormedicamentos", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idproveedormedicamentos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_nrc", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nrc", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -3174,8 +3173,8 @@ Namespace dsPersonalTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_laboratorio", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "laboratorio", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_propietario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "propietario", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_propietario", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "propietario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_direccion_", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion ", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion ", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_direccion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_telefono", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telefono", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_email", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -3183,37 +3182,36 @@ Namespace dsPersonalTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [proveedormedicamentos] ([nrc], [laboratorio], [propietario], [direcc"& _ 
-                "ion ], [telefono], [email]) VALUES (@nrc, @laboratorio, @propietario, @direccion"& _ 
-                "_, @telefono, @email);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idproveedormedicamentos, nrc, laboratorio, propie"& _ 
-                "tario, [direccion ], telefono, email FROM proveedormedicamentos WHERE (Idproveed"& _ 
-                "ormedicamentos = SCOPE_IDENTITY())"
+                "ion], [telefono], [email]) VALUES (@nrc, @laboratorio, @propietario, @direccion,"& _ 
+                " @telefono, @email);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idproveedormedicamentos, nrc, laboratorio, propieta"& _ 
+                "rio, direccion, telefono, email FROM proveedormedicamentos WHERE (Idproveedormed"& _ 
+                "icamentos = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nrc", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nrc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@laboratorio", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "laboratorio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@propietario", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "propietario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion ", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@email", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [proveedormedicamentos] SET [nrc] = @nrc, [laboratorio] = @laboratorio, [p"& _ 
-                "ropietario] = @propietario, [direccion ] = @direccion_, [telefono] = @telefono, "& _ 
-                "[email] = @email WHERE (([Idproveedormedicamentos] = @Original_Idproveedormedica"& _ 
-                "mentos) AND ((@IsNull_nrc = 1 AND [nrc] IS NULL) OR ([nrc] = @Original_nrc)) AND"& _ 
-                " ((@IsNull_laboratorio = 1 AND [laboratorio] IS NULL) OR ([laboratorio] = @Origi"& _ 
-                "nal_laboratorio)) AND ((@IsNull_propietario = 1 AND [propietario] IS NULL) OR (["& _ 
-                "propietario] = @Original_propietario)) AND ((@IsNull_direccion_ = 1 AND [direcci"& _ 
-                "on ] IS NULL) OR ([direccion ] = @Original_direccion_)) AND ((@IsNull_telefono ="& _ 
-                " 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_e"& _ 
-                "mail = 1 AND [email] IS NULL) OR ([email] = @Original_email)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idprovee"& _ 
-                "dormedicamentos, nrc, laboratorio, propietario, [direccion ], telefono, email FR"& _ 
-                "OM proveedormedicamentos WHERE (Idproveedormedicamentos = @Idproveedormedicament"& _ 
-                "os)"
+                "ropietario] = @propietario, [direccion] = @direccion, [telefono] = @telefono, [e"& _ 
+                "mail] = @email WHERE (([Idproveedormedicamentos] = @Original_Idproveedormedicame"& _ 
+                "ntos) AND ((@IsNull_nrc = 1 AND [nrc] IS NULL) OR ([nrc] = @Original_nrc)) AND ("& _ 
+                "(@IsNull_laboratorio = 1 AND [laboratorio] IS NULL) OR ([laboratorio] = @Origina"& _ 
+                "l_laboratorio)) AND ((@IsNull_propietario = 1 AND [propietario] IS NULL) OR ([pr"& _ 
+                "opietario] = @Original_propietario)) AND ((@IsNull_direccion = 1 AND [direccion]"& _ 
+                " IS NULL) OR ([direccion] = @Original_direccion)) AND ((@IsNull_telefono = 1 AND"& _ 
+                " [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_email ="& _ 
+                " 1 AND [email] IS NULL) OR ([email] = @Original_email)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idproveedormed"& _ 
+                "icamentos, nrc, laboratorio, propietario, direccion, telefono, email FROM provee"& _ 
+                "dormedicamentos WHERE (Idproveedormedicamentos = @Idproveedormedicamentos)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nrc", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nrc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@laboratorio", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "laboratorio", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@propietario", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "propietario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion ", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@direccion", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@telefono", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@email", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idproveedormedicamentos", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idproveedormedicamentos", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -3223,8 +3221,8 @@ Namespace dsPersonalTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_laboratorio", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "laboratorio", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_propietario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "propietario", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_propietario", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "propietario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_direccion_", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion ", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion_", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion ", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_direccion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_direccion", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "direccion", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_telefono", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_telefono", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "telefono", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_email", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "email", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -3245,8 +3243,8 @@ Namespace dsPersonalTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        Idproveedormedicamentos, nrc, laboratorio, propietario, [direccion "& _ 
-                "], telefono, email"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            proveedormedicamentos"
+            Me._commandCollection(0).CommandText = "SELECT        Idproveedormedicamentos, nrc, laboratorio, propietario, direccion ,"& _ 
+                " telefono, email"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            proveedormedicamentos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -3306,7 +3304,7 @@ Namespace dsPersonalTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Idproveedormedicamentos As Integer, ByVal Original_nrc As String, ByVal Original_laboratorio As String, ByVal Original_propietario As String, ByVal Original_direccion_ As String, ByVal Original_telefono As String, ByVal Original_email As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Idproveedormedicamentos As Integer, ByVal Original_nrc As String, ByVal Original_laboratorio As String, ByVal Original_propietario As String, ByVal Original_direccion As String, ByVal Original_telefono As String, ByVal Original_email As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Idproveedormedicamentos,Integer)
             If (Original_nrc Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
@@ -3329,12 +3327,11 @@ Namespace dsPersonalTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_propietario,String)
             End If
-            If (Original_direccion_ Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            If (Original_direccion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_direccion")
             Else
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_direccion_,String)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_direccion,String)
             End If
             If (Original_telefono Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
@@ -3369,7 +3366,7 @@ Namespace dsPersonalTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion_ As String, ByVal telefono As String, ByVal email As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion As String, ByVal telefono As String, ByVal email As String) As Integer
             If (nrc Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -3385,10 +3382,10 @@ Namespace dsPersonalTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(2).Value = CType(propietario,String)
             End If
-            If (direccion_ Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            If (direccion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("direccion")
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(direccion_,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(direccion,String)
             End If
             If (telefono Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
@@ -3419,7 +3416,7 @@ Namespace dsPersonalTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion_ As String, ByVal telefono As String, ByVal email As String, ByVal Original_Idproveedormedicamentos As Integer, ByVal Original_nrc As String, ByVal Original_laboratorio As String, ByVal Original_propietario As String, ByVal Original_direccion_ As String, ByVal Original_telefono As String, ByVal Original_email As String, ByVal Idproveedormedicamentos As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion As String, ByVal telefono As String, ByVal email As String, ByVal Original_Idproveedormedicamentos As Integer, ByVal Original_nrc As String, ByVal Original_laboratorio As String, ByVal Original_propietario As String, ByVal Original_direccion As String, ByVal Original_telefono As String, ByVal Original_email As String, ByVal Idproveedormedicamentos As Integer) As Integer
             If (nrc Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -3435,10 +3432,10 @@ Namespace dsPersonalTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(2).Value = CType(propietario,String)
             End If
-            If (direccion_ Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            If (direccion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("direccion")
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(direccion_,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(direccion,String)
             End If
             If (telefono Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
@@ -3472,12 +3469,11 @@ Namespace dsPersonalTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_propietario,String)
             End If
-            If (Original_direccion_ Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            If (Original_direccion Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_direccion")
             Else
                 Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_direccion_,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_direccion,String)
             End If
             If (Original_telefono Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
@@ -3513,8 +3509,8 @@ Namespace dsPersonalTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion_ As String, ByVal telefono As String, ByVal email As String, ByVal Original_Idproveedormedicamentos As Integer, ByVal Original_nrc As String, ByVal Original_laboratorio As String, ByVal Original_propietario As String, ByVal Original_direccion_ As String, ByVal Original_telefono As String, ByVal Original_email As String) As Integer
-            Return Me.Update(nrc, laboratorio, propietario, direccion_, telefono, email, Original_Idproveedormedicamentos, Original_nrc, Original_laboratorio, Original_propietario, Original_direccion_, Original_telefono, Original_email, Original_Idproveedormedicamentos)
+        Public Overloads Overridable Function Update(ByVal nrc As String, ByVal laboratorio As String, ByVal propietario As String, ByVal direccion As String, ByVal telefono As String, ByVal email As String, ByVal Original_Idproveedormedicamentos As Integer, ByVal Original_nrc As String, ByVal Original_laboratorio As String, ByVal Original_propietario As String, ByVal Original_direccion As String, ByVal Original_telefono As String, ByVal Original_email As String) As Integer
+            Return Me.Update(nrc, laboratorio, propietario, direccion, telefono, email, Original_Idproveedormedicamentos, Original_nrc, Original_laboratorio, Original_propietario, Original_direccion, Original_telefono, Original_email, Original_Idproveedormedicamentos)
         End Function
     End Class
     
