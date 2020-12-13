@@ -187,6 +187,12 @@
     <Compile Include="fmrListaPersonal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormExpediente.Designer.vb">
+      <DependentUpon>FormExpediente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormExpediente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmHistorial.medicamentos.Designer.vb">
       <DependentUpon>FrmHistorial.medicamentos.vb</DependentUpon>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmrEliminardatosdelpaciente.resx">
       <DependentUpon>FmrEliminardatosdelpaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExpediente.resx">
+      <DependentUpon>FormExpediente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmHistorial.medicamentos.resx">
       <DependentUpon>FrmHistorial.medicamentos.vb</DependentUpon>

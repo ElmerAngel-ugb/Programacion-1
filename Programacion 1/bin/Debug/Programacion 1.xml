@@ -588,6 +588,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:Programacion_1.sdExpediente.PediatraDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:Programacion_1.sdExpediente.medicamentoDataTable">
 <summary>
 Represents the strongly named DataTable class.
@@ -614,6 +619,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:Programacion_1.sdExpediente.RecetaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpediente.PediatraRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -648,6 +658,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:Programacion_1.sdExpediente.PediatraRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:Programacion_1.sdExpediente.medicamentoRowChangeEvent">
 <summary>
 Row event argument class
@@ -674,6 +689,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:Programacion_1.sdExpedienteTableAdapters.RecetaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Programacion_1.sdExpedienteTableAdapters.PediatraTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
