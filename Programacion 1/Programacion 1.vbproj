@@ -241,6 +241,12 @@
     <Compile Include="FrmFormasdePago.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmListadodeAcompañante.Designer.vb">
+      <DependentUpon>frmListadodeAcompañante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadodeAcompañante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmListaMedicamentos.Designer.vb">
       <DependentUpon>FrmListaMedicamentos.vb</DependentUpon>
     </Compile>
@@ -344,6 +350,9 @@
     <EmbeddedResource Include="FrmFormasdePago.resx">
       <DependentUpon>FrmFormasdePago.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListadodeAcompañante.resx">
+      <DependentUpon>frmListadodeAcompañante.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListaMedicamentos.resx">
       <DependentUpon>FrmListaMedicamentos.vb</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +361,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ifmHistorialdeMedi.Solicitado.rdlc" />
     <EmbeddedResource Include="ifmListademedicamentoscategoria.rdlc" />
+    <EmbeddedResource Include="ifmListadodeAcompañantes.rdlc" />
     <EmbeddedResource Include="ifmListaMedicamentos.rdlc" />
     <EmbeddedResource Include="ifmPaciente.rdlc" />
     <EmbeddedResource Include="ifmPersonal.rdlc" />
