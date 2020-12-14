@@ -44,6 +44,7 @@ Partial Class SistemaClinico
         Me.MedicamentoPorCategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagosPendientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,146 +54,152 @@ Partial Class SistemaClinico
         Me.mnuPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OperacionesToolStripMenuItem, Me.MantenimientoToolStripMenuItem, Me.BarraDeEliminacionDeDatosToolStripMenuItem, Me.InformesToolStripMenuItem})
         Me.mnuPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.mnuPrincipal.Name = "mnuPrincipal"
-        Me.mnuPrincipal.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.mnuPrincipal.Size = New System.Drawing.Size(600, 24)
+        Me.mnuPrincipal.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.mnuPrincipal.Size = New System.Drawing.Size(800, 28)
         Me.mnuPrincipal.TabIndex = 1
         '
         'OperacionesToolStripMenuItem
         '
-        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem, Me.PagarToolStripMenuItem, Me.CategoriasDeMedicinaToolStripMenuItem})
+        Me.OperacionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EncargarMedicamentoToolStripMenuItem, Me.PagarToolStripMenuItem, Me.CategoriasDeMedicinaToolStripMenuItem, Me.PagosPendientesToolStripMenuItem})
         Me.OperacionesToolStripMenuItem.Name = "OperacionesToolStripMenuItem"
-        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(85, 20)
+        Me.OperacionesToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.OperacionesToolStripMenuItem.Text = "Operaciones"
         '
         'EncargarMedicamentoToolStripMenuItem
         '
         Me.EncargarMedicamentoToolStripMenuItem.Name = "EncargarMedicamentoToolStripMenuItem"
-        Me.EncargarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.EncargarMedicamentoToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
         Me.EncargarMedicamentoToolStripMenuItem.Text = "Encargar Medicamento"
         '
         'PagarToolStripMenuItem
         '
         Me.PagarToolStripMenuItem.Name = "PagarToolStripMenuItem"
-        Me.PagarToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.PagarToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
         Me.PagarToolStripMenuItem.Text = "Pagar"
         '
         'CategoriasDeMedicinaToolStripMenuItem
         '
         Me.CategoriasDeMedicinaToolStripMenuItem.Name = "CategoriasDeMedicinaToolStripMenuItem"
-        Me.CategoriasDeMedicinaToolStripMenuItem.Size = New System.Drawing.Size(198, 22)
+        Me.CategoriasDeMedicinaToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
         Me.CategoriasDeMedicinaToolStripMenuItem.Text = "Categorias de medicina"
         '
         'MantenimientoToolStripMenuItem
         '
         Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
-        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(101, 20)
+        Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
         '
         'PacienteToolStripMenuItem
         '
         Me.PacienteToolStripMenuItem.Name = "PacienteToolStripMenuItem"
-        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.PacienteToolStripMenuItem.Text = "Paciente"
         '
         'RegistrarPacienteToolStripMenuItem
         '
         Me.RegistrarPacienteToolStripMenuItem.Name = "RegistrarPacienteToolStripMenuItem"
-        Me.RegistrarPacienteToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.RegistrarPacienteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.RegistrarPacienteToolStripMenuItem.Text = "Buscar Paciente"
         '
         'RegistroDePersonalToolStripMenuItem
         '
         Me.RegistroDePersonalToolStripMenuItem.Name = "RegistroDePersonalToolStripMenuItem"
-        Me.RegistroDePersonalToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.RegistroDePersonalToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.RegistroDePersonalToolStripMenuItem.Text = "Registro de personal"
         '
         'MedicamentoToolStripMenuItem
         '
         Me.MedicamentoToolStripMenuItem.Name = "MedicamentoToolStripMenuItem"
-        Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
         Me.MedicamentoToolStripMenuItem.Text = "Medicamento"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(229, 26)
         Me.ToolStripMenuItem1.Text = "Formas de Pago"
         '
         'BarraDeEliminacionDeDatosToolStripMenuItem
         '
         Me.BarraDeEliminacionDeDatosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarDatosDelPacienteToolStripMenuItem})
         Me.BarraDeEliminacionDeDatosToolStripMenuItem.Name = "BarraDeEliminacionDeDatosToolStripMenuItem"
-        Me.BarraDeEliminacionDeDatosToolStripMenuItem.Size = New System.Drawing.Size(176, 20)
+        Me.BarraDeEliminacionDeDatosToolStripMenuItem.Size = New System.Drawing.Size(224, 24)
         Me.BarraDeEliminacionDeDatosToolStripMenuItem.Text = "Barra de eliminacion de Datos"
         '
         'EliminarDatosDelPacienteToolStripMenuItem
         '
         Me.EliminarDatosDelPacienteToolStripMenuItem.Name = "EliminarDatosDelPacienteToolStripMenuItem"
-        Me.EliminarDatosDelPacienteToolStripMenuItem.Size = New System.Drawing.Size(217, 22)
+        Me.EliminarDatosDelPacienteToolStripMenuItem.Size = New System.Drawing.Size(273, 26)
         Me.EliminarDatosDelPacienteToolStripMenuItem.Text = "Eliminar Datos del Paciente"
         '
         'InformesToolStripMenuItem
         '
         Me.InformesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListadoDePacientesToolStripMenuItem, Me.ListadoDePersonalToolStripMenuItem, Me.ListadoDeMedicamentosToolStripMenuItem, Me.ListadoDeAcompañantesToolStripMenuItem, Me.MedicamentoPorCategoriaToolStripMenuItem, Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem, Me.ListadoDeProveedoresToolStripMenuItem})
         Me.InformesToolStripMenuItem.Name = "InformesToolStripMenuItem"
-        Me.InformesToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.InformesToolStripMenuItem.Size = New System.Drawing.Size(81, 24)
         Me.InformesToolStripMenuItem.Text = "Informes"
         '
         'ListadoDePacientesToolStripMenuItem
         '
         Me.ListadoDePacientesToolStripMenuItem.Name = "ListadoDePacientesToolStripMenuItem"
-        Me.ListadoDePacientesToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.ListadoDePacientesToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.ListadoDePacientesToolStripMenuItem.Text = "Listado de pacientes"
         '
         'ListadoDePersonalToolStripMenuItem
         '
         Me.ListadoDePersonalToolStripMenuItem.Name = "ListadoDePersonalToolStripMenuItem"
-        Me.ListadoDePersonalToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.ListadoDePersonalToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.ListadoDePersonalToolStripMenuItem.Text = "Listado de personal "
         '
         'ListadoDeMedicamentosToolStripMenuItem
         '
         Me.ListadoDeMedicamentosToolStripMenuItem.Name = "ListadoDeMedicamentosToolStripMenuItem"
-        Me.ListadoDeMedicamentosToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.ListadoDeMedicamentosToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.ListadoDeMedicamentosToolStripMenuItem.Text = "Listado de medicamentos "
         '
         'ListadoDeAcompañantesToolStripMenuItem
         '
         Me.ListadoDeAcompañantesToolStripMenuItem.Name = "ListadoDeAcompañantesToolStripMenuItem"
-        Me.ListadoDeAcompañantesToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.ListadoDeAcompañantesToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.ListadoDeAcompañantesToolStripMenuItem.Text = "Listado de acompañantes"
         '
         'MedicamentoPorCategoriaToolStripMenuItem
         '
         Me.MedicamentoPorCategoriaToolStripMenuItem.Name = "MedicamentoPorCategoriaToolStripMenuItem"
-        Me.MedicamentoPorCategoriaToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.MedicamentoPorCategoriaToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.MedicamentoPorCategoriaToolStripMenuItem.Text = "Lis.Medicamento por categoria"
         '
         'HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem
         '
         Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem.Name = "HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem"
-        Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem.Text = "Historial de Medicamento solicitado por codigo"
         '
         'ListadoDeProveedoresToolStripMenuItem
         '
         Me.ListadoDeProveedoresToolStripMenuItem.Name = "ListadoDeProveedoresToolStripMenuItem"
-        Me.ListadoDeProveedoresToolStripMenuItem.Size = New System.Drawing.Size(326, 22)
+        Me.ListadoDeProveedoresToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.ListadoDeProveedoresToolStripMenuItem.Text = "Listado de proveedores "
+        '
+        'PagosPendientesToolStripMenuItem
+        '
+        Me.PagosPendientesToolStripMenuItem.Name = "PagosPendientesToolStripMenuItem"
+        Me.PagosPendientesToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
+        Me.PagosPendientesToolStripMenuItem.Text = "Pagos Pendientes"
         '
         'SistemaClinico
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Programacion_1.My.Resources.Recursos.Hospital1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.mnuPrincipal)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "SistemaClinico"
         Me.Text = "SistemaClinico"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -223,4 +230,5 @@ Partial Class SistemaClinico
     Friend WithEvents MedicamentoPorCategoriaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PagosPendientesToolStripMenuItem As ToolStripMenuItem
 End Class

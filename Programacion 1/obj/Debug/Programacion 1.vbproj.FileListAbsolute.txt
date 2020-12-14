@@ -303,3 +303,5 @@ C:\Users\user\Source\Repos\Programacion-16\Programacion 1\obj\Debug\Programacion
 C:\Users\user\Source\Repos\Programacion-16\Programacion 1\obj\Debug\Programacion 1.pdb
 C:\Users\user\Source\Repos\Programacion-16\Programacion 1\obj\Debug\Programacion 1.vbprojAssemblyReference.cache
 C:\Users\user\Source\Repos\Programacion-16\Programacion 1\obj\Debug\Programacion_1.FrmPagosPendientes.resources
+C:\Users\user\Source\Repos\Programacion-16\Programacion 1\obj\Debug\Programacion_1.FormExpediente.resources
+C:\Users\user\Source\Repos\Programacion-16\Programacion 1\obj\Debug\Programacion_1.frmListadodeAcompañante.resources
