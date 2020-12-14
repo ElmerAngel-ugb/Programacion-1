@@ -197,7 +197,7 @@ Partial Class FrmPaciente
         '
         'grbDatos
         '
-        Me.grbDatos.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.grbDatos.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.grbDatos.Controls.Add(Me.Label7)
         Me.grbDatos.Controls.Add(Me.txtDireccionPaciente)
         Me.grbDatos.Controls.Add(Me.Label6)
@@ -467,7 +467,7 @@ Partial Class FrmPaciente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Desktop
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(616, 685)
         Me.Controls.Add(Me.grbEdicion)
         Me.Controls.Add(Me.grbNavegacion)

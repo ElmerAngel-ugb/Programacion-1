@@ -22,661 +22,490 @@ Partial Class FormRegistro_Acompañante
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormRegistro_Acompañante))
-        Me.OfdSeleccionarImagen = New System.Windows.Forms.OpenFileDialog()
-        Me.btnPrimeroRegistro = New System.Windows.Forms.Button()
-        Me.btnAnteriorRegistro = New System.Windows.Forms.Button()
-        Me.btnSiguienteRegistro = New System.Windows.Forms.Button()
-        Me.btnUltimoRegistro = New System.Windows.Forms.Button()
-        Me.lblRegistrosRegistro = New System.Windows.Forms.Label()
-        Me.grbNavegacion = New System.Windows.Forms.GroupBox()
-        Me.btnAgregarRegistro = New System.Windows.Forms.Button()
-        Me.btnModificarRegistro = New System.Windows.Forms.Button()
-        Me.btnEliminarRegistro = New System.Windows.Forms.Button()
-        Me.btnBuscarRegistro = New System.Windows.Forms.Button()
-        Me.grbEdicion = New System.Windows.Forms.GroupBox()
-        Me.lblCodigoRegistro = New System.Windows.Forms.Label()
-        Me.txtCodigoRegistro = New System.Windows.Forms.TextBox()
-        Me.txtNombreRegistro = New System.Windows.Forms.TextBox()
-        Me.lblNombreRegsitro = New System.Windows.Forms.Label()
-        Me.txtEdadPaciente = New System.Windows.Forms.TextBox()
-        Me.lblTelefonoCliente = New System.Windows.Forms.Label()
-        Me.txtEmailPaciente = New System.Windows.Forms.TextBox()
-        Me.lblEmailCliente = New System.Windows.Forms.Label()
-        Me.txtNacimientoRegistro = New System.Windows.Forms.TextBox()
-        Me.lblFecha_NacimientoRegsitro = New System.Windows.Forms.Label()
-        Me.txtSexoRegistro = New System.Windows.Forms.TextBox()
-        Me.lblSexoRegsitro = New System.Windows.Forms.Label()
-        Me.txtSexoAcompanante = New System.Windows.Forms.TextBox()
-        Me.lblSexoAcompanante = New System.Windows.Forms.Label()
-        Me.txtTelefonoAcompnante = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtApellidoRegistro = New System.Windows.Forms.TextBox()
-        Me.lblApellidoRegsitro = New System.Windows.Forms.Label()
-        Me.txtDireccionPaciente = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.PicmostrarImagen = New System.Windows.Forms.PictureBox()
-        Me.btnSeleccionarImagen = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Dim CodigoLabel1 As System.Windows.Forms.Label
+        Dim NombreLabel1 As System.Windows.Forms.Label
+        Dim ApellidoLabel1 As System.Windows.Forms.Label
+        Dim Label1 As System.Windows.Forms.Label
+        Dim SexoLabel1 As System.Windows.Forms.Label
+        Dim Label2 As System.Windows.Forms.Label
+        Dim Label3 As System.Windows.Forms.Label
+        Dim Label4 As System.Windows.Forms.Label
+        Me.SdExpediente = New Programacion_1.sdExpediente()
+        Me.AcompananteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AcompananteTableAdapter = New Programacion_1.sdExpedienteTableAdapters.AcompananteTableAdapter()
+        Me.TableAdapterManager = New Programacion_1.sdExpedienteTableAdapters.TableAdapterManager()
+        Me.AcompananteBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMovePreviousItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
+        Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorMoveNextItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.AcompananteBindingNavigatorSaveItem = New System.Windows.Forms.ToolStripButton()
+        Me.CodigoTextBox1 = New System.Windows.Forms.TextBox()
+        Me.NombreTextBox1 = New System.Windows.Forms.TextBox()
+        Me.ApellidoTextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtTipo_SangreRegistro = New System.Windows.Forms.TextBox()
-        Me.lblTipo_SangreRegsitro = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.lblCodigoAcompanante = New System.Windows.Forms.Label()
-        Me.txtCodigoAcompanante = New System.Windows.Forms.TextBox()
-        Me.grbDatosRegistro = New System.Windows.Forms.GroupBox()
-        Me.grbNavegacion.SuspendLayout()
-        Me.grbEdicion.SuspendLayout()
-        CType(Me.PicmostrarImagen, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grbDatosRegistro.SuspendLayout()
+        Me.SexoTextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RegistroTableAdapter = New Programacion_1.sdExpedienteTableAdapters.RegistroTableAdapter()
+        Me.RegistroDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        CodigoLabel1 = New System.Windows.Forms.Label()
+        NombreLabel1 = New System.Windows.Forms.Label()
+        ApellidoLabel1 = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
+        SexoLabel1 = New System.Windows.Forms.Label()
+        Label2 = New System.Windows.Forms.Label()
+        Label3 = New System.Windows.Forms.Label()
+        Label4 = New System.Windows.Forms.Label()
+        CType(Me.SdExpediente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AcompananteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AcompananteBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.AcompananteBindingNavigator.SuspendLayout()
+        CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RegistroDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'OfdSeleccionarImagen
-        '
-        Me.OfdSeleccionarImagen.Filter = "Archivo de mapa de bits|*.BMP|JPEG|*.JPG"
-        '
-        'btnPrimeroRegistro
-        '
-        Me.btnPrimeroRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrimeroRegistro.Location = New System.Drawing.Point(2, 19)
-        Me.btnPrimeroRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnPrimeroRegistro.Name = "btnPrimeroRegistro"
-        Me.btnPrimeroRegistro.Size = New System.Drawing.Size(41, 39)
-        Me.btnPrimeroRegistro.TabIndex = 0
-        Me.btnPrimeroRegistro.Text = "|<"
-        Me.btnPrimeroRegistro.UseVisualStyleBackColor = True
-        '
-        'btnAnteriorRegistro
-        '
-        Me.btnAnteriorRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnteriorRegistro.Location = New System.Drawing.Point(42, 19)
-        Me.btnAnteriorRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAnteriorRegistro.Name = "btnAnteriorRegistro"
-        Me.btnAnteriorRegistro.Size = New System.Drawing.Size(41, 39)
-        Me.btnAnteriorRegistro.TabIndex = 1
-        Me.btnAnteriorRegistro.Text = "<"
-        Me.btnAnteriorRegistro.UseVisualStyleBackColor = True
-        '
-        'btnSiguienteRegistro
-        '
-        Me.btnSiguienteRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguienteRegistro.Location = New System.Drawing.Point(187, 19)
-        Me.btnSiguienteRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnSiguienteRegistro.Name = "btnSiguienteRegistro"
-        Me.btnSiguienteRegistro.Size = New System.Drawing.Size(41, 39)
-        Me.btnSiguienteRegistro.TabIndex = 2
-        Me.btnSiguienteRegistro.Text = ">"
-        Me.btnSiguienteRegistro.UseVisualStyleBackColor = True
-        '
-        'btnUltimoRegistro
-        '
-        Me.btnUltimoRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimoRegistro.Location = New System.Drawing.Point(226, 19)
-        Me.btnUltimoRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnUltimoRegistro.Name = "btnUltimoRegistro"
-        Me.btnUltimoRegistro.Size = New System.Drawing.Size(44, 39)
-        Me.btnUltimoRegistro.TabIndex = 3
-        Me.btnUltimoRegistro.Text = ">|"
-        Me.btnUltimoRegistro.UseVisualStyleBackColor = True
-        '
-        'lblRegistrosRegistro
-        '
-        Me.lblRegistrosRegistro.AutoSize = True
-        Me.lblRegistrosRegistro.Location = New System.Drawing.Point(86, 34)
-        Me.lblRegistrosRegistro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblRegistrosRegistro.Name = "lblRegistrosRegistro"
-        Me.lblRegistrosRegistro.Size = New System.Drawing.Size(36, 13)
-        Me.lblRegistrosRegistro.TabIndex = 4
-        Me.lblRegistrosRegistro.Text = "x de n"
-        '
-        'grbNavegacion
-        '
-        Me.grbNavegacion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.grbNavegacion.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.grbNavegacion.Controls.Add(Me.lblRegistrosRegistro)
-        Me.grbNavegacion.Controls.Add(Me.btnUltimoRegistro)
-        Me.grbNavegacion.Controls.Add(Me.btnSiguienteRegistro)
-        Me.grbNavegacion.Controls.Add(Me.btnAnteriorRegistro)
-        Me.grbNavegacion.Controls.Add(Me.btnPrimeroRegistro)
-        Me.grbNavegacion.Location = New System.Drawing.Point(10, 477)
-        Me.grbNavegacion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Name = "grbNavegacion"
-        Me.grbNavegacion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbNavegacion.Size = New System.Drawing.Size(275, 86)
-        Me.grbNavegacion.TabIndex = 13
-        Me.grbNavegacion.TabStop = False
-        Me.grbNavegacion.Text = "Navegacion"
-        '
-        'btnAgregarRegistro
-        '
-        Me.btnAgregarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarRegistro.Location = New System.Drawing.Point(2, 19)
-        Me.btnAgregarRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnAgregarRegistro.Name = "btnAgregarRegistro"
-        Me.btnAgregarRegistro.Size = New System.Drawing.Size(68, 39)
-        Me.btnAgregarRegistro.TabIndex = 5
-        Me.btnAgregarRegistro.Text = "Nuevo"
-        Me.btnAgregarRegistro.UseVisualStyleBackColor = True
-        '
-        'btnModificarRegistro
-        '
-        Me.btnModificarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarRegistro.Location = New System.Drawing.Point(69, 19)
-        Me.btnModificarRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnModificarRegistro.Name = "btnModificarRegistro"
-        Me.btnModificarRegistro.Size = New System.Drawing.Size(90, 39)
-        Me.btnModificarRegistro.TabIndex = 6
-        Me.btnModificarRegistro.Text = "Modificar"
-        Me.btnModificarRegistro.UseVisualStyleBackColor = True
-        '
-        'btnEliminarRegistro
-        '
-        Me.btnEliminarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarRegistro.Location = New System.Drawing.Point(158, 19)
-        Me.btnEliminarRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnEliminarRegistro.Name = "btnEliminarRegistro"
-        Me.btnEliminarRegistro.Size = New System.Drawing.Size(80, 39)
-        Me.btnEliminarRegistro.TabIndex = 7
-        Me.btnEliminarRegistro.Text = "Eliminar"
-        Me.btnEliminarRegistro.UseVisualStyleBackColor = True
-        '
-        'btnBuscarRegistro
-        '
-        Me.btnBuscarRegistro.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscarRegistro.Location = New System.Drawing.Point(237, 19)
-        Me.btnBuscarRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.btnBuscarRegistro.Name = "btnBuscarRegistro"
-        Me.btnBuscarRegistro.Size = New System.Drawing.Size(71, 39)
-        Me.btnBuscarRegistro.TabIndex = 8
-        Me.btnBuscarRegistro.Text = "Buscar"
-        Me.btnBuscarRegistro.UseVisualStyleBackColor = True
-        '
-        'grbEdicion
-        '
-        Me.grbEdicion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.grbEdicion.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.grbEdicion.Controls.Add(Me.btnBuscarRegistro)
-        Me.grbEdicion.Controls.Add(Me.btnEliminarRegistro)
-        Me.grbEdicion.Controls.Add(Me.btnModificarRegistro)
-        Me.grbEdicion.Controls.Add(Me.btnAgregarRegistro)
-        Me.grbEdicion.Location = New System.Drawing.Point(711, 477)
-        Me.grbEdicion.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Name = "grbEdicion"
-        Me.grbEdicion.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbEdicion.Size = New System.Drawing.Size(310, 86)
-        Me.grbEdicion.TabIndex = 14
-        Me.grbEdicion.TabStop = False
-        Me.grbEdicion.Text = "Edicion"
-        '
-        'lblCodigoRegistro
-        '
-        Me.lblCodigoRegistro.AutoSize = True
-        Me.lblCodigoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigoRegistro.Location = New System.Drawing.Point(187, 90)
-        Me.lblCodigoRegistro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblCodigoRegistro.Name = "lblCodigoRegistro"
-        Me.lblCodigoRegistro.Size = New System.Drawing.Size(64, 16)
-        Me.lblCodigoRegistro.TabIndex = 0
-        Me.lblCodigoRegistro.Text = "CODIGO:"
-        '
-        'txtCodigoRegistro
-        '
-        Me.txtCodigoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigoRegistro.Location = New System.Drawing.Point(253, 87)
-        Me.txtCodigoRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtCodigoRegistro.Name = "txtCodigoRegistro"
-        Me.txtCodigoRegistro.Size = New System.Drawing.Size(105, 22)
-        Me.txtCodigoRegistro.TabIndex = 1
-        '
-        'txtNombreRegistro
-        '
-        Me.txtNombreRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombreRegistro.Location = New System.Drawing.Point(257, 139)
-        Me.txtNombreRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtNombreRegistro.Name = "txtNombreRegistro"
-        Me.txtNombreRegistro.Size = New System.Drawing.Size(273, 22)
-        Me.txtNombreRegistro.TabIndex = 3
-        '
-        'lblNombreRegsitro
-        '
-        Me.lblNombreRegsitro.AutoSize = True
-        Me.lblNombreRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreRegsitro.Location = New System.Drawing.Point(187, 142)
-        Me.lblNombreRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblNombreRegsitro.Name = "lblNombreRegsitro"
-        Me.lblNombreRegsitro.Size = New System.Drawing.Size(68, 16)
-        Me.lblNombreRegsitro.TabIndex = 4
-        Me.lblNombreRegsitro.Text = "NOMBRE:"
-        '
-        'txtEdadPaciente
-        '
-        Me.txtEdadPaciente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtEdadPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEdadPaciente.Location = New System.Drawing.Point(625, 192)
-        Me.txtEdadPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtEdadPaciente.Name = "txtEdadPaciente"
-        Me.txtEdadPaciente.Size = New System.Drawing.Size(159, 22)
-        Me.txtEdadPaciente.TabIndex = 7
-        '
-        'lblTelefonoCliente
-        '
-        Me.lblTelefonoCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblTelefonoCliente.AutoSize = True
-        Me.lblTelefonoCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTelefonoCliente.Location = New System.Drawing.Point(569, 195)
-        Me.lblTelefonoCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblTelefonoCliente.Name = "lblTelefonoCliente"
-        Me.lblTelefonoCliente.Size = New System.Drawing.Size(44, 16)
-        Me.lblTelefonoCliente.TabIndex = 8
-        Me.lblTelefonoCliente.Text = "Edad:"
-        '
-        'txtEmailPaciente
-        '
-        Me.txtEmailPaciente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtEmailPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmailPaciente.Location = New System.Drawing.Point(615, 346)
-        Me.txtEmailPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtEmailPaciente.Name = "txtEmailPaciente"
-        Me.txtEmailPaciente.Size = New System.Drawing.Size(280, 22)
-        Me.txtEmailPaciente.TabIndex = 9
-        '
-        'lblEmailCliente
-        '
-        Me.lblEmailCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblEmailCliente.AutoSize = True
-        Me.lblEmailCliente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmailCliente.Location = New System.Drawing.Point(561, 346)
-        Me.lblEmailCliente.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblEmailCliente.Name = "lblEmailCliente"
-        Me.lblEmailCliente.Size = New System.Drawing.Size(52, 16)
-        Me.lblEmailCliente.TabIndex = 10
-        Me.lblEmailCliente.Text = "EMAIL:"
-        '
-        'txtNacimientoRegistro
-        '
-        Me.txtNacimientoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNacimientoRegistro.Location = New System.Drawing.Point(200, 343)
-        Me.txtNacimientoRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtNacimientoRegistro.Name = "txtNacimientoRegistro"
-        Me.txtNacimientoRegistro.Size = New System.Drawing.Size(243, 22)
-        Me.txtNacimientoRegistro.TabIndex = 11
-        '
-        'lblFecha_NacimientoRegsitro
-        '
-        Me.lblFecha_NacimientoRegsitro.AutoSize = True
-        Me.lblFecha_NacimientoRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFecha_NacimientoRegsitro.Location = New System.Drawing.Point(51, 343)
-        Me.lblFecha_NacimientoRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblFecha_NacimientoRegsitro.Name = "lblFecha_NacimientoRegsitro"
-        Me.lblFecha_NacimientoRegsitro.Size = New System.Drawing.Size(147, 16)
-        Me.lblFecha_NacimientoRegsitro.TabIndex = 12
-        Me.lblFecha_NacimientoRegsitro.Text = "Fecha de Nacimiento:"
-        '
-        'txtSexoRegistro
-        '
-        Me.txtSexoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSexoRegistro.Location = New System.Drawing.Point(240, 251)
-        Me.txtSexoRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtSexoRegistro.Name = "txtSexoRegistro"
-        Me.txtSexoRegistro.Size = New System.Drawing.Size(203, 22)
-        Me.txtSexoRegistro.TabIndex = 13
-        '
-        'lblSexoRegsitro
-        '
-        Me.lblSexoRegsitro.AutoSize = True
-        Me.lblSexoRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSexoRegsitro.Location = New System.Drawing.Point(193, 254)
-        Me.lblSexoRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblSexoRegsitro.Name = "lblSexoRegsitro"
-        Me.lblSexoRegsitro.Size = New System.Drawing.Size(45, 16)
-        Me.lblSexoRegsitro.TabIndex = 14
-        Me.lblSexoRegsitro.Text = "Sexo:"
-        '
-        'txtSexoAcompanante
-        '
-        Me.txtSexoAcompanante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSexoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSexoAcompanante.Location = New System.Drawing.Point(615, 245)
-        Me.txtSexoAcompanante.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtSexoAcompanante.Name = "txtSexoAcompanante"
-        Me.txtSexoAcompanante.Size = New System.Drawing.Size(156, 22)
-        Me.txtSexoAcompanante.TabIndex = 15
-        '
-        'lblSexoAcompanante
-        '
-        Me.lblSexoAcompanante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblSexoAcompanante.AutoSize = True
-        Me.lblSexoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSexoAcompanante.Location = New System.Drawing.Point(555, 245)
-        Me.lblSexoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblSexoAcompanante.Name = "lblSexoAcompanante"
-        Me.lblSexoAcompanante.Size = New System.Drawing.Size(45, 16)
-        Me.lblSexoAcompanante.TabIndex = 16
-        Me.lblSexoAcompanante.Text = "Sexo:"
-        '
-        'txtTelefonoAcompnante
-        '
-        Me.txtTelefonoAcompnante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtTelefonoAcompnante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelefonoAcompnante.Location = New System.Drawing.Point(615, 295)
-        Me.txtTelefonoAcompnante.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtTelefonoAcompnante.Name = "txtTelefonoAcompnante"
-        Me.txtTelefonoAcompnante.Size = New System.Drawing.Size(149, 22)
-        Me.txtTelefonoAcompnante.TabIndex = 17
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(546, 295)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 16)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Telefono:"
-        '
-        'txtApellidoRegistro
-        '
-        Me.txtApellidoRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidoRegistro.Location = New System.Drawing.Point(251, 192)
-        Me.txtApellidoRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtApellidoRegistro.Name = "txtApellidoRegistro"
-        Me.txtApellidoRegistro.Size = New System.Drawing.Size(273, 22)
-        Me.txtApellidoRegistro.TabIndex = 21
-        '
-        'lblApellidoRegsitro
-        '
-        Me.lblApellidoRegsitro.AutoSize = True
-        Me.lblApellidoRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApellidoRegsitro.Location = New System.Drawing.Point(184, 192)
-        Me.lblApellidoRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblApellidoRegsitro.Name = "lblApellidoRegsitro"
-        Me.lblApellidoRegsitro.Size = New System.Drawing.Size(65, 16)
-        Me.lblApellidoRegsitro.TabIndex = 22
-        Me.lblApellidoRegsitro.Text = "Apellido:"
-        '
-        'txtDireccionPaciente
-        '
-        Me.txtDireccionPaciente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDireccionPaciente.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccionPaciente.Location = New System.Drawing.Point(615, 394)
-        Me.txtDireccionPaciente.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtDireccionPaciente.Multiline = True
-        Me.txtDireccionPaciente.Name = "txtDireccionPaciente"
-        Me.txtDireccionPaciente.Size = New System.Drawing.Size(380, 55)
-        Me.txtDireccionPaciente.TabIndex = 23
-        '
-        'Label7
-        '
-        Me.Label7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(541, 397)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(72, 16)
-        Me.Label7.TabIndex = 24
-        Me.Label7.Text = "Direccion:"
-        '
-        'PicmostrarImagen
-        '
-        Me.PicmostrarImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PicmostrarImagen.Location = New System.Drawing.Point(32, 66)
-        Me.PicmostrarImagen.Name = "PicmostrarImagen"
-        Me.PicmostrarImagen.Size = New System.Drawing.Size(147, 187)
-        Me.PicmostrarImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PicmostrarImagen.TabIndex = 25
-        Me.PicmostrarImagen.TabStop = False
-        '
-        'btnSeleccionarImagen
-        '
-        Me.btnSeleccionarImagen.Location = New System.Drawing.Point(42, 259)
-        Me.btnSeleccionarImagen.Name = "btnSeleccionarImagen"
-        Me.btnSeleccionarImagen.Size = New System.Drawing.Size(125, 23)
-        Me.btnSeleccionarImagen.TabIndex = 26
-        Me.btnSeleccionarImagen.Text = "Seleccionar Imagen"
-        Me.btnSeleccionarImagen.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(621, 101)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(1)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(264, 22)
-        Me.TextBox2.TabIndex = 29
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(551, 104)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 16)
-        Me.Label9.TabIndex = 30
-        Me.Label9.Text = "NOMBRE:"
+        'SdExpediente
+        '
+        Me.SdExpediente.DataSetName = "sdExpediente"
+        Me.SdExpediente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AcompananteBindingSource
+        '
+        Me.AcompananteBindingSource.DataMember = "Acompanante"
+        Me.AcompananteBindingSource.DataSource = Me.SdExpediente
+        '
+        'AcompananteTableAdapter
+        '
+        Me.AcompananteTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AcompananteTableAdapter = Me.AcompananteTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.DiagnosticoTableAdapter = Nothing
+        Me.TableAdapterManager.ExpedienteTableAdapter = Nothing
+        Me.TableAdapterManager.medicamentoTableAdapter = Nothing
+        Me.TableAdapterManager.PediatraTableAdapter = Nothing
+        Me.TableAdapterManager.RecetaTableAdapter = Nothing
+        Me.TableAdapterManager.RegistroTableAdapter = Me.RegistroTableAdapter
+        Me.TableAdapterManager.UpdateOrder = Programacion_1.sdExpedienteTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'AcompananteBindingNavigator
+        '
+        Me.AcompananteBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
+        Me.AcompananteBindingNavigator.BindingSource = Me.AcompananteBindingSource
+        Me.AcompananteBindingNavigator.CountItem = Me.BindingNavigatorCountItem
+        Me.AcompananteBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
+        Me.AcompananteBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.AcompananteBindingNavigatorSaveItem})
+        Me.AcompananteBindingNavigator.Location = New System.Drawing.Point(0, 0)
+        Me.AcompananteBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
+        Me.AcompananteBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
+        Me.AcompananteBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
+        Me.AcompananteBindingNavigator.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
+        Me.AcompananteBindingNavigator.Name = "AcompananteBindingNavigator"
+        Me.AcompananteBindingNavigator.PositionItem = Me.BindingNavigatorPositionItem
+        Me.AcompananteBindingNavigator.Size = New System.Drawing.Size(685, 25)
+        Me.AcompananteBindingNavigator.TabIndex = 0
+        Me.AcompananteBindingNavigator.Text = "BindingNavigator1"
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        Me.BindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMoveFirstItem.Text = "Mover primero"
+        '
+        'BindingNavigatorMovePreviousItem
+        '
+        Me.BindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMovePreviousItem.Image = CType(resources.GetObject("BindingNavigatorMovePreviousItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMovePreviousItem.Name = "BindingNavigatorMovePreviousItem"
+        Me.BindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMovePreviousItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorMovePreviousItem.Text = "Mover anterior"
+        '
+        'BindingNavigatorSeparator
+        '
+        Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
+        '
+        'BindingNavigatorPositionItem
+        '
+        Me.BindingNavigatorPositionItem.AccessibleName = "Posición"
+        Me.BindingNavigatorPositionItem.AutoSize = False
+        Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
+        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
+        Me.BindingNavigatorPositionItem.Text = "0"
+        Me.BindingNavigatorPositionItem.ToolTipText = "Posición actual"
+        '
+        'BindingNavigatorCountItem
+        '
+        Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(37, 15)
+        Me.BindingNavigatorCountItem.Text = "de {0}"
+        Me.BindingNavigatorCountItem.ToolTipText = "Número total de elementos"
+        '
+        'BindingNavigatorSeparator1
+        '
+        Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorMoveNextItem
+        '
+        Me.BindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveNextItem.Image = CType(resources.GetObject("BindingNavigatorMoveNextItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveNextItem.Name = "BindingNavigatorMoveNextItem"
+        Me.BindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveNextItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveNextItem.Text = "Mover siguiente"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        Me.BindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorMoveLastItem.Text = "Mover último"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator"
+        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 6)
+        '
+        'BindingNavigatorAddNewItem
+        '
+        Me.BindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorAddNewItem.Image = CType(resources.GetObject("BindingNavigatorAddNewItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorAddNewItem.Name = "BindingNavigatorAddNewItem"
+        Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
+        Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        Me.BindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = True
+        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 20)
+        Me.BindingNavigatorDeleteItem.Text = "Eliminar"
+        '
+        'AcompananteBindingNavigatorSaveItem
+        '
+        Me.AcompananteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AcompananteBindingNavigatorSaveItem.Image = CType(resources.GetObject("AcompananteBindingNavigatorSaveItem.Image"), System.Drawing.Image)
+        Me.AcompananteBindingNavigatorSaveItem.Name = "AcompananteBindingNavigatorSaveItem"
+        Me.AcompananteBindingNavigatorSaveItem.Size = New System.Drawing.Size(23, 23)
+        Me.AcompananteBindingNavigatorSaveItem.Text = "Guardar datos"
+        '
+        'CodigoLabel1
+        '
+        CodigoLabel1.AutoSize = True
+        CodigoLabel1.Location = New System.Drawing.Point(28, 54)
+        CodigoLabel1.Name = "CodigoLabel1"
+        CodigoLabel1.Size = New System.Drawing.Size(43, 13)
+        CodigoLabel1.TabIndex = 34
+        CodigoLabel1.Text = "Codigo:"
+        '
+        'CodigoTextBox1
+        '
+        Me.CodigoTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Codigo", True))
+        Me.CodigoTextBox1.Location = New System.Drawing.Point(77, 54)
+        Me.CodigoTextBox1.Name = "CodigoTextBox1"
+        Me.CodigoTextBox1.Size = New System.Drawing.Size(70, 20)
+        Me.CodigoTextBox1.TabIndex = 35
+        '
+        'NombreLabel1
+        '
+        NombreLabel1.AutoSize = True
+        NombreLabel1.Location = New System.Drawing.Point(24, 103)
+        NombreLabel1.Name = "NombreLabel1"
+        NombreLabel1.Size = New System.Drawing.Size(47, 13)
+        NombreLabel1.TabIndex = 36
+        NombreLabel1.Text = "Nombre:"
+        '
+        'NombreTextBox1
+        '
+        Me.NombreTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Nombre", True))
+        Me.NombreTextBox1.Location = New System.Drawing.Point(77, 96)
+        Me.NombreTextBox1.Name = "NombreTextBox1"
+        Me.NombreTextBox1.Size = New System.Drawing.Size(165, 20)
+        Me.NombreTextBox1.TabIndex = 37
+        '
+        'ApellidoLabel1
+        '
+        ApellidoLabel1.AutoSize = True
+        ApellidoLabel1.Location = New System.Drawing.Point(24, 153)
+        ApellidoLabel1.Name = "ApellidoLabel1"
+        ApellidoLabel1.Size = New System.Drawing.Size(47, 13)
+        ApellidoLabel1.TabIndex = 38
+        ApellidoLabel1.Text = "Apellido:"
+        '
+        'ApellidoTextBox1
+        '
+        Me.ApellidoTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Apellido", True))
+        Me.ApellidoTextBox1.Location = New System.Drawing.Point(77, 142)
+        Me.ApellidoTextBox1.Name = "ApellidoTextBox1"
+        Me.ApellidoTextBox1.Size = New System.Drawing.Size(165, 20)
+        Me.ApellidoTextBox1.TabIndex = 39
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(414, 53)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(35, 13)
+        Label1.TabIndex = 40
+        Label1.Text = "Edad:"
         '
         'TextBox1
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(622, 148)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(1)
+        Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Edad", True))
+        Me.TextBox1.Location = New System.Drawing.Point(455, 50)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(267, 22)
-        Me.TextBox1.TabIndex = 31
+        Me.TextBox1.Size = New System.Drawing.Size(72, 20)
+        Me.TextBox1.TabIndex = 41
         '
-        'Label8
+        'SexoLabel1
         '
-        Me.Label8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(555, 148)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 16)
-        Me.Label8.TabIndex = 32
-        Me.Label8.Text = "Apellido:"
+        SexoLabel1.AutoSize = True
+        SexoLabel1.Location = New System.Drawing.Point(28, 200)
+        SexoLabel1.Name = "SexoLabel1"
+        SexoLabel1.Size = New System.Drawing.Size(34, 13)
+        SexoLabel1.TabIndex = 42
+        SexoLabel1.Text = "Sexo:"
         '
-        'txtTipo_SangreRegistro
+        'SexoTextBox1
         '
-        Me.txtTipo_SangreRegistro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipo_SangreRegistro.Location = New System.Drawing.Point(253, 301)
-        Me.txtTipo_SangreRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtTipo_SangreRegistro.Name = "txtTipo_SangreRegistro"
-        Me.txtTipo_SangreRegistro.Size = New System.Drawing.Size(190, 22)
-        Me.txtTipo_SangreRegistro.TabIndex = 33
+        Me.SexoTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Sexo", True))
+        Me.SexoTextBox1.Location = New System.Drawing.Point(68, 192)
+        Me.SexoTextBox1.Name = "SexoTextBox1"
+        Me.SexoTextBox1.Size = New System.Drawing.Size(130, 20)
+        Me.SexoTextBox1.TabIndex = 43
         '
-        'lblTipo_SangreRegsitro
+        'Label2
         '
-        Me.lblTipo_SangreRegsitro.AutoSize = True
-        Me.lblTipo_SangreRegsitro.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTipo_SangreRegsitro.Location = New System.Drawing.Point(142, 301)
-        Me.lblTipo_SangreRegsitro.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblTipo_SangreRegsitro.Name = "lblTipo_SangreRegsitro"
-        Me.lblTipo_SangreRegsitro.Size = New System.Drawing.Size(107, 16)
-        Me.lblTipo_SangreRegsitro.TabIndex = 34
-        Me.lblTipo_SangreRegsitro.Text = "Tipo de sangre:"
+        Label2.AutoSize = True
+        Label2.Location = New System.Drawing.Point(407, 106)
+        Label2.Name = "Label2"
+        Label2.Size = New System.Drawing.Size(52, 13)
+        Label2.TabIndex = 44
+        Label2.Text = "Telefono:"
         '
-        'Label10
+        'TextBox2
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(59, 24)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(139, 30)
-        Me.Label10.TabIndex = 35
-        Me.Label10.Text = "Paciente"
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Telefono", True))
+        Me.TextBox2.Location = New System.Drawing.Point(465, 103)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(107, 20)
+        Me.TextBox2.TabIndex = 45
         '
-        'Label11
+        'Label3
         '
-        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Algerian", 20.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(653, 14)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(207, 30)
-        Me.Label11.TabIndex = 36
-        Me.Label11.Text = "Acompañante"
+        Label3.AutoSize = True
+        Label3.Location = New System.Drawing.Point(408, 158)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(35, 13)
+        Label3.TabIndex = 46
+        Label3.Text = "Email:"
         '
-        'lblCodigoAcompanante
+        'TextBox3
         '
-        Me.lblCodigoAcompanante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblCodigoAcompanante.AutoSize = True
-        Me.lblCodigoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCodigoAcompanante.Location = New System.Drawing.Point(555, 64)
-        Me.lblCodigoAcompanante.Margin = New System.Windows.Forms.Padding(1, 0, 1, 0)
-        Me.lblCodigoAcompanante.Name = "lblCodigoAcompanante"
-        Me.lblCodigoAcompanante.Size = New System.Drawing.Size(64, 16)
-        Me.lblCodigoAcompanante.TabIndex = 37
-        Me.lblCodigoAcompanante.Text = "CODIGO:"
+        Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Email", True))
+        Me.TextBox3.Location = New System.Drawing.Point(449, 155)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(198, 20)
+        Me.TextBox3.TabIndex = 47
         '
-        'txtCodigoAcompanante
+        'Label4
         '
-        Me.txtCodigoAcompanante.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCodigoAcompanante.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigoAcompanante.Location = New System.Drawing.Point(624, 58)
-        Me.txtCodigoAcompanante.Margin = New System.Windows.Forms.Padding(1)
-        Me.txtCodigoAcompanante.Name = "txtCodigoAcompanante"
-        Me.txtCodigoAcompanante.Size = New System.Drawing.Size(105, 22)
-        Me.txtCodigoAcompanante.TabIndex = 38
+        Label4.AutoSize = True
+        Label4.Location = New System.Drawing.Point(407, 208)
+        Label4.Name = "Label4"
+        Label4.Size = New System.Drawing.Size(55, 13)
+        Label4.TabIndex = 48
+        Label4.Text = "Direccion:"
         '
-        'grbDatosRegistro
+        'TextBox4
         '
-        Me.grbDatosRegistro.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.grbDatosRegistro.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.grbDatosRegistro.Controls.Add(Me.txtCodigoAcompanante)
-        Me.grbDatosRegistro.Controls.Add(Me.lblCodigoAcompanante)
-        Me.grbDatosRegistro.Controls.Add(Me.Label11)
-        Me.grbDatosRegistro.Controls.Add(Me.Label10)
-        Me.grbDatosRegistro.Controls.Add(Me.lblTipo_SangreRegsitro)
-        Me.grbDatosRegistro.Controls.Add(Me.txtTipo_SangreRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.Label8)
-        Me.grbDatosRegistro.Controls.Add(Me.TextBox1)
-        Me.grbDatosRegistro.Controls.Add(Me.Label9)
-        Me.grbDatosRegistro.Controls.Add(Me.TextBox2)
-        Me.grbDatosRegistro.Controls.Add(Me.btnSeleccionarImagen)
-        Me.grbDatosRegistro.Controls.Add(Me.PicmostrarImagen)
-        Me.grbDatosRegistro.Controls.Add(Me.Label7)
-        Me.grbDatosRegistro.Controls.Add(Me.txtDireccionPaciente)
-        Me.grbDatosRegistro.Controls.Add(Me.lblApellidoRegsitro)
-        Me.grbDatosRegistro.Controls.Add(Me.txtApellidoRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.Label4)
-        Me.grbDatosRegistro.Controls.Add(Me.txtTelefonoAcompnante)
-        Me.grbDatosRegistro.Controls.Add(Me.lblSexoAcompanante)
-        Me.grbDatosRegistro.Controls.Add(Me.txtSexoAcompanante)
-        Me.grbDatosRegistro.Controls.Add(Me.lblSexoRegsitro)
-        Me.grbDatosRegistro.Controls.Add(Me.txtSexoRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.lblFecha_NacimientoRegsitro)
-        Me.grbDatosRegistro.Controls.Add(Me.txtNacimientoRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.lblEmailCliente)
-        Me.grbDatosRegistro.Controls.Add(Me.txtEmailPaciente)
-        Me.grbDatosRegistro.Controls.Add(Me.lblTelefonoCliente)
-        Me.grbDatosRegistro.Controls.Add(Me.txtEdadPaciente)
-        Me.grbDatosRegistro.Controls.Add(Me.lblNombreRegsitro)
-        Me.grbDatosRegistro.Controls.Add(Me.txtNombreRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.txtCodigoRegistro)
-        Me.grbDatosRegistro.Controls.Add(Me.lblCodigoRegistro)
-        Me.grbDatosRegistro.Enabled = False
-        Me.grbDatosRegistro.Location = New System.Drawing.Point(10, 10)
-        Me.grbDatosRegistro.Margin = New System.Windows.Forms.Padding(1)
-        Me.grbDatosRegistro.Name = "grbDatosRegistro"
-        Me.grbDatosRegistro.Padding = New System.Windows.Forms.Padding(1)
-        Me.grbDatosRegistro.Size = New System.Drawing.Size(1011, 465)
-        Me.grbDatosRegistro.TabIndex = 10
-        Me.grbDatosRegistro.TabStop = False
-        Me.grbDatosRegistro.Text = "Datos del Paciente y Acompañante"
+        Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AcompananteBindingSource, "Direccion", True))
+        Me.TextBox4.Location = New System.Drawing.Point(468, 205)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(179, 20)
+        Me.TextBox4.TabIndex = 49
+        '
+        'RegistroBindingSource
+        '
+        Me.RegistroBindingSource.DataMember = "FK_Registro_Acompanante"
+        Me.RegistroBindingSource.DataSource = Me.AcompananteBindingSource
+        '
+        'RegistroTableAdapter
+        '
+        Me.RegistroTableAdapter.ClearBeforeFill = True
+        '
+        'RegistroDataGridView
+        '
+        Me.RegistroDataGridView.AutoGenerateColumns = False
+        Me.RegistroDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.RegistroDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
+        Me.RegistroDataGridView.DataSource = Me.RegistroBindingSource
+        Me.RegistroDataGridView.Location = New System.Drawing.Point(27, 234)
+        Me.RegistroDataGridView.Name = "RegistroDataGridView"
+        Me.RegistroDataGridView.Size = New System.Drawing.Size(646, 220)
+        Me.RegistroDataGridView.TabIndex = 49
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Id_Registro"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Id_Registro"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Codigo"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Codigo"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 65
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Nombre"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 130
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Apellido"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Apellido"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.Width = 130
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Sexo"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Sexo"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Tipo_Sangre"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Tipo_Sangre"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.Width = 75
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Fecha_Nacimiento"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Fecha_Nacimiento"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        Me.DataGridViewTextBoxColumn7.Width = 110
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Id_Acompanante"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Id_Acompanante"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.Visible = False
         '
         'FormRegistro_Acompañante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Desktop
-        Me.ClientSize = New System.Drawing.Size(1031, 576)
-        Me.Controls.Add(Me.grbDatosRegistro)
-        Me.Controls.Add(Me.grbEdicion)
-        Me.Controls.Add(Me.grbNavegacion)
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientSize = New System.Drawing.Size(685, 463)
+        Me.Controls.Add(Me.RegistroDataGridView)
+        Me.Controls.Add(CodigoLabel1)
+        Me.Controls.Add(Me.CodigoTextBox1)
+        Me.Controls.Add(NombreLabel1)
+        Me.Controls.Add(Me.NombreTextBox1)
+        Me.Controls.Add(ApellidoLabel1)
+        Me.Controls.Add(Me.ApellidoTextBox1)
+        Me.Controls.Add(Label1)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(SexoLabel1)
+        Me.Controls.Add(Me.SexoTextBox1)
+        Me.Controls.Add(Label2)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Label3)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Label4)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.AcompananteBindingNavigator)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormRegistro_Acompañante"
         Me.Text = "FormRegistro_Acompañante"
-        Me.grbNavegacion.ResumeLayout(False)
-        Me.grbNavegacion.PerformLayout()
-        Me.grbEdicion.ResumeLayout(False)
-        CType(Me.PicmostrarImagen, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grbDatosRegistro.ResumeLayout(False)
-        Me.grbDatosRegistro.PerformLayout()
+        CType(Me.SdExpediente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AcompananteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AcompananteBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.AcompananteBindingNavigator.ResumeLayout(False)
+        Me.AcompananteBindingNavigator.PerformLayout()
+        CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RegistroDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents OfdSeleccionarImagen As OpenFileDialog
-    Friend WithEvents btnPrimeroRegistro As Button
-    Friend WithEvents btnAnteriorRegistro As Button
-    Friend WithEvents btnSiguienteRegistro As Button
-    Friend WithEvents btnUltimoRegistro As Button
-    Friend WithEvents lblRegistrosRegistro As Label
-    Friend WithEvents grbNavegacion As GroupBox
-    Friend WithEvents btnAgregarRegistro As Button
-    Friend WithEvents btnModificarRegistro As Button
-    Friend WithEvents btnEliminarRegistro As Button
-    Friend WithEvents btnBuscarRegistro As Button
-    Friend WithEvents grbEdicion As GroupBox
-    Friend WithEvents lblCodigoRegistro As Label
-    Friend WithEvents txtCodigoRegistro As TextBox
-    Friend WithEvents txtNombreRegistro As TextBox
-    Friend WithEvents lblNombreRegsitro As Label
-    Friend WithEvents txtEdadPaciente As TextBox
-    Friend WithEvents lblTelefonoCliente As Label
-    Friend WithEvents txtEmailPaciente As TextBox
-    Friend WithEvents lblEmailCliente As Label
-    Friend WithEvents txtNacimientoRegistro As TextBox
-    Friend WithEvents lblFecha_NacimientoRegsitro As Label
-    Friend WithEvents txtSexoRegistro As TextBox
-    Friend WithEvents lblSexoRegsitro As Label
-    Friend WithEvents txtSexoAcompanante As TextBox
-    Friend WithEvents lblSexoAcompanante As Label
-    Friend WithEvents txtTelefonoAcompnante As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtApellidoRegistro As TextBox
-    Friend WithEvents lblApellidoRegsitro As Label
-    Friend WithEvents txtDireccionPaciente As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents PicmostrarImagen As PictureBox
-    Friend WithEvents btnSeleccionarImagen As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label9 As Label
+
+    Friend WithEvents SdExpediente As sdExpediente
+    Friend WithEvents AcompananteBindingSource As BindingSource
+    Friend WithEvents AcompananteTableAdapter As sdExpedienteTableAdapters.AcompananteTableAdapter
+    Friend WithEvents TableAdapterManager As sdExpedienteTableAdapters.TableAdapterManager
+    Friend WithEvents AcompananteBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents AcompananteBindingNavigatorSaveItem As ToolStripButton
+    Friend WithEvents RegistroTableAdapter As sdExpedienteTableAdapters.RegistroTableAdapter
+    Friend WithEvents CodigoTextBox1 As TextBox
+    Friend WithEvents NombreTextBox1 As TextBox
+    Friend WithEvents ApellidoTextBox1 As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtTipo_SangreRegistro As TextBox
-    Friend WithEvents lblTipo_SangreRegsitro As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents lblCodigoAcompanante As Label
-    Friend WithEvents txtCodigoAcompanante As TextBox
-    Friend WithEvents grbDatosRegistro As GroupBox
+    Friend WithEvents SexoTextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents RegistroBindingSource As BindingSource
+    Friend WithEvents RegistroDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
 End Class
