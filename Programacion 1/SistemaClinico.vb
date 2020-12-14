@@ -100,4 +100,46 @@
             frmFormasdePago.Activate()
         End If
     End Sub
+
+    Private Sub ListadoDePacientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDePacientesToolStripMenuItem.Click
+        Dim objListadePacientes As New fmrListadePacientes
+        objListadePacientes.MdiParent = Me
+        objListadePacientes.Show()
+    End Sub
+
+    Private Sub ListadoDePersonalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDePersonalToolStripMenuItem.Click
+        Dim objListaPersonal As New fmrListaPersonal
+        objListaPersonal.MdiParent = Me
+        objListaPersonal.Show()
+    End Sub
+
+    Private Sub ListadoDeMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeMedicamentosToolStripMenuItem.Click
+        Dim objFrmListaMedicamentos As New FrmListaMedicamentos
+        objFrmListaMedicamentos.MdiParent = Me
+        objFrmListaMedicamentos.Show()
+    End Sub
+
+    Private Sub ListadoDeAcompañantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeAcompañantesToolStripMenuItem.Click
+        Dim objFrmListadodeAcompañante As New frmListadodeAcompañante
+        objFrmListadodeAcompañante.MdiParent = Me
+        objFrmListadodeAcompañante.Show()
+    End Sub
+
+    Private Sub MedicamentoPorCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MedicamentoPorCategoriaToolStripMenuItem.Click
+        Dim objfrmLismedicamentoCategoria As New frmLisMedicamentoCategoria
+        objfrmLismedicamentoCategoria.MdiParent = Me
+        objfrmLismedicamentoCategoria.Show()
+    End Sub
+
+    Private Sub HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem.Click
+        Dim objForm1 As New Form1
+        objForm1.MdiParent = Me
+        objForm1.Show()
+    End Sub
+
+    Private Sub ListadoDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeProveedoresToolStripMenuItem.Click
+        Dim objListadeproveedores As New frmListadeproveedores
+        objListadeproveedores.MdiParent = Me
+        objListadeproveedores.Show()
+    End Sub
 End Class
