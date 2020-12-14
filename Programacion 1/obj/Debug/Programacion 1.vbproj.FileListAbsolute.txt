@@ -302,3 +302,99 @@ C:\Users\admin\Source\Repos\Programacion-1.0\Programacion 1\obj\Debug\Programaci
 C:\Users\admin\Source\Repos\Programacion-1.0\Programacion 1\obj\Debug\Programacion_1.FormExpediente.resources
 C:\Users\admin\Source\Repos\Programacion-1\Programacion 1\obj\Debug\Programacion_1.FormExpediente.resources
 C:\Users\admin\Source\Repos\Programacion-1\Programacion 1\obj\Debug\Programacion_1.frmListadodeAcompañante.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.vbprojAssemblyReference.cache
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.BuscarCategoriamedicamentos.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.fmrListadePacientes.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.fmrListaPersonal.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FmrPagar.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FmrRegistrodePersonalvb.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FmrMedicamento.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FmrEncargarMedicamento.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FmrEliminardatosdelpaciente.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FormExpediente.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.Form1.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.frmLisMedicamentoCategoria.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.frmListadeproveedores.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FormRegistro_Acompañante.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FrmBuscarEmpleadosvb.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FrmBuscarPaciente.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.frmCegorias_Medicamentosvb.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FrmFormasdePago.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.frmListadodeAcompañante.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FrmListaMedicamentos.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.FrmPaciente.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.Resources.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.Recursos.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion_1.SistemaClinico.resources
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.vbproj.GenerateResource.cache
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\RdlCompile.cache
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\RdlCompile.compiled
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.vbproj.CoreCompileInputs.cache
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.exe
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.xml
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.pdb
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\sistemaclinicodb_log.ldf
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\sistemaclinicodb.mdf
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Programacion 1.exe.config
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Programacion 1.exe
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Programacion 1.pdb
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Programacion 1.xml
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\EnvDTE.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\stdole.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\Microsoft.MSXML.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\isabe\Source\Repos\Programacion-14\Programacion 1\obj\Debug\Programacion 1.vbproj.CopyComplete
