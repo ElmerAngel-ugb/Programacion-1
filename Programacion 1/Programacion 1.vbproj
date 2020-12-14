@@ -198,10 +198,10 @@
     <Compile Include="FormExpediente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmHistorial.medicamentos.Designer.vb">
-      <DependentUpon>FrmHistorial.medicamentos.vb</DependentUpon>
+    <Compile Include="FrmHistorialmedicamentos.Designer.vb">
+      <DependentUpon>FrmHistorialmedicamentos.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmHistorial.medicamentos.vb">
+    <Compile Include="FrmHistorialmedicamentos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmImprimirPago.Designer.vb">
@@ -343,8 +343,8 @@
     <EmbeddedResource Include="FormExpediente.resx">
       <DependentUpon>FormExpediente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmHistorial.medicamentos.resx">
-      <DependentUpon>FrmHistorial.medicamentos.vb</DependentUpon>
+    <EmbeddedResource Include="FrmHistorialmedicamentos.resx">
+      <DependentUpon>FrmHistorialmedicamentos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmImprimirPago.resx">
       <DependentUpon>FrmImprimirPago.vb</DependentUpon>

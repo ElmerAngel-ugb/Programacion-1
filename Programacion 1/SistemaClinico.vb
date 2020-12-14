@@ -9,6 +9,14 @@
     Public frmElmiminardatosdelpaciente As FmrEliminardatosdelpaciente
     Public frmFormasdePago As FrmFormasdePago
     Public FrmPagosPendientes As FrmPagosPendientes
+    Public FormRegistro_Acompañante As FormRegistro_Acompañante
+    Public fmrListadePacientes As fmrListadePacientes
+    Public fmrListaPersonal As fmrListaPersonal
+    Public FrmListaMedicamentos As FrmListaMedicamentos
+    Public frmListadodeAcompañante As frmListadodeAcompañante
+    Public frmLisMedicamentoCategoria As frmLisMedicamentoCategoria
+    Public Form1 As Form1
+    Public frmListadeproveedores As frmListadeproveedores
 
 
 
@@ -122,6 +130,86 @@
             FrmPagosPendientes.Show()
         Else
             FrmPagosPendientes.Activate()
+        End If
+    End Sub
+
+    Private Sub RegistroDeAcompañanteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDeAcompañanteToolStripMenuItem.Click
+        If FormRegistro_Acompañante Is Nothing Then
+            FormRegistro_Acompañante = New FormRegistro_Acompañante
+            FormRegistro_Acompañante.MdiParent = Me
+            FormRegistro_Acompañante.Show()
+        Else
+            FormRegistro_Acompañante.Activate()
+        End If
+    End Sub
+
+    Private Sub ListadoDePacientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDePacientesToolStripMenuItem.Click
+        If fmrListadePacientes Is Nothing Then
+            fmrListadePacientes = New fmrListadePacientes
+            fmrListadePacientes.MdiParent = Me
+            fmrListadePacientes.Show()
+        Else
+            fmrListadePacientes.Activate()
+        End If
+    End Sub
+
+    Private Sub ListadoDePersonalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDePersonalToolStripMenuItem.Click
+        If fmrListaPersonal Is Nothing Then
+            fmrListaPersonal = New fmrListaPersonal
+            fmrListaPersonal.MdiParent = Me
+            fmrListaPersonal.Show()
+        Else
+            fmrListaPersonal.Activate()
+        End If
+    End Sub
+
+    Private Sub ListadoDeMedicamentosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeMedicamentosToolStripMenuItem.Click
+        If FrmListaMedicamentos Is Nothing Then
+            FrmListaMedicamentos = New FrmListaMedicamentos
+            FrmListaMedicamentos.MdiParent = Me
+            FrmListaMedicamentos.Show()
+        Else
+            FrmListaMedicamentos.Activate()
+        End If
+    End Sub
+
+    Private Sub ListadoDeAcompañantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeAcompañantesToolStripMenuItem.Click
+        If frmListadodeAcompañante Is Nothing Then
+            frmListadodeAcompañante = New frmListadodeAcompañante
+            frmListadodeAcompañante.MdiParent = Me
+            frmListadodeAcompañante.Show()
+        Else
+            frmListadodeAcompañante.Activate()
+        End If
+    End Sub
+
+    Private Sub MedicamentoPorCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MedicamentoPorCategoriaToolStripMenuItem.Click
+        If frmLisMedicamentoCategoria Is Nothing Then
+            frmLisMedicamentoCategoria = New frmLisMedicamentoCategoria
+            frmLisMedicamentoCategoria.MdiParent = Me
+            frmLisMedicamentoCategoria.Show()
+        Else
+            frmLisMedicamentoCategoria.Activate()
+        End If
+    End Sub
+
+    Private Sub HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem.Click
+        If Form1 Is Nothing Then
+            Form1 = New Form1
+            Form1.MdiParent = Me
+            Form1.Show()
+        Else
+            Form1.Activate()
+        End If
+    End Sub
+
+    Private Sub ListadoDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListadoDeProveedoresToolStripMenuItem.Click
+        If frmListadeproveedores Is Nothing Then
+            frmListadeproveedores = New frmListadeproveedores
+            frmListadeproveedores.MdiParent = Me
+            frmListadeproveedores.Show()
+        Else
+            frmListadeproveedores.Activate()
         End If
     End Sub
 End Class

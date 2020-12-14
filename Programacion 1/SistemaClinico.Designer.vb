@@ -28,12 +28,14 @@ Partial Class SistemaClinico
         Me.EncargarMedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PagarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CategoriasDeMedicinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PagosPendientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDePersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MedicamentoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistroDeAcompañanteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BarraDeEliminacionDeDatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarDatosDelPacienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InformesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,7 +46,6 @@ Partial Class SistemaClinico
         Me.MedicamentoPorCategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListadoDeProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PagosPendientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -83,9 +84,15 @@ Partial Class SistemaClinico
         Me.CategoriasDeMedicinaToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
         Me.CategoriasDeMedicinaToolStripMenuItem.Text = "Categorias de medicina"
         '
+        'PagosPendientesToolStripMenuItem
+        '
+        Me.PagosPendientesToolStripMenuItem.Name = "PagosPendientesToolStripMenuItem"
+        Me.PagosPendientesToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
+        Me.PagosPendientesToolStripMenuItem.Text = "Pagos Pendientes"
+        '
         'MantenimientoToolStripMenuItem
         '
-        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem, Me.ToolStripMenuItem1})
+        Me.MantenimientoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PacienteToolStripMenuItem, Me.RegistrarPacienteToolStripMenuItem, Me.RegistroDePersonalToolStripMenuItem, Me.MedicamentoToolStripMenuItem, Me.ToolStripMenuItem1, Me.RegistroDeAcompañanteToolStripMenuItem})
         Me.MantenimientoToolStripMenuItem.Name = "MantenimientoToolStripMenuItem"
         Me.MantenimientoToolStripMenuItem.Size = New System.Drawing.Size(124, 24)
         Me.MantenimientoToolStripMenuItem.Text = "Mantenimiento"
@@ -93,32 +100,38 @@ Partial Class SistemaClinico
         'PacienteToolStripMenuItem
         '
         Me.PacienteToolStripMenuItem.Name = "PacienteToolStripMenuItem"
-        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.PacienteToolStripMenuItem.Size = New System.Drawing.Size(263, 26)
         Me.PacienteToolStripMenuItem.Text = "Paciente"
         '
         'RegistrarPacienteToolStripMenuItem
         '
         Me.RegistrarPacienteToolStripMenuItem.Name = "RegistrarPacienteToolStripMenuItem"
-        Me.RegistrarPacienteToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.RegistrarPacienteToolStripMenuItem.Size = New System.Drawing.Size(263, 26)
         Me.RegistrarPacienteToolStripMenuItem.Text = "Buscar Paciente"
         '
         'RegistroDePersonalToolStripMenuItem
         '
         Me.RegistroDePersonalToolStripMenuItem.Name = "RegistroDePersonalToolStripMenuItem"
-        Me.RegistroDePersonalToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.RegistroDePersonalToolStripMenuItem.Size = New System.Drawing.Size(263, 26)
         Me.RegistroDePersonalToolStripMenuItem.Text = "Registro de personal"
         '
         'MedicamentoToolStripMenuItem
         '
         Me.MedicamentoToolStripMenuItem.Name = "MedicamentoToolStripMenuItem"
-        Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(229, 26)
+        Me.MedicamentoToolStripMenuItem.Size = New System.Drawing.Size(263, 26)
         Me.MedicamentoToolStripMenuItem.Text = "Medicamento"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(229, 26)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(263, 26)
         Me.ToolStripMenuItem1.Text = "Formas de Pago"
+        '
+        'RegistroDeAcompañanteToolStripMenuItem
+        '
+        Me.RegistroDeAcompañanteToolStripMenuItem.Name = "RegistroDeAcompañanteToolStripMenuItem"
+        Me.RegistroDeAcompañanteToolStripMenuItem.Size = New System.Drawing.Size(263, 26)
+        Me.RegistroDeAcompañanteToolStripMenuItem.Text = "Registro de acompañante"
         '
         'BarraDeEliminacionDeDatosToolStripMenuItem
         '
@@ -182,12 +195,6 @@ Partial Class SistemaClinico
         Me.ListadoDeProveedoresToolStripMenuItem.Size = New System.Drawing.Size(412, 26)
         Me.ListadoDeProveedoresToolStripMenuItem.Text = "Listado de proveedores "
         '
-        'PagosPendientesToolStripMenuItem
-        '
-        Me.PagosPendientesToolStripMenuItem.Name = "PagosPendientesToolStripMenuItem"
-        Me.PagosPendientesToolStripMenuItem.Size = New System.Drawing.Size(249, 26)
-        Me.PagosPendientesToolStripMenuItem.Text = "Pagos Pendientes"
-        '
         'SistemaClinico
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -231,4 +238,5 @@ Partial Class SistemaClinico
     Friend WithEvents HistorialDeMedicamentoSolicitadoPorCodigoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ListadoDeProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PagosPendientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistroDeAcompañanteToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -46,12 +46,14 @@ Partial Class FrmPagosPendientes
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.btnAcciom, Me.IdPagar, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.CostodecitaDataGridViewTextBoxColumn, Me.CostodeingresoDataGridViewTextBoxColumn, Me.TotalDataGridViewTextBoxColumn, Me.NombreFormaPagoDataGridViewTextBoxColumn, Me.TotalapagarDataGridViewTextBoxColumn, Me.PagosPendientesDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.PagosPendientesBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(0, 2)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.Size = New System.Drawing.Size(1195, 538)
@@ -78,11 +80,13 @@ Partial Class FrmPagosPendientes
         '
         'btnAcciom
         '
+        Me.btnAcciom.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.btnAcciom.HeaderText = "Acción"
         Me.btnAcciom.MinimumWidth = 6
         Me.btnAcciom.Name = "btnAcciom"
         Me.btnAcciom.Text = "Pagar"
-        Me.btnAcciom.Width = 125
+        Me.btnAcciom.UseColumnTextForButtonValue = True
+        Me.btnAcciom.Width = 136
         '
         'IdPagar
         '

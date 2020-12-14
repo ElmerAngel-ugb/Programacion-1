@@ -25,16 +25,31 @@ Partial Class frmLisMedicamentoCategoria
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Dim ReportDataSource2 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.sistemaclinicodbDataSet = New Programacion_1.sistemaclinicodbDataSet()
         Me.categoriasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.categoriasTableAdapter = New Programacion_1.sistemaclinicodbDataSetTableAdapters.categoriasTableAdapter()
+        Me.sistemaclinicodbDataSet = New Programacion_1.sistemaclinicodbDataSet()
         Me.productosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.categoriasTableAdapter = New Programacion_1.sistemaclinicodbDataSetTableAdapters.categoriasTableAdapter()
         Me.productosTableAdapter = New Programacion_1.sistemaclinicodbDataSetTableAdapters.productosTableAdapter()
-        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.categoriasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.productosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'categoriasBindingSource
+        '
+        Me.categoriasBindingSource.DataMember = "categorias"
+        Me.categoriasBindingSource.DataSource = Me.sistemaclinicodbDataSet
+        '
+        'sistemaclinicodbDataSet
+        '
+        Me.sistemaclinicodbDataSet.DataSetName = "sistemaclinicodbDataSet"
+        Me.sistemaclinicodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'productosBindingSource
+        '
+        Me.productosBindingSource.DataMember = "productos"
+        Me.productosBindingSource.DataSource = Me.sistemaclinicodbDataSet
         '
         'ReportViewer1
         '
@@ -48,30 +63,16 @@ Partial Class frmLisMedicamentoCategoria
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource2)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Programacion_1.ifmListademedicamentoscategoria.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
+        Me.ReportViewer1.Location = New System.Drawing.Point(16, 15)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(899, 607)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1198, 747)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'sistemaclinicodbDataSet
-        '
-        Me.sistemaclinicodbDataSet.DataSetName = "sistemaclinicodbDataSet"
-        Me.sistemaclinicodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'categoriasBindingSource
-        '
-        Me.categoriasBindingSource.DataMember = "categorias"
-        Me.categoriasBindingSource.DataSource = Me.sistemaclinicodbDataSet
         '
         'categoriasTableAdapter
         '
         Me.categoriasTableAdapter.ClearBeforeFill = True
-        '
-        'productosBindingSource
-        '
-        Me.productosBindingSource.DataMember = "productos"
-        Me.productosBindingSource.DataSource = Me.sistemaclinicodbDataSet
         '
         'productosTableAdapter
         '
@@ -79,14 +80,15 @@ Partial Class frmLisMedicamentoCategoria
         '
         'frmLisMedicamentoCategoria
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(923, 645)
+        Me.ClientSize = New System.Drawing.Size(1231, 794)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLisMedicamentoCategoria"
         Me.Text = "Lista de Medicamento por Categoria"
-        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.categoriasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.productosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

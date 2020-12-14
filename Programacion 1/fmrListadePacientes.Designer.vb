@@ -24,13 +24,23 @@ Partial Class fmrListadePacientes
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.dsPersonal = New Programacion_1.dsPersonal()
         Me.pacienteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dsPersonal = New Programacion_1.dsPersonal()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.pacienteTableAdapter = New Programacion_1.dsPersonalTableAdapters.pacienteTableAdapter()
-        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pacienteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'pacienteBindingSource
+        '
+        Me.pacienteBindingSource.DataMember = "paciente"
+        Me.pacienteBindingSource.DataSource = Me.dsPersonal
+        '
+        'dsPersonal
+        '
+        Me.dsPersonal.DataSetName = "dsPersonal"
+        Me.dsPersonal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -41,21 +51,12 @@ Partial Class fmrListadePacientes
         ReportDataSource1.Value = Me.pacienteBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Programacion_1.ifmPaciente.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(21, 12)
+        Me.ReportViewer1.Location = New System.Drawing.Point(28, 15)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(843, 567)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1123, 697)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'dsPersonal
-        '
-        Me.dsPersonal.DataSetName = "dsPersonal"
-        Me.dsPersonal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'pacienteBindingSource
-        '
-        Me.pacienteBindingSource.DataMember = "paciente"
-        Me.pacienteBindingSource.DataSource = Me.dsPersonal
         '
         'pacienteTableAdapter
         '
@@ -63,14 +64,15 @@ Partial Class fmrListadePacientes
         '
         'fmrListadePacientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(876, 591)
+        Me.ClientSize = New System.Drawing.Size(1168, 727)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "fmrListadePacientes"
         Me.Text = "Lista de Pacientes"
-        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pacienteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

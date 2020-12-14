@@ -24,13 +24,23 @@ Partial Class fmrListaPersonal
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.dsPersonal = New Programacion_1.dsPersonal()
         Me.registrodepersonalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.dsPersonal = New Programacion_1.dsPersonal()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.registrodepersonalTableAdapter = New Programacion_1.dsPersonalTableAdapters.registrodepersonalTableAdapter()
-        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.registrodepersonalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'registrodepersonalBindingSource
+        '
+        Me.registrodepersonalBindingSource.DataMember = "registrodepersonal"
+        Me.registrodepersonalBindingSource.DataSource = Me.dsPersonal
+        '
+        'dsPersonal
+        '
+        Me.dsPersonal.DataSetName = "dsPersonal"
+        Me.dsPersonal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -41,21 +51,12 @@ Partial Class fmrListaPersonal
         ReportDataSource1.Value = Me.registrodepersonalBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Programacion_1.ifmPersonal.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
+        Me.ReportViewer1.Location = New System.Drawing.Point(16, 15)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(962, 603)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1282, 742)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'dsPersonal
-        '
-        Me.dsPersonal.DataSetName = "dsPersonal"
-        Me.dsPersonal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'registrodepersonalBindingSource
-        '
-        Me.registrodepersonalBindingSource.DataMember = "registrodepersonal"
-        Me.registrodepersonalBindingSource.DataSource = Me.dsPersonal
         '
         'registrodepersonalTableAdapter
         '
@@ -63,14 +64,15 @@ Partial Class fmrListaPersonal
         '
         'fmrListaPersonal
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(986, 627)
+        Me.ClientSize = New System.Drawing.Size(1315, 772)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "fmrListaPersonal"
         Me.Text = "Lista de Personal"
-        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.registrodepersonalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dsPersonal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

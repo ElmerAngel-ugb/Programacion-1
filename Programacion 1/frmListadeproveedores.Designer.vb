@@ -24,13 +24,23 @@ Partial Class frmListadeproveedores
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.sistemaclinicodbDataSet = New Programacion_1.sistemaclinicodbDataSet()
         Me.proveedormedicamentosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.sistemaclinicodbDataSet = New Programacion_1.sistemaclinicodbDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.proveedormedicamentosTableAdapter = New Programacion_1.sistemaclinicodbDataSetTableAdapters.proveedormedicamentosTableAdapter()
-        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.proveedormedicamentosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'proveedormedicamentosBindingSource
+        '
+        Me.proveedormedicamentosBindingSource.DataMember = "proveedormedicamentos"
+        Me.proveedormedicamentosBindingSource.DataSource = Me.sistemaclinicodbDataSet
+        '
+        'sistemaclinicodbDataSet
+        '
+        Me.sistemaclinicodbDataSet.DataSetName = "sistemaclinicodbDataSet"
+        Me.sistemaclinicodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -41,21 +51,12 @@ Partial Class frmListadeproveedores
         ReportDataSource1.Value = Me.proveedormedicamentosBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Programacion_1.Report1.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(33, 12)
+        Me.ReportViewer1.Location = New System.Drawing.Point(44, 15)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(829, 558)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1105, 686)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'sistemaclinicodbDataSet
-        '
-        Me.sistemaclinicodbDataSet.DataSetName = "sistemaclinicodbDataSet"
-        Me.sistemaclinicodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'proveedormedicamentosBindingSource
-        '
-        Me.proveedormedicamentosBindingSource.DataMember = "proveedormedicamentos"
-        Me.proveedormedicamentosBindingSource.DataSource = Me.sistemaclinicodbDataSet
         '
         'proveedormedicamentosTableAdapter
         '
@@ -63,14 +64,15 @@ Partial Class frmListadeproveedores
         '
         'frmListadeproveedores
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(882, 611)
+        Me.ClientSize = New System.Drawing.Size(1176, 752)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmListadeproveedores"
         Me.Text = "Lista de proveedores"
-        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.proveedormedicamentosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

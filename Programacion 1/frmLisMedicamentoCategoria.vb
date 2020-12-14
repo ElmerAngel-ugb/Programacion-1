@@ -7,4 +7,8 @@
 
         Me.ReportViewer1.RefreshReport()
     End Sub
+
+    Private Sub frmLisMedicamentoCategoria_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SistemaClinico.frmLisMedicamentoCategoria = Nothing
+    End Sub
 End Class

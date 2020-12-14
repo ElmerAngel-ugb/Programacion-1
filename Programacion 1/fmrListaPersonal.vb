@@ -5,4 +5,8 @@
 
         Me.ReportViewer1.RefreshReport()
     End Sub
+
+    Private Sub fmrListaPersonal_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        SistemaClinico.fmrListaPersonal = Nothing
+    End Sub
 End Class

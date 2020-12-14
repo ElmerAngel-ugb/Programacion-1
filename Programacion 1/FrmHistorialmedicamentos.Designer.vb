@@ -24,13 +24,23 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.sistemaclinicodbDataSet = New Programacion_1.sistemaclinicodbDataSet()
         Me.encargar_medicamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.sistemaclinicodbDataSet = New Programacion_1.sistemaclinicodbDataSet()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.encargar_medicamentoTableAdapter = New Programacion_1.sistemaclinicodbDataSetTableAdapters.encargar_medicamentoTableAdapter()
-        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.encargar_medicamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'encargar_medicamentoBindingSource
+        '
+        Me.encargar_medicamentoBindingSource.DataMember = "encargar_medicamento"
+        Me.encargar_medicamentoBindingSource.DataSource = Me.sistemaclinicodbDataSet
+        '
+        'sistemaclinicodbDataSet
+        '
+        Me.sistemaclinicodbDataSet.DataSetName = "sistemaclinicodbDataSet"
+        Me.sistemaclinicodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
@@ -38,21 +48,12 @@ Partial Class Form1
         ReportDataSource1.Value = Me.encargar_medicamentoBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Programacion_1.ifmHistorialdeMedi.Solicitado.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(12, 12)
+        Me.ReportViewer1.Location = New System.Drawing.Point(16, 15)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(794, 577)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1058, 710)
         Me.ReportViewer1.TabIndex = 0
-        '
-        'sistemaclinicodbDataSet
-        '
-        Me.sistemaclinicodbDataSet.DataSetName = "sistemaclinicodbDataSet"
-        Me.sistemaclinicodbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'encargar_medicamentoBindingSource
-        '
-        Me.encargar_medicamentoBindingSource.DataMember = "encargar_medicamento"
-        Me.encargar_medicamentoBindingSource.DataSource = Me.sistemaclinicodbDataSet
         '
         'encargar_medicamentoTableAdapter
         '
@@ -60,14 +61,15 @@ Partial Class Form1
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(818, 601)
+        Me.ClientSize = New System.Drawing.Size(1091, 740)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Form1"
         Me.Text = "Historial de medicamentos solicitados "
-        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.encargar_medicamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.sistemaclinicodbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
