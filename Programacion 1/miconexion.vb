@@ -87,6 +87,28 @@ Public Class db_conexion
 
         Return ds
     End Function
+    Public Function mantenimientoDatosRegistro(ByVal datos As String(), ByVal accion As String)
+        Dim sql, msg As String
+        Select Case accion
+            Case "nuevo"
+                sql = "INSERT INTO Registro (Codigo,Nombre,Apellido,Sexo,Tipo_Sangre,Fecha_Nacimiento) VALUES('" + datos(1) + "','" + datos(2) + "','" + datos(3) + "','" + datos(4) + "','" + datos(5) + "','" + datos(6) + "')"
+            Case "modificar"
+                sql = "UPDATE Registro SET Codigo ='" + datos(1) + "',Nombre='" + datos(2) + "',Apellido='" + datos(3) + "',Sexo='" + datos(4) + "',Tipo_Sangre='" + datos(5) + "',Fecha_Nacimiento='" + datos(6) + "'  WHERE Id_Registro='" + datos(0) + "'"
+            Case "eliminar"
+                sql = "DELETE FROM Registro WHERE Id_Registro='" + datos(0) + "'"
+        End Select
+
+#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+        If executeSql(sql) > 0 Then
+#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+            msg = "Accion realizada con exito"
+        Else
+            msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
+        End If
+
+        Return msg
+    End Function
+
 
     Public Function mantenimientoDatosPaciente(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
@@ -142,30 +164,14 @@ Public Class db_conexion
         miCommand.Parameters.Add("@lab", SqlDbType.Char).Value = ""
         miCommand.Parameters.Add("@can", SqlDbType.Char).Value = ""
 
-        miCommand.Parameters.Add("@Id_Reg", SqlDbType.Int).Value = 0
-        miCommand.Parameters.Add("@Id_Acompanante", SqlDbType.Int).Value = 0
-        miCommand.Parameters.Add("@codio", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@nombre", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@ape", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@sex", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@tisa", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@fena", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@codi", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@nomb", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@apell", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@sexo", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@ed", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@tele", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@ema", SqlDbType.Char).Value = ""
-        miCommand.Parameters.Add("@dire", SqlDbType.Char).Value = ""
     End Sub
     Public Function mantenimientoDatosProductos(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
             Case "nuevo"
-                sql = "INSERT INTO productos (idCategoria,codigo,nombre,descripcion,laboratorio,cantidad) VALUES(@idCategoria,@cod,@nombre,@des,@lab,@can)"
+                sql = "INSERT INTO productos (idCategoria,codigo,nombre,descripcion,laboratorio,cantidad) VALUES(@idCategoria,@cod,@nom,@des,@lab,@can)"
             Case "modificar"
-                sql = "UPDATE productos SET idCategoria=@idCategoria,codigo=@cod,nombre=@nombre,descripcion=@des,laboratorio=@lab,cantidad=@can WHERE Idproductos=@ide"
+                sql = "UPDATE productos SET idCategoria=@idCategoria,codigo=@cod,nombre=@nom,descripcion=@des,laboratorio=@lab,cantidad=@can WHERE Idproductos=@ide"
             Case "eliminar"
                 sql = "DELETE FROM productos WHERE Idproductos=@ide"
         End Select
@@ -174,7 +180,7 @@ Public Class db_conexion
         If accion IsNot "eliminar" Then
             miCommand.Parameters("@idCategoria").Value = datos(1)
             miCommand.Parameters("@cod").Value = datos(2)
-            miCommand.Parameters("@nomb").Value = datos(3)
+            miCommand.Parameters("@nom").Value = datos(3)
             miCommand.Parameters("@des").Value = datos(4)
             miCommand.Parameters("@lab").Value = datos(5)
             miCommand.Parameters("@can").Value = datos(6)
@@ -208,54 +214,22 @@ Public Class db_conexion
         End If
         Return msg
     End Function
-    Public Function mantenimientoDatosRegistro(ByVal datos As String(), ByVal accion As String)
+
+    Public Function mantenimientoPagoPendiente(ByVal datos As String(), ByVal accion As String)
         Dim sql, msg As String
         Select Case accion
-            Case "nuevo"
-                sql = "INSERT INTO Registro (Id_AcompananteCodigo,Nombre,Apellido,Sexo,Tipo_Sangre,Fecha_Nacimiento) VALUES(@Id_Acompanante,@codigo,@nom,@ape,@sex,@tisa,@fena)"
             Case "modificar"
-                sql = "UPDATE Registro SET Id_Acompanante=@Id_Acompanante,Codigo=@codigo,Nombre=@nom,Apellido=@ape,Sexo=@sex,Tipo_Sangre@tisa,Fecha_Nacimiento=@fena WHERE Id_Registro=@Id_Reg"
-            Case "eliminar"
-                sql = "DELETE FROM Registro WHERE Id_Registro=@Id_Reg"
+                sql = "UPDATE pagar SET PagosPendientes=0 WHERE idPagar=@ide"
         End Select
-        miCommand.Parameters("@Id_Reg").Value = datos(0)
-        If accion IsNot "eliminar" Then
-            miCommand.Parameters("@Id_Acompanante").Value = datos(6)
-            miCommand.Parameters("@codi").Value = datos(7)
-            miCommand.Parameters("@nomb").Value = datos(8)
-            miCommand.Parameters("@apell").Value = datos(9)
-            miCommand.Parameters("@ed").Value = datos(10)
-            miCommand.Parameters("@sexo").Value = datos(11)
-            miCommand.Parameters("@tele").Value = datos(12)
-            miCommand.Parameters("@ema").Value = datos(13)
-            miCommand.Parameters("@dire").Value = datos(14)
-        End If
-
-#Disable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
+        miCommand.Parameters("@ide").Value = datos(0)
         If executeSql(sql) > 0 Then
-#Enable Warning BC42104 ' Se usa la variable antes de que se le haya asignado un valor
-            msg = "Accion realizada con exito"
+            msg = "exito"
         Else
-            msg = "Fallo el proceso, Porfavor Intentelo de nuevo"
+            msg = "error"
         End If
-
         Return msg
     End Function
-    Private Sub mantenimientoDatosAcompanante(ByVal datos As String(), ByVal accion As String)
-        Dim sql, msg As String
-        Select Case accion
-            Case "nuevo"
-                miCommand.Connection = miConexion
-                miCommand.CommandText = "select MAX(Id_Registro) AS Id_Registro from Registro"
-                datos(0) = miCommand.ExecuteScalar().ToString()
 
-                sql = "INSERT INTO Acompanante (Codigo,Nombre,Apellido,Edad,Sexo,Telefono,Email,Direccion) VALUES(@codi,@nomb,@apell,@sexo,@ed,@tele,@ema,@dire)"
-            Case "modificar"
-                sql = "UPDATE Acompanante SET Codigo=@codi,Nombre=@nomb,Apellido=@apell,Sexo=@sexo,Edad=@ed,Telefono=@tele,Email=@ema,Direccion=@dire WHERE Id_Acompanante=@Id_Acompanante"
-            Case "eliminar"
-                sql = "DELETE FROM Acompanante WHERE Id_Acompanante=@Id_Acompanante"
-        End Select
-    End Sub
     Private Function executeSql(ByVal sql As String)
         Try
             miCommand.Connection = miConexion

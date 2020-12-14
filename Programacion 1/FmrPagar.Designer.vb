@@ -50,6 +50,9 @@ Partial Class FmrPagar
         Me.txtBuscarEncargo = New System.Windows.Forms.ToolStripTextBox()
         Me.btnBuscarEncargo = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnImprimirPago = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -74,6 +77,8 @@ Partial Class FmrPagar
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtApellidoPaciente = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.CbPendientes = New System.Windows.Forms.CheckBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.cbxFormadePago = New System.Windows.Forms.ComboBox()
         Me.FormadePagoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.bsFormaPago = New System.Windows.Forms.BindingSource(Me.components)
@@ -103,7 +108,7 @@ Partial Class FmrPagar
         Me.navPagar.CountItem = Me.BindingNavigatorCountItem
         Me.navPagar.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.navPagar.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.navPagar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ToolStripSeparator1, Me.btnPagar, Me.ToolStripSeparator2, Me.btnCancelarPago, Me.ToolStripSeparator3, Me.txtBuscarpago, Me.btnBuscarPago, Me.btnRemoveFilter, Me.ToolStripSeparator4, Me.txtBuscarEncargo, Me.btnBuscarEncargo, Me.ToolStripSeparator5})
+        Me.navPagar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ToolStripSeparator1, Me.btnPagar, Me.ToolStripSeparator2, Me.btnCancelarPago, Me.ToolStripSeparator3, Me.txtBuscarpago, Me.btnBuscarPago, Me.btnRemoveFilter, Me.ToolStripSeparator4, Me.txtBuscarEncargo, Me.btnBuscarEncargo, Me.ToolStripSeparator5, Me.btnImprimirPago, Me.ToolStripSeparator6, Me.ToolStripSeparator7})
         Me.navPagar.Location = New System.Drawing.Point(0, 0)
         Me.navPagar.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.navPagar.MoveLastItem = Me.BindingNavigatorMoveLastItem
@@ -111,7 +116,7 @@ Partial Class FmrPagar
         Me.navPagar.MovePreviousItem = Me.BindingNavigatorMovePreviousItem
         Me.navPagar.Name = "navPagar"
         Me.navPagar.PositionItem = Me.BindingNavigatorPositionItem
-        Me.navPagar.Size = New System.Drawing.Size(933, 27)
+        Me.navPagar.Size = New System.Drawing.Size(1140, 27)
         Me.navPagar.TabIndex = 0
         Me.navPagar.Text = "BindingNavigator1"
         '
@@ -295,6 +300,25 @@ Partial Class FmrPagar
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 27)
+        '
+        'btnImprimirPago
+        '
+        Me.btnImprimirPago.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btnImprimirPago.Image = Global.Programacion_1.My.Resources.Recursos.Imprimir
+        Me.btnImprimirPago.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnImprimirPago.Name = "btnImprimirPago"
+        Me.btnImprimirPago.Size = New System.Drawing.Size(29, 24)
+        Me.btnImprimirPago.Text = "Imprimir"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 27)
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 27)
         '
         'Label1
         '
@@ -511,6 +535,8 @@ Partial Class FmrPagar
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CbPendientes)
+        Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.cbxFormadePago)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtApellidoPaciente)
@@ -539,6 +565,27 @@ Partial Class FmrPagar
         Me.GroupBox1.Size = New System.Drawing.Size(844, 445)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
+        '
+        'CbPendientes
+        '
+        Me.CbPendientes.AutoSize = True
+        Me.CbPendientes.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.bsPagar, "PagosPendientes", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
+        Me.CbPendientes.Location = New System.Drawing.Point(210, 302)
+        Me.CbPendientes.Name = "CbPendientes"
+        Me.CbPendientes.Size = New System.Drawing.Size(131, 21)
+        Me.CbPendientes.TabIndex = 38
+        Me.CbPendientes.Text = "Pago Pendiente"
+        Me.CbPendientes.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(6, 302)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(149, 18)
+        Me.Label11.TabIndex = 37
+        Me.Label11.Text = "Pagos Pendientes:"
         '
         'cbxFormadePago
         '
@@ -599,7 +646,7 @@ Partial Class FmrPagar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(933, 504)
+        Me.ClientSize = New System.Drawing.Size(1140, 504)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.navPagar)
         Me.Name = "FmrPagar"
@@ -681,4 +728,9 @@ Partial Class FmrPagar
     Friend WithEvents DsFormaPago As dsFormaPago
     Friend WithEvents FormadePagoBindingSource As BindingSource
     Friend WithEvents FormadePagoTableAdapter As dsFormaPagoTableAdapters.FormadePagoTableAdapter
+    Friend WithEvents btnImprimirPago As ToolStripButton
+    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
+    Friend WithEvents ToolStripSeparator7 As ToolStripSeparator
+    Friend WithEvents CbPendientes As CheckBox
+    Friend WithEvents Label11 As Label
 End Class

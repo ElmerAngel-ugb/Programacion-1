@@ -139,6 +139,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsPagar.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsPagospendientes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPagospendientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsPersonal.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -197,6 +202,12 @@
       <DependentUpon>FrmHistorial.medicamentos.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmHistorial.medicamentos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImprimirPago.Designer.vb">
+      <DependentUpon>FrmImprimirPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImprimirPago.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLisMedicamentoCategoria.Designer.vb">
@@ -276,6 +287,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="FrmPagosPendientes.Designer.vb">
+      <DependentUpon>FrmPagosPendientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagosPendientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Recursos.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -329,6 +346,9 @@
     <EmbeddedResource Include="FrmHistorial.medicamentos.resx">
       <DependentUpon>FrmHistorial.medicamentos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmImprimirPago.resx">
+      <DependentUpon>FrmImprimirPago.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLisMedicamentoCategoria.resx">
       <DependentUpon>frmLisMedicamentoCategoria.vb</DependentUpon>
     </EmbeddedResource>
@@ -365,6 +385,7 @@
     <EmbeddedResource Include="ifmListaMedicamentos.rdlc" />
     <EmbeddedResource Include="ifmPaciente.rdlc" />
     <EmbeddedResource Include="ifmPersonal.rdlc" />
+    <EmbeddedResource Include="ImprimirPago.rdlc" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -417,6 +438,17 @@
     <None Include="dsPagar.xss">
       <DependentUpon>dsPagar.xsd</DependentUpon>
     </None>
+    <None Include="dsPagospendientes.xsc">
+      <DependentUpon>dsPagospendientes.xsd</DependentUpon>
+    </None>
+    <None Include="dsPagospendientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPagospendientes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsPagospendientes.xss">
+      <DependentUpon>dsPagospendientes.xsd</DependentUpon>
+    </None>
     <None Include="dsPersonal.xsc">
       <DependentUpon>dsPersonal.xsd</DependentUpon>
     </None>
@@ -463,6 +495,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Imprimir.ico" />
+    <None Include="Resources\Pagospendientes.ico" />
     <Content Include="SqlServerTypes\Loader.cs" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -477,12 +511,16 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="FrmPagosPendientes.resx">
+      <DependentUpon>FrmPagosPendientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recursos.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Recursos.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="SistemaClinico.resx">
       <DependentUpon>SistemaClinico.vb</DependentUpon>
     </EmbeddedResource>

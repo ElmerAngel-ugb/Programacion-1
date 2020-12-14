@@ -29,9 +29,9 @@ Partial Public Class dsPagar
     
     Private tableencargar_medicamento As encargar_medicamentoDataTable
     
-    Private tablePagar As PagarDataTable
-    
     Private tableFormadePago As FormadePagoDataTable
+    
+    Private tablePagar As PagarDataTable
     
     Private relationpaciente_encargar_medicamento As Global.System.Data.DataRelation
     
@@ -74,11 +74,11 @@ Partial Public Class dsPagar
             If (Not (ds.Tables("encargar_medicamento")) Is Nothing) Then
                 MyBase.Tables.Add(New encargar_medicamentoDataTable(ds.Tables("encargar_medicamento")))
             End If
-            If (Not (ds.Tables("Pagar")) Is Nothing) Then
-                MyBase.Tables.Add(New PagarDataTable(ds.Tables("Pagar")))
-            End If
             If (Not (ds.Tables("FormadePago")) Is Nothing) Then
                 MyBase.Tables.Add(New FormadePagoDataTable(ds.Tables("FormadePago")))
+            End If
+            If (Not (ds.Tables("Pagar")) Is Nothing) Then
+                MyBase.Tables.Add(New PagarDataTable(ds.Tables("Pagar")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -121,9 +121,9 @@ Partial Public Class dsPagar
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property Pagar() As PagarDataTable
+    Public ReadOnly Property FormadePago() As FormadePagoDataTable
         Get
-            Return Me.tablePagar
+            Return Me.tableFormadePago
         End Get
     End Property
     
@@ -131,9 +131,9 @@ Partial Public Class dsPagar
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property FormadePago() As FormadePagoDataTable
+    Public ReadOnly Property Pagar() As PagarDataTable
         Get
-            Return Me.tableFormadePago
+            Return Me.tablePagar
         End Get
     End Property
     
@@ -210,11 +210,11 @@ Partial Public Class dsPagar
             If (Not (ds.Tables("encargar_medicamento")) Is Nothing) Then
                 MyBase.Tables.Add(New encargar_medicamentoDataTable(ds.Tables("encargar_medicamento")))
             End If
-            If (Not (ds.Tables("Pagar")) Is Nothing) Then
-                MyBase.Tables.Add(New PagarDataTable(ds.Tables("Pagar")))
-            End If
             If (Not (ds.Tables("FormadePago")) Is Nothing) Then
                 MyBase.Tables.Add(New FormadePagoDataTable(ds.Tables("FormadePago")))
+            End If
+            If (Not (ds.Tables("Pagar")) Is Nothing) Then
+                MyBase.Tables.Add(New PagarDataTable(ds.Tables("Pagar")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -260,16 +260,16 @@ Partial Public Class dsPagar
                 Me.tableencargar_medicamento.InitVars
             End If
         End If
-        Me.tablePagar = CType(MyBase.Tables("Pagar"),PagarDataTable)
-        If (initTable = true) Then
-            If (Not (Me.tablePagar) Is Nothing) Then
-                Me.tablePagar.InitVars
-            End If
-        End If
         Me.tableFormadePago = CType(MyBase.Tables("FormadePago"),FormadePagoDataTable)
         If (initTable = true) Then
             If (Not (Me.tableFormadePago) Is Nothing) Then
                 Me.tableFormadePago.InitVars
+            End If
+        End If
+        Me.tablePagar = CType(MyBase.Tables("Pagar"),PagarDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tablePagar) Is Nothing) Then
+                Me.tablePagar.InitVars
             End If
         End If
         Me.relationpaciente_encargar_medicamento = Me.Relations("paciente_encargar_medicamento")
@@ -289,10 +289,10 @@ Partial Public Class dsPagar
         MyBase.Tables.Add(Me.tablepaciente)
         Me.tableencargar_medicamento = New encargar_medicamentoDataTable()
         MyBase.Tables.Add(Me.tableencargar_medicamento)
-        Me.tablePagar = New PagarDataTable()
-        MyBase.Tables.Add(Me.tablePagar)
         Me.tableFormadePago = New FormadePagoDataTable()
         MyBase.Tables.Add(Me.tableFormadePago)
+        Me.tablePagar = New PagarDataTable()
+        MyBase.Tables.Add(Me.tablePagar)
         Me.relationpaciente_encargar_medicamento = New Global.System.Data.DataRelation("paciente_encargar_medicamento", New Global.System.Data.DataColumn() {Me.tablepaciente.IdPacienteColumn}, New Global.System.Data.DataColumn() {Me.tableencargar_medicamento.idpacienteColumn}, false)
         Me.Relations.Add(Me.relationpaciente_encargar_medicamento)
         Me.relationencargar_medicamento_Pagar = New Global.System.Data.DataRelation("encargar_medicamento_Pagar", New Global.System.Data.DataColumn() {Me.tableencargar_medicamento.id_encargarmedicamentoColumn}, New Global.System.Data.DataColumn() {Me.tablePagar.id_encargarmedicamentoColumn}, false)
@@ -315,13 +315,13 @@ Partial Public Class dsPagar
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializePagar() As Boolean
+    Private Function ShouldSerializeFormadePago() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Private Function ShouldSerializeFormadePago() As Boolean
+    Private Function ShouldSerializePagar() As Boolean
         Return false
     End Function
     
@@ -390,10 +390,10 @@ Partial Public Class dsPagar
     Public Delegate Sub encargar_medicamentoRowChangeEventHandler(ByVal sender As Object, ByVal e As encargar_medicamentoRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub PagarRowChangeEventHandler(ByVal sender As Object, ByVal e As PagarRowChangeEvent)
+    Public Delegate Sub FormadePagoRowChangeEventHandler(ByVal sender As Object, ByVal e As FormadePagoRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Delegate Sub FormadePagoRowChangeEventHandler(ByVal sender As Object, ByVal e As FormadePagoRowChangeEvent)
+    Public Delegate Sub PagarRowChangeEventHandler(ByVal sender As Object, ByVal e As PagarRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -1157,360 +1157,6 @@ Partial Public Class dsPagar
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class PagarDataTable
-        Inherits Global.System.Data.TypedTableBase(Of PagarRow)
-        
-        Private columnIdpagar As Global.System.Data.DataColumn
-        
-        Private columncosto_de_cita As Global.System.Data.DataColumn
-        
-        Private columnid_encargarmedicamento As Global.System.Data.DataColumn
-        
-        Private columncosto_de_ingreso As Global.System.Data.DataColumn
-        
-        Private columnSub_total As Global.System.Data.DataColumn
-        
-        Private columnTotal_a_pagar As Global.System.Data.DataColumn
-        
-        Private columnidFormaPago As Global.System.Data.DataColumn
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.TableName = "Pagar"
-            Me.BeginInit
-            Me.InitClass
-            Me.EndInit
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Sub New(ByVal table As Global.System.Data.DataTable)
-            MyBase.New
-            Me.TableName = table.TableName
-            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
-                Me.CaseSensitive = table.CaseSensitive
-            End If
-            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
-                Me.Locale = table.Locale
-            End If
-            If (table.Namespace <> table.DataSet.Namespace) Then
-                Me.Namespace = table.Namespace
-            End If
-            Me.Prefix = table.Prefix
-            Me.MinimumCapacity = table.MinimumCapacity
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-            MyBase.New(info, context)
-            Me.InitVars
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property IdpagarColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnIdpagar
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property costo_de_citaColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncosto_de_cita
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property id_encargarmedicamentoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnid_encargarmedicamento
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property costo_de_ingresoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncosto_de_ingreso
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Sub_totalColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSub_total
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Total_a_pagarColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnTotal_a_pagar
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property idFormaPagoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnidFormaPago
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Browsable(false)>  _
-        Public ReadOnly Property Count() As Integer
-            Get
-                Return Me.Rows.Count
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As PagarRow
-            Get
-                Return CType(Me.Rows(index),PagarRow)
-            End Get
-        End Property
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event PagarRowChanging As PagarRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event PagarRowChanged As PagarRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event PagarRowDeleting As PagarRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Event PagarRowDeleted As PagarRowChangeEventHandler
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Sub AddPagarRow(ByVal row As PagarRow)
-            Me.Rows.Add(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddPagarRow(ByVal costo_de_cita As Decimal, ByVal parentencargar_medicamentoRowByencargar_medicamento_Pagar As encargar_medicamentoRow, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal parentFormadePagoRowByFormadePago_Pagar As FormadePagoRow) As PagarRow
-            Dim rowPagarRow As PagarRow = CType(Me.NewRow,PagarRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, costo_de_cita, Nothing, costo_de_ingreso, Sub_total, Total_a_pagar, Nothing}
-            If (Not (parentencargar_medicamentoRowByencargar_medicamento_Pagar) Is Nothing) Then
-                columnValuesArray(2) = parentencargar_medicamentoRowByencargar_medicamento_Pagar(4)
-            End If
-            If (Not (parentFormadePagoRowByFormadePago_Pagar) Is Nothing) Then
-                columnValuesArray(6) = parentFormadePagoRowByFormadePago_Pagar(0)
-            End If
-            rowPagarRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowPagarRow)
-            Return rowPagarRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function FindByIdpagar(ByVal Idpagar As Integer) As PagarRow
-            Return CType(Me.Rows.Find(New Object() {Idpagar}),PagarRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As PagarDataTable = CType(MyBase.Clone,PagarDataTable)
-            cln.InitVars
-            Return cln
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New PagarDataTable()
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Sub InitVars()
-            Me.columnIdpagar = MyBase.Columns("Idpagar")
-            Me.columncosto_de_cita = MyBase.Columns("costo_de_cita")
-            Me.columnid_encargarmedicamento = MyBase.Columns("id_encargarmedicamento")
-            Me.columncosto_de_ingreso = MyBase.Columns("costo_de_ingreso")
-            Me.columnSub_total = MyBase.Columns("Sub_total")
-            Me.columnTotal_a_pagar = MyBase.Columns("Total_a_pagar")
-            Me.columnidFormaPago = MyBase.Columns("idFormaPago")
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitClass()
-            Me.columnIdpagar = New Global.System.Data.DataColumn("Idpagar", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnIdpagar)
-            Me.columncosto_de_cita = New Global.System.Data.DataColumn("costo_de_cita", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncosto_de_cita)
-            Me.columnid_encargarmedicamento = New Global.System.Data.DataColumn("id_encargarmedicamento", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnid_encargarmedicamento)
-            Me.columncosto_de_ingreso = New Global.System.Data.DataColumn("costo_de_ingreso", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncosto_de_ingreso)
-            Me.columnSub_total = New Global.System.Data.DataColumn("Sub_total", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSub_total)
-            Me.columnTotal_a_pagar = New Global.System.Data.DataColumn("Total_a_pagar", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnTotal_a_pagar)
-            Me.columnidFormaPago = New Global.System.Data.DataColumn("idFormaPago", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnidFormaPago)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdpagar}, true))
-            Me.columnIdpagar.AutoIncrement = true
-            Me.columnIdpagar.AutoIncrementSeed = -1
-            Me.columnIdpagar.AutoIncrementStep = -1
-            Me.columnIdpagar.AllowDBNull = false
-            Me.columnIdpagar.ReadOnly = true
-            Me.columnIdpagar.Unique = true
-            Me.columncosto_de_cita.AllowDBNull = false
-            Me.columnid_encargarmedicamento.AllowDBNull = false
-            Me.columncosto_de_ingreso.AllowDBNull = false
-            Me.columnSub_total.AllowDBNull = false
-            Me.columnTotal_a_pagar.AllowDBNull = false
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function NewPagarRow() As PagarRow
-            Return CType(Me.NewRow,PagarRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New PagarRow(builder)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(PagarRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanged(e)
-            If (Not (Me.PagarRowChangedEvent) Is Nothing) Then
-                RaiseEvent PagarRowChanged(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanging(e)
-            If (Not (Me.PagarRowChangingEvent) Is Nothing) Then
-                RaiseEvent PagarRowChanging(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleted(e)
-            If (Not (Me.PagarRowDeletedEvent) Is Nothing) Then
-                RaiseEvent PagarRowDeleted(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleting(e)
-            If (Not (Me.PagarRowDeletingEvent) Is Nothing) Then
-                RaiseEvent PagarRowDeleting(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub RemovePagarRow(ByVal row As PagarRow)
-            Me.Rows.Remove(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
-            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As dsPagar = New dsPagar()
-            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
-            any1.MinOccurs = New Decimal(0)
-            any1.MaxOccurs = Decimal.MaxValue
-            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any1)
-            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
-            any2.MinOccurs = New Decimal(1)
-            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any2)
-            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute1.Name = "namespace"
-            attribute1.FixedValue = ds.Namespace
-            type.Attributes.Add(attribute1)
-            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "PagarDataTable"
-            type.Attributes.Add(attribute2)
-            type.Particle = sequence
-            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
-            If xs.Contains(dsSchema.TargetNamespace) Then
-                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Try 
-                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
-                    dsSchema.Write(s1)
-                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
-                    Do While schemas.MoveNext
-                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
-                        s2.SetLength(0)
-                        schema.Write(s2)
-                        If (s1.Length = s2.Length) Then
-                            s1.Position = 0
-                            s2.Position = 0
-                            
-                            Do While ((s1.Position <> s1.Length)  _
-                                        AndAlso (s1.ReadByte = s2.ReadByte))
-                                
-                                
-                            Loop
-                            If (s1.Position = s1.Length) Then
-                                Return type
-                            End If
-                        End If
-                        
-                    Loop
-                Finally
-                    If (Not (s1) Is Nothing) Then
-                        s1.Close
-                    End If
-                    If (Not (s2) Is Nothing) Then
-                        s2.Close
-                    End If
-                End Try
-            End If
-            xs.Add(dsSchema)
-            Return type
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the strongly named DataTable class.
-    '''</summary>
-    <Global.System.Serializable(),  _
-     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
     Partial Public Class FormadePagoDataTable
         Inherits Global.System.Data.TypedTableBase(Of FormadePagoRow)
         
@@ -1743,6 +1389,373 @@ Partial Public Class dsPagar
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "FormadePagoDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class PagarDataTable
+        Inherits Global.System.Data.TypedTableBase(Of PagarRow)
+        
+        Private columnIdpagar As Global.System.Data.DataColumn
+        
+        Private columncosto_de_cita As Global.System.Data.DataColumn
+        
+        Private columnid_encargarmedicamento As Global.System.Data.DataColumn
+        
+        Private columncosto_de_ingreso As Global.System.Data.DataColumn
+        
+        Private columnSub_total As Global.System.Data.DataColumn
+        
+        Private columnTotal_a_pagar As Global.System.Data.DataColumn
+        
+        Private columnidFormaPago As Global.System.Data.DataColumn
+        
+        Private columnPagosPendientes As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "Pagar"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property IdpagarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnIdpagar
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property costo_de_citaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncosto_de_cita
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property id_encargarmedicamentoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_encargarmedicamento
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property costo_de_ingresoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncosto_de_ingreso
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Sub_totalColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSub_total
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Total_a_pagarColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTotal_a_pagar
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property idFormaPagoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidFormaPago
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property PagosPendientesColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPagosPendientes
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As PagarRow
+            Get
+                Return CType(Me.Rows(index),PagarRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event PagarRowChanging As PagarRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event PagarRowChanged As PagarRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event PagarRowDeleting As PagarRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Event PagarRowDeleted As PagarRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Sub AddPagarRow(ByVal row As PagarRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function AddPagarRow(ByVal costo_de_cita As Decimal, ByVal parentencargar_medicamentoRowByencargar_medicamento_Pagar As encargar_medicamentoRow, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal parentFormadePagoRowByFormadePago_Pagar As FormadePagoRow, ByVal PagosPendientes As Byte) As PagarRow
+            Dim rowPagarRow As PagarRow = CType(Me.NewRow,PagarRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, costo_de_cita, Nothing, costo_de_ingreso, Sub_total, Total_a_pagar, Nothing, PagosPendientes}
+            If (Not (parentencargar_medicamentoRowByencargar_medicamento_Pagar) Is Nothing) Then
+                columnValuesArray(2) = parentencargar_medicamentoRowByencargar_medicamento_Pagar(4)
+            End If
+            If (Not (parentFormadePagoRowByFormadePago_Pagar) Is Nothing) Then
+                columnValuesArray(6) = parentFormadePagoRowByFormadePago_Pagar(0)
+            End If
+            rowPagarRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowPagarRow)
+            Return rowPagarRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function FindByIdpagar(ByVal Idpagar As Integer) As PagarRow
+            Return CType(Me.Rows.Find(New Object() {Idpagar}),PagarRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As PagarDataTable = CType(MyBase.Clone,PagarDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New PagarDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnIdpagar = MyBase.Columns("Idpagar")
+            Me.columncosto_de_cita = MyBase.Columns("costo_de_cita")
+            Me.columnid_encargarmedicamento = MyBase.Columns("id_encargarmedicamento")
+            Me.columncosto_de_ingreso = MyBase.Columns("costo_de_ingreso")
+            Me.columnSub_total = MyBase.Columns("Sub_total")
+            Me.columnTotal_a_pagar = MyBase.Columns("Total_a_pagar")
+            Me.columnidFormaPago = MyBase.Columns("idFormaPago")
+            Me.columnPagosPendientes = MyBase.Columns("PagosPendientes")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnIdpagar = New Global.System.Data.DataColumn("Idpagar", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnIdpagar)
+            Me.columncosto_de_cita = New Global.System.Data.DataColumn("costo_de_cita", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncosto_de_cita)
+            Me.columnid_encargarmedicamento = New Global.System.Data.DataColumn("id_encargarmedicamento", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_encargarmedicamento)
+            Me.columncosto_de_ingreso = New Global.System.Data.DataColumn("costo_de_ingreso", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncosto_de_ingreso)
+            Me.columnSub_total = New Global.System.Data.DataColumn("Sub_total", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSub_total)
+            Me.columnTotal_a_pagar = New Global.System.Data.DataColumn("Total_a_pagar", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTotal_a_pagar)
+            Me.columnidFormaPago = New Global.System.Data.DataColumn("idFormaPago", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidFormaPago)
+            Me.columnPagosPendientes = New Global.System.Data.DataColumn("PagosPendientes", GetType(Byte), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPagosPendientes)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnIdpagar}, true))
+            Me.columnIdpagar.AutoIncrement = true
+            Me.columnIdpagar.AutoIncrementSeed = -1
+            Me.columnIdpagar.AutoIncrementStep = -1
+            Me.columnIdpagar.AllowDBNull = false
+            Me.columnIdpagar.ReadOnly = true
+            Me.columnIdpagar.Unique = true
+            Me.columncosto_de_cita.AllowDBNull = false
+            Me.columnid_encargarmedicamento.AllowDBNull = false
+            Me.columncosto_de_ingreso.AllowDBNull = false
+            Me.columnSub_total.AllowDBNull = false
+            Me.columnTotal_a_pagar.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function NewPagarRow() As PagarRow
+            Return CType(Me.NewRow,PagarRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New PagarRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(PagarRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.PagarRowChangedEvent) Is Nothing) Then
+                RaiseEvent PagarRowChanged(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.PagarRowChangingEvent) Is Nothing) Then
+                RaiseEvent PagarRowChanging(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.PagarRowDeletedEvent) Is Nothing) Then
+                RaiseEvent PagarRowDeleted(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.PagarRowDeletingEvent) Is Nothing) Then
+                RaiseEvent PagarRowDeleting(Me, New PagarRowChangeEvent(CType(e.Row,PagarRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub RemovePagarRow(ByVal row As PagarRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As dsPagar = New dsPagar()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "PagarDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -2242,6 +2255,54 @@ Partial Public Class dsPagar
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
+    Partial Public Class FormadePagoRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableFormadePago As FormadePagoDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableFormadePago = CType(Me.Table,FormadePagoDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property IdFormaPago() As Integer
+            Get
+                Return CType(Me(Me.tableFormadePago.IdFormaPagoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableFormadePago.IdFormaPagoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property nombreFormaPago() As String
+            Get
+                Return CType(Me(Me.tableFormadePago.nombreFormaPagoColumn),String)
+            End Get
+            Set
+                Me(Me.tableFormadePago.nombreFormaPagoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function GetPagarRows() As PagarRow()
+            If (Me.Table.ChildRelations("FormadePago_Pagar") Is Nothing) Then
+                Return New PagarRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FormadePago_Pagar")),PagarRow())
+            End If
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
     Partial Public Class PagarRow
         Inherits Global.System.Data.DataRow
         
@@ -2337,6 +2398,21 @@ Partial Public Class dsPagar
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property PagosPendientes() As Byte
+            Get
+                Try 
+                    Return CType(Me(Me.tablePagar.PagosPendientesColumn),Byte)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'PagosPendientes' de la tabla 'Pagar' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePagar.PagosPendientesColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property encargar_medicamentoRow() As encargar_medicamentoRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("encargar_medicamento_Pagar")),encargar_medicamentoRow)
@@ -2368,54 +2444,18 @@ Partial Public Class dsPagar
         Public Sub SetidFormaPagoNull()
             Me(Me.tablePagar.idFormaPagoColumn) = Global.System.Convert.DBNull
         End Sub
-    End Class
-    
-    '''<summary>
-    '''Represents strongly named DataRow class.
-    '''</summary>
-    Partial Public Class FormadePagoRow
-        Inherits Global.System.Data.DataRow
-        
-        Private tableFormadePago As FormadePagoDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
-            MyBase.New(rb)
-            Me.tableFormadePago = CType(Me.Table,FormadePagoDataTable)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property IdFormaPago() As Integer
-            Get
-                Return CType(Me(Me.tableFormadePago.IdFormaPagoColumn),Integer)
-            End Get
-            Set
-                Me(Me.tableFormadePago.IdFormaPagoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property nombreFormaPago() As String
-            Get
-                Return CType(Me(Me.tableFormadePago.nombreFormaPagoColumn),String)
-            End Get
-            Set
-                Me(Me.tableFormadePago.nombreFormaPagoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Function GetPagarRows() As PagarRow()
-            If (Me.Table.ChildRelations("FormadePago_Pagar") Is Nothing) Then
-                Return New PagarRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FormadePago_Pagar")),PagarRow())
-            End If
+        Public Function IsPagosPendientesNull() As Boolean
+            Return Me.IsNull(Me.tablePagar.PagosPendientesColumn)
         End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetPagosPendientesNull()
+            Me(Me.tablePagar.PagosPendientesColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -2494,42 +2534,6 @@ Partial Public Class dsPagar
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-    Public Class PagarRowChangeEvent
-        Inherits Global.System.EventArgs
-        
-        Private eventRow As PagarRow
-        
-        Private eventAction As Global.System.Data.DataRowAction
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New(ByVal row As PagarRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New
-            Me.eventRow = row
-            Me.eventAction = action
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Row() As PagarRow
-            Get
-                Return Me.eventRow
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
-            Get
-                Return Me.eventAction
-            End Get
-        End Property
-    End Class
-    
-    '''<summary>
-    '''Row event argument class
-    '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Class FormadePagoRowChangeEvent
         Inherits Global.System.EventArgs
         
@@ -2548,6 +2552,42 @@ Partial Public Class dsPagar
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property Row() As FormadePagoRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+    Public Class PagarRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As PagarRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New(ByVal row As PagarRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property Row() As PagarRow
             Get
                 Return Me.eventRow
             End Get
@@ -3664,425 +3704,6 @@ Namespace dsPagarTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class PagarTableAdapter
-        Inherits Global.System.ComponentModel.Component
-        
-        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
-        
-        Private _connection As Global.System.Data.SqlClient.SqlConnection
-        
-        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
-        
-        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
-        
-        Private _clearBeforeFill As Boolean
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.ClearBeforeFill = true
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
-            Get
-                If (Me._adapter Is Nothing) Then
-                    Me.InitAdapter
-                End If
-                Return Me._adapter
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
-            Get
-                If (Me._connection Is Nothing) Then
-                    Me.InitConnection
-                End If
-                Return Me._connection
-            End Get
-            Set
-                Me._connection = value
-                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
-                    Me.Adapter.InsertCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
-                    Me.Adapter.DeleteCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
-                    Me.Adapter.UpdateCommand.Connection = value
-                End If
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
-                    End If
-                    i = (i + 1)
-                Loop
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
-            Get
-                Return Me._transaction
-            End Get
-            Set
-                Me._transaction = value
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    Me.CommandCollection(i).Transaction = Me._transaction
-                    i = (i + 1)
-                Loop
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
-                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
-                    Me.Adapter.InsertCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
-                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
-                End If
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
-            Get
-                If (Me._commandCollection Is Nothing) Then
-                    Me.InitCommandCollection
-                End If
-                Return Me._commandCollection
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Property ClearBeforeFill() As Boolean
-            Get
-                Return Me._clearBeforeFill
-            End Get
-            Set
-                Me._clearBeforeFill = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitAdapter()
-            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
-            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
-            tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "Pagar"
-            tableMapping.ColumnMappings.Add("Idpagar", "Idpagar")
-            tableMapping.ColumnMappings.Add("costo_de_cita", "costo_de_cita")
-            tableMapping.ColumnMappings.Add("id_encargarmedicamento", "id_encargarmedicamento")
-            tableMapping.ColumnMappings.Add("costo_de_ingreso", "costo_de_ingreso")
-            tableMapping.ColumnMappings.Add("Sub_total", "Sub_total")
-            tableMapping.ColumnMappings.Add("Total_a_pagar", "Total_a_pagar")
-            tableMapping.ColumnMappings.Add("idFormaPago", "idFormaPago")
-            Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Pagar] WHERE (([Idpagar] = @Original_Idpagar) AND ([costo_de_c"& _ 
-                "ita] = @Original_costo_de_cita) AND ([id_encargarmedicamento] = @Original_id_enc"& _ 
-                "argarmedicamento) AND ([costo_de_ingreso] = @Original_costo_de_ingreso) AND ([Su"& _ 
-                "b_total] = @Original_Sub_total) AND ([Total_a_pagar] = @Original_Total_a_pagar) "& _ 
-                "AND ((@IsNull_idFormaPago = 1 AND [idFormaPago] IS NULL) OR ([idFormaPago] = @Or"& _ 
-                "iginal_idFormaPago)))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idpagar", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idpagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Pagar] ([costo_de_cita], [id_encargarmedicamento], [costo_de_i"& _ 
-                "ngreso], [Sub_total], [Total_a_pagar], [idFormaPago]) VALUES (@costo_de_cita, @i"& _ 
-                "d_encargarmedicamento, @costo_de_ingreso, @Sub_total, @Total_a_pagar, @idFormaPa"& _ 
-                "go);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, S"& _ 
-                "ub_total, Total_a_pagar, idFormaPago FROM Pagar WHERE (Idpagar = SCOPE_IDENTITY("& _ 
-                "))"
-            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Pagar] SET [costo_de_cita] = @costo_de_cita, [id_encargarmedicament"& _ 
-                "o] = @id_encargarmedicamento, [costo_de_ingreso] = @costo_de_ingreso, [Sub_total"& _ 
-                "] = @Sub_total, [Total_a_pagar] = @Total_a_pagar, [idFormaPago] = @idFormaPago W"& _ 
-                "HERE (([Idpagar] = @Original_Idpagar) AND ([costo_de_cita] = @Original_costo_de_"& _ 
-                "cita) AND ([id_encargarmedicamento] = @Original_id_encargarmedicamento) AND ([co"& _ 
-                "sto_de_ingreso] = @Original_costo_de_ingreso) AND ([Sub_total] = @Original_Sub_t"& _ 
-                "otal) AND ([Total_a_pagar] = @Original_Total_a_pagar) AND ((@IsNull_idFormaPago "& _ 
-                "= 1 AND [idFormaPago] IS NULL) OR ([idFormaPago] = @Original_idFormaPago)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
-                "LECT Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_total"& _ 
-                ", Total_a_pagar, idFormaPago FROM Pagar WHERE (Idpagar = @Idpagar)"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idpagar", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idpagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Idpagar", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Idpagar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitConnection()
-            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.Programacion_1.My.MySettings.Default.sistemaclinicodbConnectionString
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
-            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_tota"& _ 
-                "l, Total_a_pagar, idFormaPago FROM dbo.Pagar"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_tota"& _ 
-                "l, Total_a_pagar, idFormaPago"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Pagar"
-            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "SELECT Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_tota"& _ 
-                "l, Total_a_pagar, idFormaPago FROM dbo.Pagar"
-            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As dsPagar.PagarDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As dsPagar.PagarDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As dsPagar.PagarDataTable = New dsPagar.PagarDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy(ByVal dataTable As dsPagar.PagarDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(1)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillBy1(ByVal dataTable As dsPagar.PagarDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(2)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As dsPagar.PagarDataTable) As Integer
-            Return Me.Adapter.Update(dataTable)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataSet As dsPagar) As Integer
-            Return Me.Adapter.Update(dataSet, "Pagar")
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
-            Return Me.Adapter.Update(dataRows)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Idpagar As Integer, ByVal Original_costo_de_cita As Decimal, ByVal Original_id_encargarmedicamento As Integer, ByVal Original_costo_de_ingreso As Decimal, ByVal Original_Sub_total As Decimal, ByVal Original_Total_a_pagar As Decimal, ByVal Original_idFormaPago As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Idpagar,Integer)
-            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_costo_de_cita,Decimal)
-            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_id_encargarmedicamento,Integer)
-            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_costo_de_ingreso,Decimal)
-            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Sub_total,Decimal)
-            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Total_a_pagar,Decimal)
-            If (Original_idFormaPago.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_idFormaPago.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal costo_de_cita As Decimal, ByVal id_encargarmedicamento As Integer, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal idFormaPago As Global.System.Nullable(Of Integer)) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(costo_de_cita,Decimal)
-            Me.Adapter.InsertCommand.Parameters(1).Value = CType(id_encargarmedicamento,Integer)
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(costo_de_ingreso,Decimal)
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(Sub_total,Decimal)
-            Me.Adapter.InsertCommand.Parameters(4).Value = CType(Total_a_pagar,Decimal)
-            If (idFormaPago.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(idFormaPago.Value,Integer)
-            Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal costo_de_cita As Decimal, ByVal id_encargarmedicamento As Integer, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal idFormaPago As Global.System.Nullable(Of Integer), ByVal Original_Idpagar As Integer, ByVal Original_costo_de_cita As Decimal, ByVal Original_id_encargarmedicamento As Integer, ByVal Original_costo_de_ingreso As Decimal, ByVal Original_Sub_total As Decimal, ByVal Original_Total_a_pagar As Decimal, ByVal Original_idFormaPago As Global.System.Nullable(Of Integer), ByVal Idpagar As Integer) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(costo_de_cita,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(id_encargarmedicamento,Integer)
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(costo_de_ingreso,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Sub_total,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Total_a_pagar,Decimal)
-            If (idFormaPago.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(idFormaPago.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Idpagar,Integer)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_costo_de_cita,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_id_encargarmedicamento,Integer)
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_costo_de_ingreso,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Sub_total,Decimal)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Total_a_pagar,Decimal)
-            If (Original_idFormaPago.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_idFormaPago.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
-            End If
-            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Idpagar,Integer)
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal costo_de_cita As Decimal, ByVal id_encargarmedicamento As Integer, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal idFormaPago As Global.System.Nullable(Of Integer), ByVal Original_Idpagar As Integer, ByVal Original_costo_de_cita As Decimal, ByVal Original_id_encargarmedicamento As Integer, ByVal Original_costo_de_ingreso As Decimal, ByVal Original_Sub_total As Decimal, ByVal Original_Total_a_pagar As Decimal, ByVal Original_idFormaPago As Global.System.Nullable(Of Integer)) As Integer
-            Return Me.Update(costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_total, Total_a_pagar, idFormaPago, Original_Idpagar, Original_costo_de_cita, Original_id_encargarmedicamento, Original_costo_de_ingreso, Original_Sub_total, Original_Total_a_pagar, Original_idFormaPago, Original_Idpagar)
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the connection and commands used to retrieve and save data.
-    '''</summary>
-    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
-     Global.System.ComponentModel.ToolboxItem(true),  _
-     Global.System.ComponentModel.DataObjectAttribute(true),  _
-     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
-     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
     Partial Public Class FormadePagoTableAdapter
         Inherits Global.System.ComponentModel.Component
         
@@ -4393,6 +4014,439 @@ Namespace dsPagarTableAdapters
     End Class
     
     '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class PagarTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "Pagar"
+            tableMapping.ColumnMappings.Add("Idpagar", "Idpagar")
+            tableMapping.ColumnMappings.Add("costo_de_cita", "costo_de_cita")
+            tableMapping.ColumnMappings.Add("id_encargarmedicamento", "id_encargarmedicamento")
+            tableMapping.ColumnMappings.Add("costo_de_ingreso", "costo_de_ingreso")
+            tableMapping.ColumnMappings.Add("Sub_total", "Sub_total")
+            tableMapping.ColumnMappings.Add("Total_a_pagar", "Total_a_pagar")
+            tableMapping.ColumnMappings.Add("idFormaPago", "idFormaPago")
+            tableMapping.ColumnMappings.Add("PagosPendientes", "PagosPendientes")
+            Me._adapter.TableMappings.Add(tableMapping)
+            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.DeleteCommand.Connection = Me.Connection
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Pagar] WHERE (([Idpagar] = @Original_Idpagar) AND ([costo_de_c"& _ 
+                "ita] = @Original_costo_de_cita) AND ([id_encargarmedicamento] = @Original_id_enc"& _ 
+                "argarmedicamento) AND ([costo_de_ingreso] = @Original_costo_de_ingreso) AND ([Su"& _ 
+                "b_total] = @Original_Sub_total) AND ([Total_a_pagar] = @Original_Total_a_pagar) "& _ 
+                "AND ((@IsNull_idFormaPago = 1 AND [idFormaPago] IS NULL) OR ([idFormaPago] = @Or"& _ 
+                "iginal_idFormaPago)) AND ((@IsNull_PagosPendientes = 1 AND [PagosPendientes] IS "& _ 
+                "NULL) OR ([PagosPendientes] = @Original_PagosPendientes)))"
+            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idpagar", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idpagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PagosPendientes", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PagosPendientes", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PagosPendientes", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PagosPendientes", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Pagar] ([costo_de_cita], [id_encargarmedicamento], [costo_de_i"& _ 
+                "ngreso], [Sub_total], [Total_a_pagar], [idFormaPago], [PagosPendientes]) VALUES "& _ 
+                "(@costo_de_cita, @id_encargarmedicamento, @costo_de_ingreso, @Sub_total, @Total_"& _ 
+                "a_pagar, @idFormaPago, @PagosPendientes);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Idpagar, costo_de_cita, id_enc"& _ 
+                "argarmedicamento, costo_de_ingreso, Sub_total, Total_a_pagar, idFormaPago, Pagos"& _ 
+                "Pendientes FROM Pagar WHERE (Idpagar = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PagosPendientes", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PagosPendientes", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.UpdateCommand.Connection = Me.Connection
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Pagar] SET [costo_de_cita] = @costo_de_cita, [id_encargarmedicament"& _ 
+                "o] = @id_encargarmedicamento, [costo_de_ingreso] = @costo_de_ingreso, [Sub_total"& _ 
+                "] = @Sub_total, [Total_a_pagar] = @Total_a_pagar, [idFormaPago] = @idFormaPago, "& _ 
+                "[PagosPendientes] = @PagosPendientes WHERE (([Idpagar] = @Original_Idpagar) AND "& _ 
+                "([costo_de_cita] = @Original_costo_de_cita) AND ([id_encargarmedicamento] = @Ori"& _ 
+                "ginal_id_encargarmedicamento) AND ([costo_de_ingreso] = @Original_costo_de_ingre"& _ 
+                "so) AND ([Sub_total] = @Original_Sub_total) AND ([Total_a_pagar] = @Original_Tot"& _ 
+                "al_a_pagar) AND ((@IsNull_idFormaPago = 1 AND [idFormaPago] IS NULL) OR ([idForm"& _ 
+                "aPago] = @Original_idFormaPago)) AND ((@IsNull_PagosPendientes = 1 AND [PagosPen"& _ 
+                "dientes] IS NULL) OR ([PagosPendientes] = @Original_PagosPendientes)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
+                "Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_total, Tot"& _ 
+                "al_a_pagar, idFormaPago, PagosPendientes FROM Pagar WHERE (Idpagar = @Idpagar)"
+            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PagosPendientes", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PagosPendientes", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Idpagar", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Idpagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_cita", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_cita", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_encargarmedicamento", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_encargarmedicamento", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_costo_de_ingreso", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "costo_de_ingreso", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Sub_total", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sub_total", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Total_a_pagar", Global.System.Data.SqlDbType.Money, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Total_a_pagar", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idFormaPago", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idFormaPago", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_PagosPendientes", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PagosPendientes", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PagosPendientes", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PagosPendientes", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Idpagar", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Idpagar", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.Programacion_1.My.MySettings.Default.sistemaclinicodbConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT Idpagar, costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_tota"& _ 
+                "l, Total_a_pagar, idFormaPago, PagosPendientes FROM dbo.Pagar"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As dsPagar.PagarDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As dsPagar.PagarDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As dsPagar.PagarDataTable = New dsPagar.PagarDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As dsPagar.PagarDataTable) As Integer
+            Return Me.Adapter.Update(dataTable)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As dsPagar) As Integer
+            Return Me.Adapter.Update(dataSet, "Pagar")
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+            Return Me.Adapter.Update(dataRows)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_Idpagar As Integer, ByVal Original_costo_de_cita As Decimal, ByVal Original_id_encargarmedicamento As Integer, ByVal Original_costo_de_ingreso As Decimal, ByVal Original_Sub_total As Decimal, ByVal Original_Total_a_pagar As Decimal, ByVal Original_idFormaPago As Global.System.Nullable(Of Integer), ByVal Original_PagosPendientes As Global.System.Nullable(Of Byte)) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Idpagar,Integer)
+            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_costo_de_cita,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_id_encargarmedicamento,Integer)
+            Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_costo_de_ingreso,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Sub_total,Decimal)
+            Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Total_a_pagar,Decimal)
+            If (Original_idFormaPago.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_idFormaPago.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PagosPendientes.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_PagosPendientes.Value,Byte)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.DeleteCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.DeleteCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal costo_de_cita As Decimal, ByVal id_encargarmedicamento As Integer, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal idFormaPago As Global.System.Nullable(Of Integer), ByVal PagosPendientes As Global.System.Nullable(Of Byte)) As Integer
+            Me.Adapter.InsertCommand.Parameters(0).Value = CType(costo_de_cita,Decimal)
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(id_encargarmedicamento,Integer)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(costo_de_ingreso,Decimal)
+            Me.Adapter.InsertCommand.Parameters(3).Value = CType(Sub_total,Decimal)
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(Total_a_pagar,Decimal)
+            If (idFormaPago.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(idFormaPago.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (PagosPendientes.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(PagosPendientes.Value,Byte)
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.InsertCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.InsertCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update( _
+                    ByVal costo_de_cita As Decimal,  _
+                    ByVal id_encargarmedicamento As Integer,  _
+                    ByVal costo_de_ingreso As Decimal,  _
+                    ByVal Sub_total As Decimal,  _
+                    ByVal Total_a_pagar As Decimal,  _
+                    ByVal idFormaPago As Global.System.Nullable(Of Integer),  _
+                    ByVal PagosPendientes As Global.System.Nullable(Of Byte),  _
+                    ByVal Original_Idpagar As Integer,  _
+                    ByVal Original_costo_de_cita As Decimal,  _
+                    ByVal Original_id_encargarmedicamento As Integer,  _
+                    ByVal Original_costo_de_ingreso As Decimal,  _
+                    ByVal Original_Sub_total As Decimal,  _
+                    ByVal Original_Total_a_pagar As Decimal,  _
+                    ByVal Original_idFormaPago As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PagosPendientes As Global.System.Nullable(Of Byte),  _
+                    ByVal Idpagar As Integer) As Integer
+            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(costo_de_cita,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(id_encargarmedicamento,Integer)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(costo_de_ingreso,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Sub_total,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Total_a_pagar,Decimal)
+            If (idFormaPago.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(idFormaPago.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (PagosPendientes.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(PagosPendientes.Value,Byte)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Idpagar,Integer)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_costo_de_cita,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_id_encargarmedicamento,Integer)
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_costo_de_ingreso,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Sub_total,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Total_a_pagar,Decimal)
+            If (Original_idFormaPago.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_idFormaPago.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PagosPendientes.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_PagosPendientes.Value,Byte)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Idpagar,Integer)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                Me.Adapter.UpdateCommand.Connection.Open
+            End If
+            Try 
+                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
+                Return returnValue
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    Me.Adapter.UpdateCommand.Connection.Close
+                End If
+            End Try
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal costo_de_cita As Decimal, ByVal id_encargarmedicamento As Integer, ByVal costo_de_ingreso As Decimal, ByVal Sub_total As Decimal, ByVal Total_a_pagar As Decimal, ByVal idFormaPago As Global.System.Nullable(Of Integer), ByVal PagosPendientes As Global.System.Nullable(Of Byte), ByVal Original_Idpagar As Integer, ByVal Original_costo_de_cita As Decimal, ByVal Original_id_encargarmedicamento As Integer, ByVal Original_costo_de_ingreso As Decimal, ByVal Original_Sub_total As Decimal, ByVal Original_Total_a_pagar As Decimal, ByVal Original_idFormaPago As Global.System.Nullable(Of Integer), ByVal Original_PagosPendientes As Global.System.Nullable(Of Byte)) As Integer
+            Return Me.Update(costo_de_cita, id_encargarmedicamento, costo_de_ingreso, Sub_total, Total_a_pagar, idFormaPago, PagosPendientes, Original_Idpagar, Original_costo_de_cita, Original_id_encargarmedicamento, Original_costo_de_ingreso, Original_Sub_total, Original_Total_a_pagar, Original_idFormaPago, Original_PagosPendientes, Original_Idpagar)
+        End Function
+    End Class
+    
+    '''<summary>
     '''TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     '''</summary>
     <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
@@ -4409,9 +4463,9 @@ Namespace dsPagarTableAdapters
         
         Private _encargar_medicamentoTableAdapter As encargar_medicamentoTableAdapter
         
-        Private _pagarTableAdapter As PagarTableAdapter
-        
         Private _formadePagoTableAdapter As FormadePagoTableAdapter
+        
+        Private _pagarTableAdapter As PagarTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -4461,12 +4515,12 @@ Namespace dsPagarTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property PagarTableAdapter() As PagarTableAdapter
+        Public Property FormadePagoTableAdapter() As FormadePagoTableAdapter
             Get
-                Return Me._pagarTableAdapter
+                Return Me._formadePagoTableAdapter
             End Get
             Set
-                Me._pagarTableAdapter = value
+                Me._formadePagoTableAdapter = value
             End Set
         End Property
         
@@ -4475,12 +4529,12 @@ Namespace dsPagarTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property FormadePagoTableAdapter() As FormadePagoTableAdapter
+        Public Property PagarTableAdapter() As PagarTableAdapter
             Get
-                Return Me._formadePagoTableAdapter
+                Return Me._pagarTableAdapter
             End Get
             Set
-                Me._formadePagoTableAdapter = value
+                Me._pagarTableAdapter = value
             End Set
         End Property
         
@@ -4511,13 +4565,13 @@ Namespace dsPagarTableAdapters
                             AndAlso (Not (Me._encargar_medicamentoTableAdapter.Connection) Is Nothing)) Then
                     Return Me._encargar_medicamentoTableAdapter.Connection
                 End If
-                If ((Not (Me._pagarTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._pagarTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._pagarTableAdapter.Connection
-                End If
                 If ((Not (Me._formadePagoTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._formadePagoTableAdapter.Connection) Is Nothing)) Then
                     Return Me._formadePagoTableAdapter.Connection
+                End If
+                If ((Not (Me._pagarTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._pagarTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._pagarTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -4538,10 +4592,10 @@ Namespace dsPagarTableAdapters
                 If (Not (Me._encargar_medicamentoTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._pagarTableAdapter) Is Nothing) Then
+                If (Not (Me._formadePagoTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._formadePagoTableAdapter) Is Nothing) Then
+                If (Not (Me._pagarTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -4726,13 +4780,13 @@ Namespace dsPagarTableAdapters
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._pagarTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._pagarTableAdapter.Connection) = false)) Then
+            If ((Not (Me._formadePagoTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._formadePagoTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
-            If ((Not (Me._formadePagoTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._formadePagoTableAdapter.Connection) = false)) Then
+            If ((Not (Me._pagarTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._pagarTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi"& _ 
                         "sma cadena de conexión.")
             End If
@@ -4786,15 +4840,6 @@ Namespace dsPagarTableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._encargar_medicamentoTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._pagarTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._pagarTableAdapter, Me._pagarTableAdapter.Connection)
-                    Me._pagarTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._pagarTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._pagarTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._pagarTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._pagarTableAdapter.Adapter)
-                    End If
-                End If
                 If (Not (Me._formadePagoTableAdapter) Is Nothing) Then
                     revertConnections.Add(Me._formadePagoTableAdapter, Me._formadePagoTableAdapter.Connection)
                     Me._formadePagoTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
@@ -4802,6 +4847,15 @@ Namespace dsPagarTableAdapters
                     If Me._formadePagoTableAdapter.Adapter.AcceptChangesDuringUpdate Then
                         Me._formadePagoTableAdapter.Adapter.AcceptChangesDuringUpdate = false
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._formadePagoTableAdapter.Adapter)
+                    End If
+                End If
+                If (Not (Me._pagarTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._pagarTableAdapter, Me._pagarTableAdapter.Connection)
+                    Me._pagarTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._pagarTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._pagarTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._pagarTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._pagarTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -4872,13 +4926,13 @@ Namespace dsPagarTableAdapters
                     Me._encargar_medicamentoTableAdapter.Connection = CType(revertConnections(Me._encargar_medicamentoTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._encargar_medicamentoTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._pagarTableAdapter) Is Nothing) Then
-                    Me._pagarTableAdapter.Connection = CType(revertConnections(Me._pagarTableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._pagarTableAdapter.Transaction = Nothing
-                End If
                 If (Not (Me._formadePagoTableAdapter) Is Nothing) Then
                     Me._formadePagoTableAdapter.Connection = CType(revertConnections(Me._formadePagoTableAdapter),Global.System.Data.SqlClient.SqlConnection)
                     Me._formadePagoTableAdapter.Transaction = Nothing
+                End If
+                If (Not (Me._pagarTableAdapter) Is Nothing) Then
+                    Me._pagarTableAdapter.Connection = CType(revertConnections(Me._pagarTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._pagarTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

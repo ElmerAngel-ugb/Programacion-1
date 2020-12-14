@@ -3,6 +3,7 @@
     Dim btnPagarFuepresionado As Boolean = False
     Dim formLoad As Boolean = False
     Dim btnRemoveFilterFuePresionado As Boolean = False
+    Public FrmImprimirPago As FrmImprimirPago
 
     Private Sub FmrPagar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         formLoad = True
@@ -15,7 +16,6 @@
         Me.actualizarSubTotal()
         actualizarTotal()
         actualizarFormadePago()
-
     End Sub
 
     Private Sub actualizarFormadePago()
@@ -65,6 +65,9 @@
     End Sub
 
     Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
+        Pagar()
+    End Sub
+    Private Sub Pagar()
         btnPagarFuepresionado = True
         btnRemoveFilterFuePresionado = False
         formLoad = False
@@ -95,8 +98,6 @@
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
-
-
 
     End Sub
 
@@ -145,6 +146,9 @@
                 navPagar.DeleteItem = Nothing
                 MsgBox("Pago Cancelado", 64, "")
             End If
+
+        ElseIf e.ClickedItem Is navPagar.AddNewItem Then
+            CbPendientes.Checked = False
         ElseIf e.ClickedItem Is navPagar.MoveFirstItem Or e.ClickedItem Is navPagar.MoveLastItem Or e.ClickedItem Is navPagar.MoveNextItem Or e.ClickedItem Is navPagar.MovePreviousItem Then
             actualizarinformaciondeencargarMedicamento(Me.txtidEncargarmedicamento.Text.Trim)
             actualizarinfomaciondelPaciente(Me.txtidPaciente.Text.Trim)
@@ -256,22 +260,34 @@
         End Try
     End Sub
 
-    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs)
+    'Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs)
+    'Try
+    'Me.PagarTableAdapter.FillBy(Me.Form_DsPagar.Pagar)
+    'ch ex As System.Exception
+    ' System.Windows.Forms.MessageBox.Show(ex.Message)
+    'End Try
+
+    ' End Sub
+
+    'Private Sub FillBy1ToolStripButton_Click(sender As Object, e As EventArgs)
+    'Try
+    'Me.PagarTableAdapter.FillBy1(Me.Form_DsPagar.Pagar)
+    'Catch ex As System.Exception
+    ' System.Windows.Forms.MessageBox.Show(ex.Message)
+    'End Try
+
+    ' End Sub
+
+
+    Private Sub btnImprimirPago_Click(sender As Object, e As EventArgs) Handles btnImprimirPago.Click
+        Pagar()
+        FrmImprimirPago = New FrmImprimirPago
+        FrmImprimirPago.IdPagar = -1
         Try
-            Me.PagarTableAdapter.FillBy(Me.Form_DsPagar.Pagar)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
+            FrmImprimirPago.IdPagar = Integer.Parse(Me.txtPagar.Text.Trim)
+        Catch ex As Exception
+
         End Try
-
+        FrmImprimirPago.Show()
     End Sub
-
-    Private Sub FillBy1ToolStripButton_Click(sender As Object, e As EventArgs)
-        Try
-            Me.PagarTableAdapter.FillBy1(Me.Form_DsPagar.Pagar)
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
-
-    End Sub
-
 End Class
